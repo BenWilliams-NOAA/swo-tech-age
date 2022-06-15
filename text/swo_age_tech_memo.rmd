@@ -230,7 +230,7 @@ Herein, when we use the term ‘effective sample size’ we are referring to the
 
 [Para on use of input sample sizes used in assessment, with examples from other regions (e.g., west coast, iphc) - Matt]
 
-[Conclusion para on where input sample size will be available to authors - Pete]
+[Conclusion para on where input sample size will be available to authors - Pete with input from all]
 
 \newpage
 
