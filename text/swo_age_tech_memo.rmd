@@ -67,11 +67,11 @@ render_toc("swo_age_tech_memo.Rmd")
 
 # Introduction 
 
-[General para on use of age and length comp data in AFSC assessments - Pete]
+[General para on use of age and length comp data in AFSC assessments - Matt and Pete]
 
 [General para on age & length sampling in AFSC bottom trawl surveys - Jason]
 
-[General para on effective sample size and estimating input sample size - Matt]
+[General para on effective sample size and estimating input sample size - Matt and Pete]
 
 [Objective para - Pete and Matt]
 
@@ -145,12 +145,12 @@ and to obtain the sex-specific estimates of population abundance at length in a 
 
 ## Expanding specimen collections to population abundance at age
 
-[Pete and Matt]
+[Pete]
 
 
 ## Bootstrap-simulation framework  
 
-[Ben and Pete - leaving what we had to build upon]
+[Pete and Ben - leaving what we had to build upon]
 
 To evaluate the effect of sub-sampling length frequency collections for which sex is subsequently determined we developed a bootstrap-simulation framework that allowed for reductions in the number of sexed length frequencies collected.
 We used the historical length frequency data that were collected from the bottom trawl surveys to evaluate the impact of reduced sex-specific length frequency data. 
