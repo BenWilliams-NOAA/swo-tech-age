@@ -73,7 +73,7 @@ render_toc("swo_age_tech_memo.Rmd")
 
 [General para on effective sample size and estimating input sample size - Matt]
 
-[Objective para - Pete]
+[Objective para - Pete and Matt]
 
 
 # Materials and Methods 
