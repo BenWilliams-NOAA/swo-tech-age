@@ -169,7 +169,7 @@ While in the preceding equations we do not include a subscript for sub-region, p
 We have developed functions to estimate population abundance at age by sub-region, and by a combination of sub-regions within the GOA to allow for this flexibility in estimating population abundance at age.
 
 There are a handful of assessments conducted at AFSC that evaluate stocks at a complex level, where several species are included together in an assessment. 
-There are two stock complexes at AFSC in which the species are combined and assessed within the same statistical catch-at-age model: blackspotted and rougheye rockfish in the GOA and AI (*Spencer*, *Sullivan*).
+There are two stock complexes at AFSC in which the species are combined and assessed within the same statistical catch-at-age model: blackspotted and rougheye rockfish in the GOA and AI [@Spencer2020b; @Sullivan2021].
 Between the two management regions there are subtle differences in how the population abundance at age is estimated from the survey specimen data; we have developed functions that allow for these differences and estimate population abundance at age for these two stock complexes.
 
 ## Bootstrap framework for estimating age and length composition input sample size 
@@ -250,8 +250,8 @@ knitr::kable(vroom::vroom(here::here('tables', 'ai_samples.csv')), caption = "To
 
 [Will figure out what figures to include - pun intended, left length flowchart here as we will have the total flowchart included]
 
-```{r length, fig.cap="Bootstrap-simulation flow chart, the steps refer to the order of operations as described in the *Bootstrap-simulation framework* section."}
-knitr::include_graphics(here::here('figs', 'length_flowchart.png'))
+```{r length, fig.cap="Bootstrap flow chart, the steps refer to the order of operations as described in the *Bootstrap framework for estimating age and length composition input sample size* section."}
+knitr::include_graphics(here::here('figs', 'age_flowchart.png'))
 ```
 
 
