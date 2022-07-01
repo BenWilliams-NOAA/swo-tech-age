@@ -75,11 +75,11 @@ Therefore, care must be taken in the design of sampling efforts as well as the d
 [General para on age & length sampling in AFSC bottom trawl surveys - Jason]
 
 Since modern stock assessment models integrate multiple sources of data related to catch (e.g., fisheries catch-per-unit-effort, survey indices of abundance), life history (e.g., size-at-age, maturity-at-age, selectivity-at-age), and composition (e.g., length and age), it is imperative to consider the relative information content these data products provide to the model employed. 
-This is often handled through the use of data-weighting methods, checking the fit of compositional data in the model, and ensuring a good match between the variance of the data and the variance implied by the model [@Francis017]. The weight assigned to annual compositions (the ‘input sample size’) can be calculated using myriad methods [e.g., fixed values, number of samples or tows sampled upon, bootstrapping compositions; @Stewart2014], as can the estimated sample size resulting from the fit of compositional data in the model (the ‘effective sample size’). 
+This is often handled through the use of data-weighting methods, checking the fit of compositional data in the model, and ensuring a good match between the variance of the data and the variance implied by the model [@Francis2017]. The weight assigned to annual compositions (the ‘input sample size’) can be calculated using myriad methods (e.g., fixed values, number of samples or tows sampled upon, bootstrapping compositions; @Stewart2014), as can the estimated sample size resulting from the fit of compositional data in the model (the ‘effective sample size’). 
 Often, input sample sizes are used in an initial fit of the model, and then a tuning (or ‘re-weighting’) process is used to ensure the compositional data are appropriately weighted. 
 This re-weighting process has various forms, but two common methods are to use the estimated effective sample size in a new fit of the model, or calculating a new weight based on expected vs. observed compositions applied to the original input sample size.
 
-[Objective para - Pete and Matt] The main objectives of this study were to (1) document methods for expanding length and age compositions, (2) present species-specific results of historical input samples size for Tier $\geq$3 stocks, and (3) record methods for estimating input sample sizes of survey-based age and length compositions using a two-stage bootstrapping approach.
+The main objectives of this technical memorandum are to (1) document methods used by AFSC for expanding length and age collections to population abundance estimates (which are subsequently used as composition data in stock assessments), (2) present species-specific results of historical input samples size for Tier $\geq$ 3 stocks, and (3) record methods for estimating input sample sizes of survey-based age and length compositions using a two-stage bootstrapping approach.
 
 
 # Materials and Methods
@@ -91,9 +91,9 @@ Length frequency protocols and recent analysis of historical data are further de
 
 [Some further detail on age sampling - Jason]
 
-Species within each survey that are assessed with statistical catch-at-age models (Tier 3 and above stock assessments) were selected to be included in this analysis.
+Species within each survey that are assessed with statistical catch-at-age models (Tier $\geq$ 3 stock assessments) were selected to be included in this analysis.
 
-[Tables of annual raw sample sizes for length and age with some description - Meaghan]
+[Report average age and length sample sizes referring to regional tables - Meaghan (EBS) and Pete (AI & GOA)]
 
 The database (i.e., RACEBASE) was queried based on functions used in the sumfish package in Program R (https://github.com/afsc-gap-products/sumfish).
 
@@ -139,7 +139,7 @@ where $CPUE_{h,st,y}$ is the catch per unit effort of numbers caught within a ha
 \end{equation}
 
 where $N_{sx,l,h,st,y}$ is the length frequency sampled, in numbers, by sex-*sx* and length-*l*.
-In some cases there are hauls that have catch for a species but did not collect length frequency data, in this case (2) is applied in order to account for the unknown length frequency in these hauls, otherwise, if length frequency samples are obtained (1) is applied.
+In some cases there are hauls that have catch for a species but did not collect length frequency data, in this case (2) is applied in order to account for the unknown length frequency in these hauls, otherwise, if length frequency samples are obtained case (1) is applied.
 Finally, we estimate the sex-specific population abundance at length within strata-st with:
 
 \begin{equation}
@@ -171,7 +171,7 @@ where $\hat{N}_{sx,l,y}$ is the population abundance at length from \@ref(eq:eqn
 For specimen data with observations of sex (either female or male), the sex-specific specimen data is used, however, for specimen data without observations of sex the specimen data is pooled across all sexes and the unsexed population abundance at length is then applied to the pooled specimen data to estimate unsexed population abundance at age.
 
 For the majority of stocks assessed at AFSC age population estimates are computed at the management area scale (e.g., the entire GOA, AI, or EBS), however, we note that there are two flatfish stock assessments that are spatially-explicit in the GOA [@Mcgilliard2017; @Bryan2021].
-While in the preceding equations we do not include a subscript for sub-region, population abundance at age can be estimated by sub-region through summing the population abundance at length in \@ref(eq:eqn5) across strata within the sub-region and applying \@ref(eq:eqn6) and \@ref(eq:eqn7) to specimen data that is subsetted to the sub-region.
+While in the preceding equations we do not include a subscript for sub-region, population abundance at age can be estimated by sub-region through summing the population abundance at length in equation \@ref(eq:eqn5) across strata within the sub-region and applying equations \@ref(eq:eqn6) and \@ref(eq:eqn7) to specimen data that is subsetted to the sub-region.
 We have developed functions to estimate population abundance at age by sub-region, and by a combination of sub-regions within the GOA to allow for this flexibility in estimating population abundance at age.
 
 There are a handful of assessments conducted at AFSC that evaluate stocks at a complex level, where several species are included together in an assessment.
@@ -185,16 +185,18 @@ The bootstrap framework is composed of a suite of nested resampling (with replac
 Functions to run the sampling protocols were developed in a compartmentalized manner to provide for substantial flexibility in exploring desired resampling protocols.
 The order of operations (Figure \@ref(fig:length)) has the following schedule, with steps 1-3 being optional switches:
 
-1. Resample hauls (wr) from the set of hauls with associated catch per unit effort (in numbers)
+1. Resample hauls from the set of hauls with associated catch per unit effort (in numbers)
 2. Within the resampled hauls from step 1, resample the observed length frequency data
 3. Within the resampled hauls from step 1, resample the observed specimen data
 4. From the resampled length freqeuncy data in step 2, calculate sex-specific population abundance at length, using equations \@ref(eq:eqn1) - \@ref(eq:eqn5)
 5. From the resampled specimen data in step 3 and the sex-specific population abundance at length in step 4, calculate sex-specific population abundance at age, using equations \@ref(eq:eqn6) - \@ref(eq:eqn7)
 
 The bootstrap framework then repeated steps 1-5 iteratively, providing iterated sex-specific population abundance at length and age that was then compared to the historical sex-specific population abundance at length and age determined by the bottom trawl surveys.
-We applied the bootstrap-simulation to species that are assessed in the EBS, AI, and GOA with statistical catch-at-age models (or are Tier $\geq$3, *table(s)?*).
+We applied the bootstrap-simulation to stocks that are assessed in the EBS, AI, and GOA with statistical catch-at-age models (or are Tier $\geq$ 3, *table(s)?*).
 We ran the bootstrap-simulation for 500 iterations, which was a level for which the variability in population abundance at length results had stabilized, and applied the bootstrap-simulation to all years of the respective bottom trawl surveys through the 2021 surveys (for species that had specimen data completed by the AFSC Age and Growth Program).
 The bootstrap-simulation was developed in R [@Rcore] and is available via GitHub as an R package (https://github.com/BenWilliams-NOAA/swo).
+
+## Computing effective and input sample size
 
 Effective sample size, as introduced by @Mcallister1997, is a statistic that can evaluate the level of intra-haul correlation in composition samples that are collected on a survey (whether from age or length frequency collections).
 It is also a statistic that can evaluate the amount of uncertainty in an estimated composition compared to an observed composition.
