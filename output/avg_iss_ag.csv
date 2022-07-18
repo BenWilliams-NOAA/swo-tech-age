@@ -1,0 +1,82 @@
+species_code,ess,species_name,avg_iss,region
+10180,ess_f,Dover sole,133.00881102576204,goa
+20510,ess_f,sablefish,71.6593934492501,goa
+21740,ess_f,walleye pollock,12.496378674256562,goa
+30060,ess_f,Pacific ocean perch,58.363864298622545,goa
+30420,ess_f,northern rockfish,101.09356090180867,goa
+10110,ess_f,arrowtooth flounder,215.53740748387074,goa
+10130,ess_f,flathead sole,72.72030799639482,goa
+21720,ess_f,Pacific cod,98.81102540920416,goa
+10180,ess_m,Dover sole,113.41646775637233,goa
+20510,ess_m,sablefish,77.9852410654087,goa
+21740,ess_m,walleye pollock,11.85472030679585,goa
+30060,ess_m,Pacific ocean perch,58.42546374923808,goa
+30420,ess_m,northern rockfish,95.18792177773784,goa
+10110,ess_m,arrowtooth flounder,133.07700155559024,goa
+10130,ess_m,flathead sole,54.71461238078325,goa
+21720,ess_m,Pacific cod,88.75492797614051,goa
+10180,ess_t,Dover sole,219.48870272168563,goa
+20510,ess_t,sablefish,102.85568072751863,goa
+21740,ess_t,walleye pollock,14.825253314951649,goa
+30060,ess_t,Pacific ocean perch,80.17030714038971,goa
+30420,ess_t,northern rockfish,169.44609708134536,goa
+10110,ess_t,arrowtooth flounder,291.22739592915775,goa
+10130,ess_t,flathead sole,107.95431367139236,goa
+21720,ess_t,Pacific cod,121.56213018492087,goa
+30050,ess_f,REBS rockfish complex,91.20813006147236,goa
+30050,ess_m,REBS rockfish complex,71.33223144036,goa
+30050,ess_t,REBS rockfish complex,128.70032819811334,goa
+30150,ess_f,Dusky rockfish,91.179513365678,goa
+30150,ess_m,Dusky rockfish,72.1951136824973,goa
+30150,ess_t,Dusky rockfish,129.79218953535107,goa
+21720,ess_f,Pacific cod,109.6953578785779,ai
+21740,ess_f,walleye pollock,55.615713690304666,ai
+21921,ess_f,Atka mackerel,61.720338743634066,ai
+30060,ess_f,Pacific ocean perch,62.26322564836087,ai
+30420,ess_f,northern rockfish,75.72714200312542,ai
+10110,ess_f,arrowtooth flounder,160.9337312216606,ai
+10112,ess_f,Kamchatka flounder,67.69044256389998,ai
+21720,ess_m,Pacific cod,108.43062628123475,ai
+21740,ess_m,walleye pollock,47.641538998822924,ai
+21921,ess_m,Atka mackerel,57.49670434781574,ai
+30060,ess_m,Pacific ocean perch,57.491538147576975,ai
+30420,ess_m,northern rockfish,58.825433740449206,ai
+10110,ess_m,arrowtooth flounder,79.34138812164653,ai
+10112,ess_m,Kamchatka flounder,50.75024927055264,ai
+21720,ess_t,Pacific cod,145.02093896040768,ai
+21740,ess_t,walleye pollock,63.598127896490446,ai
+21921,ess_t,Atka mackerel,79.61525729446652,ai
+30060,ess_t,Pacific ocean perch,84.9474871167313,ai
+30420,ess_t,northern rockfish,107.54486866045121,ai
+10110,ess_t,arrowtooth flounder,179.27775006807732,ai
+10112,ess_t,Kamchatka flounder,78.77671992644042,ai
+30050,ess_f,REBS rockfish complex,98.46526449853248,ai
+30050,ess_m,REBS rockfish complex,96.55866829155144,ai
+30050,ess_t,REBS rockfish complex,180.3530542823699,ai
+10110,ess_f,arrowtooth flounder,124.4252866058047,ebs
+10115,ess_f,Greenland turbot,13.751032089949106,ebs
+10130,ess_f,flathead sole,42.63211832481665,ebs
+10210,ess_f,yellowfin sole,212.03887893159205,ebs
+10285,ess_f,Alaska plaice,140.78245893069746,ebs
+21740,ess_f,walleye pollock,4.7793171256855675,ebs
+21720,ess_f,Pacific cod,47.64266495525192,ebs
+10261,ess_f,northern rock sole,89.3055516084164,ebs
+10112,ess_f,Kamchatka flounder,140.49423747906383,ebs
+10110,ess_m,arrowtooth flounder,57.73356484466367,ebs
+10115,ess_m,Greenland turbot,9.826904960256368,ebs
+10130,ess_m,flathead sole,34.79718150433978,ebs
+10210,ess_m,yellowfin sole,168.22461359255223,ebs
+10285,ess_m,Alaska plaice,81.50760626549057,ebs
+21740,ess_m,walleye pollock,4.766562726883695,ebs
+21720,ess_m,Pacific cod,58.71776310018791,ebs
+10261,ess_m,northern rock sole,64.58251674056734,ebs
+10112,ess_m,Kamchatka flounder,107.67828441766089,ebs
+10110,ess_t,arrowtooth flounder,159.82364716435634,ebs
+10115,ess_t,Greenland turbot,20.5423864911998,ebs
+10130,ess_t,flathead sole,62.79352354784136,ebs
+10210,ess_t,yellowfin sole,310.77618183644125,ebs
+10285,ess_t,Alaska plaice,191.66924264179355,ebs
+21740,ess_t,walleye pollock,5.701537941618963,ebs
+21720,ess_t,Pacific cod,70.90211305975868,ebs
+10261,ess_t,northern rock sole,126.54239494444641,ebs
+10112,ess_t,Kamchatka flounder,220.2838340550271,ebs

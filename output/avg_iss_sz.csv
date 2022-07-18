@@ -1,0 +1,82 @@
+species_code,ess,species_name,avg_iss,region
+10110,ess_f,arrowtooth flounder,3642.6480355876333,goa
+10130,ess_f,flathead sole,1480.7798702976486,goa
+10180,ess_f,Dover sole,606.50321387162,goa
+20510,ess_f,sablefish,468.5655538586057,goa
+21720,ess_f,Pacific cod,582.2062555757635,goa
+21740,ess_f,walleye pollock,467.6426872345903,goa
+30060,ess_f,Pacific ocean perch,319.9108111638711,goa
+30420,ess_f,northern rockfish,126.84711573697167,goa
+10110,ess_m,arrowtooth flounder,1860.6462235834908,goa
+10130,ess_m,flathead sole,1155.0004417791367,goa
+10180,ess_m,Dover sole,631.2756753951219,goa
+20510,ess_m,sablefish,618.3600453008476,goa
+21720,ess_m,Pacific cod,560.0090781187475,goa
+21740,ess_m,walleye pollock,363.3227680038338,goa
+30060,ess_m,Pacific ocean perch,321.75674233081605,goa
+30420,ess_m,northern rockfish,145.22429128867986,goa
+10110,ess_t,arrowtooth flounder,4576.785100414159,goa
+10130,ess_t,flathead sole,2231.416282092057,goa
+10180,ess_t,Dover sole,1105.1886795213054,goa
+20510,ess_t,sablefish,858.0876096973284,goa
+21720,ess_t,Pacific cod,780.3300340736329,goa
+21740,ess_t,walleye pollock,431.18630125200946,goa
+30060,ess_t,Pacific ocean perch,415.5423915188051,goa
+30420,ess_t,northern rockfish,215.77574856807408,goa
+30050,ess_f,REBS rockfish complex,145.16260390336083,goa
+30050,ess_m,REBS rockfish complex,118.33663537877547,goa
+30050,ess_t,REBS rockfish complex,194.15066976849656,goa
+30150,ess_f,Dusky rockfish,145.0024024610217,goa
+30150,ess_m,Dusky rockfish,116.95512264736583,goa
+30150,ess_t,Dusky rockfish,192.98679234676717,goa
+10110,ess_f,arrowtooth flounder,670.0563053704828,ai
+10112,ess_f,Kamchatka flounder,204.69112595137554,ai
+21720,ess_f,Pacific cod,442.46201967592526,ai
+21740,ess_f,walleye pollock,297.5271759933548,ai
+21921,ess_f,Atka mackerel,164.33267557073458,ai
+30060,ess_f,Pacific ocean perch,383.7886185465685,ai
+30420,ess_f,northern rockfish,180.2716152196459,ai
+10110,ess_m,arrowtooth flounder,350.063331856257,ai
+10112,ess_m,Kamchatka flounder,187.8976008663068,ai
+21720,ess_m,Pacific cod,455.24469720613735,ai
+21740,ess_m,walleye pollock,220.88496890211343,ai
+21921,ess_m,Atka mackerel,147.07832978099245,ai
+30060,ess_m,Pacific ocean perch,466.0948949498355,ai
+30420,ess_m,northern rockfish,155.70591588069016,ai
+10110,ess_t,arrowtooth flounder,787.1190190143465,ai
+10112,ess_t,Kamchatka flounder,294.66577778074145,ai
+21720,ess_t,Pacific cod,696.9875789677689,ai
+21740,ess_t,walleye pollock,286.669448115509,ai
+21921,ess_t,Atka mackerel,192.04382596552549,ai
+30060,ess_t,Pacific ocean perch,614.273661862658,ai
+30420,ess_t,northern rockfish,217.40560032900893,ai
+30050,ess_f,REBS rockfish complex,144.10153115138618,ai
+30050,ess_m,REBS rockfish complex,148.33384934755605,ai
+30050,ess_t,REBS rockfish complex,246.65085372324265,ai
+10110,ess_f,arrowtooth flounder,1421.1744472211485,ebs
+10112,ess_f,Kamchatka flounder,260.1664277811166,ebs
+10115,ess_f,Greenland turbot,115.86316867610114,ebs
+10130,ess_f,flathead sole,1224.1565863168528,ebs
+10210,ess_f,yellowfin sole,1848.4068508992975,ebs
+10261,ess_f,northern rock sole,1386.1643460496398,ebs
+10285,ess_f,Alaska plaice,1040.2772568580115,ebs
+21720,ess_f,Pacific cod,1109.6799904967677,ebs
+21740,ess_f,walleye pollock,1368.830838533169,ebs
+10110,ess_m,arrowtooth flounder,657.4076933364508,ebs
+10112,ess_m,Kamchatka flounder,252.04043548826914,ebs
+10115,ess_m,Greenland turbot,112.8914395727027,ebs
+10130,ess_m,flathead sole,1061.76848392903,ebs
+10210,ess_m,yellowfin sole,1233.1799903700235,ebs
+10261,ess_m,northern rock sole,1344.7371962345571,ebs
+10285,ess_m,Alaska plaice,979.7455453922868,ebs
+21720,ess_m,Pacific cod,1129.8012486052698,ebs
+21740,ess_m,walleye pollock,1296.3241511352228,ebs
+10110,ess_t,arrowtooth flounder,1796.8657915190772,ebs
+10112,ess_t,Kamchatka flounder,458.08511083788386,ebs
+10115,ess_t,Greenland turbot,239.73847597798556,ebs
+10130,ess_t,flathead sole,1760.2368080048577,ebs
+10210,ess_t,yellowfin sole,2137.0861398815523,ebs
+10261,ess_t,northern rock sole,1974.7078091429823,ebs
+10285,ess_t,Alaska plaice,1617.320033266046,ebs
+21720,ess_t,Pacific cod,1653.1578597364582,ebs
+21740,ess_t,walleye pollock,1590.0843641929707,ebs
