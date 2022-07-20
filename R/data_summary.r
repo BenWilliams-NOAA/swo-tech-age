@@ -2,6 +2,10 @@
 rm(oracle_pw)
 rm(oracle_user)
 
+#ADD oracle username and password
+oracle_pw=
+oracle_user=
+
 # packages
 library(sumfish)
 library(tidyverse)
@@ -15,7 +19,7 @@ library(scico)
 library(extrafont)
 remotes::install_version("Rttf2pt1", version = "1.3.8")
 extrafont::font_import()
-
+y
 loadfonts(device="win")
 
 # add fonts to all text (last line)
@@ -38,38 +42,55 @@ ggplot2::theme_set(
 spec<-vroom::vroom(here::here('data', 'species_code_name.csv')) #species_code and common names
 
 #Species codes and yrs by area
-ebs_sp_code=c(10110, 10112, 10115, 10130, 10210, 10261, 10285, 21720, 21740)
-ebs_yr=c(seq(1982, 2019), 2021)
+ebs_sp_code=c(21740, 21741, 21742, 21720, 21721, 21722, 10210, 10209, 10261, 10263, 10130, 10110, 10112, 10115, 10116, 10285)
+ebs_yr=c(2017,2018,2019)
 
-ai_sp_code=c(10110, 10112, 21720, 21740, 21921, 30060, 30420, 30050, 30051, 30052)
-ai_yr=c(1980, 1983, 1986, 1991, 1994, 1997, 2000, 2002, 2004, 2006, 2010, 2012, 2014, 2016, 2018)
+ai_sp_code=c(30060,30420,21740, 21741, 21742, 21720, 21721, 21722, 10261, 10263, 10110, 21921, 10130, 10112)
+ai_yr=c(2014,2016,2018)
 
-goa_sp_code=c(10110, 10130, 10180, 20510, 21720, 21740, 30060, 30420, 30050, 30051, 30052, 30150, 30152, 10261, 10262, 10200)
-goa_yr=c(1984, 1987, 1990, 1993, 1996, 1999, 2001, 2003, 2005, 2007, 2009, 2011, 2013, 2015, 2017,2019,2021)
+goa_sp_code=c(30060, 21740, 21741, 21742, 21720, 21721, 21722, 10110, 10130, 30020, 10262, 10261, 20510, 10200, 20510, 30420)
+goa_yr=c(2017,2019,2021)
+
+ebs_slope=c(10115, 10112, 10110,30060)
+ebs_slope_yr=c(2002,2004,2008, 2010, 2012, 2016)
+
 
 #query Racebase - returns list object
 #also keep the species of interest for each area
 ebs_data=sumfish::getRacebase(year=ebs_yr,surv="EBS_SHELF")
+
+ebs_slope_data=sumfish::getRacebase(year=ebs_slope_yr,surv="EBS_SLOPE")
+
 ai_data=sumfish::getRacebase(year=ai_yr,surv="AI")
+
 goa_data=sumfish::getRacebase(year=goa_yr,surv="GOA")
 
 #Combine objects and filter for area specific species codes
 #raw lengths
 raw_len=bind_rows(data.frame(ebs_data$raw_length %>% rename_all(tolower) %>% filter(species_code %in% ebs_sp_code),surv="EBS_SHELF"),
+                  data.frame(ebs_slope_data$raw_length %>% rename_all(tolower) %>% filter(species_code %in% ebs_slope),surv="EBS_SLOPE"),
                   data.frame(ai_data$raw_length %>% rename_all(tolower) %>% filter(species_code %in% ai_sp_code),surv="AI"),
                   data.frame(goa_data$raw_length %>% rename_all(tolower) %>% filter(species_code %in% goa_sp_code),surv="GOA"))
 #lengths from length table
 lfreq=bind_rows(data.frame(ebs_data$length %>% rename_all(tolower) %>% filter(species_code %in% ebs_sp_code),surv="EBS_SHELF"),
+                data.frame(ebs_slope_data$length %>% rename_all(tolower) %>% filter(species_code %in% ebs_slope),surv="EBS_SLOPE"),
                 data.frame(ai_data$length %>% rename_all(tolower) %>% filter(species_code %in% ai_sp_code),surv="AI"),
                 data.frame(goa_data$length %>% rename_all(tolower) %>% filter(species_code %in% goa_sp_code),surv="GOA"))
 #survey catch
 catch=bind_rows(data.frame(ebs_data$catch %>% rename_all(tolower) %>% filter(species_code %in% ebs_sp_code),surv="EBS_SHELF"),
+                data.frame(ebs_slope_data$catch %>% rename_all(tolower) %>% filter(species_code %in% ebs_slope),surv="EBS_SLOPE"),
                 data.frame(ai_data$catch %>% rename_all(tolower) %>% filter(species_code %in% ai_sp_code),surv="AI"),
                 data.frame(goa_data$catch %>% rename_all(tolower) %>% filter(species_code %in% goa_sp_code),surv="GOA"))
 #hauls
 haul=bind_rows(data.frame(ebs_data$haul %>% rename_all(tolower),surv="EBS_SHELF"),
+               data.frame(ebs_slope_data$haul %>% rename_all(tolower),surv="EBS_SLOPE"),
                 data.frame(ai_data$haul %>% rename_all(tolower),surv="AI"),
                 data.frame(goa_data$haul %>% rename_all(tolower),surv="GOA"))
+#specimen data
+specimen=bind_rows(data.frame(ebs_data$specimen %>% rename_all(tolower) %>% filter(species_code %in% ebs_sp_code), surv="EBS_SHELF"),
+               data.frame(ebs_slope_data$specimen %>% rename_all(tolower) %>% filter(species_code %in% ebs_slope), surv="EBS_SLOPE"),
+               data.frame(ai_data$specimen %>% rename_all(tolower) %>% filter(species_code %in% ai_sp_code), surv="AI"),
+               data.frame(goa_data$specimen %>% rename_all(tolower) %>% filter(species_code %in% goa_sp_code), surv="GOA"))
 
 #add year column
 raw_len2 <- raw_len %>%
@@ -86,6 +107,10 @@ lfreq2 <- lfreq %>%
   rename_all(tolower) %>%
   dplyr::select(year, species_code, hauljoin, sample_type,sex, surv,length, frequency)
 
+specimen2 <- specimen %>%
+  mutate(year = as.numeric(substr(cruise,1,4)) ) %>%
+  rename_all(tolower)
+
 #Changing juvenile codes so we can plot raw lengths per haul
 raw_len2$species_code[raw_len2$species_code==21741]=21740
 raw_len2$species_code[raw_len2$species_code==21742]=21740
@@ -95,7 +120,20 @@ raw_len2$species_code[raw_len2$species_code==10209]=10210
 raw_len2$species_code[raw_len2$species_code==10116]=10115
 raw_len2$species_code[raw_len2$species_code==10263]=10261
 
-raw_len3=full_join(raw_len2,spec,by="species_code")
+#Changing juvenile codes so we can plot raw lengths per haul
+specimen2$species_code[specimen2$species_code==21741]=21740
+specimen2$species_code[specimen2$species_code==21742]=21740
+specimen2$species_code[specimen2$species_code==21721]=21720
+specimen2$species_code[specimen2$species_code==21722]=21720
+specimen2$species_code[specimen2$species_code==10209]=10210
+specimen2$species_code[specimen2$species_code==10116]=10115
+specimen2$species_code[specimen2$species_code==10263]=10261
+
+#add species name to raw_len and specimen
+raw_len3=full_join(raw_len2,spec,by='species_code')
+specimen3=full_join(specimen2,spec,by='species_code')
+
+specimen3=specimen3[specimen3$age>=0,]
 
 #number caught per haul, species, and survey
 num_ct=catch2 %>% group_by(year,species_code,surv,hauljoin) %>% summarise(num=sum(number_fish))
@@ -104,14 +142,34 @@ len_hl=raw_len3 %>% group_by(year,species_code,species_name,surv,hauljoin) %>% s
 #number lengths per haul, species, sex, and survey
 len_s=raw_len3 %>% group_by(year,species_code,species_name,surv,sex,hauljoin) %>% summarise(freq=sum(frequency))
 
-#Annual number of lengths
-ann_len=raw_len3 %>% group_by(year,species_name,surv) %>% summarise(freq=sum(frequency))
-  ann_len=spread(ann_len,surv,freq)
-  write.csv(ann_len,file="annLen_byAreaSpecies_rep.csv",row.names=FALSE)
+#Annual number of lengths by year, species and survey
+ann_len=raw_len3 %>% group_by(year,species_code,species_name,surv) %>% summarise(freq=sum(frequency))
+  ann_len_w=spread(ann_len,year,freq)
+  write.csv(ann_len_w,file=here::here("data/annLen_byAreaSpecies_rep.csv"),row.names=FALSE)
 #3-yr average table
-all_3yrAvgTotLen=ann_len %>% group_by(species_name,surv) %>% summarise(avg_tot_num=round(mean(freq),digits=0))
+all_3yrAvgTotLen=ann_len %>% group_by(species_code,species_name,surv) %>% summarise(avg_tot_num=round(mean(freq),digits=0))
   all_3yrAvgTotLen_v2=spread(all_3yrAvgTotLen,surv,avg_tot_num)
-  write.csv(all_3yrAvgTotLen_v2,file="avg3yr_byAreaSP_rep.csv",row.names=FALSE)
+  write.csv(all_3yrAvgTotLen_v2,file=here::here("data/avg3yr_byAreaSP_rep.csv"),row.names=FALSE)
+
+#Annual number of otoliths read by species, year, and survey
+ann_specimen=specimen3 %>% group_by(species_code, species_name, surv, year) %>% summarise(nages2=length(age))
+write.csv(ann_specimen,file=here::here("data/ann_specimen.csv"),row.names=FALSE)
+
+#Combine ann_len and all_3yrAvgTotLen
+  ebs_summ=inner_join(spread(ann_len[ann_len$surv=="EBS_SHELF",],year,freq),all_3yrAvgTotLen_v2[,c("species_name","EBS_SHELF")],by="species_name")
+    ebs_summ=select(ebs_summ,-surv)
+    ebs_summ=rename(ebs_summ,Species=species_name, average=EBS_SHELF)
+    write.csv(ebs_summ,file=here::here("data/ebs_samples.csv"),row.names=FALSE)
+
+  ai_summ=inner_join(spread(ann_len[ann_len$surv=="AI",],year,freq),all_3yrAvgTotLen_v2[,c("species_name","AI")],by="species_name")
+    ai_summ=select(ai_summ,-surv)
+    ai_summ=rename(ai_summ,Species=species_name, average=AI)
+    write.csv(ai_summ,file=here::here("data/ai_samples.csv"),row.names=FALSE)
+
+  goa_summ=inner_join(spread(ann_len[ann_len$surv=="GOA",],year,freq),all_3yrAvgTotLen_v2[,c("species_name","GOA")],by="species_name")
+    goa_summ=select(goa_summ,-surv)
+    goa_summ=rename(goa_summ,Species=species_name, average=GOA)
+    write.csv(goa_summ,file=here::here("data/goa_samples.csv"),row.names=FALSE)
 
 #plot the number of sampled lengths per haul v number caught per haul by species and survey
 lfreq_num_plot=function(dat,surv,sex=FALSE,pname="foo")
@@ -125,7 +183,7 @@ lfreq_num_plot=function(dat,surv,sex=FALSE,pname="foo")
             xlab("Catch (number) per haul")+ylab("Number of sampled lengths per haul")+
             scale_color_discrete(name="Sex")
 
-    png(paste0(surv,"_samples_per_haul_bySex.png"),units="in",width=12,height=10,res=300)
+    png(paste0(surv,"_samples_per_haul_bySex.png"),units="in",width=6.5,height=6,res=300)
     print(ls_plot)
     dev.off()
   }
@@ -136,7 +194,7 @@ lfreq_num_plot=function(dat,surv,sex=FALSE,pname="foo")
             geom_hline(yintercept = 200, colour = "red",linetype="dashed")+
             xlab("Catch (number) per haul")+ylab("Number of sampled lengths per haul")
 
-    png(paste0(surv,"_samples_per_haul_",pname,".png"),units="in",width=12,height=10,res=300)
+    png(paste0(surv,"_samples_per_haul_",pname,".png"),units="in",width=6.5,height=6,res=300)
     print(ls_plot)
     dev.off()
   }

@@ -1,0 +1,76 @@
+species_code,species_name,surv,year,nages2
+10110,arrowtooth flounder,AI,2014,314
+10110,arrowtooth flounder,AI,2016,477
+10110,arrowtooth flounder,AI,2018,588
+10110,arrowtooth flounder,EBS_SHELF,2017,523
+10110,arrowtooth flounder,EBS_SHELF,2018,800
+10110,arrowtooth flounder,EBS_SHELF,2019,708
+10110,arrowtooth flounder,GOA,2017,896
+10110,arrowtooth flounder,GOA,2019,896
+10112,Kamchatka flounder,AI,2016,449
+10112,Kamchatka flounder,AI,2018,628
+10112,Kamchatka flounder,EBS_SHELF,2017,460
+10112,Kamchatka flounder,EBS_SHELF,2018,483
+10112,Kamchatka flounder,EBS_SHELF,2019,448
+10112,Kamchatka flounder,EBS_SLOPE,2012,682
+10112,Kamchatka flounder,EBS_SLOPE,2016,694
+10115,Greenland turbot,EBS_SHELF,2017,217
+10115,Greenland turbot,EBS_SHELF,2018,191
+10115,Greenland turbot,EBS_SHELF,2019,110
+10115,Greenland turbot,EBS_SLOPE,2010,492
+10115,Greenland turbot,EBS_SLOPE,2012,450
+10115,Greenland turbot,EBS_SLOPE,2016,620
+10130,flathead sole,EBS_SHELF,2017,693
+10130,flathead sole,EBS_SHELF,2018,796
+10130,flathead sole,EBS_SHELF,2019,807
+10130,flathead sole,GOA,2017,213
+10130,flathead sole,GOA,2019,227
+10130,flathead sole,GOA,2021,234
+10200,rex sole,GOA,2017,558
+10200,rex sole,GOA,2019,679
+10210,yellowfin sole,EBS_SHELF,2017,886
+10210,yellowfin sole,EBS_SHELF,2018,720
+10210,yellowfin sole,EBS_SHELF,2019,832
+10261,northern rock sole,AI,2018,487
+10261,northern rock sole,EBS_SHELF,2017,502
+10261,northern rock sole,EBS_SHELF,2018,563
+10261,northern rock sole,EBS_SHELF,2019,544
+10261,northern rock sole,GOA,2017,591
+10262,southern rock sole,GOA,2017,718
+10262,southern rock sole,GOA,2019,673
+10285,Alaska plaice,EBS_SHELF,2017,552
+10285,Alaska plaice,EBS_SHELF,2018,463
+10285,Alaska plaice,EBS_SHELF,2019,517
+21720,Pacific cod,AI,2014,557
+21720,Pacific cod,AI,2016,681
+21720,Pacific cod,AI,2018,575
+21720,Pacific cod,EBS_SHELF,2017,1381
+21720,Pacific cod,EBS_SHELF,2018,1532
+21720,Pacific cod,EBS_SHELF,2019,1449
+21720,Pacific cod,GOA,2017,330
+21720,Pacific cod,GOA,2019,492
+21740,walleye pollock,AI,2014,717
+21740,walleye pollock,AI,2016,753
+21740,walleye pollock,AI,2018,904
+21740,walleye pollock,EBS_SHELF,2017,1623
+21740,walleye pollock,EBS_SHELF,2018,1734
+21740,walleye pollock,EBS_SHELF,2019,1537
+21740,walleye pollock,GOA,2017,895
+21740,walleye pollock,GOA,2019,987
+21740,walleye pollock,GOA,2021,669
+21921,Atka mackerel,AI,2014,478
+21921,Atka mackerel,AI,2016,300
+21921,Atka mackerel,AI,2018,1052
+30060,Pacific ocean perch,AI,2014,1078
+30060,Pacific ocean perch,AI,2016,1062
+30060,Pacific ocean perch,AI,2018,918
+30060,Pacific ocean perch,EBS_SLOPE,2010,415
+30060,Pacific ocean perch,EBS_SLOPE,2012,472
+30060,Pacific ocean perch,EBS_SLOPE,2016,400
+30060,Pacific ocean perch,GOA,2017,1071
+30060,Pacific ocean perch,GOA,2019,1225
+30420,northern rockfish,AI,2014,550
+30420,northern rockfish,AI,2016,576
+30420,northern rockfish,AI,2018,588
+30420,northern rockfish,GOA,2017,462
+30420,northern rockfish,GOA,2019,368
