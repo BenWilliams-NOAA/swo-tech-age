@@ -98,8 +98,8 @@ To facilitate age estimation, individual fish are processed at sea to record sex
 Survey age sampling protocols are specific by fish species and follow 1 of 2 paradigms: 1) a stratified collection that is distributed over both the spatial frame of the stratification scheme and the expected size range of a species; or 2) a small subsample (3-6 fish, depneding on species) collected randomly per trawl. 
 The protocol for some species has changed over the time series, which has followed a trend of transitioning from protocol 1) to protocol 2). 
 Age-length-keys (ALKs) generated from the age/length observations within a survey are then applied to estimated size compositions to provide an estimate of population age composition. 
-Currently, no species age compositions in the EBS are estimated using stratified ALKs, rather, all observations are pooled for the entirety of the survey area each survey year. 
-When there is no corresponding age observation for an observed length bin in a single survey, age-at-length observations for all years are pooled to assign ages to that length bin. 
+Currently, no species age composition are estimated using stratified ALKs, rather, all observations are pooled for the entirety of the survey area each survey year. 
+*When there is no corresponding age observation for an observed length bin in a single survey, age-at-length observations for all years are pooled to assign ages to that length bin.* This is different in AI/GOA, where the age obs are just dropped, remember to check back on 
   
 Species within each survey that are assessed with statistical catch-at-age models (Tier $\geq$ 3 stock assessments) were selected to be included in this analysis.
 
