@@ -71,9 +71,14 @@ Age-structured stock assessments (e.g., statistical catch-at-age models) conduct
 Compositional information on age and length comprise important data products used in these assessments, as they facilitate the tracking of year classes and size-structure over time, thus improving our understanding of the population dynamics [@QuinnDeriso1999]. 
 For stocks that depend on the periodic production of strong year-classes and subsequent recruitment into fisheries, sampling efforts for age and length data, scaling of these data to the population level (‘compositional expansion’), and the weight assigned to these data products in assessment models are highly important. 
 Therefore, care must be taken in the design of sampling efforts as well as the development of quantitative methods used in the expansion process and estimation of weights.
-
-[General para on age & length sampling in AFSC bottom trawl surveys - Jason]
-
+  
+The AFSC is responsible for the execution of several fisheries-independent bottom trawl surveys [@stauffer2004], spanning most of the continental shelf in Alaskan waters south of the Bering Strait, including the eastern Bering Sea (EBS), the Aleutian Islands (AI), and the Gulf of Alaska (GOA). 
+The quantitative time series of these surveys began in 1982 with the adoption of standardized trawling protocols [@lauth2019], but trawl observations were made as early as 1955 [@zimmerman2009]. 
+Within the quantitative time series, AFSC scientists have routinely collected observations of fish size and age composition, consisting of complete or random subsamples of fish within each trawl. 
+Large subsample observations (n > 200 per trawl sample) of sex-specific fish size are relatively inexpensive to obtain, however the indirect cost of workplace illness from repetitive length processing has been documented [@Hulson2022]. 
+There is a significant fiscal cost to processing age composition data, in that the extraction of otoliths from individual fish and the subsequent analysis of these otoliths for age determination is labor intensive. 
+To leverage the relative costs of size composition data to age composition data, estimated age-at-length is often applied to the estimated total population proportion for each length bin in a survey.
+  
 Since modern stock assessment models integrate multiple sources of data related to catch (e.g., fisheries catch-per-unit-effort, survey indices of abundance), life history (e.g., size-at-age, maturity-at-age, selectivity-at-age), and composition (e.g., length and age), it is imperative to consider the relative information content these data products provide to the model employed. 
 This is often handled through the use of data-weighting methods, checking the fit of compositional data in the model, and ensuring a good match between the variance of the data and the variance implied by the model [@Francis2017]. The weight assigned to annual compositions (the ‘input sample size’) can be calculated using myriad methods (e.g., fixed values, number of samples or tows sampled upon, bootstrapping compositions; @Stewart2014), as can the estimated sample size resulting from the fit of compositional data in the model (the ‘effective sample size’). 
 Often, input sample sizes are used in an initial fit of the model, and then a tuning (or ‘re-weighting’) process is used to ensure the compositional data are appropriately weighted. 
@@ -89,8 +94,13 @@ The main objectives of this technical memorandum are to (1) document methods use
 Data collection for each AFSC groundfish survey is described in respective NOAA Technical Memorandum [EBS: @Lauth2019; AI: @vonSzalay2017; GOA: @vonSzalay2018].
 Length frequency protocols and recent analysis of historical data are further described in @Hulson2022.
 
-[Some further detail on age sampling - Jason]
-
+To facilitate age estimation, individual fish are processed at sea to record sex, length and weight and to remove sagittal otoliths that are returned the AFSC Age and Growth laboratory for age determination. 
+Survey age sampling protocols are specific by fish species and follow 1 of 2 paradigms: 1) a stratified collection that is distributed over both the spatial frame of the stratification scheme and the expected size range of a species; or 2) a small subsample (3-6 fish, depneding on species) collected randomly per trawl. 
+The protocol for some species has changed over the time series, which has followed a trend of transitioning from protocol 1) to protocol 2). 
+Age-length-keys (ALKs) generated from the age/length observations within a survey are then applied to estimated size compositions to provide an estimate of population age composition. 
+Currently, no species age composition are estimated using stratified ALKs, rather, all observations are pooled for the entirety of the survey area each survey year. 
+*When there is no corresponding age observation for an observed length bin in a single survey, age-at-length observations for all years are pooled to assign ages to that length bin.* This is different in AI/GOA, where the age obs are just dropped, remember to check back on 
+  
 Species within each survey that are assessed with statistical catch-at-age models (Tier $\geq$ 3 stock assessments) were selected to be included in this analysis.
 
 [Report average age and length sample sizes referring to regional tables - Meaghan (EBS) and Pete (AI & GOA)]

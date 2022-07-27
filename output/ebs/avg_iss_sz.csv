@@ -1,0 +1,28 @@
+species_code,ess,species_name,avg_iss
+10110,ess_f,arrowtooth flounder,1421.1744472211485
+10112,ess_f,Kamchatka flounder,260.1664277811166
+10115,ess_f,Greenland turbot,115.86316867610114
+10130,ess_f,flathead sole,1224.1565863168528
+10210,ess_f,yellowfin sole,1848.4068508992975
+10261,ess_f,northern rock sole,1386.1643460496398
+10285,ess_f,Alaska plaice,1040.2772568580115
+21720,ess_f,Pacific cod,1109.6799904967677
+21740,ess_f,walleye pollock,1368.830838533169
+10110,ess_m,arrowtooth flounder,657.4076933364508
+10112,ess_m,Kamchatka flounder,252.04043548826914
+10115,ess_m,Greenland turbot,112.8914395727027
+10130,ess_m,flathead sole,1061.76848392903
+10210,ess_m,yellowfin sole,1233.1799903700235
+10261,ess_m,northern rock sole,1344.7371962345571
+10285,ess_m,Alaska plaice,979.7455453922868
+21720,ess_m,Pacific cod,1129.8012486052698
+21740,ess_m,walleye pollock,1296.3241511352228
+10110,ess_t,arrowtooth flounder,1796.8657915190772
+10112,ess_t,Kamchatka flounder,458.08511083788386
+10115,ess_t,Greenland turbot,239.73847597798556
+10130,ess_t,flathead sole,1760.2368080048577
+10210,ess_t,yellowfin sole,2137.0861398815523
+10261,ess_t,northern rock sole,1974.7078091429823
+10285,ess_t,Alaska plaice,1617.320033266046
+21720,ess_t,Pacific cod,1653.1578597364582
+21740,ess_t,walleye pollock,1590.0843641929707

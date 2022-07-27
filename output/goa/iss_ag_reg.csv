@@ -1,0 +1,253 @@
+year,species_code,ess,region,species_name,iss
+2005,10262,ess_f,E,southern rock sole,0
+2009,10262,ess_f,E,southern rock sole,0
+2013,10262,ess_f,E,southern rock sole,13.052216626316646
+2015,10262,ess_f,E,southern rock sole,0
+2017,10262,ess_f,E,southern rock sole,9.67061707952319
+2019,10262,ess_f,E,southern rock sole,0
+2005,10262,ess_m,E,southern rock sole,0
+2009,10262,ess_m,E,southern rock sole,22.680394087757275
+2013,10262,ess_m,E,southern rock sole,0
+2015,10262,ess_m,E,southern rock sole,0
+2017,10262,ess_m,E,southern rock sole,0
+2019,10262,ess_m,E,southern rock sole,0
+2005,10262,ess_t,E,southern rock sole,0
+2009,10262,ess_t,E,southern rock sole,0
+2013,10262,ess_t,E,southern rock sole,19.16043224787232
+2015,10262,ess_t,E,southern rock sole,0
+2017,10262,ess_t,E,southern rock sole,9.797906865827697
+2019,10262,ess_t,E,southern rock sole,11.703171451139813
+2011,10261,ess_f,E,northern rock sole,0
+2011,10261,ess_m,E,northern rock sole,18.082281608263767
+2011,10261,ess_t,E,northern rock sole,0
+1996,10261,ess_f,W,northern rock sole,0
+1996,10262,ess_f,W,southern rock sole,15.37654507283336
+1999,10261,ess_f,W,northern rock sole,30.781390258993515
+1999,10262,ess_f,W,southern rock sole,34.23960975092614
+2001,10261,ess_f,W,northern rock sole,50.074135980339456
+2001,10262,ess_f,W,southern rock sole,42.79139088106465
+2003,10261,ess_f,W,northern rock sole,42.48317887514368
+2003,10262,ess_f,W,southern rock sole,51.80867954397348
+2005,10261,ess_f,W,northern rock sole,29.99929259172134
+2005,10262,ess_f,W,southern rock sole,0
+2007,10261,ess_f,W,northern rock sole,32.88320018783594
+2007,10262,ess_f,W,southern rock sole,40.42206319115277
+2009,10261,ess_f,W,northern rock sole,39.11156760858683
+2009,10262,ess_f,W,southern rock sole,0
+2011,10261,ess_f,W,northern rock sole,0
+2011,10262,ess_f,W,southern rock sole,24.988887234317986
+2013,10261,ess_f,W,northern rock sole,23.058390782826766
+2013,10262,ess_f,W,southern rock sole,13.052216626316646
+2015,10261,ess_f,W,northern rock sole,32.788044145663775
+2015,10262,ess_f,W,southern rock sole,0
+2017,10261,ess_f,W,northern rock sole,37.42542639880954
+2017,10262,ess_f,W,southern rock sole,9.67061707952319
+2019,10262,ess_f,W,southern rock sole,0
+1996,10261,ess_m,W,northern rock sole,0
+1996,10262,ess_m,W,southern rock sole,0
+1999,10261,ess_m,W,northern rock sole,19.887676180874493
+1999,10262,ess_m,W,southern rock sole,0
+2001,10261,ess_m,W,northern rock sole,36.77960065632279
+2001,10262,ess_m,W,southern rock sole,25.76146380844594
+2003,10261,ess_m,W,northern rock sole,25.037728801956288
+2003,10262,ess_m,W,southern rock sole,35.10516979668344
+2005,10261,ess_m,W,northern rock sole,18.095094071703823
+2005,10262,ess_m,W,southern rock sole,0
+2007,10261,ess_m,W,northern rock sole,18.457825671882322
+2007,10262,ess_m,W,southern rock sole,27.14369985777989
+2009,10261,ess_m,W,northern rock sole,28.40706503196716
+2009,10262,ess_m,W,southern rock sole,22.680394087757275
+2011,10261,ess_m,W,northern rock sole,18.082281608263767
+2011,10262,ess_m,W,southern rock sole,14.47052003281497
+2013,10261,ess_m,W,northern rock sole,17.171555850212638
+2013,10262,ess_m,W,southern rock sole,0
+2015,10261,ess_m,W,northern rock sole,25.496711981829062
+2015,10262,ess_m,W,southern rock sole,0
+2017,10261,ess_m,W,northern rock sole,19.521919092160797
+2017,10262,ess_m,W,southern rock sole,0
+2019,10262,ess_m,W,southern rock sole,0
+1996,10261,ess_t,W,northern rock sole,0
+1996,10262,ess_t,W,southern rock sole,23.457622954361966
+1999,10261,ess_t,W,northern rock sole,43.75863740726868
+1999,10262,ess_t,W,southern rock sole,49.73185341784923
+2001,10261,ess_t,W,northern rock sole,76.1587979872768
+2001,10262,ess_t,W,southern rock sole,69.11683821894381
+2003,10261,ess_t,W,northern rock sole,58.85909671588173
+2003,10262,ess_t,W,southern rock sole,76.36647493414517
+2005,10261,ess_t,W,northern rock sole,44.82138937939818
+2005,10262,ess_t,W,southern rock sole,0
+2007,10261,ess_t,W,northern rock sole,45.189705918105034
+2007,10262,ess_t,W,southern rock sole,62.26433316794857
+2009,10261,ess_t,W,northern rock sole,52.75325157966561
+2009,10262,ess_t,W,southern rock sole,0
+2011,10261,ess_t,W,northern rock sole,0
+2011,10262,ess_t,W,southern rock sole,35.31946999454393
+2013,10261,ess_t,W,northern rock sole,34.26420676301951
+2013,10262,ess_t,W,southern rock sole,19.16043224787232
+2015,10261,ess_t,W,northern rock sole,45.9001017076984
+2015,10262,ess_t,W,southern rock sole,0
+2017,10261,ess_t,W,northern rock sole,51.67838428403003
+2017,10262,ess_t,W,southern rock sole,9.797906865827697
+2019,10262,ess_t,W,southern rock sole,11.703171451139813
+1996,10261,ess_f,C,northern rock sole,0
+1996,10262,ess_f,C,southern rock sole,15.37654507283336
+1999,10261,ess_f,C,northern rock sole,30.781390258993515
+1999,10262,ess_f,C,southern rock sole,34.23960975092614
+2001,10261,ess_f,C,northern rock sole,50.074135980339456
+2001,10262,ess_f,C,southern rock sole,42.79139088106465
+2003,10261,ess_f,C,northern rock sole,42.48317887514368
+2003,10262,ess_f,C,southern rock sole,51.80867954397348
+2005,10261,ess_f,C,northern rock sole,29.99929259172134
+2005,10262,ess_f,C,southern rock sole,0
+2007,10261,ess_f,C,northern rock sole,32.88320018783594
+2007,10262,ess_f,C,southern rock sole,40.42206319115277
+2009,10261,ess_f,C,northern rock sole,39.11156760858683
+2009,10262,ess_f,C,southern rock sole,0
+2011,10261,ess_f,C,northern rock sole,0
+2011,10262,ess_f,C,southern rock sole,24.988887234317986
+2013,10261,ess_f,C,northern rock sole,23.058390782826766
+2013,10262,ess_f,C,southern rock sole,13.052216626316646
+2015,10261,ess_f,C,northern rock sole,32.788044145663775
+2015,10262,ess_f,C,southern rock sole,0
+2017,10261,ess_f,C,northern rock sole,37.42542639880954
+2017,10262,ess_f,C,southern rock sole,9.67061707952319
+2019,10262,ess_f,C,southern rock sole,0
+1996,10261,ess_m,C,northern rock sole,0
+1996,10262,ess_m,C,southern rock sole,0
+1999,10261,ess_m,C,northern rock sole,19.887676180874493
+1999,10262,ess_m,C,southern rock sole,0
+2001,10261,ess_m,C,northern rock sole,36.77960065632279
+2001,10262,ess_m,C,southern rock sole,25.76146380844594
+2003,10261,ess_m,C,northern rock sole,25.037728801956288
+2003,10262,ess_m,C,southern rock sole,35.10516979668344
+2005,10261,ess_m,C,northern rock sole,18.095094071703823
+2005,10262,ess_m,C,southern rock sole,0
+2007,10261,ess_m,C,northern rock sole,18.457825671882322
+2007,10262,ess_m,C,southern rock sole,27.14369985777989
+2009,10261,ess_m,C,northern rock sole,28.40706503196716
+2009,10262,ess_m,C,southern rock sole,22.680394087757275
+2011,10261,ess_m,C,northern rock sole,18.082281608263767
+2011,10262,ess_m,C,southern rock sole,14.47052003281497
+2013,10261,ess_m,C,northern rock sole,17.171555850212638
+2013,10262,ess_m,C,southern rock sole,0
+2015,10261,ess_m,C,northern rock sole,25.496711981829062
+2015,10262,ess_m,C,southern rock sole,0
+2017,10261,ess_m,C,northern rock sole,19.521919092160797
+2017,10262,ess_m,C,southern rock sole,0
+2019,10262,ess_m,C,southern rock sole,0
+1996,10261,ess_t,C,northern rock sole,0
+1996,10262,ess_t,C,southern rock sole,23.457622954361966
+1999,10261,ess_t,C,northern rock sole,43.75863740726868
+1999,10262,ess_t,C,southern rock sole,49.73185341784923
+2001,10261,ess_t,C,northern rock sole,76.1587979872768
+2001,10262,ess_t,C,southern rock sole,69.11683821894381
+2003,10261,ess_t,C,northern rock sole,58.85909671588173
+2003,10262,ess_t,C,southern rock sole,76.36647493414517
+2005,10261,ess_t,C,northern rock sole,44.82138937939818
+2005,10262,ess_t,C,southern rock sole,0
+2007,10261,ess_t,C,northern rock sole,45.189705918105034
+2007,10262,ess_t,C,southern rock sole,62.26433316794857
+2009,10261,ess_t,C,northern rock sole,52.75325157966561
+2009,10262,ess_t,C,southern rock sole,0
+2011,10261,ess_t,C,northern rock sole,0
+2011,10262,ess_t,C,southern rock sole,35.31946999454393
+2013,10261,ess_t,C,northern rock sole,34.26420676301951
+2013,10262,ess_t,C,southern rock sole,19.16043224787232
+2015,10261,ess_t,C,northern rock sole,45.9001017076984
+2015,10262,ess_t,C,southern rock sole,0
+2017,10261,ess_t,C,northern rock sole,51.67838428403003
+2017,10262,ess_t,C,southern rock sole,9.797906865827697
+2019,10262,ess_t,C,southern rock sole,11.703171451139813
+1984,10200,ess_f,E,rex sole,32.03703101298769
+1987,10200,ess_f,E,rex sole,29.876084428197196
+1990,10200,ess_f,E,rex sole,26.39980115938169
+1996,10200,ess_f,E,rex sole,14.378598789956865
+1999,10200,ess_f,E,rex sole,0
+2003,10200,ess_f,E,rex sole,32.68247133737459
+2005,10200,ess_f,E,rex sole,32.08025402223073
+2007,10200,ess_f,E,rex sole,0
+2009,10200,ess_f,E,rex sole,36.819226380232855
+2011,10200,ess_f,E,rex sole,31.174734698228235
+2013,10200,ess_f,E,rex sole,33.8648014294905
+2015,10200,ess_f,E,rex sole,0
+2017,10200,ess_f,E,rex sole,36.77095364101778
+2019,10200,ess_f,E,rex sole,54.84673197079158
+1984,10200,ess_m,E,rex sole,13.962921279058456
+1987,10200,ess_m,E,rex sole,9.000201045950412
+1990,10200,ess_m,E,rex sole,44.0526948977371
+1996,10200,ess_m,E,rex sole,11.222717901332652
+1999,10200,ess_m,E,rex sole,0
+2003,10200,ess_m,E,rex sole,36.36804879170686
+2005,10200,ess_m,E,rex sole,28.022143411516527
+2007,10200,ess_m,E,rex sole,0
+2009,10200,ess_m,E,rex sole,27.910995396381075
+2011,10200,ess_m,E,rex sole,28.029962738541627
+2013,10200,ess_m,E,rex sole,26.71933767328777
+2015,10200,ess_m,E,rex sole,0
+2017,10200,ess_m,E,rex sole,40.780047813031985
+2019,10200,ess_m,E,rex sole,47.76089863274402
+1984,10200,ess_t,E,rex sole,39.129705947046006
+1987,10200,ess_t,E,rex sole,33.33013504124399
+1990,10200,ess_t,E,rex sole,31.92110081949265
+1996,10200,ess_t,E,rex sole,32.11268741861328
+1999,10200,ess_t,E,rex sole,0
+2003,10200,ess_t,E,rex sole,60.676560391528845
+2005,10200,ess_t,E,rex sole,56.604811738145294
+2007,10200,ess_t,E,rex sole,0
+2009,10200,ess_t,E,rex sole,58.272158138261226
+2011,10200,ess_t,E,rex sole,50.143966368557564
+2013,10200,ess_t,E,rex sole,51.44284691858332
+2015,10200,ess_t,E,rex sole,20.33856319788136
+2017,10200,ess_t,E,rex sole,70.62946429754878
+2019,10200,ess_t,E,rex sole,95.95780484048584
+1993,10200,ess_f,E,rex sole,63.44456676419752
+1993,10200,ess_m,E,rex sole,50.65861785392046
+1993,10200,ess_t,E,rex sole,98.53078239845257
+1984,10200,ess_f,WC,rex sole,32.03703101298769
+1987,10200,ess_f,WC,rex sole,29.876084428197196
+1990,10200,ess_f,WC,rex sole,26.39980115938169
+1993,10200,ess_f,WC,rex sole,63.44456676419752
+1996,10200,ess_f,WC,rex sole,14.378598789956865
+1999,10200,ess_f,WC,rex sole,0
+2001,10200,ess_f,WC,rex sole,231.93180274190274
+2003,10200,ess_f,WC,rex sole,32.68247133737459
+2005,10200,ess_f,WC,rex sole,32.08025402223073
+2007,10200,ess_f,WC,rex sole,0
+2009,10200,ess_f,WC,rex sole,36.819226380232855
+2011,10200,ess_f,WC,rex sole,31.174734698228235
+2013,10200,ess_f,WC,rex sole,33.8648014294905
+2015,10200,ess_f,WC,rex sole,0
+2017,10200,ess_f,WC,rex sole,36.77095364101778
+2019,10200,ess_f,WC,rex sole,54.84673197079158
+1984,10200,ess_m,WC,rex sole,13.962921279058456
+1987,10200,ess_m,WC,rex sole,9.000201045950412
+1990,10200,ess_m,WC,rex sole,44.0526948977371
+1993,10200,ess_m,WC,rex sole,50.65861785392046
+1996,10200,ess_m,WC,rex sole,11.222717901332652
+1999,10200,ess_m,WC,rex sole,0
+2001,10200,ess_m,WC,rex sole,153.3499579225621
+2003,10200,ess_m,WC,rex sole,36.36804879170686
+2005,10200,ess_m,WC,rex sole,28.022143411516527
+2007,10200,ess_m,WC,rex sole,0
+2009,10200,ess_m,WC,rex sole,27.910995396381075
+2011,10200,ess_m,WC,rex sole,28.029962738541627
+2013,10200,ess_m,WC,rex sole,26.71933767328777
+2015,10200,ess_m,WC,rex sole,0
+2017,10200,ess_m,WC,rex sole,40.780047813031985
+2019,10200,ess_m,WC,rex sole,47.76089863274402
+1984,10200,ess_t,WC,rex sole,39.129705947046006
+1987,10200,ess_t,WC,rex sole,33.33013504124399
+1990,10200,ess_t,WC,rex sole,31.92110081949265
+1993,10200,ess_t,WC,rex sole,98.53078239845257
+1996,10200,ess_t,WC,rex sole,32.11268741861328
+1999,10200,ess_t,WC,rex sole,0
+2001,10200,ess_t,WC,rex sole,306.0244675818101
+2003,10200,ess_t,WC,rex sole,60.676560391528845
+2005,10200,ess_t,WC,rex sole,56.604811738145294
+2007,10200,ess_t,WC,rex sole,0
+2009,10200,ess_t,WC,rex sole,58.272158138261226
+2011,10200,ess_t,WC,rex sole,50.143966368557564
+2013,10200,ess_t,WC,rex sole,51.44284691858332
+2015,10200,ess_t,WC,rex sole,20.33856319788136
+2017,10200,ess_t,WC,rex sole,70.62946429754878
+2019,10200,ess_t,WC,rex sole,95.95780484048584

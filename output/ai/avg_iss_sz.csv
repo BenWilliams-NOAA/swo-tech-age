@@ -1,0 +1,25 @@
+species_code,ess,species_name,avg_iss
+10110,ess_f,arrowtooth flounder,670.0563053704828
+10112,ess_f,Kamchatka flounder,204.69112595137554
+21720,ess_f,Pacific cod,442.46201967592526
+21740,ess_f,walleye pollock,297.5271759933548
+21921,ess_f,Atka mackerel,164.33267557073458
+30060,ess_f,Pacific ocean perch,383.7886185465685
+30420,ess_f,northern rockfish,180.2716152196459
+10110,ess_m,arrowtooth flounder,350.063331856257
+10112,ess_m,Kamchatka flounder,187.8976008663068
+21720,ess_m,Pacific cod,455.24469720613735
+21740,ess_m,walleye pollock,220.88496890211343
+21921,ess_m,Atka mackerel,147.07832978099245
+30060,ess_m,Pacific ocean perch,466.0948949498355
+30420,ess_m,northern rockfish,155.70591588069016
+10110,ess_t,arrowtooth flounder,787.1190190143465
+10112,ess_t,Kamchatka flounder,294.66577778074145
+21720,ess_t,Pacific cod,696.9875789677689
+21740,ess_t,walleye pollock,286.669448115509
+21921,ess_t,Atka mackerel,192.04382596552549
+30060,ess_t,Pacific ocean perch,614.273661862658
+30420,ess_t,northern rockfish,217.40560032900893
+30050,ess_f,REBS rockfish complex,144.10153115138618
+30050,ess_m,REBS rockfish complex,148.33384934755605
+30050,ess_t,REBS rockfish complex,246.65085372324265

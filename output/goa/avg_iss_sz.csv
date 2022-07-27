@@ -1,0 +1,31 @@
+species_code,ess,species_name,avg_iss
+10110,ess_f,arrowtooth flounder,3642.6480355876333
+10130,ess_f,flathead sole,1480.7798702976486
+10180,ess_f,Dover sole,606.50321387162
+20510,ess_f,sablefish,468.5655538586057
+21720,ess_f,Pacific cod,582.2062555757635
+21740,ess_f,walleye pollock,467.6426872345903
+30060,ess_f,Pacific ocean perch,319.9108111638711
+30420,ess_f,northern rockfish,126.84711573697167
+10110,ess_m,arrowtooth flounder,1860.6462235834908
+10130,ess_m,flathead sole,1155.0004417791367
+10180,ess_m,Dover sole,631.2756753951219
+20510,ess_m,sablefish,618.3600453008476
+21720,ess_m,Pacific cod,560.0090781187475
+21740,ess_m,walleye pollock,363.3227680038338
+30060,ess_m,Pacific ocean perch,321.75674233081605
+30420,ess_m,northern rockfish,145.22429128867986
+10110,ess_t,arrowtooth flounder,4576.785100414159
+10130,ess_t,flathead sole,2231.416282092057
+10180,ess_t,Dover sole,1105.1886795213054
+20510,ess_t,sablefish,858.0876096973284
+21720,ess_t,Pacific cod,780.3300340736329
+21740,ess_t,walleye pollock,431.18630125200946
+30060,ess_t,Pacific ocean perch,415.5423915188051
+30420,ess_t,northern rockfish,215.77574856807408
+30050,ess_f,REBS rockfish complex,145.16260390336083
+30050,ess_m,REBS rockfish complex,118.33663537877547
+30050,ess_t,REBS rockfish complex,194.15066976849656
+30150,ess_f,Dusky rockfish,146.9608553884755
+30150,ess_m,Dusky rockfish,119.01314542362728
+30150,ess_t,Dusky rockfish,196.50469236770522

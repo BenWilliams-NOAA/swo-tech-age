@@ -1,0 +1,25 @@
+species_code,ess,region,species_name,avg_iss
+10262,ess_f,E,southern rock sole,3.787138950973306
+10262,ess_m,E,southern rock sole,3.780065681292879
+10262,ess_t,E,southern rock sole,6.776918427473305
+10261,ess_f,E,northern rock sole,0
+10261,ess_m,E,northern rock sole,18.082281608263767
+10261,ess_t,E,northern rock sole,0
+10261,ess_f,W,northern rock sole,28.96405698453826
+10262,ess_f,W,southern rock sole,19.362500781675685
+10261,ess_m,W,northern rock sole,20.63067808610665
+10262,ess_m,W,southern rock sole,10.430103965290126
+10261,ess_t,W,northern rock sole,41.21668834021309
+10262,ess_t,W,southern rock sole,29.74317527105271
+10261,ess_f,C,northern rock sole,28.96405698453826
+10262,ess_f,C,southern rock sole,19.362500781675685
+10261,ess_m,C,northern rock sole,20.63067808610665
+10262,ess_m,C,southern rock sole,10.430103965290126
+10261,ess_t,C,northern rock sole,41.21668834021309
+10262,ess_t,C,southern rock sole,29.74317527105271
+10200,ess_f,E,rex sole,28.29168370893915
+10200,ess_m,E,rex sole,24.299239162347263
+10200,ess_t,E,rex sole,46.60603916772271
+10200,ess_f,WC,rex sole,41.019191148499374
+10200,ess_m,WC,rex sole,32.36490908486069
+10200,ess_t,WC,rex sole,62.81969094360318

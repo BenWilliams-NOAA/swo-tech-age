@@ -1,0 +1,1579 @@
+year,species_code,species_name,surv,type,hls,nss
+1980,10110,arrowtooth flounder,AI,female,1,465
+1980,21720,Pacific cod,AI,female,5,306
+1980,21740,walleye pollock,AI,female,9,2890
+1980,21921,Atka mackerel,AI,female,6,499
+1980,30060,Pacific ocean perch,AI,female,12,435
+1980,30420,northern rockfish,AI,female,4,262
+1982,10110,arrowtooth flounder,EBS_SHELF,female,9,132
+1982,10115,Greenland turbot,EBS_SHELF,female,11,151
+1982,10130,flathead sole,EBS_SHELF,female,14,207
+1982,10210,yellowfin sole,EBS_SHELF,female,33,419
+1982,10285,Alaska plaice,EBS_SHELF,female,29,198
+1982,21740,walleye pollock,EBS_SHELF,female,79,804
+1983,10110,arrowtooth flounder,AI,female,1,133
+1983,10210,yellowfin sole,EBS_SHELF,female,36,409
+1983,21740,walleye pollock,AI,female,48,3501
+1983,21740,walleye pollock,EBS_SHELF,female,85,990
+1983,21921,Atka mackerel,AI,female,19,287
+1983,30060,Pacific ocean perch,AI,female,42,1210
+1983,30420,northern rockfish,AI,female,11,301
+1984,10110,arrowtooth flounder,GOA,female,1,717
+1984,10130,flathead sole,GOA,female,1,369
+1984,10180,Dover sole,GOA,female,13,209
+1984,10200,rex sole,GOA,female,5,155
+1984,10210,yellowfin sole,EBS_SHELF,female,49,467
+1984,20510,sablefish,GOA,female,23,352
+1984,21720,Pacific cod,EBS_SHELF,female,18,129
+1984,21740,walleye pollock,EBS_SHELF,female,110,943
+1984,21740,walleye pollock,GOA,female,71,1394
+1984,30050,REBS rockfish complex,GOA,female,16,174
+1984,30060,Pacific ocean perch,GOA,female,34,674
+1984,30150,Dusky rockfish,GOA,female,4,86
+1984,30420,northern rockfish,GOA,female,6,181
+1985,10130,flathead sole,EBS_SHELF,female,23,268
+1985,10210,yellowfin sole,EBS_SHELF,female,35,464
+1985,21740,walleye pollock,EBS_SHELF,female,76,1002
+1986,10210,yellowfin sole,EBS_SHELF,female,32,418
+1986,21740,walleye pollock,AI,female,63,1170
+1986,21740,walleye pollock,EBS_SHELF,female,44,702
+1986,21921,Atka mackerel,AI,female,23,355
+1986,30050,REBS rockfish complex,AI,female,13,203
+1986,30060,Pacific ocean perch,AI,female,53,931
+1986,30420,northern rockfish,AI,female,18,286
+1987,10110,arrowtooth flounder,GOA,female,50,819
+1987,10130,flathead sole,GOA,female,25,477
+1987,10180,Dover sole,GOA,female,16,212
+1987,10200,rex sole,GOA,female,5,102
+1987,10210,yellowfin sole,EBS_SHELF,female,16,442
+1987,20510,sablefish,GOA,female,4,50
+1987,21720,Pacific cod,GOA,female,3,69
+1987,21740,walleye pollock,EBS_SHELF,female,35,849
+1987,21740,walleye pollock,GOA,female,39,675
+1987,30050,REBS rockfish complex,GOA,female,13,162
+1987,30060,Pacific ocean perch,GOA,female,41,869
+1987,30150,Dusky rockfish,GOA,female,12,233
+1987,30420,northern rockfish,GOA,female,17,262
+1988,10210,yellowfin sole,EBS_SHELF,female,17,369
+1988,10285,Alaska plaice,EBS_SHELF,female,12,182
+1988,21720,Pacific cod,EBS_SHELF,female,27,323
+1988,21740,walleye pollock,EBS_SHELF,female,26,587
+1989,10210,yellowfin sole,EBS_SHELF,female,23,422
+1989,21720,Pacific cod,EBS_SHELF,female,40,367
+1989,21740,walleye pollock,EBS_SHELF,female,36,608
+1990,10110,arrowtooth flounder,GOA,female,14,216
+1990,10130,flathead sole,GOA,female,18,138
+1990,10180,Dover sole,GOA,female,18,123
+1990,10200,rex sole,GOA,female,26,156
+1990,10210,yellowfin sole,EBS_SHELF,female,27,435
+1990,21720,Pacific cod,EBS_SHELF,female,69,393
+1990,21720,Pacific cod,GOA,female,28,273
+1990,21740,walleye pollock,EBS_SHELF,female,45,623
+1990,21740,walleye pollock,GOA,female,35,560
+1990,30050,REBS rockfish complex,GOA,female,22,114
+1990,30060,Pacific ocean perch,GOA,female,52,890
+1990,30150,Dusky rockfish,GOA,female,9,77
+1990,30420,northern rockfish,GOA,female,13,237
+1991,10210,yellowfin sole,EBS_SHELF,female,24,445
+1991,21720,Pacific cod,AI,female,31,447
+1991,21720,Pacific cod,EBS_SHELF,female,41,351
+1991,21740,walleye pollock,AI,female,20,357
+1991,21740,walleye pollock,EBS_SHELF,female,40,494
+1991,21921,Atka mackerel,AI,female,11,223
+1991,30050,REBS rockfish complex,AI,female,27,251
+1991,30060,Pacific ocean perch,AI,female,26,477
+1991,30420,northern rockfish,AI,female,14,263
+1992,10130,flathead sole,EBS_SHELF,female,10,228
+1992,10210,yellowfin sole,EBS_SHELF,female,16,358
+1992,10285,Alaska plaice,EBS_SHELF,female,10,184
+1992,21720,Pacific cod,EBS_SHELF,female,25,349
+1992,21740,walleye pollock,EBS_SHELF,female,30,638
+1993,10110,arrowtooth flounder,EBS_SHELF,female,5,138
+1993,10110,arrowtooth flounder,GOA,female,68,647
+1993,10130,flathead sole,EBS_SHELF,female,5,78
+1993,10130,flathead sole,GOA,female,30,179
+1993,10180,Dover sole,GOA,female,31,147
+1993,10200,rex sole,GOA,female,26,193
+1993,10210,yellowfin sole,EBS_SHELF,female,20,357
+1993,10285,Alaska plaice,EBS_SHELF,female,4,100
+1993,21720,Pacific cod,EBS_SHELF,female,29,316
+1993,21720,Pacific cod,GOA,female,65,460
+1993,21740,walleye pollock,EBS_SHELF,female,33,704
+1993,21740,walleye pollock,GOA,female,60,1013
+1993,30050,REBS rockfish complex,GOA,female,60,434
+1993,30060,Pacific ocean perch,GOA,female,47,773
+1993,30150,Dusky rockfish,GOA,female,44,328
+1993,30420,northern rockfish,GOA,female,18,181
+1994,10110,arrowtooth flounder,EBS_SHELF,female,3,85
+1994,10130,flathead sole,EBS_SHELF,female,7,204
+1994,10210,yellowfin sole,EBS_SHELF,female,14,291
+1994,10285,Alaska plaice,EBS_SHELF,female,6,124
+1994,21720,Pacific cod,AI,female,63,624
+1994,21720,Pacific cod,EBS_SHELF,female,22,377
+1994,21740,walleye pollock,AI,female,38,535
+1994,21740,walleye pollock,EBS_SHELF,female,22,603
+1994,21921,Atka mackerel,AI,female,51,410
+1994,30050,REBS rockfish complex,AI,female,56,242
+1994,30060,Pacific ocean perch,AI,female,45,422
+1994,30420,northern rockfish,AI,female,17,214
+1995,10130,flathead sole,EBS_SHELF,female,10,216
+1995,10210,yellowfin sole,EBS_SHELF,female,20,375
+1995,10285,Alaska plaice,EBS_SHELF,female,11,173
+1995,21720,Pacific cod,EBS_SHELF,female,27,314
+1995,21740,walleye pollock,EBS_SHELF,female,24,581
+1996,10110,arrowtooth flounder,EBS_SHELF,female,4,137
+1996,10110,arrowtooth flounder,GOA,female,60,443
+1996,10130,flathead sole,GOA,female,49,295
+1996,10180,Dover sole,GOA,female,55,213
+1996,10200,rex sole,GOA,female,61,218
+1996,10210,yellowfin sole,EBS_SHELF,female,15,383
+1996,10261,northern rock sole,EBS_SHELF,female,13,281
+1996,10261,northern rock sole,GOA,female,18,142
+1996,10262,southern rock sole,GOA,female,29,181
+1996,20510,sablefish,GOA,female,88,372
+1996,21720,Pacific cod,EBS_SHELF,female,21,347
+1996,21720,Pacific cod,GOA,female,77,385
+1996,21740,walleye pollock,EBS_SHELF,female,28,711
+1996,21740,walleye pollock,GOA,female,66,560
+1996,30050,REBS rockfish complex,GOA,female,37,377
+1996,30060,Pacific ocean perch,GOA,female,17,377
+1996,30150,Dusky rockfish,GOA,female,36,332
+1996,30420,northern rockfish,GOA,female,15,214
+1997,10210,yellowfin sole,EBS_SHELF,female,11,231
+1997,10261,northern rock sole,EBS_SHELF,female,10,207
+1997,21720,Pacific cod,AI,female,71,423
+1997,21720,Pacific cod,EBS_SHELF,female,36,347
+1997,21740,walleye pollock,AI,female,79,591
+1997,21740,walleye pollock,EBS_SHELF,female,34,579
+1997,21921,Atka mackerel,AI,female,41,223
+1997,30050,REBS rockfish complex,AI,female,73,279
+1997,30060,Pacific ocean perch,AI,female,114,612
+1997,30420,northern rockfish,AI,female,55,329
+1998,10110,arrowtooth flounder,EBS_SHELF,female,8,200
+1998,10115,Greenland turbot,EBS_SHELF,female,20,58
+1998,10210,yellowfin sole,EBS_SHELF,female,15,326
+1998,10261,northern rock sole,EBS_SHELF,female,20,233
+1998,10285,Alaska plaice,EBS_SHELF,female,13,236
+1998,21720,Pacific cod,EBS_SHELF,female,30,325
+1998,21740,walleye pollock,EBS_SHELF,female,30,602
+1999,10110,arrowtooth flounder,GOA,female,77,570
+1999,10130,flathead sole,EBS_SHELF,female,18,226
+1999,10130,flathead sole,GOA,female,43,316
+1999,10180,Dover sole,GOA,female,54,181
+1999,10200,rex sole,GOA,female,52,218
+1999,10210,yellowfin sole,EBS_SHELF,female,30,417
+1999,10261,northern rock sole,EBS_SHELF,female,26,298
+1999,10261,northern rock sole,GOA,female,29,227
+1999,10262,southern rock sole,GOA,female,27,223
+1999,20510,sablefish,GOA,female,99,320
+1999,21720,Pacific cod,EBS_SHELF,female,44,446
+1999,21720,Pacific cod,GOA,female,61,376
+1999,21740,walleye pollock,EBS_SHELF,female,50,656
+1999,21740,walleye pollock,GOA,female,105,613
+1999,30050,REBS rockfish complex,GOA,female,63,328
+1999,30060,Pacific ocean perch,GOA,female,64,462
+1999,30150,Dusky rockfish,GOA,female,22,110
+1999,30420,northern rockfish,GOA,female,26,160
+2000,10130,flathead sole,EBS_SHELF,female,19,248
+2000,10210,yellowfin sole,EBS_SHELF,female,35,504
+2000,10261,northern rock sole,EBS_SHELF,female,23,246
+2000,10285,Alaska plaice,EBS_SHELF,female,16,231
+2000,21720,Pacific cod,AI,female,73,418
+2000,21720,Pacific cod,EBS_SHELF,female,38,436
+2000,21740,walleye pollock,AI,female,82,456
+2000,21740,walleye pollock,EBS_SHELF,female,51,805
+2000,21921,Atka mackerel,AI,female,69,418
+2000,30050,REBS rockfish complex,AI,female,69,238
+2000,30060,Pacific ocean perch,AI,female,128,648
+2000,30420,northern rockfish,AI,female,73,377
+2001,10110,arrowtooth flounder,GOA,female,123,876
+2001,10130,flathead sole,EBS_SHELF,female,20,282
+2001,10130,flathead sole,GOA,female,75,460
+2001,10180,Dover sole,GOA,female,104,299
+2001,10200,rex sole,GOA,female,106,386
+2001,10210,yellowfin sole,EBS_SHELF,female,33,429
+2001,10261,northern rock sole,EBS_SHELF,female,25,246
+2001,10261,northern rock sole,GOA,female,89,352
+2001,10262,southern rock sole,GOA,female,94,434
+2001,10285,Alaska plaice,EBS_SHELF,female,16,209
+2001,21720,Pacific cod,EBS_SHELF,female,51,465
+2001,21720,Pacific cod,GOA,female,126,391
+2001,21740,walleye pollock,EBS_SHELF,female,60,836
+2001,21740,walleye pollock,GOA,female,125,519
+2001,30150,Dusky rockfish,GOA,female,58,398
+2001,30420,northern rockfish,GOA,female,74,275
+2002,10110,arrowtooth flounder,EBS_SLOPE,female,51,360
+2002,10112,Kamchatka flounder,EBS_SLOPE,female,87,347
+2002,10115,Greenland turbot,EBS_SLOPE,female,77,223
+2002,10130,flathead sole,EBS_SHELF,female,19,265
+2002,10210,yellowfin sole,EBS_SHELF,female,35,440
+2002,10261,northern rock sole,EBS_SHELF,female,34,286
+2002,10285,Alaska plaice,EBS_SHELF,female,27,270
+2002,21720,Pacific cod,AI,female,132,632
+2002,21720,Pacific cod,EBS_SHELF,female,50,483
+2002,21740,walleye pollock,AI,female,141,746
+2002,21740,walleye pollock,EBS_SHELF,female,64,838
+2002,21921,Atka mackerel,AI,female,97,397
+2002,30050,REBS rockfish complex,AI,female,59,230
+2002,30060,Pacific ocean perch,AI,female,95,178
+2002,30060,Pacific ocean perch,EBS_SLOPE,female,26,164
+2002,30420,northern rockfish,AI,female,58,140
+2003,10110,arrowtooth flounder,GOA,female,104,640
+2003,10115,Greenland turbot,EBS_SHELF,female,57,214
+2003,10130,flathead sole,EBS_SHELF,female,32,158
+2003,10130,flathead sole,GOA,female,71,249
+2003,10180,Dover sole,GOA,female,86,266
+2003,10200,rex sole,GOA,female,82,328
+2003,10210,yellowfin sole,EBS_SHELF,female,37,444
+2003,10261,northern rock sole,EBS_SHELF,female,30,281
+2003,10261,northern rock sole,GOA,female,60,302
+2003,10262,southern rock sole,GOA,female,63,354
+2003,21720,Pacific cod,EBS_SHELF,female,91,676
+2003,21720,Pacific cod,GOA,female,101,375
+2003,21740,walleye pollock,EBS_SHELF,female,82,829
+2003,21740,walleye pollock,GOA,female,140,589
+2003,30050,REBS rockfish complex,GOA,female,79,241
+2003,30060,Pacific ocean perch,GOA,female,91,499
+2003,30150,Dusky rockfish,GOA,female,17,116
+2003,30420,northern rockfish,GOA,female,19,135
+2004,10110,arrowtooth flounder,EBS_SHELF,female,22,422
+2004,10115,Greenland turbot,EBS_SHELF,female,38,135
+2004,10115,Greenland turbot,EBS_SLOPE,female,92,243
+2004,10130,flathead sole,EBS_SHELF,female,16,265
+2004,10210,yellowfin sole,EBS_SHELF,female,29,451
+2004,10261,northern rock sole,EBS_SHELF,female,13,227
+2004,21720,Pacific cod,AI,female,82,401
+2004,21720,Pacific cod,EBS_SHELF,female,53,487
+2004,21740,walleye pollock,AI,female,48,344
+2004,21740,walleye pollock,EBS_SHELF,female,59,816
+2004,21921,Atka mackerel,AI,female,68,313
+2004,30050,REBS rockfish complex,AI,female,79,244
+2004,30060,Pacific ocean perch,AI,female,80,559
+2004,30060,Pacific ocean perch,EBS_SLOPE,female,32,220
+2004,30420,northern rockfish,AI,female,59,288
+2005,10110,arrowtooth flounder,GOA,female,124,445
+2005,10115,Greenland turbot,EBS_SHELF,female,44,149
+2005,10130,flathead sole,EBS_SHELF,female,18,287
+2005,10130,flathead sole,GOA,female,67,296
+2005,10180,Dover sole,GOA,female,86,276
+2005,10200,rex sole,GOA,female,86,310
+2005,10210,yellowfin sole,EBS_SHELF,female,35,395
+2005,10261,northern rock sole,EBS_SHELF,female,20,247
+2005,10261,northern rock sole,GOA,female,49,219
+2005,10262,southern rock sole,GOA,female,55,258
+2005,10285,Alaska plaice,EBS_SHELF,female,20,199
+2005,21720,Pacific cod,EBS_SHELF,female,77,665
+2005,21720,Pacific cod,GOA,female,68,280
+2005,21740,walleye pollock,EBS_SHELF,female,68,805
+2005,21740,walleye pollock,GOA,female,168,868
+2005,30050,REBS rockfish complex,GOA,female,75,204
+2005,30060,Pacific ocean perch,GOA,female,96,512
+2005,30150,Dusky rockfish,GOA,female,58,242
+2005,30420,northern rockfish,GOA,female,62,226
+2006,10115,Greenland turbot,EBS_SHELF,female,38,133
+2006,10130,flathead sole,EBS_SHELF,female,26,277
+2006,10210,yellowfin sole,EBS_SHELF,female,35,245
+2006,10261,northern rock sole,EBS_SHELF,female,39,284
+2006,10285,Alaska plaice,EBS_SHELF,female,22,271
+2006,21720,Pacific cod,AI,female,99,364
+2006,21720,Pacific cod,EBS_SHELF,female,106,656
+2006,21740,walleye pollock,AI,female,53,294
+2006,21740,walleye pollock,EBS_SHELF,female,221,673
+2006,21921,Atka mackerel,AI,female,64,246
+2006,30050,REBS rockfish complex,AI,female,65,232
+2006,30060,Pacific ocean perch,AI,female,84,240
+2006,30420,northern rockfish,AI,female,50,304
+2007,10110,arrowtooth flounder,GOA,female,162,488
+2007,10115,Greenland turbot,EBS_SHELF,female,48,145
+2007,10130,flathead sole,EBS_SHELF,female,35,314
+2007,10130,flathead sole,GOA,female,67,410
+2007,10180,Dover sole,GOA,female,52,188
+2007,10200,rex sole,GOA,female,48,220
+2007,10210,yellowfin sole,EBS_SHELF,female,56,444
+2007,10261,northern rock sole,EBS_SHELF,female,40,263
+2007,10261,northern rock sole,GOA,female,68,261
+2007,10262,southern rock sole,GOA,female,70,275
+2007,10285,Alaska plaice,EBS_SHELF,female,40,206
+2007,21720,Pacific cod,EBS_SHELF,female,137,692
+2007,21720,Pacific cod,GOA,female,50,238
+2007,21740,walleye pollock,EBS_SHELF,female,182,494
+2007,21740,walleye pollock,GOA,female,128,674
+2007,30050,REBS rockfish complex,GOA,female,54,233
+2007,30060,Pacific ocean perch,GOA,female,80,617
+2007,30150,Dusky rockfish,GOA,female,75,281
+2007,30420,northern rockfish,GOA,female,75,335
+2008,10115,Greenland turbot,EBS_SHELF,female,43,100
+2008,10115,Greenland turbot,EBS_SLOPE,female,74,221
+2008,10130,flathead sole,EBS_SHELF,female,45,328
+2008,10210,yellowfin sole,EBS_SHELF,female,56,459
+2008,10261,northern rock sole,EBS_SHELF,female,20,212
+2008,10285,Alaska plaice,EBS_SHELF,female,32,209
+2008,21720,Pacific cod,EBS_SHELF,female,105,624
+2008,21740,walleye pollock,EBS_SHELF,female,176,561
+2008,30060,Pacific ocean perch,EBS_SLOPE,female,36,209
+2009,10110,arrowtooth flounder,GOA,female,91,505
+2009,10115,Greenland turbot,EBS_SHELF,female,41,137
+2009,10130,flathead sole,EBS_SHELF,female,43,369
+2009,10130,flathead sole,GOA,female,67,366
+2009,10180,Dover sole,GOA,female,80,238
+2009,10200,rex sole,GOA,female,85,267
+2009,10210,yellowfin sole,EBS_SHELF,female,63,433
+2009,10261,northern rock sole,EBS_SHELF,female,52,334
+2009,10261,northern rock sole,GOA,female,48,285
+2009,10262,southern rock sole,GOA,female,50,290
+2009,10285,Alaska plaice,EBS_SHELF,female,65,356
+2009,21720,Pacific cod,EBS_SHELF,female,128,699
+2009,21720,Pacific cod,GOA,female,82,285
+2009,21740,walleye pollock,EBS_SHELF,female,179,563
+2009,21740,walleye pollock,GOA,female,176,870
+2009,30050,REBS rockfish complex,GOA,female,61,450
+2009,30060,Pacific ocean perch,GOA,female,61,204
+2009,30150,Dusky rockfish,GOA,female,40,276
+2009,30420,northern rockfish,GOA,female,56,336
+2010,10110,arrowtooth flounder,AI,female,83,294
+2010,10110,arrowtooth flounder,EBS_SHELF,female,44,301
+2010,10110,arrowtooth flounder,EBS_SLOPE,female,79,586
+2010,10112,Kamchatka flounder,AI,female,60,233
+2010,10115,Greenland turbot,EBS_SHELF,female,52,158
+2010,10115,Greenland turbot,EBS_SLOPE,female,73,222
+2010,10130,flathead sole,EBS_SHELF,female,55,382
+2010,10210,yellowfin sole,EBS_SHELF,female,65,464
+2010,10261,northern rock sole,EBS_SHELF,female,48,285
+2010,10285,Alaska plaice,EBS_SHELF,female,43,263
+2010,21720,Pacific cod,AI,female,83,328
+2010,21720,Pacific cod,EBS_SHELF,female,107,648
+2010,21740,walleye pollock,AI,female,38,204
+2010,21740,walleye pollock,EBS_SHELF,female,200,620
+2010,21921,Atka mackerel,AI,female,85,325
+2010,30050,REBS rockfish complex,AI,female,52,231
+2010,30060,Pacific ocean perch,AI,female,82,504
+2010,30060,Pacific ocean perch,EBS_SLOPE,female,38,218
+2010,30420,northern rockfish,AI,female,66,285
+2011,10110,arrowtooth flounder,GOA,female,121,543
+2011,10115,Greenland turbot,EBS_SHELF,female,41,182
+2011,10130,flathead sole,EBS_SHELF,female,50,406
+2011,10130,flathead sole,GOA,female,81,374
+2011,10180,Dover sole,GOA,female,79,245
+2011,10200,rex sole,GOA,female,75,283
+2011,10210,yellowfin sole,EBS_SHELF,female,51,420
+2011,10261,northern rock sole,EBS_SHELF,female,43,218
+2011,10261,northern rock sole,GOA,female,57,240
+2011,10262,southern rock sole,GOA,female,65,240
+2011,10285,Alaska plaice,EBS_SHELF,female,54,342
+2011,21720,Pacific cod,EBS_SHELF,female,102,644
+2011,21720,Pacific cod,GOA,female,118,424
+2011,21740,walleye pollock,EBS_SHELF,female,248,803
+2011,21740,walleye pollock,GOA,female,160,939
+2011,30050,REBS rockfish complex,GOA,female,59,195
+2011,30060,Pacific ocean perch,GOA,female,134,393
+2011,30150,Dusky rockfish,GOA,female,52,228
+2011,30420,northern rockfish,GOA,female,60,241
+2012,10110,arrowtooth flounder,AI,female,66,256
+2012,10110,arrowtooth flounder,EBS_SHELF,female,40,407
+2012,10110,arrowtooth flounder,EBS_SLOPE,female,39,343
+2012,10112,Kamchatka flounder,EBS_SLOPE,female,69,370
+2012,10115,Greenland turbot,EBS_SHELF,female,46,197
+2012,10115,Greenland turbot,EBS_SLOPE,female,58,211
+2012,10130,flathead sole,EBS_SHELF,female,45,323
+2012,10210,yellowfin sole,EBS_SHELF,female,64,532
+2012,10261,northern rock sole,EBS_SHELF,female,39,197
+2012,10285,Alaska plaice,EBS_SHELF,female,57,280
+2012,21720,Pacific cod,AI,female,76,296
+2012,21720,Pacific cod,EBS_SHELF,female,123,657
+2012,21740,walleye pollock,AI,female,51,304
+2012,21740,walleye pollock,EBS_SHELF,female,252,773
+2012,21921,Atka mackerel,AI,female,52,212
+2012,30050,REBS rockfish complex,AI,female,75,264
+2012,30060,Pacific ocean perch,AI,female,98,589
+2012,30060,Pacific ocean perch,EBS_SLOPE,female,31,238
+2012,30420,northern rockfish,AI,female,62,315
+2013,10110,arrowtooth flounder,GOA,female,109,497
+2013,10115,Greenland turbot,EBS_SHELF,female,41,182
+2013,10130,flathead sole,EBS_SHELF,female,62,361
+2013,10130,flathead sole,GOA,female,69,340
+2013,10180,Dover sole,GOA,female,66,198
+2013,10200,rex sole,GOA,female,84,267
+2013,10210,yellowfin sole,EBS_SHELF,female,59,467
+2013,10261,northern rock sole,EBS_SHELF,female,37,206
+2013,10261,northern rock sole,GOA,female,51,221
+2013,10262,southern rock sole,GOA,female,55,266
+2013,10285,Alaska plaice,EBS_SHELF,female,60,334
+2013,21720,Pacific cod,EBS_SHELF,female,117,710
+2013,21720,Pacific cod,GOA,female,116,469
+2013,21740,walleye pollock,EBS_SHELF,female,242,773
+2013,21740,walleye pollock,GOA,female,144,784
+2013,30050,REBS rockfish complex,GOA,female,110,515
+2013,30060,Pacific ocean perch,GOA,female,82,463
+2013,30150,Dusky rockfish,GOA,female,59,229
+2013,30420,northern rockfish,GOA,female,55,267
+2014,10110,arrowtooth flounder,AI,female,45,190
+2014,10110,arrowtooth flounder,EBS_SHELF,female,30,262
+2014,10115,Greenland turbot,EBS_SHELF,female,47,181
+2014,10130,flathead sole,EBS_SHELF,female,55,364
+2014,10210,yellowfin sole,EBS_SHELF,female,48,461
+2014,10261,northern rock sole,EBS_SHELF,female,29,159
+2014,10285,Alaska plaice,EBS_SHELF,female,48,309
+2014,21720,Pacific cod,AI,female,67,260
+2014,21720,Pacific cod,EBS_SHELF,female,110,747
+2014,21740,walleye pollock,AI,female,62,344
+2014,21740,walleye pollock,EBS_SHELF,female,306,914
+2014,21921,Atka mackerel,AI,female,52,232
+2014,30050,REBS rockfish complex,AI,female,64,220
+2014,30060,Pacific ocean perch,AI,female,93,573
+2014,30420,northern rockfish,AI,female,51,301
+2015,10110,arrowtooth flounder,EBS_SHELF,female,55,372
+2015,10110,arrowtooth flounder,GOA,female,97,375
+2015,10115,Greenland turbot,EBS_SHELF,female,50,186
+2015,10130,flathead sole,EBS_SHELF,female,221,396
+2015,10130,flathead sole,GOA,female,150,376
+2015,10180,Dover sole,GOA,female,134,209
+2015,10200,rex sole,GOA,female,41,129
+2015,10210,yellowfin sole,EBS_SHELF,female,57,482
+2015,10261,northern rock sole,EBS_SHELF,female,42,206
+2015,10261,northern rock sole,GOA,female,43,253
+2015,10262,southern rock sole,GOA,female,37,247
+2015,21720,Pacific cod,EBS_SHELF,female,215,888
+2015,21720,Pacific cod,GOA,female,65,400
+2015,21740,walleye pollock,EBS_SHELF,female,341,1058
+2015,21740,walleye pollock,GOA,female,120,664
+2015,30050,REBS rockfish complex,GOA,female,77,257
+2015,30060,Pacific ocean perch,GOA,female,57,373
+2015,30150,Dusky rockfish,GOA,female,56,264
+2015,30420,northern rockfish,GOA,female,45,259
+2016,10110,arrowtooth flounder,AI,female,141,307
+2016,10110,arrowtooth flounder,EBS_SHELF,female,230,605
+2016,10110,arrowtooth flounder,EBS_SLOPE,female,82,276
+2016,10112,Kamchatka flounder,AI,female,58,234
+2016,10112,Kamchatka flounder,EBS_SHELF,female,65,262
+2016,10112,Kamchatka flounder,EBS_SLOPE,female,100,379
+2016,10115,Greenland turbot,EBS_SHELF,female,62,162
+2016,10115,Greenland turbot,EBS_SLOPE,female,75,315
+2016,10130,flathead sole,EBS_SHELF,female,214,408
+2016,10210,yellowfin sole,EBS_SHELF,female,67,495
+2016,10261,northern rock sole,EBS_SHELF,female,49,256
+2016,10285,Alaska plaice,EBS_SHELF,female,52,287
+2016,21720,Pacific cod,AI,female,97,340
+2016,21720,Pacific cod,EBS_SHELF,female,234,827
+2016,21740,walleye pollock,AI,female,137,418
+2016,21740,walleye pollock,EBS_SHELF,female,315,826
+2016,21921,Atka mackerel,AI,female,41,148
+2016,30050,REBS rockfish complex,AI,female,74,156
+2016,30060,Pacific ocean perch,AI,female,224,470
+2016,30060,Pacific ocean perch,EBS_SLOPE,female,39,192
+2016,30420,northern rockfish,AI,female,140,369
+2017,10110,arrowtooth flounder,EBS_SHELF,female,173,382
+2017,10110,arrowtooth flounder,GOA,female,380,612
+2017,10112,Kamchatka flounder,EBS_SHELF,female,76,250
+2017,10115,Greenland turbot,EBS_SHELF,female,35,127
+2017,10130,flathead sole,EBS_SHELF,female,208,385
+2017,10130,flathead sole,GOA,female,104,106
+2017,10180,Dover sole,GOA,female,59,155
+2017,10200,rex sole,GOA,female,146,307
+2017,10210,yellowfin sole,EBS_SHELF,female,60,459
+2017,10261,northern rock sole,EBS_SHELF,female,44,264
+2017,10261,northern rock sole,GOA,female,69,360
+2017,10262,southern rock sole,GOA,female,78,425
+2017,10285,Alaska plaice,EBS_SHELF,female,59,345
+2017,21720,Pacific cod,EBS_SHELF,female,329,703
+2017,21720,Pacific cod,GOA,female,67,179
+2017,21740,walleye pollock,EBS_SHELF,female,324,743
+2017,21740,walleye pollock,GOA,female,168,478
+2017,30050,REBS rockfish complex,GOA,female,97,242
+2017,30060,Pacific ocean perch,GOA,female,71,538
+2017,30150,Dusky rockfish,GOA,female,39,241
+2017,30420,northern rockfish,GOA,female,69,258
+2018,10110,arrowtooth flounder,AI,female,171,351
+2018,10110,arrowtooth flounder,EBS_SHELF,female,262,608
+2018,10112,Kamchatka flounder,AI,female,188,305
+2018,10112,Kamchatka flounder,EBS_SHELF,female,87,273
+2018,10115,Greenland turbot,EBS_SHELF,female,54,114
+2018,10130,flathead sole,EBS_SHELF,female,227,419
+2018,10210,yellowfin sole,EBS_SHELF,female,61,411
+2018,10261,northern rock sole,EBS_SHELF,female,50,314
+2018,10285,Alaska plaice,EBS_SHELF,female,53,277
+2018,21720,Pacific cod,AI,female,209,283
+2018,21720,Pacific cod,EBS_SHELF,female,382,804
+2018,21740,walleye pollock,AI,female,155,571
+2018,21740,walleye pollock,EBS_SHELF,female,356,820
+2018,21921,Atka mackerel,AI,female,149,539
+2018,30050,REBS rockfish complex,AI,female,70,154
+2018,30060,Pacific ocean perch,AI,female,187,378
+2018,30420,northern rockfish,AI,female,138,387
+2019,10110,arrowtooth flounder,EBS_SHELF,female,227,511
+2019,10110,arrowtooth flounder,GOA,female,388,564
+2019,10112,Kamchatka flounder,EBS_SHELF,female,70,250
+2019,10115,Greenland turbot,EBS_SHELF,female,48,73
+2019,10130,flathead sole,EBS_SHELF,female,228,421
+2019,10130,flathead sole,GOA,female,104,108
+2019,10180,Dover sole,GOA,female,60,158
+2019,10200,rex sole,GOA,female,193,381
+2019,10210,yellowfin sole,EBS_SHELF,female,61,466
+2019,10261,northern rock sole,EBS_SHELF,female,44,288
+2019,10262,southern rock sole,GOA,female,123,477
+2019,10285,Alaska plaice,EBS_SHELF,female,54,316
+2019,21720,Pacific cod,EBS_SHELF,female,342,744
+2019,21720,Pacific cod,GOA,female,92,253
+2019,21740,walleye pollock,EBS_SHELF,female,284,707
+2019,21740,walleye pollock,GOA,female,185,534
+2019,30050,REBS rockfish complex,GOA,female,84,210
+2019,30060,Pacific ocean perch,GOA,female,246,562
+2019,30150,Dusky rockfish,GOA,female,75,211
+2019,30420,northern rockfish,GOA,female,59,219
+2021,10130,flathead sole,EBS_SHELF,female,247,461
+2021,10130,flathead sole,GOA,female,121,123
+2021,10210,yellowfin sole,EBS_SHELF,female,193,639
+2021,10261,northern rock sole,EBS_SHELF,female,47,344
+2021,21740,walleye pollock,EBS_SHELF,female,316,763
+2021,21740,walleye pollock,GOA,female,112,336
+1980,10110,arrowtooth flounder,AI,male,1,619
+1980,21720,Pacific cod,AI,male,5,283
+1980,21740,walleye pollock,AI,male,9,2122
+1980,21921,Atka mackerel,AI,male,5,189
+1980,30060,Pacific ocean perch,AI,male,14,455
+1980,30420,northern rockfish,AI,male,4,211
+1982,10110,arrowtooth flounder,EBS_SHELF,male,9,105
+1982,10115,Greenland turbot,EBS_SHELF,male,11,141
+1982,10130,flathead sole,EBS_SHELF,male,15,181
+1982,10210,yellowfin sole,EBS_SHELF,male,31,317
+1982,10285,Alaska plaice,EBS_SHELF,male,13,102
+1982,21740,walleye pollock,EBS_SHELF,male,71,698
+1983,10110,arrowtooth flounder,AI,male,1,192
+1983,10210,yellowfin sole,EBS_SHELF,male,29,307
+1983,21740,walleye pollock,AI,male,47,2892
+1983,21740,walleye pollock,EBS_SHELF,male,88,931
+1983,21921,Atka mackerel,AI,male,17,248
+1983,30060,Pacific ocean perch,AI,male,44,1283
+1983,30420,northern rockfish,AI,male,11,324
+1984,10110,arrowtooth flounder,GOA,male,1,576
+1984,10130,flathead sole,GOA,male,1,284
+1984,10180,Dover sole,GOA,male,13,255
+1984,10200,rex sole,GOA,male,5,78
+1984,10210,yellowfin sole,EBS_SHELF,male,42,329
+1984,20510,sablefish,GOA,male,23,366
+1984,21720,Pacific cod,EBS_SHELF,male,18,187
+1984,21740,walleye pollock,EBS_SHELF,male,100,826
+1984,21740,walleye pollock,GOA,male,71,1119
+1984,30050,REBS rockfish complex,GOA,male,16,195
+1984,30060,Pacific ocean perch,GOA,male,34,754
+1984,30150,Dusky rockfish,GOA,male,4,75
+1984,30420,northern rockfish,GOA,male,6,175
+1985,10130,flathead sole,EBS_SHELF,male,20,227
+1985,10210,yellowfin sole,EBS_SHELF,male,36,338
+1985,21740,walleye pollock,EBS_SHELF,male,72,852
+1986,10210,yellowfin sole,EBS_SHELF,male,26,321
+1986,21740,walleye pollock,AI,male,63,1145
+1986,21740,walleye pollock,EBS_SHELF,male,44,608
+1986,21921,Atka mackerel,AI,male,21,357
+1986,30050,REBS rockfish complex,AI,male,13,202
+1986,30060,Pacific ocean perch,AI,male,54,929
+1986,30420,northern rockfish,AI,male,18,279
+1987,10110,arrowtooth flounder,GOA,male,46,715
+1987,10130,flathead sole,GOA,male,23,353
+1987,10180,Dover sole,GOA,male,16,147
+1987,10200,rex sole,GOA,male,5,87
+1987,10210,yellowfin sole,EBS_SHELF,male,14,356
+1987,20510,sablefish,GOA,male,4,64
+1987,21720,Pacific cod,GOA,male,3,69
+1987,21740,walleye pollock,EBS_SHELF,male,33,728
+1987,21740,walleye pollock,GOA,male,40,672
+1987,30050,REBS rockfish complex,GOA,male,14,186
+1987,30060,Pacific ocean perch,GOA,male,42,911
+1987,30150,Dusky rockfish,GOA,male,12,213
+1987,30420,northern rockfish,GOA,male,17,235
+1988,10210,yellowfin sole,EBS_SHELF,male,16,275
+1988,10285,Alaska plaice,EBS_SHELF,male,12,153
+1988,21720,Pacific cod,EBS_SHELF,male,27,316
+1988,21740,walleye pollock,EBS_SHELF,male,26,572
+1989,10210,yellowfin sole,EBS_SHELF,male,23,318
+1989,21720,Pacific cod,EBS_SHELF,male,41,387
+1989,21740,walleye pollock,EBS_SHELF,male,36,530
+1990,10110,arrowtooth flounder,GOA,male,13,109
+1990,10130,flathead sole,GOA,male,17,107
+1990,10180,Dover sole,GOA,male,17,80
+1990,10200,rex sole,GOA,male,20,114
+1990,10210,yellowfin sole,EBS_SHELF,male,24,357
+1990,21720,Pacific cod,EBS_SHELF,male,67,400
+1990,21720,Pacific cod,GOA,male,26,220
+1990,21740,walleye pollock,EBS_SHELF,male,46,573
+1990,21740,walleye pollock,GOA,male,35,503
+1990,30050,REBS rockfish complex,GOA,male,24,101
+1990,30060,Pacific ocean perch,GOA,male,52,874
+1990,30150,Dusky rockfish,GOA,male,8,68
+1990,30420,northern rockfish,GOA,male,13,202
+1991,10210,yellowfin sole,EBS_SHELF,male,24,349
+1991,21720,Pacific cod,AI,male,32,472
+1991,21720,Pacific cod,EBS_SHELF,male,41,313
+1991,21740,walleye pollock,AI,male,21,368
+1991,21740,walleye pollock,EBS_SHELF,male,45,515
+1991,21921,Atka mackerel,AI,male,11,255
+1991,30050,REBS rockfish complex,AI,male,24,225
+1991,30060,Pacific ocean perch,AI,male,26,537
+1991,30420,northern rockfish,AI,male,14,193
+1992,10130,flathead sole,EBS_SHELF,male,11,191
+1992,10210,yellowfin sole,EBS_SHELF,male,14,248
+1992,10285,Alaska plaice,EBS_SHELF,male,10,127
+1992,21720,Pacific cod,EBS_SHELF,male,24,368
+1992,21740,walleye pollock,EBS_SHELF,male,30,595
+1993,10110,arrowtooth flounder,EBS_SHELF,male,5,71
+1993,10110,arrowtooth flounder,GOA,male,47,396
+1993,10130,flathead sole,EBS_SHELF,male,4,58
+1993,10130,flathead sole,GOA,male,26,132
+1993,10180,Dover sole,GOA,male,23,105
+1993,10200,rex sole,GOA,male,20,139
+1993,10210,yellowfin sole,EBS_SHELF,male,15,192
+1993,10285,Alaska plaice,EBS_SHELF,male,4,83
+1993,21720,Pacific cod,EBS_SHELF,male,29,271
+1993,21720,Pacific cod,GOA,male,64,400
+1993,21740,walleye pollock,EBS_SHELF,male,33,649
+1993,21740,walleye pollock,GOA,male,63,879
+1993,30050,REBS rockfish complex,GOA,male,65,434
+1993,30060,Pacific ocean perch,GOA,male,50,710
+1993,30150,Dusky rockfish,GOA,male,41,284
+1993,30420,northern rockfish,GOA,male,19,173
+1994,10110,arrowtooth flounder,EBS_SHELF,male,3,40
+1994,10130,flathead sole,EBS_SHELF,male,7,166
+1994,10210,yellowfin sole,EBS_SHELF,male,14,231
+1994,10285,Alaska plaice,EBS_SHELF,male,6,104
+1994,21720,Pacific cod,AI,male,61,550
+1994,21720,Pacific cod,EBS_SHELF,male,22,338
+1994,21740,walleye pollock,AI,male,33,455
+1994,21740,walleye pollock,EBS_SHELF,male,21,501
+1994,21921,Atka mackerel,AI,male,55,334
+1994,30050,REBS rockfish complex,AI,male,55,244
+1994,30060,Pacific ocean perch,AI,male,48,419
+1994,30420,northern rockfish,AI,male,17,195
+1995,10130,flathead sole,EBS_SHELF,male,9,179
+1995,10210,yellowfin sole,EBS_SHELF,male,19,272
+1995,10285,Alaska plaice,EBS_SHELF,male,10,112
+1995,21720,Pacific cod,EBS_SHELF,male,28,284
+1995,21740,walleye pollock,EBS_SHELF,male,25,551
+1996,10110,arrowtooth flounder,EBS_SHELF,male,4,72
+1996,10110,arrowtooth flounder,GOA,male,43,263
+1996,10130,flathead sole,GOA,male,42,253
+1996,10180,Dover sole,GOA,male,49,170
+1996,10200,rex sole,GOA,male,44,160
+1996,10210,yellowfin sole,EBS_SHELF,male,16,338
+1996,10261,northern rock sole,EBS_SHELF,male,14,215
+1996,10261,northern rock sole,GOA,male,17,99
+1996,10262,southern rock sole,GOA,male,19,87
+1996,20510,sablefish,GOA,male,89,336
+1996,21720,Pacific cod,EBS_SHELF,male,21,364
+1996,21720,Pacific cod,GOA,male,68,386
+1996,21740,walleye pollock,EBS_SHELF,male,28,587
+1996,21740,walleye pollock,GOA,male,67,509
+1996,30050,REBS rockfish complex,GOA,male,40,392
+1996,30060,Pacific ocean perch,GOA,male,18,341
+1996,30150,Dusky rockfish,GOA,male,45,320
+1996,30420,northern rockfish,GOA,male,18,248
+1997,10210,yellowfin sole,EBS_SHELF,male,11,223
+1997,10261,northern rock sole,EBS_SHELF,male,10,129
+1997,21720,Pacific cod,AI,male,79,422
+1997,21720,Pacific cod,EBS_SHELF,male,33,353
+1997,21740,walleye pollock,AI,male,75,487
+1997,21740,walleye pollock,EBS_SHELF,male,31,524
+1997,21921,Atka mackerel,AI,male,45,210
+1997,30050,REBS rockfish complex,AI,male,77,299
+1997,30060,Pacific ocean perch,AI,male,107,547
+1997,30420,northern rockfish,AI,male,54,301
+1998,10110,arrowtooth flounder,EBS_SHELF,male,6,75
+1998,10115,Greenland turbot,EBS_SHELF,male,16,63
+1998,10210,yellowfin sole,EBS_SHELF,male,14,244
+1998,10261,northern rock sole,EBS_SHELF,male,14,166
+1998,10285,Alaska plaice,EBS_SHELF,male,14,180
+1998,21720,Pacific cod,EBS_SHELF,male,27,292
+1998,21740,walleye pollock,EBS_SHELF,male,31,558
+1999,10110,arrowtooth flounder,GOA,male,67,353
+1999,10130,flathead sole,EBS_SHELF,male,16,187
+1999,10130,flathead sole,GOA,male,42,288
+1999,10180,Dover sole,GOA,male,47,172
+1999,10200,rex sole,GOA,male,45,192
+1999,10210,yellowfin sole,EBS_SHELF,male,30,353
+1999,10261,northern rock sole,EBS_SHELF,male,25,200
+1999,10261,northern rock sole,GOA,male,25,155
+1999,10262,southern rock sole,GOA,male,23,132
+1999,20510,sablefish,GOA,male,103,314
+1999,21720,Pacific cod,EBS_SHELF,male,44,404
+1999,21720,Pacific cod,GOA,male,56,306
+1999,21740,walleye pollock,EBS_SHELF,male,50,627
+1999,21740,walleye pollock,GOA,male,93,560
+1999,30050,REBS rockfish complex,GOA,male,60,322
+1999,30060,Pacific ocean perch,GOA,male,71,500
+1999,30150,Dusky rockfish,GOA,male,20,74
+1999,30420,northern rockfish,GOA,male,22,133
+2000,10130,flathead sole,EBS_SHELF,male,18,204
+2000,10210,yellowfin sole,EBS_SHELF,male,34,393
+2000,10261,northern rock sole,EBS_SHELF,male,22,157
+2000,10285,Alaska plaice,EBS_SHELF,male,12,128
+2000,21720,Pacific cod,AI,male,80,410
+2000,21720,Pacific cod,EBS_SHELF,male,37,416
+2000,21740,walleye pollock,AI,male,77,412
+2000,21740,walleye pollock,EBS_SHELF,male,48,690
+2000,21921,Atka mackerel,AI,male,75,413
+2000,30050,REBS rockfish complex,AI,male,75,249
+2000,30060,Pacific ocean perch,AI,male,126,565
+2000,30420,northern rockfish,AI,male,72,345
+2001,10110,arrowtooth flounder,GOA,male,111,508
+2001,10130,flathead sole,EBS_SHELF,male,20,254
+2001,10130,flathead sole,GOA,male,67,399
+2001,10180,Dover sole,GOA,male,82,244
+2001,10200,rex sole,GOA,male,96,290
+2001,10210,yellowfin sole,EBS_SHELF,male,31,322
+2001,10261,northern rock sole,EBS_SHELF,male,23,193
+2001,10261,northern rock sole,GOA,male,69,243
+2001,10262,southern rock sole,GOA,male,57,267
+2001,10285,Alaska plaice,EBS_SHELF,male,13,126
+2001,21720,Pacific cod,EBS_SHELF,male,54,485
+2001,21720,Pacific cod,GOA,male,120,360
+2001,21740,walleye pollock,EBS_SHELF,male,58,754
+2001,21740,walleye pollock,GOA,male,103,395
+2001,30150,Dusky rockfish,GOA,male,54,320
+2001,30420,northern rockfish,GOA,male,83,258
+2002,10110,arrowtooth flounder,EBS_SLOPE,male,38,123
+2002,10112,Kamchatka flounder,EBS_SLOPE,male,62,260
+2002,10115,Greenland turbot,EBS_SLOPE,male,66,239
+2002,10130,flathead sole,EBS_SHELF,male,16,200
+2002,10210,yellowfin sole,EBS_SHELF,male,31,329
+2002,10261,northern rock sole,EBS_SHELF,male,30,219
+2002,10285,Alaska plaice,EBS_SHELF,male,18,174
+2002,21720,Pacific cod,AI,male,123,638
+2002,21720,Pacific cod,EBS_SHELF,male,47,456
+2002,21740,walleye pollock,AI,male,127,588
+2002,21740,walleye pollock,EBS_SHELF,male,62,702
+2002,21921,Atka mackerel,AI,male,89,392
+2002,30050,REBS rockfish complex,AI,male,68,221
+2002,30060,Pacific ocean perch,AI,male,87,157
+2002,30060,Pacific ocean perch,EBS_SLOPE,male,24,134
+2002,30420,northern rockfish,AI,male,51,119
+2003,10110,arrowtooth flounder,GOA,male,86,394
+2003,10115,Greenland turbot,EBS_SHELF,male,42,177
+2003,10130,flathead sole,EBS_SHELF,male,28,127
+2003,10130,flathead sole,GOA,male,67,250
+2003,10180,Dover sole,GOA,male,65,238
+2003,10200,rex sole,GOA,male,69,266
+2003,10210,yellowfin sole,EBS_SHELF,male,30,308
+2003,10261,northern rock sole,EBS_SHELF,male,27,225
+2003,10261,northern rock sole,GOA,male,49,217
+2003,10262,southern rock sole,GOA,male,49,223
+2003,21720,Pacific cod,EBS_SHELF,male,93,684
+2003,21720,Pacific cod,GOA,male,109,336
+2003,21740,walleye pollock,EBS_SHELF,male,79,769
+2003,21740,walleye pollock,GOA,male,147,514
+2003,30050,REBS rockfish complex,GOA,male,80,263
+2003,30060,Pacific ocean perch,GOA,male,93,500
+2003,30150,Dusky rockfish,GOA,male,19,160
+2003,30420,northern rockfish,GOA,male,22,137
+2004,10110,arrowtooth flounder,EBS_SHELF,male,18,169
+2004,10115,Greenland turbot,EBS_SHELF,male,34,144
+2004,10115,Greenland turbot,EBS_SLOPE,male,68,235
+2004,10130,flathead sole,EBS_SHELF,male,16,208
+2004,10210,yellowfin sole,EBS_SHELF,male,27,310
+2004,10261,northern rock sole,EBS_SHELF,male,13,191
+2004,21720,Pacific cod,AI,male,85,374
+2004,21720,Pacific cod,EBS_SHELF,male,51,525
+2004,21740,walleye pollock,AI,male,46,239
+2004,21740,walleye pollock,EBS_SHELF,male,57,769
+2004,21921,Atka mackerel,AI,male,72,285
+2004,30050,REBS rockfish complex,AI,male,69,228
+2004,30060,Pacific ocean perch,AI,male,82,472
+2004,30060,Pacific ocean perch,EBS_SLOPE,male,28,202
+2004,30420,northern rockfish,AI,male,51,227
+2005,10110,arrowtooth flounder,GOA,male,102,284
+2005,10115,Greenland turbot,EBS_SHELF,male,41,127
+2005,10130,flathead sole,EBS_SHELF,male,18,243
+2005,10130,flathead sole,GOA,male,62,243
+2005,10180,Dover sole,GOA,male,80,242
+2005,10200,rex sole,GOA,male,78,282
+2005,10210,yellowfin sole,EBS_SHELF,male,34,285
+2005,10261,northern rock sole,EBS_SHELF,male,17,166
+2005,10261,northern rock sole,GOA,male,38,166
+2005,10262,southern rock sole,GOA,male,43,151
+2005,10285,Alaska plaice,EBS_SHELF,male,17,138
+2005,21720,Pacific cod,EBS_SHELF,male,78,610
+2005,21720,Pacific cod,GOA,male,68,256
+2005,21740,walleye pollock,EBS_SHELF,male,69,788
+2005,21740,walleye pollock,GOA,male,161,639
+2005,30050,REBS rockfish complex,GOA,male,71,221
+2005,30060,Pacific ocean perch,GOA,male,97,511
+2005,30150,Dusky rockfish,GOA,male,68,233
+2005,30420,northern rockfish,GOA,male,55,195
+2006,10115,Greenland turbot,EBS_SHELF,male,41,104
+2006,10130,flathead sole,EBS_SHELF,male,26,229
+2006,10210,yellowfin sole,EBS_SHELF,male,31,186
+2006,10261,northern rock sole,EBS_SHELF,male,32,246
+2006,10285,Alaska plaice,EBS_SHELF,male,20,173
+2006,21720,Pacific cod,AI,male,104,390
+2006,21720,Pacific cod,EBS_SHELF,male,97,617
+2006,21740,walleye pollock,AI,male,53,261
+2006,21740,walleye pollock,EBS_SHELF,male,225,598
+2006,21921,Atka mackerel,AI,male,64,279
+2006,30050,REBS rockfish complex,AI,male,68,227
+2006,30060,Pacific ocean perch,AI,male,76,215
+2006,30420,northern rockfish,AI,male,47,229
+2007,10110,arrowtooth flounder,GOA,male,125,296
+2007,10115,Greenland turbot,EBS_SHELF,male,45,144
+2007,10130,flathead sole,EBS_SHELF,male,34,242
+2007,10130,flathead sole,GOA,male,67,345
+2007,10180,Dover sole,GOA,male,52,183
+2007,10200,rex sole,GOA,male,38,196
+2007,10210,yellowfin sole,EBS_SHELF,male,48,326
+2007,10261,northern rock sole,EBS_SHELF,male,31,200
+2007,10261,northern rock sole,GOA,male,54,205
+2007,10262,southern rock sole,GOA,male,51,173
+2007,10285,Alaska plaice,EBS_SHELF,male,25,129
+2007,21720,Pacific cod,EBS_SHELF,male,128,677
+2007,21720,Pacific cod,GOA,male,56,233
+2007,21740,walleye pollock,EBS_SHELF,male,177,517
+2007,21740,walleye pollock,GOA,male,127,646
+2007,30050,REBS rockfish complex,GOA,male,55,201
+2007,30060,Pacific ocean perch,GOA,male,79,543
+2007,30150,Dusky rockfish,GOA,male,70,231
+2007,30420,northern rockfish,GOA,male,72,279
+2008,10115,Greenland turbot,EBS_SHELF,male,37,109
+2008,10115,Greenland turbot,EBS_SLOPE,male,71,235
+2008,10130,flathead sole,EBS_SHELF,male,39,244
+2008,10210,yellowfin sole,EBS_SHELF,male,53,371
+2008,10261,northern rock sole,EBS_SHELF,male,17,157
+2008,10285,Alaska plaice,EBS_SHELF,male,22,144
+2008,21720,Pacific cod,EBS_SHELF,male,100,567
+2008,21740,walleye pollock,EBS_SHELF,male,174,517
+2008,30060,Pacific ocean perch,EBS_SLOPE,male,38,195
+2009,10110,arrowtooth flounder,GOA,male,77,315
+2009,10115,Greenland turbot,EBS_SHELF,male,50,168
+2009,10130,flathead sole,EBS_SHELF,male,44,292
+2009,10130,flathead sole,GOA,male,65,314
+2009,10180,Dover sole,GOA,male,68,229
+2009,10200,rex sole,GOA,male,71,217
+2009,10210,yellowfin sole,EBS_SHELF,male,51,318
+2009,10261,northern rock sole,EBS_SHELF,male,49,245
+2009,10261,northern rock sole,GOA,male,47,222
+2009,10262,southern rock sole,GOA,male,45,217
+2009,10285,Alaska plaice,EBS_SHELF,male,42,234
+2009,21720,Pacific cod,EBS_SHELF,male,117,692
+2009,21720,Pacific cod,GOA,male,78,261
+2009,21740,walleye pollock,EBS_SHELF,male,171,495
+2009,21740,walleye pollock,GOA,male,164,684
+2009,30050,REBS rockfish complex,GOA,male,63,474
+2009,30060,Pacific ocean perch,GOA,male,67,211
+2009,30150,Dusky rockfish,GOA,male,47,219
+2009,30420,northern rockfish,GOA,male,56,315
+2010,10110,arrowtooth flounder,AI,male,62,183
+2010,10110,arrowtooth flounder,EBS_SHELF,male,37,169
+2010,10110,arrowtooth flounder,EBS_SLOPE,male,55,181
+2010,10112,Kamchatka flounder,AI,male,55,217
+2010,10115,Greenland turbot,EBS_SHELF,male,52,163
+2010,10115,Greenland turbot,EBS_SLOPE,male,78,270
+2010,10130,flathead sole,EBS_SHELF,male,47,285
+2010,10210,yellowfin sole,EBS_SHELF,male,56,363
+2010,10261,northern rock sole,EBS_SHELF,male,49,205
+2010,10285,Alaska plaice,EBS_SHELF,male,38,185
+2010,21720,Pacific cod,AI,male,90,345
+2010,21720,Pacific cod,EBS_SHELF,male,94,627
+2010,21740,walleye pollock,AI,male,38,209
+2010,21740,walleye pollock,EBS_SHELF,male,193,557
+2010,21921,Atka mackerel,AI,male,66,235
+2010,30050,REBS rockfish complex,AI,male,63,249
+2010,30060,Pacific ocean perch,AI,male,89,445
+2010,30060,Pacific ocean perch,EBS_SLOPE,male,37,195
+2010,30420,northern rockfish,AI,male,58,253
+2011,10110,arrowtooth flounder,GOA,male,95,352
+2011,10115,Greenland turbot,EBS_SHELF,male,49,192
+2011,10130,flathead sole,EBS_SHELF,male,46,322
+2011,10130,flathead sole,GOA,male,78,279
+2011,10180,Dover sole,GOA,male,62,214
+2011,10200,rex sole,GOA,male,60,226
+2011,10210,yellowfin sole,EBS_SHELF,male,50,333
+2011,10261,northern rock sole,EBS_SHELF,male,40,166
+2011,10261,northern rock sole,GOA,male,58,170
+2011,10262,southern rock sole,GOA,male,40,142
+2011,10285,Alaska plaice,EBS_SHELF,male,42,218
+2011,21720,Pacific cod,EBS_SHELF,male,107,604
+2011,21720,Pacific cod,GOA,male,114,395
+2011,21740,walleye pollock,EBS_SHELF,male,243,736
+2011,21740,walleye pollock,GOA,male,159,705
+2011,30050,REBS rockfish complex,GOA,male,63,207
+2011,30060,Pacific ocean perch,GOA,male,151,400
+2011,30150,Dusky rockfish,GOA,male,50,199
+2011,30420,northern rockfish,GOA,male,54,189
+2012,10110,arrowtooth flounder,AI,male,51,145
+2012,10110,arrowtooth flounder,EBS_SHELF,male,31,213
+2012,10110,arrowtooth flounder,EBS_SLOPE,male,38,130
+2012,10112,Kamchatka flounder,EBS_SLOPE,male,59,312
+2012,10115,Greenland turbot,EBS_SHELF,male,51,190
+2012,10115,Greenland turbot,EBS_SLOPE,male,54,239
+2012,10130,flathead sole,EBS_SHELF,male,39,266
+2012,10210,yellowfin sole,EBS_SHELF,male,61,441
+2012,10261,northern rock sole,EBS_SHELF,male,35,151
+2012,10285,Alaska plaice,EBS_SHELF,male,43,195
+2012,21720,Pacific cod,AI,male,77,302
+2012,21720,Pacific cod,EBS_SHELF,male,118,625
+2012,21740,walleye pollock,AI,male,51,251
+2012,21740,walleye pollock,EBS_SHELF,male,250,727
+2012,21921,Atka mackerel,AI,male,52,205
+2012,30050,REBS rockfish complex,AI,male,80,290
+2012,30060,Pacific ocean perch,AI,male,92,547
+2012,30060,Pacific ocean perch,EBS_SLOPE,male,30,228
+2012,30420,northern rockfish,AI,male,51,259
+2013,10110,arrowtooth flounder,GOA,male,91,321
+2013,10115,Greenland turbot,EBS_SHELF,male,51,168
+2013,10130,flathead sole,EBS_SHELF,male,56,293
+2013,10130,flathead sole,GOA,male,61,264
+2013,10180,Dover sole,GOA,male,57,197
+2013,10200,rex sole,GOA,male,62,216
+2013,10210,yellowfin sole,EBS_SHELF,male,47,330
+2013,10261,northern rock sole,EBS_SHELF,male,36,146
+2013,10261,northern rock sole,GOA,male,44,171
+2013,10262,southern rock sole,GOA,male,43,178
+2013,10285,Alaska plaice,EBS_SHELF,male,50,203
+2013,21720,Pacific cod,EBS_SHELF,male,103,679
+2013,21720,Pacific cod,GOA,male,110,439
+2013,21740,walleye pollock,EBS_SHELF,male,245,743
+2013,21740,walleye pollock,GOA,male,146,763
+2013,30050,REBS rockfish complex,GOA,male,119,536
+2013,30060,Pacific ocean perch,GOA,male,76,417
+2013,30150,Dusky rockfish,GOA,male,60,205
+2013,30420,northern rockfish,GOA,male,55,228
+2014,10110,arrowtooth flounder,AI,male,31,124
+2014,10110,arrowtooth flounder,EBS_SHELF,male,24,126
+2014,10115,Greenland turbot,EBS_SHELF,male,45,143
+2014,10130,flathead sole,EBS_SHELF,male,52,314
+2014,10210,yellowfin sole,EBS_SHELF,male,45,329
+2014,10261,northern rock sole,EBS_SHELF,male,22,109
+2014,10285,Alaska plaice,EBS_SHELF,male,36,181
+2014,21720,Pacific cod,AI,male,69,297
+2014,21720,Pacific cod,EBS_SHELF,male,104,671
+2014,21740,walleye pollock,AI,male,63,373
+2014,21740,walleye pollock,EBS_SHELF,male,297,859
+2014,21921,Atka mackerel,AI,male,50,246
+2014,30050,REBS rockfish complex,AI,male,68,221
+2014,30060,Pacific ocean perch,AI,male,86,505
+2014,30420,northern rockfish,AI,male,55,249
+2015,10110,arrowtooth flounder,EBS_SHELF,male,46,237
+2015,10110,arrowtooth flounder,GOA,male,79,241
+2015,10115,Greenland turbot,EBS_SHELF,male,41,165
+2015,10130,flathead sole,EBS_SHELF,male,196,318
+2015,10130,flathead sole,GOA,male,135,305
+2015,10180,Dover sole,GOA,male,109,158
+2015,10200,rex sole,GOA,male,36,102
+2015,10210,yellowfin sole,EBS_SHELF,male,47,393
+2015,10261,northern rock sole,EBS_SHELF,male,36,159
+2015,10261,northern rock sole,GOA,male,36,198
+2015,10262,southern rock sole,GOA,male,35,151
+2015,21720,Pacific cod,EBS_SHELF,male,218,922
+2015,21720,Pacific cod,GOA,male,59,373
+2015,21740,walleye pollock,EBS_SHELF,male,333,1003
+2015,21740,walleye pollock,GOA,male,116,492
+2015,30050,REBS rockfish complex,GOA,male,73,257
+2015,30060,Pacific ocean perch,GOA,male,64,386
+2015,30150,Dusky rockfish,GOA,male,50,207
+2015,30420,northern rockfish,GOA,male,44,206
+2016,10110,arrowtooth flounder,AI,male,108,170
+2016,10110,arrowtooth flounder,EBS_SHELF,male,114,166
+2016,10110,arrowtooth flounder,EBS_SLOPE,male,56,158
+2016,10112,Kamchatka flounder,AI,male,60,215
+2016,10112,Kamchatka flounder,EBS_SHELF,male,61,253
+2016,10112,Kamchatka flounder,EBS_SLOPE,male,88,315
+2016,10115,Greenland turbot,EBS_SHELF,male,49,151
+2016,10115,Greenland turbot,EBS_SLOPE,male,69,305
+2016,10130,flathead sole,EBS_SHELF,male,180,289
+2016,10210,yellowfin sole,EBS_SHELF,male,61,380
+2016,10261,northern rock sole,EBS_SHELF,male,44,206
+2016,10285,Alaska plaice,EBS_SHELF,male,40,181
+2016,21720,Pacific cod,AI,male,86,341
+2016,21720,Pacific cod,EBS_SHELF,male,235,786
+2016,21740,walleye pollock,AI,male,130,334
+2016,21740,walleye pollock,EBS_SHELF,male,322,862
+2016,21921,Atka mackerel,AI,male,43,152
+2016,30050,REBS rockfish complex,AI,male,79,167
+2016,30060,Pacific ocean perch,AI,male,247,587
+2016,30060,Pacific ocean perch,EBS_SLOPE,male,38,198
+2016,30420,northern rockfish,AI,male,110,207
+2017,10110,arrowtooth flounder,EBS_SHELF,male,110,141
+2017,10110,arrowtooth flounder,GOA,male,217,284
+2017,10112,Kamchatka flounder,EBS_SHELF,male,62,210
+2017,10115,Greenland turbot,EBS_SHELF,male,30,90
+2017,10130,flathead sole,EBS_SHELF,male,176,291
+2017,10130,flathead sole,GOA,male,103,107
+2017,10180,Dover sole,GOA,male,60,184
+2017,10200,rex sole,GOA,male,131,248
+2017,10210,yellowfin sole,EBS_SHELF,male,52,427
+2017,10261,northern rock sole,EBS_SHELF,male,42,232
+2017,10261,northern rock sole,GOA,male,54,231
+2017,10262,southern rock sole,GOA,male,58,293
+2017,10285,Alaska plaice,EBS_SHELF,male,40,206
+2017,21720,Pacific cod,EBS_SHELF,male,325,664
+2017,21720,Pacific cod,GOA,male,65,151
+2017,21740,walleye pollock,EBS_SHELF,male,329,777
+2017,21740,walleye pollock,GOA,male,159,407
+2017,30050,REBS rockfish complex,GOA,male,91,246
+2017,30060,Pacific ocean perch,GOA,male,69,532
+2017,30150,Dusky rockfish,GOA,male,26,188
+2017,30420,northern rockfish,GOA,male,58,204
+2018,10110,arrowtooth flounder,AI,male,136,237
+2018,10110,arrowtooth flounder,EBS_SHELF,male,149,191
+2018,10112,Kamchatka flounder,AI,male,176,317
+2018,10112,Kamchatka flounder,EBS_SHELF,male,75,210
+2018,10115,Greenland turbot,EBS_SHELF,male,33,77
+2018,10130,flathead sole,EBS_SHELF,male,218,368
+2018,10210,yellowfin sole,EBS_SHELF,male,53,309
+2018,10261,northern rock sole,EBS_SHELF,male,47,227
+2018,10285,Alaska plaice,EBS_SHELF,male,38,186
+2018,21720,Pacific cod,AI,male,210,292
+2018,21720,Pacific cod,EBS_SHELF,male,362,725
+2018,21740,walleye pollock,AI,male,138,328
+2018,21740,walleye pollock,EBS_SHELF,male,359,826
+2018,21921,Atka mackerel,AI,male,163,513
+2018,30050,REBS rockfish complex,AI,male,73,157
+2018,30060,Pacific ocean perch,AI,male,204,516
+2018,30420,northern rockfish,AI,male,108,200
+2019,10110,arrowtooth flounder,EBS_SHELF,male,146,197
+2019,10110,arrowtooth flounder,GOA,male,270,329
+2019,10112,Kamchatka flounder,EBS_SHELF,male,60,198
+2019,10115,Greenland turbot,EBS_SHELF,male,24,37
+2019,10130,flathead sole,EBS_SHELF,male,214,384
+2019,10130,flathead sole,GOA,male,113,116
+2019,10180,Dover sole,GOA,male,63,169
+2019,10200,rex sole,GOA,male,166,296
+2019,10210,yellowfin sole,EBS_SHELF,male,50,366
+2019,10261,northern rock sole,EBS_SHELF,male,40,250
+2019,10262,southern rock sole,GOA,male,94,196
+2019,10285,Alaska plaice,EBS_SHELF,male,46,201
+2019,21720,Pacific cod,EBS_SHELF,male,332,700
+2019,21720,Pacific cod,GOA,male,93,239
+2019,21740,walleye pollock,EBS_SHELF,male,298,755
+2019,21740,walleye pollock,GOA,male,176,447
+2019,30050,REBS rockfish complex,GOA,male,82,209
+2019,30060,Pacific ocean perch,GOA,male,249,653
+2019,30150,Dusky rockfish,GOA,male,75,195
+2019,30420,northern rockfish,GOA,male,44,148
+2021,10130,flathead sole,EBS_SHELF,male,223,365
+2021,10130,flathead sole,GOA,male,109,111
+2021,10210,yellowfin sole,EBS_SHELF,male,151,344
+2021,10261,northern rock sole,EBS_SHELF,male,46,293
+2021,21740,walleye pollock,EBS_SHELF,male,313,717
+2021,21740,walleye pollock,GOA,male,114,333
+1980,10110,arrowtooth flounder,AI,total,2,1084
+1980,21720,Pacific cod,AI,total,10,589
+1980,21740,walleye pollock,AI,total,18,5012
+1980,21921,Atka mackerel,AI,total,11,688
+1980,30060,Pacific ocean perch,AI,total,26,890
+1980,30420,northern rockfish,AI,total,8,473
+1982,10110,arrowtooth flounder,EBS_SHELF,total,18,237
+1982,10115,Greenland turbot,EBS_SHELF,total,22,292
+1982,10130,flathead sole,EBS_SHELF,total,31,390
+1982,10210,yellowfin sole,EBS_SHELF,total,65,744
+1982,10285,Alaska plaice,EBS_SHELF,total,42,300
+1982,21740,walleye pollock,EBS_SHELF,total,170,1611
+1983,10110,arrowtooth flounder,AI,total,2,325
+1983,10210,yellowfin sole,EBS_SHELF,total,65,716
+1983,21740,walleye pollock,AI,total,95,6393
+1983,21740,walleye pollock,EBS_SHELF,total,175,1931
+1983,21921,Atka mackerel,AI,total,36,535
+1983,30060,Pacific ocean perch,AI,total,87,2495
+1983,30420,northern rockfish,AI,total,22,625
+1984,10110,arrowtooth flounder,GOA,total,2,1293
+1984,10130,flathead sole,GOA,total,2,653
+1984,10180,Dover sole,GOA,total,26,464
+1984,10200,rex sole,GOA,total,10,233
+1984,10210,yellowfin sole,EBS_SHELF,total,91,796
+1984,20510,sablefish,GOA,total,46,718
+1984,21720,Pacific cod,EBS_SHELF,total,36,316
+1984,21740,walleye pollock,EBS_SHELF,total,214,1806
+1984,21740,walleye pollock,GOA,total,145,2528
+1984,30050,REBS rockfish complex,GOA,total,32,369
+1984,30060,Pacific ocean perch,GOA,total,68,1428
+1984,30150,Dusky rockfish,GOA,total,8,161
+1984,30420,northern rockfish,GOA,total,12,356
+1985,10130,flathead sole,EBS_SHELF,total,44,496
+1985,10210,yellowfin sole,EBS_SHELF,total,71,802
+1985,21740,walleye pollock,EBS_SHELF,total,155,1890
+1986,10210,yellowfin sole,EBS_SHELF,total,58,739
+1986,21740,walleye pollock,AI,total,126,2315
+1986,21740,walleye pollock,EBS_SHELF,total,95,1344
+1986,21921,Atka mackerel,AI,total,44,712
+1986,30050,REBS rockfish complex,AI,total,26,405
+1986,30060,Pacific ocean perch,AI,total,107,1860
+1986,30420,northern rockfish,AI,total,36,565
+1987,10110,arrowtooth flounder,GOA,total,96,1534
+1987,10130,flathead sole,GOA,total,48,830
+1987,10180,Dover sole,GOA,total,32,359
+1987,10200,rex sole,GOA,total,10,189
+1987,10210,yellowfin sole,EBS_SHELF,total,30,798
+1987,20510,sablefish,GOA,total,8,114
+1987,21720,Pacific cod,GOA,total,6,138
+1987,21740,walleye pollock,EBS_SHELF,total,70,1607
+1987,21740,walleye pollock,GOA,total,79,1347
+1987,30050,REBS rockfish complex,GOA,total,27,348
+1987,30060,Pacific ocean perch,GOA,total,85,1824
+1987,30150,Dusky rockfish,GOA,total,24,446
+1987,30420,northern rockfish,GOA,total,34,497
+1988,10210,yellowfin sole,EBS_SHELF,total,33,644
+1988,10285,Alaska plaice,EBS_SHELF,total,24,335
+1988,21720,Pacific cod,EBS_SHELF,total,54,639
+1988,21740,walleye pollock,EBS_SHELF,total,55,1173
+1989,10210,yellowfin sole,EBS_SHELF,total,46,740
+1989,21720,Pacific cod,EBS_SHELF,total,82,760
+1989,21740,walleye pollock,EBS_SHELF,total,84,1227
+1990,10110,arrowtooth flounder,GOA,total,27,325
+1990,10130,flathead sole,GOA,total,36,247
+1990,10180,Dover sole,GOA,total,35,203
+1990,10200,rex sole,GOA,total,46,270
+1990,10210,yellowfin sole,EBS_SHELF,total,51,792
+1990,21720,Pacific cod,EBS_SHELF,total,136,793
+1990,21720,Pacific cod,GOA,total,54,493
+1990,21740,walleye pollock,EBS_SHELF,total,103,1257
+1990,21740,walleye pollock,GOA,total,72,1065
+1990,30050,REBS rockfish complex,GOA,total,47,216
+1990,30060,Pacific ocean perch,GOA,total,106,1766
+1990,30150,Dusky rockfish,GOA,total,17,145
+1990,30420,northern rockfish,GOA,total,28,442
+1991,10210,yellowfin sole,EBS_SHELF,total,48,794
+1991,21720,Pacific cod,AI,total,63,919
+1991,21720,Pacific cod,EBS_SHELF,total,82,664
+1991,21740,walleye pollock,AI,total,41,725
+1991,21740,walleye pollock,EBS_SHELF,total,95,1063
+1991,21921,Atka mackerel,AI,total,22,478
+1991,30050,REBS rockfish complex,AI,total,51,476
+1991,30060,Pacific ocean perch,AI,total,53,1015
+1991,30420,northern rockfish,AI,total,28,456
+1992,10130,flathead sole,EBS_SHELF,total,21,419
+1992,10210,yellowfin sole,EBS_SHELF,total,30,606
+1992,10285,Alaska plaice,EBS_SHELF,total,20,311
+1992,21720,Pacific cod,EBS_SHELF,total,49,717
+1992,21740,walleye pollock,EBS_SHELF,total,66,1263
+1993,10110,arrowtooth flounder,EBS_SHELF,total,10,209
+1993,10110,arrowtooth flounder,GOA,total,115,1043
+1993,10130,flathead sole,EBS_SHELF,total,9,136
+1993,10130,flathead sole,GOA,total,57,312
+1993,10180,Dover sole,GOA,total,54,252
+1993,10200,rex sole,GOA,total,46,332
+1993,10210,yellowfin sole,EBS_SHELF,total,35,549
+1993,10285,Alaska plaice,EBS_SHELF,total,8,183
+1993,21720,Pacific cod,EBS_SHELF,total,63,635
+1993,21720,Pacific cod,GOA,total,129,860
+1993,21740,walleye pollock,EBS_SHELF,total,69,1385
+1993,21740,walleye pollock,GOA,total,125,1915
+1993,30050,REBS rockfish complex,GOA,total,129,876
+1993,30060,Pacific ocean perch,GOA,total,99,1492
+1993,30150,Dusky rockfish,GOA,total,85,612
+1993,30420,northern rockfish,GOA,total,37,354
+1994,10110,arrowtooth flounder,EBS_SHELF,total,6,125
+1994,10130,flathead sole,EBS_SHELF,total,15,371
+1994,10210,yellowfin sole,EBS_SHELF,total,28,522
+1994,10285,Alaska plaice,EBS_SHELF,total,12,228
+1994,21720,Pacific cod,AI,total,124,1174
+1994,21720,Pacific cod,EBS_SHELF,total,44,715
+1994,21740,walleye pollock,AI,total,71,990
+1994,21740,walleye pollock,EBS_SHELF,total,46,1141
+1994,21921,Atka mackerel,AI,total,107,745
+1994,30050,REBS rockfish complex,AI,total,111,486
+1994,30060,Pacific ocean perch,AI,total,96,849
+1994,30420,northern rockfish,AI,total,34,409
+1995,10130,flathead sole,EBS_SHELF,total,19,395
+1995,10210,yellowfin sole,EBS_SHELF,total,39,647
+1995,10285,Alaska plaice,EBS_SHELF,total,21,285
+1995,21720,Pacific cod,EBS_SHELF,total,56,599
+1995,21740,walleye pollock,EBS_SHELF,total,52,1156
+1996,10110,arrowtooth flounder,EBS_SHELF,total,9,211
+1996,10110,arrowtooth flounder,GOA,total,103,706
+1996,10130,flathead sole,GOA,total,91,548
+1996,10180,Dover sole,GOA,total,104,383
+1996,10200,rex sole,GOA,total,105,378
+1996,10210,yellowfin sole,EBS_SHELF,total,31,721
+1996,10261,northern rock sole,EBS_SHELF,total,27,496
+1996,10261,northern rock sole,GOA,total,35,241
+1996,10262,southern rock sole,GOA,total,48,268
+1996,20510,sablefish,GOA,total,177,708
+1996,21720,Pacific cod,EBS_SHELF,total,42,711
+1996,21720,Pacific cod,GOA,total,145,771
+1996,21740,walleye pollock,EBS_SHELF,total,64,1387
+1996,21740,walleye pollock,GOA,total,135,1072
+1996,30050,REBS rockfish complex,GOA,total,78,770
+1996,30060,Pacific ocean perch,GOA,total,35,718
+1996,30150,Dusky rockfish,GOA,total,81,652
+1996,30420,northern rockfish,GOA,total,33,462
+1997,10210,yellowfin sole,EBS_SHELF,total,23,466
+1997,10261,northern rock sole,EBS_SHELF,total,20,336
+1997,21720,Pacific cod,AI,total,150,845
+1997,21720,Pacific cod,EBS_SHELF,total,70,719
+1997,21740,walleye pollock,AI,total,154,1078
+1997,21740,walleye pollock,EBS_SHELF,total,75,1193
+1997,21921,Atka mackerel,AI,total,86,433
+1997,30050,REBS rockfish complex,AI,total,150,578
+1997,30060,Pacific ocean perch,AI,total,238,1224
+1997,30420,northern rockfish,AI,total,115,652
+1998,10110,arrowtooth flounder,EBS_SHELF,total,14,275
+1998,10115,Greenland turbot,EBS_SHELF,total,39,127
+1998,10210,yellowfin sole,EBS_SHELF,total,29,570
+1998,10261,northern rock sole,EBS_SHELF,total,35,405
+1998,10285,Alaska plaice,EBS_SHELF,total,27,416
+1998,21720,Pacific cod,EBS_SHELF,total,58,635
+1998,21740,walleye pollock,EBS_SHELF,total,67,1233
+1999,10110,arrowtooth flounder,GOA,total,147,931
+1999,10130,flathead sole,EBS_SHELF,total,34,413
+1999,10130,flathead sole,GOA,total,86,605
+1999,10180,Dover sole,GOA,total,101,353
+1999,10200,rex sole,GOA,total,99,421
+1999,10210,yellowfin sole,EBS_SHELF,total,60,770
+1999,10261,northern rock sole,EBS_SHELF,total,53,506
+1999,10261,northern rock sole,GOA,total,54,382
+1999,10262,southern rock sole,GOA,total,50,355
+1999,20510,sablefish,GOA,total,202,634
+1999,21720,Pacific cod,EBS_SHELF,total,89,860
+1999,21720,Pacific cod,GOA,total,117,682
+1999,21740,walleye pollock,EBS_SHELF,total,115,1364
+1999,21740,walleye pollock,GOA,total,222,1257
+1999,30050,REBS rockfish complex,GOA,total,123,650
+1999,30060,Pacific ocean perch,GOA,total,136,963
+1999,30150,Dusky rockfish,GOA,total,42,184
+1999,30420,northern rockfish,GOA,total,48,293
+2000,10130,flathead sole,EBS_SHELF,total,38,453
+2000,10210,yellowfin sole,EBS_SHELF,total,69,897
+2000,10261,northern rock sole,EBS_SHELF,total,45,403
+2000,10285,Alaska plaice,EBS_SHELF,total,28,359
+2000,21720,Pacific cod,AI,total,153,828
+2000,21720,Pacific cod,EBS_SHELF,total,77,864
+2000,21740,walleye pollock,AI,total,159,868
+2000,21740,walleye pollock,EBS_SHELF,total,106,1545
+2000,21921,Atka mackerel,AI,total,144,831
+2000,30050,REBS rockfish complex,AI,total,145,490
+2000,30060,Pacific ocean perch,AI,total,266,1238
+2000,30420,northern rockfish,AI,total,147,725
+2001,10110,arrowtooth flounder,GOA,total,234,1384
+2001,10130,flathead sole,EBS_SHELF,total,40,536
+2001,10130,flathead sole,GOA,total,144,863
+2001,10180,Dover sole,GOA,total,186,543
+2001,10200,rex sole,GOA,total,203,677
+2001,10210,yellowfin sole,EBS_SHELF,total,64,751
+2001,10261,northern rock sole,EBS_SHELF,total,48,439
+2001,10261,northern rock sole,GOA,total,158,595
+2001,10262,southern rock sole,GOA,total,151,701
+2001,10285,Alaska plaice,EBS_SHELF,total,29,335
+2001,21720,Pacific cod,EBS_SHELF,total,105,950
+2001,21720,Pacific cod,GOA,total,246,751
+2001,21740,walleye pollock,EBS_SHELF,total,127,1641
+2001,21740,walleye pollock,GOA,total,229,924
+2001,30150,Dusky rockfish,GOA,total,112,718
+2001,30420,northern rockfish,GOA,total,157,533
+2002,10110,arrowtooth flounder,EBS_SLOPE,total,89,483
+2002,10112,Kamchatka flounder,EBS_SLOPE,total,149,607
+2002,10115,Greenland turbot,EBS_SLOPE,total,143,462
+2002,10130,flathead sole,EBS_SHELF,total,35,465
+2002,10210,yellowfin sole,EBS_SHELF,total,66,769
+2002,10261,northern rock sole,EBS_SHELF,total,65,507
+2002,10285,Alaska plaice,EBS_SHELF,total,45,444
+2002,21720,Pacific cod,AI,total,255,1270
+2002,21720,Pacific cod,EBS_SHELF,total,100,947
+2002,21740,walleye pollock,AI,total,271,1340
+2002,21740,walleye pollock,EBS_SHELF,total,149,1668
+2002,21921,Atka mackerel,AI,total,186,789
+2002,30050,REBS rockfish complex,AI,total,127,451
+2002,30060,Pacific ocean perch,AI,total,184,337
+2002,30060,Pacific ocean perch,EBS_SLOPE,total,51,299
+2002,30420,northern rockfish,AI,total,109,259
+2003,10110,arrowtooth flounder,GOA,total,190,1034
+2003,10115,Greenland turbot,EBS_SHELF,total,105,407
+2003,10130,flathead sole,EBS_SHELF,total,60,285
+2003,10130,flathead sole,GOA,total,138,499
+2003,10180,Dover sole,GOA,total,151,504
+2003,10200,rex sole,GOA,total,153,596
+2003,10210,yellowfin sole,EBS_SHELF,total,67,752
+2003,10261,northern rock sole,EBS_SHELF,total,57,506
+2003,10261,northern rock sole,GOA,total,109,519
+2003,10262,southern rock sole,GOA,total,112,577
+2003,21720,Pacific cod,EBS_SHELF,total,184,1360
+2003,21720,Pacific cod,GOA,total,210,711
+2003,21740,walleye pollock,EBS_SHELF,total,167,1625
+2003,21740,walleye pollock,GOA,total,290,1115
+2003,30050,REBS rockfish complex,GOA,total,163,510
+2003,30060,Pacific ocean perch,GOA,total,186,1003
+2003,30150,Dusky rockfish,GOA,total,36,276
+2003,30420,northern rockfish,GOA,total,41,272
+2004,10110,arrowtooth flounder,EBS_SHELF,total,41,592
+2004,10115,Greenland turbot,EBS_SHELF,total,73,280
+2004,10115,Greenland turbot,EBS_SLOPE,total,160,478
+2004,10130,flathead sole,EBS_SHELF,total,32,473
+2004,10210,yellowfin sole,EBS_SHELF,total,57,763
+2004,10261,northern rock sole,EBS_SHELF,total,29,441
+2004,21720,Pacific cod,AI,total,167,775
+2004,21720,Pacific cod,EBS_SHELF,total,108,1040
+2004,21740,walleye pollock,AI,total,94,583
+2004,21740,walleye pollock,EBS_SHELF,total,128,1650
+2004,21921,Atka mackerel,AI,total,140,598
+2004,30050,REBS rockfish complex,AI,total,148,472
+2004,30060,Pacific ocean perch,AI,total,162,1031
+2004,30060,Pacific ocean perch,EBS_SLOPE,total,63,425
+2004,30420,northern rockfish,AI,total,110,515
+2005,10110,arrowtooth flounder,GOA,total,226,729
+2005,10115,Greenland turbot,EBS_SHELF,total,87,278
+2005,10130,flathead sole,EBS_SHELF,total,37,531
+2005,10130,flathead sole,GOA,total,132,551
+2005,10180,Dover sole,GOA,total,166,518
+2005,10200,rex sole,GOA,total,164,592
+2005,10210,yellowfin sole,EBS_SHELF,total,70,681
+2005,10261,northern rock sole,EBS_SHELF,total,38,416
+2005,10261,northern rock sole,GOA,total,87,385
+2005,10262,southern rock sole,GOA,total,98,409
+2005,10285,Alaska plaice,EBS_SHELF,total,37,337
+2005,21720,Pacific cod,EBS_SHELF,total,156,1280
+2005,21720,Pacific cod,GOA,total,136,536
+2005,21740,walleye pollock,EBS_SHELF,total,150,1653
+2005,21740,walleye pollock,GOA,total,335,1522
+2005,30050,REBS rockfish complex,GOA,total,146,425
+2005,30060,Pacific ocean perch,GOA,total,193,1023
+2005,30150,Dusky rockfish,GOA,total,126,475
+2005,30420,northern rockfish,GOA,total,117,421
+2006,10115,Greenland turbot,EBS_SHELF,total,81,239
+2006,10130,flathead sole,EBS_SHELF,total,54,508
+2006,10210,yellowfin sole,EBS_SHELF,total,66,431
+2006,10261,northern rock sole,EBS_SHELF,total,72,539
+2006,10285,Alaska plaice,EBS_SHELF,total,42,444
+2006,21720,Pacific cod,AI,total,203,754
+2006,21720,Pacific cod,EBS_SHELF,total,213,1300
+2006,21740,walleye pollock,AI,total,107,575
+2006,21740,walleye pollock,EBS_SHELF,total,534,1573
+2006,21921,Atka mackerel,AI,total,128,525
+2006,30050,REBS rockfish complex,AI,total,133,459
+2006,30060,Pacific ocean perch,AI,total,164,462
+2006,30420,northern rockfish,AI,total,98,535
+2007,10110,arrowtooth flounder,GOA,total,289,786
+2007,10115,Greenland turbot,EBS_SHELF,total,103,311
+2007,10130,flathead sole,EBS_SHELF,total,70,560
+2007,10130,flathead sole,GOA,total,134,755
+2007,10180,Dover sole,GOA,total,104,371
+2007,10200,rex sole,GOA,total,86,416
+2007,10210,yellowfin sole,EBS_SHELF,total,105,772
+2007,10261,northern rock sole,EBS_SHELF,total,71,463
+2007,10261,northern rock sole,GOA,total,122,466
+2007,10262,southern rock sole,GOA,total,121,448
+2007,10285,Alaska plaice,EBS_SHELF,total,65,335
+2007,21720,Pacific cod,EBS_SHELF,total,294,1441
+2007,21720,Pacific cod,GOA,total,106,471
+2007,21740,walleye pollock,EBS_SHELF,total,495,1489
+2007,21740,walleye pollock,GOA,total,257,1327
+2007,30050,REBS rockfish complex,GOA,total,110,435
+2007,30060,Pacific ocean perch,GOA,total,162,1177
+2007,30150,Dusky rockfish,GOA,total,145,512
+2007,30420,northern rockfish,GOA,total,147,614
+2008,10115,Greenland turbot,EBS_SHELF,total,92,235
+2008,10115,Greenland turbot,EBS_SLOPE,total,145,456
+2008,10130,flathead sole,EBS_SHELF,total,88,581
+2008,10210,yellowfin sole,EBS_SHELF,total,109,830
+2008,10261,northern rock sole,EBS_SHELF,total,37,369
+2008,10285,Alaska plaice,EBS_SHELF,total,54,353
+2008,21720,Pacific cod,EBS_SHELF,total,213,1213
+2008,21740,walleye pollock,EBS_SHELF,total,426,1247
+2008,30060,Pacific ocean perch,EBS_SLOPE,total,76,413
+2009,10110,arrowtooth flounder,GOA,total,169,822
+2009,10115,Greenland turbot,EBS_SHELF,total,112,344
+2009,10130,flathead sole,EBS_SHELF,total,90,666
+2009,10130,flathead sole,GOA,total,137,692
+2009,10180,Dover sole,GOA,total,148,467
+2009,10200,rex sole,GOA,total,156,484
+2009,10210,yellowfin sole,EBS_SHELF,total,114,751
+2009,10261,northern rock sole,EBS_SHELF,total,101,579
+2009,10261,northern rock sole,GOA,total,95,507
+2009,10262,southern rock sole,GOA,total,96,508
+2009,10285,Alaska plaice,EBS_SHELF,total,107,590
+2009,21720,Pacific cod,EBS_SHELF,total,253,1412
+2009,21720,Pacific cod,GOA,total,161,548
+2009,21740,walleye pollock,EBS_SHELF,total,467,1342
+2009,21740,walleye pollock,GOA,total,342,1559
+2009,30050,REBS rockfish complex,GOA,total,125,928
+2009,30060,Pacific ocean perch,GOA,total,129,418
+2009,30150,Dusky rockfish,GOA,total,87,495
+2009,30420,northern rockfish,GOA,total,112,651
+2010,10110,arrowtooth flounder,AI,total,145,477
+2010,10110,arrowtooth flounder,EBS_SHELF,total,81,470
+2010,10110,arrowtooth flounder,EBS_SLOPE,total,134,767
+2010,10112,Kamchatka flounder,AI,total,115,450
+2010,10115,Greenland turbot,EBS_SHELF,total,116,358
+2010,10115,Greenland turbot,EBS_SLOPE,total,151,492
+2010,10130,flathead sole,EBS_SHELF,total,103,668
+2010,10210,yellowfin sole,EBS_SHELF,total,121,827
+2010,10261,northern rock sole,EBS_SHELF,total,97,490
+2010,10285,Alaska plaice,EBS_SHELF,total,81,448
+2010,21720,Pacific cod,AI,total,173,673
+2010,21720,Pacific cod,EBS_SHELF,total,209,1292
+2010,21740,walleye pollock,AI,total,77,432
+2010,21740,walleye pollock,EBS_SHELF,total,501,1385
+2010,21921,Atka mackerel,AI,total,151,560
+2010,30050,REBS rockfish complex,AI,total,117,482
+2010,30060,Pacific ocean perch,AI,total,173,951
+2010,30060,Pacific ocean perch,EBS_SLOPE,total,77,415
+2010,30420,northern rockfish,AI,total,124,538
+2011,10110,arrowtooth flounder,GOA,total,219,898
+2011,10115,Greenland turbot,EBS_SHELF,total,95,381
+2011,10130,flathead sole,EBS_SHELF,total,103,740
+2011,10130,flathead sole,GOA,total,168,672
+2011,10180,Dover sole,GOA,total,141,459
+2011,10200,rex sole,GOA,total,135,509
+2011,10210,yellowfin sole,EBS_SHELF,total,101,753
+2011,10261,northern rock sole,EBS_SHELF,total,83,384
+2011,10261,northern rock sole,GOA,total,115,410
+2011,10262,southern rock sole,GOA,total,105,382
+2011,10285,Alaska plaice,EBS_SHELF,total,96,560
+2011,21720,Pacific cod,EBS_SHELF,total,211,1253
+2011,21720,Pacific cod,GOA,total,232,819
+2011,21740,walleye pollock,EBS_SHELF,total,602,1746
+2011,21740,walleye pollock,GOA,total,326,1662
+2011,30050,REBS rockfish complex,GOA,total,122,402
+2011,30060,Pacific ocean perch,GOA,total,286,794
+2011,30150,Dusky rockfish,GOA,total,102,427
+2011,30420,northern rockfish,GOA,total,114,430
+2012,10110,arrowtooth flounder,AI,total,117,401
+2012,10110,arrowtooth flounder,EBS_SHELF,total,71,620
+2012,10110,arrowtooth flounder,EBS_SLOPE,total,77,473
+2012,10112,Kamchatka flounder,EBS_SLOPE,total,128,682
+2012,10115,Greenland turbot,EBS_SHELF,total,107,408
+2012,10115,Greenland turbot,EBS_SLOPE,total,112,450
+2012,10130,flathead sole,EBS_SHELF,total,87,597
+2012,10210,yellowfin sole,EBS_SHELF,total,125,973
+2012,10261,northern rock sole,EBS_SHELF,total,74,348
+2012,10285,Alaska plaice,EBS_SHELF,total,100,475
+2012,21720,Pacific cod,AI,total,153,598
+2012,21720,Pacific cod,EBS_SHELF,total,248,1301
+2012,21740,walleye pollock,AI,total,102,555
+2012,21740,walleye pollock,EBS_SHELF,total,656,1785
+2012,21921,Atka mackerel,AI,total,104,417
+2012,30050,REBS rockfish complex,AI,total,158,557
+2012,30060,Pacific ocean perch,AI,total,192,1140
+2012,30060,Pacific ocean perch,EBS_SLOPE,total,63,472
+2012,30420,northern rockfish,AI,total,114,576
+2013,10110,arrowtooth flounder,GOA,total,201,822
+2013,10115,Greenland turbot,EBS_SHELF,total,103,374
+2013,10130,flathead sole,EBS_SHELF,total,131,681
+2013,10130,flathead sole,GOA,total,139,630
+2013,10180,Dover sole,GOA,total,123,395
+2013,10200,rex sole,GOA,total,146,483
+2013,10210,yellowfin sole,EBS_SHELF,total,107,803
+2013,10261,northern rock sole,EBS_SHELF,total,73,352
+2013,10261,northern rock sole,GOA,total,95,392
+2013,10262,southern rock sole,GOA,total,98,444
+2013,10285,Alaska plaice,EBS_SHELF,total,110,537
+2013,21720,Pacific cod,EBS_SHELF,total,233,1418
+2013,21720,Pacific cod,GOA,total,226,908
+2013,21740,walleye pollock,EBS_SHELF,total,661,1847
+2013,21740,walleye pollock,GOA,total,292,1557
+2013,30050,REBS rockfish complex,GOA,total,233,1057
+2013,30060,Pacific ocean perch,GOA,total,158,880
+2013,30150,Dusky rockfish,GOA,total,119,434
+2013,30420,northern rockfish,GOA,total,110,495
+2014,10110,arrowtooth flounder,AI,total,76,314
+2014,10110,arrowtooth flounder,EBS_SHELF,total,54,388
+2014,10115,Greenland turbot,EBS_SHELF,total,103,340
+2014,10130,flathead sole,EBS_SHELF,total,112,689
+2014,10210,yellowfin sole,EBS_SHELF,total,93,790
+2014,10261,northern rock sole,EBS_SHELF,total,55,279
+2014,10285,Alaska plaice,EBS_SHELF,total,84,490
+2014,21720,Pacific cod,AI,total,136,557
+2014,21720,Pacific cod,EBS_SHELF,total,215,1420
+2014,21740,walleye pollock,AI,total,125,717
+2014,21740,walleye pollock,EBS_SHELF,total,776,2099
+2014,21921,Atka mackerel,AI,total,102,478
+2014,30050,REBS rockfish complex,AI,total,132,441
+2014,30060,Pacific ocean perch,AI,total,179,1078
+2014,30420,northern rockfish,AI,total,106,550
+2015,10110,arrowtooth flounder,EBS_SHELF,total,102,611
+2015,10110,arrowtooth flounder,GOA,total,177,617
+2015,10115,Greenland turbot,EBS_SHELF,total,99,368
+2015,10130,flathead sole,EBS_SHELF,total,433,734
+2015,10130,flathead sole,GOA,total,287,683
+2015,10180,Dover sole,GOA,total,243,367
+2015,10200,rex sole,GOA,total,77,231
+2015,10210,yellowfin sole,EBS_SHELF,total,104,875
+2015,10261,northern rock sole,EBS_SHELF,total,80,372
+2015,10261,northern rock sole,GOA,total,79,451
+2015,10262,southern rock sole,GOA,total,72,398
+2015,21720,Pacific cod,EBS_SHELF,total,439,1819
+2015,21720,Pacific cod,GOA,total,124,773
+2015,21740,walleye pollock,EBS_SHELF,total,830,2320
+2015,21740,walleye pollock,GOA,total,238,1159
+2015,30050,REBS rockfish complex,GOA,total,153,518
+2015,30060,Pacific ocean perch,GOA,total,122,760
+2015,30150,Dusky rockfish,GOA,total,106,471
+2015,30420,northern rockfish,GOA,total,89,465
+2016,10110,arrowtooth flounder,AI,total,249,477
+2016,10110,arrowtooth flounder,EBS_SHELF,total,345,772
+2016,10110,arrowtooth flounder,EBS_SLOPE,total,138,434
+2016,10112,Kamchatka flounder,AI,total,118,449
+2016,10112,Kamchatka flounder,EBS_SHELF,total,127,517
+2016,10112,Kamchatka flounder,EBS_SLOPE,total,188,694
+2016,10115,Greenland turbot,EBS_SHELF,total,114,316
+2016,10115,Greenland turbot,EBS_SLOPE,total,144,620
+2016,10130,flathead sole,EBS_SHELF,total,402,706
+2016,10210,yellowfin sole,EBS_SHELF,total,129,876
+2016,10261,northern rock sole,EBS_SHELF,total,104,517
+2016,10285,Alaska plaice,EBS_SHELF,total,94,472
+2016,21720,Pacific cod,AI,total,183,681
+2016,21720,Pacific cod,EBS_SHELF,total,471,1624
+2016,21740,walleye pollock,AI,total,268,753
+2016,21740,walleye pollock,EBS_SHELF,total,697,1766
+2016,21921,Atka mackerel,AI,total,84,300
+2016,30050,REBS rockfish complex,AI,total,153,323
+2016,30060,Pacific ocean perch,AI,total,473,1062
+2016,30060,Pacific ocean perch,EBS_SLOPE,total,79,400
+2016,30420,northern rockfish,AI,total,250,576
+2017,10110,arrowtooth flounder,EBS_SHELF,total,283,523
+2017,10110,arrowtooth flounder,GOA,total,597,896
+2017,10112,Kamchatka flounder,EBS_SHELF,total,138,460
+2017,10115,Greenland turbot,EBS_SHELF,total,65,217
+2017,10130,flathead sole,EBS_SHELF,total,399,693
+2017,10130,flathead sole,GOA,total,207,213
+2017,10180,Dover sole,GOA,total,119,339
+2017,10200,rex sole,GOA,total,279,558
+2017,10210,yellowfin sole,EBS_SHELF,total,112,886
+2017,10261,northern rock sole,EBS_SHELF,total,88,502
+2017,10261,northern rock sole,GOA,total,123,591
+2017,10262,southern rock sole,GOA,total,136,718
+2017,10285,Alaska plaice,EBS_SHELF,total,100,552
+2017,21720,Pacific cod,EBS_SHELF,total,668,1381
+2017,21720,Pacific cod,GOA,total,132,330
+2017,21740,walleye pollock,EBS_SHELF,total,749,1623
+2017,21740,walleye pollock,GOA,total,333,895
+2017,30050,REBS rockfish complex,GOA,total,188,488
+2017,30060,Pacific ocean perch,GOA,total,141,1071
+2017,30150,Dusky rockfish,GOA,total,65,429
+2017,30420,northern rockfish,GOA,total,127,462
+2018,10110,arrowtooth flounder,AI,total,307,588
+2018,10110,arrowtooth flounder,EBS_SHELF,total,412,800
+2018,10112,Kamchatka flounder,AI,total,368,628
+2018,10112,Kamchatka flounder,EBS_SHELF,total,162,483
+2018,10115,Greenland turbot,EBS_SHELF,total,87,191
+2018,10130,flathead sole,EBS_SHELF,total,451,796
+2018,10210,yellowfin sole,EBS_SHELF,total,114,720
+2018,10261,northern rock sole,EBS_SHELF,total,105,563
+2018,10285,Alaska plaice,EBS_SHELF,total,91,463
+2018,21720,Pacific cod,AI,total,419,575
+2018,21720,Pacific cod,EBS_SHELF,total,747,1532
+2018,21740,walleye pollock,AI,total,296,904
+2018,21740,walleye pollock,EBS_SHELF,total,789,1734
+2018,21921,Atka mackerel,AI,total,312,1052
+2018,30050,REBS rockfish complex,AI,total,145,314
+2018,30060,Pacific ocean perch,AI,total,400,918
+2018,30420,northern rockfish,AI,total,247,588
+2019,10110,arrowtooth flounder,EBS_SHELF,total,373,708
+2019,10110,arrowtooth flounder,GOA,total,661,896
+2019,10112,Kamchatka flounder,EBS_SHELF,total,130,448
+2019,10115,Greenland turbot,EBS_SHELF,total,72,110
+2019,10130,flathead sole,EBS_SHELF,total,444,807
+2019,10130,flathead sole,GOA,total,220,227
+2019,10180,Dover sole,GOA,total,124,332
+2019,10200,rex sole,GOA,total,361,679
+2019,10210,yellowfin sole,EBS_SHELF,total,111,832
+2019,10261,northern rock sole,EBS_SHELF,total,88,544
+2019,10262,southern rock sole,GOA,total,217,673
+2019,10285,Alaska plaice,EBS_SHELF,total,100,517
+2019,21720,Pacific cod,EBS_SHELF,total,679,1449
+2019,21720,Pacific cod,GOA,total,185,492
+2019,21740,walleye pollock,EBS_SHELF,total,657,1537
+2019,21740,walleye pollock,GOA,total,366,987
+2019,30050,REBS rockfish complex,GOA,total,169,429
+2019,30060,Pacific ocean perch,GOA,total,498,1225
+2019,30150,Dusky rockfish,GOA,total,150,406
+2019,30420,northern rockfish,GOA,total,104,368
+2021,10130,flathead sole,EBS_SHELF,total,471,827
+2021,10130,flathead sole,GOA,total,230,234
+2021,10210,yellowfin sole,EBS_SHELF,total,344,983
+2021,10261,northern rock sole,EBS_SHELF,total,98,644
+2021,21740,walleye pollock,EBS_SHELF,total,671,1528
+2021,21740,walleye pollock,GOA,total,226,669
