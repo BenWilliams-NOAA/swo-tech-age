@@ -61,43 +61,81 @@ vroom::vroom_write(ai_avg_iss_ag, file = here::here("output", region, paste0("av
 
 
 # globals ----
-region = 'ebs'
+region = 'bs'
 
-# bootstrapped input sample sizes
-ebs_size <- vroom::vroom(here::here('output', region, 'input_ss_ess_sz.csv'))
-ebs_age <- vroom::vroom(here::here('output', region, 'input_ss_ess_ag.csv'))
+# bootstrapped input sample sizes for shelf survey
+ebs_shelf_size <- vroom::vroom(here::here('output', region, 'bs_shelf', 'input_ss_ess_sz.csv'))
+ebs_shelf_age <- vroom::vroom(here::here('output', region, 'bs_shelf', 'input_ss_ess_ag.csv'))
 
-ebs_size %>%
+ebs_shelf_size %>%
   left_join.(spec) %>% 
   mutate.(iss = length(unique(sim))/sum(value^(-1),na.rm=TRUE), 
           .by = c(year, species_code, ess)) %>% 
   group_by(year, species_code, ess, species_name) %>%
-  dplyr::distinct(iss) -> ebs_iss_sz
+  dplyr::distinct(iss) -> ebs_shelf_iss_sz
 
-ebs_iss_sz %>% 
+ebs_shelf_iss_sz %>% 
   mutate.(avg_iss = mean(iss), 
           .by = c(species_code, ess)) %>% 
   group_by(species_code, ess, species_name) %>%
-  dplyr::distinct(avg_iss) -> ebs_avg_iss_sz
+  dplyr::distinct(avg_iss) -> ebs_shelf_avg_iss_sz
 
-vroom::vroom_write(ebs_iss_sz, file = here::here("output", region, paste0("iss_sz.csv")), delim = ",")
-vroom::vroom_write(ebs_avg_iss_sz, file = here::here("output", region, paste0("avg_iss_sz.csv")), delim = ",")
+vroom::vroom_write(ebs_shelf_iss_sz, file = here::here("output", region, 'bs_shelf', paste0("iss_sz.csv")), delim = ",")
+vroom::vroom_write(ebs_shelf_avg_iss_sz, file = here::here("output", region, 'bs_shelf', paste0("avg_iss_sz.csv")), delim = ",")
 
-ebs_age %>%
+ebs_shelf_age %>%
   left_join.(spec) %>% 
   mutate.(iss = length(unique(sim))/sum(value^(-1),na.rm=TRUE), 
           .by = c(year, species_code, ess)) %>% 
   group_by(year, species_code, ess, species_name) %>%
-  dplyr::distinct(iss) -> ebs_iss_ag
+  dplyr::distinct(iss) -> ebs_shelf_iss_ag
 
-ebs_iss_ag %>% 
+ebs_shelf_iss_ag %>% 
   mutate.(avg_iss = mean(iss), 
           .by = c(species_code, ess)) %>% 
   group_by(species_code, ess, species_name) %>%
-  dplyr::distinct(avg_iss) -> ebs_avg_iss_ag
+  dplyr::distinct(avg_iss) -> ebs_shelf_avg_iss_ag
 
-vroom::vroom_write(ebs_iss_ag, file = here::here("output", region, paste0("iss_ag.csv")), delim = ",")
-vroom::vroom_write(ebs_avg_iss_ag, file = here::here("output", region, paste0("avg_iss_ag.csv")), delim = ",")
+vroom::vroom_write(ebs_shelf_iss_ag, file = here::here("output", region, 'bs_shelf', paste0("iss_ag.csv")), delim = ",")
+vroom::vroom_write(ebs_shelf_avg_iss_ag, file = here::here("output", region, 'bs_shelf', paste0("avg_iss_ag.csv")), delim = ",")
+
+# bootstrapped input sample sizes for slope survey
+ebs_slope_size <- vroom::vroom(here::here('output', region, 'bs_slope', 'input_ss_ess_sz.csv'))
+ebs_slope_age <- vroom::vroom(here::here('output', region, 'bs_slope', 'input_ss_ess_ag.csv'))
+
+ebs_slope_size %>%
+  left_join.(spec) %>% 
+  mutate.(iss = length(unique(sim))/sum(value^(-1),na.rm=TRUE), 
+          .by = c(year, species_code, ess)) %>% 
+  group_by(year, species_code, ess, species_name) %>%
+  dplyr::distinct(iss) -> ebs_slope_iss_sz
+
+ebs_slope_iss_sz %>% 
+  mutate.(avg_iss = mean(iss), 
+          .by = c(species_code, ess)) %>% 
+  group_by(species_code, ess, species_name) %>%
+  dplyr::distinct(avg_iss) -> ebs_slope_avg_iss_sz
+
+vroom::vroom_write(ebs_slope_iss_sz, file = here::here("output", region, 'bs_slope', paste0("iss_sz.csv")), delim = ",")
+vroom::vroom_write(ebs_slope_avg_iss_sz, file = here::here("output", region, 'bs_slope', paste0("avg_iss_sz.csv")), delim = ",")
+
+ebs_slope_age %>%
+  left_join.(spec) %>% 
+  mutate.(iss = length(unique(sim))/sum(value^(-1),na.rm=TRUE), 
+          .by = c(year, species_code, ess)) %>% 
+  group_by(year, species_code, ess, species_name) %>%
+  dplyr::distinct(iss) -> ebs_slope_iss_ag
+
+ebs_slope_iss_ag %>% 
+  mutate.(avg_iss = mean(iss), 
+          .by = c(species_code, ess)) %>% 
+  group_by(species_code, ess, species_name) %>%
+  dplyr::distinct(avg_iss) -> ebs_slope_avg_iss_ag
+
+vroom::vroom_write(ebs_slope_iss_ag, file = here::here("output", region, 'bs_slope', paste0("iss_ag.csv")), delim = ",")
+vroom::vroom_write(ebs_slope_avg_iss_ag, file = here::here("output", region, 'bs_slope', paste0("avg_iss_ag.csv")), delim = ",")
+
+
 
 # globals ----
 region = 'goa'
@@ -107,8 +145,8 @@ goa_size <- vroom::vroom(here::here('output', region, 'input_ss_ess_sz.csv'))
 goa_age <- vroom::vroom(here::here('output', region, 'input_ss_ess_ag.csv'))
 goa_size_rebs <- vroom::vroom(here::here('output', region, 'input_ss_ess_sz_rebs.csv'))
 goa_age_rebs <- vroom::vroom(here::here('output', region, 'input_ss_ess_ag_rebs.csv'))
-goa_size_dusk <- vroom::vroom(here::here('output', region, 'input_ss_ess_sz_dusk.csv'))
-goa_age_dusk <- vroom::vroom(here::here('output', region, 'input_ss_ess_ag_dusk.csv'))
+goa_size_dusk <- vroom::vroom(here::here('output', region, 'input_ss_ess_sz_dr.csv'))
+goa_age_dusk <- vroom::vroom(here::here('output', region, 'input_ss_ess_ag_dr.csv'))
 
 goa_size_rebs %>% 
   mutate.(species_code = 30050) -> .goa_size_rebs
@@ -193,7 +231,7 @@ goa_reg_iss_ag %>%
 vroom::vroom_write(goa_reg_iss_ag, file = here::here("output", region, paste0("iss_ag_reg.csv")), delim = ",")
 vroom::vroom_write(goa_reg_avg_iss_ag, file = here::here("output", region, paste0("avg_iss_ag_reg.csv")), delim = ",")
 
-# Comile some results
+# Compile some results
 
 ai_avg_iss_sz %>% 
   mutate.(surv = "AI") %>% 
@@ -201,18 +239,24 @@ ai_avg_iss_sz %>%
   rename.(female = ess_f, male = ess_m, total = ess_t) %>% 
   pivot_longer.(cols = c(female, male, total),names_to = "type", values_to = "avg_iss") -> .ai_avg_iss_sz
 
-ebs_avg_iss_sz %>% 
+ebs_shelf_avg_iss_sz %>% 
   mutate.(surv = "EBS_SHELF") %>% 
   pivot_wider.(names_from = ess, values_from = avg_iss) %>% 
   rename.(female = ess_f, male = ess_m, total = ess_t) %>% 
-  pivot_longer.(cols = c(female, male, total),names_to = "type", values_to = "avg_iss") -> .ebs_avg_iss_sz
+  pivot_longer.(cols = c(female, male, total),names_to = "type", values_to = "avg_iss") -> .ebs_slope_avg_iss_sz
+
+ebs_slope_avg_iss_sz %>% 
+  mutate.(surv = "EBS_SLOPE") %>% 
+  pivot_wider.(names_from = ess, values_from = avg_iss) %>% 
+  rename.(female = ess_f, male = ess_m, total = ess_t) %>% 
+  pivot_longer.(cols = c(female, male, total),names_to = "type", values_to = "avg_iss") -> .ebs_shelf_avg_iss_sz
 
 goa_avg_iss_sz %>% 
   mutate.(surv = "GOA") %>% 
   pivot_wider.(names_from = ess, values_from = avg_iss) %>% 
   rename.(female = ess_f, male = ess_m, total = ess_t) %>% 
   pivot_longer.(cols = c(female, male, total),names_to = "type", values_to = "avg_iss") %>% 
-  bind_rows.(.ai_avg_iss_sz, .ebs_avg_iss_sz) -> avg_iss_sz
+  bind_rows.(.ai_avg_iss_sz, .ebs_shelf_avg_iss_sz, .ebs_slope_avg_iss_sz) -> avg_iss_sz
 
 ai_avg_iss_ag %>% 
   mutate.(surv = "AI") %>% 
@@ -220,18 +264,24 @@ ai_avg_iss_ag %>%
   rename.(female = ess_f, male = ess_m, total = ess_t) %>% 
   pivot_longer.(cols = c(female, male, total),names_to = "type", values_to = "avg_iss") -> .ai_avg_iss_ag
 
-ebs_avg_iss_ag %>% 
+ebs_shelf_avg_iss_ag %>% 
   mutate.(surv = "EBS_SHELF") %>% 
   pivot_wider.(names_from = ess, values_from = avg_iss) %>% 
   rename.(female = ess_f, male = ess_m, total = ess_t) %>% 
-  pivot_longer.(cols = c(female, male, total),names_to = "type", values_to = "avg_iss") -> .ebs_avg_iss_ag
+  pivot_longer.(cols = c(female, male, total),names_to = "type", values_to = "avg_iss") -> .ebs_shelf_avg_iss_ag
+
+ebs_slope_avg_iss_ag %>% 
+  mutate.(surv = "EBS_SLOPE") %>% 
+  pivot_wider.(names_from = ess, values_from = avg_iss) %>% 
+  rename.(female = ess_f, male = ess_m, total = ess_t) %>% 
+  pivot_longer.(cols = c(female, male, total),names_to = "type", values_to = "avg_iss") -> .ebs_slope_avg_iss_ag
 
 goa_avg_iss_ag %>% 
   mutate.(surv = "GOA") %>% 
   pivot_wider.(names_from = ess, values_from = avg_iss) %>% 
   rename.(female = ess_f, male = ess_m, total = ess_t) %>% 
   pivot_longer.(cols = c(female, male, total),names_to = "type", values_to = "avg_iss") %>%  
-  bind_rows.(.ai_avg_iss_ag, .ebs_avg_iss_ag) -> avg_iss_ag
+  bind_rows.(.ai_avg_iss_ag, .ebs_shelf_avg_iss_ag, .ebs_slope_avg_iss_ag) -> avg_iss_ag
 
 ai_iss_sz %>% 
   mutate.(surv = "AI") %>% 
@@ -239,18 +289,24 @@ ai_iss_sz %>%
   rename.(female = ess_f, male = ess_m, total = ess_t) %>% 
   pivot_longer.(cols = c(female, male, total),names_to = "type", values_to = "iss") -> .ai_iss_sz
 
-ebs_iss_sz %>% 
+ebs_shelf_iss_sz %>% 
   mutate.(surv = "EBS_SHELF") %>% 
   pivot_wider.(names_from = ess, values_from = iss) %>% 
   rename.(female = ess_f, male = ess_m, total = ess_t) %>% 
-  pivot_longer.(cols = c(female, male, total),names_to = "type", values_to = "iss") -> .ebs_iss_sz
+  pivot_longer.(cols = c(female, male, total),names_to = "type", values_to = "iss") -> .ebs_shelf_iss_sz
+
+ebs_slope_iss_sz %>% 
+  mutate.(surv = "EBS_SLOPE") %>% 
+  pivot_wider.(names_from = ess, values_from = iss) %>% 
+  rename.(female = ess_f, male = ess_m, total = ess_t) %>% 
+  pivot_longer.(cols = c(female, male, total),names_to = "type", values_to = "iss") -> .ebs_slope_iss_sz
 
 goa_iss_sz %>% 
   mutate.(surv = "GOA") %>% 
   pivot_wider.(names_from = ess, values_from = iss) %>% 
   rename.(female = ess_f, male = ess_m, total = ess_t) %>% 
   pivot_longer.(cols = c(female, male, total),names_to = "type", values_to = "iss") %>% 
-  bind_rows.(.ai_iss_sz, .ebs_iss_sz) -> iss_sz
+  bind_rows.(.ai_iss_sz, .ebs_shelf_iss_sz, .ebs_slope_iss_sz) -> iss_sz
 
 ai_iss_ag %>% 
   mutate.(surv = "AI") %>% 
@@ -258,18 +314,24 @@ ai_iss_ag %>%
   rename.(female = ess_f, male = ess_m, total = ess_t) %>% 
   pivot_longer.(cols = c(female, male, total),names_to = "type", values_to = "iss") -> .ai_iss_ag
 
-ebs_iss_ag %>% 
+ebs_shelf_iss_ag %>% 
   mutate.(surv = "EBS_SHELF") %>% 
   pivot_wider.(names_from = ess, values_from = iss) %>% 
   rename.(female = ess_f, male = ess_m, total = ess_t) %>% 
-  pivot_longer.(cols = c(female, male, total),names_to = "type", values_to = "iss") -> .ebs_iss_ag
+  pivot_longer.(cols = c(female, male, total),names_to = "type", values_to = "iss") -> .ebs_shelf_iss_ag
+
+ebs_slope_iss_ag %>% 
+  mutate.(surv = "EBS_SHELF") %>% 
+  pivot_wider.(names_from = ess, values_from = iss) %>% 
+  rename.(female = ess_f, male = ess_m, total = ess_t) %>% 
+  pivot_longer.(cols = c(female, male, total),names_to = "type", values_to = "iss") -> .ebs_slope_iss_ag
 
 goa_iss_ag %>% 
   mutate.(surv = "GOA") %>% 
   pivot_wider.(names_from = ess, values_from = iss) %>% 
   rename.(female = ess_f, male = ess_m, total = ess_t) %>% 
   pivot_longer.(cols = c(female, male, total),names_to = "type", values_to = "iss") %>% 
-  bind_rows.(.ai_iss_ag, .ebs_iss_ag) -> iss_ag
+  bind_rows.(.ai_iss_ag, .ebs_shelf_iss_ag, .ebs_slope_iss_ag) -> iss_ag
 
 vroom::vroom_write(avg_iss_sz, file = here::here("output", paste0("avg_iss_sz.csv")), delim = ",")
 vroom::vroom_write(avg_iss_ag, file = here::here("output", paste0("avg_iss_ag.csv")), delim = ",")

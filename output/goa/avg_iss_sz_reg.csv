@@ -1,0 +1,16 @@
+species_code,ess,region,species_name,avg_iss
+10262,ess_f,E,southern rock sole,64.56062776968578
+10262,ess_m,E,southern rock sole,22.952041862364347
+10262,ess_t,E,southern rock sole,87.30181741113846
+10262,ess_f,WC,southern rock sole,82.50948061988034
+10261,ess_f,WC,northern rock sole,201.70569708774755
+10262,ess_m,WC,southern rock sole,29.01600548052715
+10261,ess_m,WC,northern rock sole,124.97305055281426
+10262,ess_t,WC,southern rock sole,109.91500596364884
+10261,ess_t,WC,northern rock sole,257.8659745692818
+10200,ess_f,E,rex sole,289.62679631941546
+10200,ess_m,E,rex sole,256.810138019249
+10200,ess_t,E,rex sole,472.57715798364643
+10200,ess_f,WC,rex sole,324.8196318548324
+10200,ess_m,WC,rex sole,276.22860428750664
+10200,ess_t,WC,rex sole,513.3596669656175

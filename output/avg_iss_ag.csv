@@ -1,82 +1,91 @@
-species_code,ess,species_name,avg_iss,region
-10180,ess_f,Dover sole,133.00881102576204,goa
-20510,ess_f,sablefish,71.6593934492501,goa
-21740,ess_f,walleye pollock,12.496378674256562,goa
-30060,ess_f,Pacific ocean perch,58.363864298622545,goa
-30420,ess_f,northern rockfish,101.09356090180867,goa
-10110,ess_f,arrowtooth flounder,215.53740748387074,goa
-10130,ess_f,flathead sole,72.72030799639482,goa
-21720,ess_f,Pacific cod,98.81102540920416,goa
-10180,ess_m,Dover sole,113.41646775637233,goa
-20510,ess_m,sablefish,77.9852410654087,goa
-21740,ess_m,walleye pollock,11.85472030679585,goa
-30060,ess_m,Pacific ocean perch,58.42546374923808,goa
-30420,ess_m,northern rockfish,95.18792177773784,goa
-10110,ess_m,arrowtooth flounder,133.07700155559024,goa
-10130,ess_m,flathead sole,54.71461238078325,goa
-21720,ess_m,Pacific cod,88.75492797614051,goa
-10180,ess_t,Dover sole,219.48870272168563,goa
-20510,ess_t,sablefish,102.85568072751863,goa
-21740,ess_t,walleye pollock,14.825253314951649,goa
-30060,ess_t,Pacific ocean perch,80.17030714038971,goa
-30420,ess_t,northern rockfish,169.44609708134536,goa
-10110,ess_t,arrowtooth flounder,291.22739592915775,goa
-10130,ess_t,flathead sole,107.95431367139236,goa
-21720,ess_t,Pacific cod,121.56213018492087,goa
-30050,ess_f,REBS rockfish complex,91.20813006147236,goa
-30050,ess_m,REBS rockfish complex,71.33223144036,goa
-30050,ess_t,REBS rockfish complex,128.70032819811334,goa
-30150,ess_f,Dusky rockfish,90.08113359683746,goa
-30150,ess_m,Dusky rockfish,72.03519690482987,goa
-30150,ess_t,Dusky rockfish,128.91593787629455,goa
-21720,ess_f,Pacific cod,109.6953578785779,ai
-21740,ess_f,walleye pollock,55.615713690304666,ai
-21921,ess_f,Atka mackerel,61.720338743634066,ai
-30060,ess_f,Pacific ocean perch,62.26322564836087,ai
-30420,ess_f,northern rockfish,75.72714200312542,ai
-10110,ess_f,arrowtooth flounder,160.9337312216606,ai
-10112,ess_f,Kamchatka flounder,67.69044256389998,ai
-21720,ess_m,Pacific cod,108.43062628123475,ai
-21740,ess_m,walleye pollock,47.641538998822924,ai
-21921,ess_m,Atka mackerel,57.49670434781574,ai
-30060,ess_m,Pacific ocean perch,57.491538147576975,ai
-30420,ess_m,northern rockfish,58.825433740449206,ai
-10110,ess_m,arrowtooth flounder,79.34138812164653,ai
-10112,ess_m,Kamchatka flounder,50.75024927055264,ai
-21720,ess_t,Pacific cod,145.02093896040768,ai
-21740,ess_t,walleye pollock,63.598127896490446,ai
-21921,ess_t,Atka mackerel,79.61525729446652,ai
-30060,ess_t,Pacific ocean perch,84.9474871167313,ai
-30420,ess_t,northern rockfish,107.54486866045121,ai
-10110,ess_t,arrowtooth flounder,179.27775006807732,ai
-10112,ess_t,Kamchatka flounder,78.77671992644042,ai
-30050,ess_f,REBS rockfish complex,98.46526449853248,ai
-30050,ess_m,REBS rockfish complex,96.55866829155144,ai
-30050,ess_t,REBS rockfish complex,180.3530542823699,ai
-10110,ess_f,arrowtooth flounder,124.4252866058047,ebs
-10115,ess_f,Greenland turbot,13.751032089949106,ebs
-10130,ess_f,flathead sole,42.63211832481665,ebs
-10210,ess_f,yellowfin sole,212.03887893159205,ebs
-10285,ess_f,Alaska plaice,140.78245893069746,ebs
-21740,ess_f,walleye pollock,4.7793171256855675,ebs
-21720,ess_f,Pacific cod,47.64266495525192,ebs
-10261,ess_f,northern rock sole,89.3055516084164,ebs
-10112,ess_f,Kamchatka flounder,140.49423747906383,ebs
-10110,ess_m,arrowtooth flounder,57.73356484466367,ebs
-10115,ess_m,Greenland turbot,9.826904960256368,ebs
-10130,ess_m,flathead sole,34.79718150433978,ebs
-10210,ess_m,yellowfin sole,168.22461359255223,ebs
-10285,ess_m,Alaska plaice,81.50760626549057,ebs
-21740,ess_m,walleye pollock,4.766562726883695,ebs
-21720,ess_m,Pacific cod,58.71776310018791,ebs
-10261,ess_m,northern rock sole,64.58251674056734,ebs
-10112,ess_m,Kamchatka flounder,107.67828441766089,ebs
-10110,ess_t,arrowtooth flounder,159.82364716435634,ebs
-10115,ess_t,Greenland turbot,20.5423864911998,ebs
-10130,ess_t,flathead sole,62.79352354784136,ebs
-10210,ess_t,yellowfin sole,310.77618183644125,ebs
-10285,ess_t,Alaska plaice,191.66924264179355,ebs
-21740,ess_t,walleye pollock,5.701537941618963,ebs
-21720,ess_t,Pacific cod,70.90211305975868,ebs
-10261,ess_t,northern rock sole,126.54239494444641,ebs
-10112,ess_t,Kamchatka flounder,220.2838340550271,ebs
+species_code,species_name,surv,type,avg_iss
+10110,arrowtooth flounder,GOA,female,229.84960454212643
+10130,flathead sole,GOA,female,110.54942623244752
+10180,Dover sole,GOA,female,85.21224646702491
+20510,sablefish,GOA,female,51.564487293291464
+21720,Pacific cod,GOA,female,78.46307086826711
+21740,walleye pollock,GOA,female,109.6719046349053
+30050,REBS rockfish complex,GOA,female,86.2238273072282
+30060,Pacific ocean perch,GOA,female,131.59787480607517
+30150,Dusky rockfish,GOA,female,57.51662750180027
+30420,northern rockfish,GOA,female,66.6431932532245
+10110,arrowtooth flounder,GOA,male,150.5480538885771
+10130,flathead sole,GOA,male,86.11667110641442
+10180,Dover sole,GOA,male,71.28196523841909
+20510,sablefish,GOA,male,54.95504028459939
+21720,Pacific cod,GOA,male,70.1829760876491
+21740,walleye pollock,GOA,male,88.15652457192465
+30050,REBS rockfish complex,GOA,male,84.5215460845376
+30060,Pacific ocean perch,GOA,male,132.70283664955215
+30150,Dusky rockfish,GOA,male,47.97219752278617
+30420,northern rockfish,GOA,male,59.97971524615615
+10110,arrowtooth flounder,GOA,total,337.34689599389304
+10130,flathead sole,GOA,total,180.17074867515723
+10180,Dover sole,GOA,total,144.99705998876743
+20510,sablefish,GOA,total,77.24890650728395
+21720,Pacific cod,GOA,total,96.43621330617583
+21740,walleye pollock,GOA,total,99.43376455855878
+30050,REBS rockfish complex,GOA,total,152.06208756481044
+30060,Pacific ocean perch,GOA,total,204.73012939260218
+30150,Dusky rockfish,GOA,total,90.0770815807487
+30420,northern rockfish,GOA,total,115.65869198799233
+10110,arrowtooth flounder,AI,female,109.12931745521257
+10112,Kamchatka flounder,AI,female,74.12208530058089
+21720,Pacific cod,AI,female,79.85575067671974
+21740,walleye pollock,AI,female,70.81750517362525
+21921,Atka mackerel,AI,female,49.67867091146215
+30050,REBS rockfish complex,AI,female,62.69087268274022
+30060,Pacific ocean perch,AI,female,122.3450121536981
+30420,northern rockfish,AI,female,73.94286851235786
+10110,arrowtooth flounder,AI,male,55.81319457582547
+10112,Kamchatka flounder,AI,male,60.39264068589535
+21720,Pacific cod,AI,male,80.80382012201146
+21740,walleye pollock,AI,male,56.11803278653435
+21921,Atka mackerel,AI,male,45.8528294435292
+30050,REBS rockfish complex,AI,male,62.10198435093382
+30060,Pacific ocean perch,AI,male,117.03733566674633
+30420,northern rockfish,AI,male,57.15747623527832
+10110,arrowtooth flounder,AI,total,132.07504416420392
+10112,Kamchatka flounder,AI,total,94.7892574298017
+21720,Pacific cod,AI,total,113.15310167547398
+21740,walleye pollock,AI,total,83.8340728344036
+21921,Atka mackerel,AI,total,69.51380921915481
+30050,REBS rockfish complex,AI,total,120.00984526577325
+30060,Pacific ocean perch,AI,total,204.11850209382743
+30420,northern rockfish,AI,total,118.71376456616971
+10110,arrowtooth flounder,EBS_SHELF,female,247.8131720101199
+10112,Kamchatka flounder,EBS_SHELF,female,113.14349300362329
+10115,Greenland turbot,EBS_SHELF,female,35.135866338024414
+10130,flathead sole,EBS_SHELF,female,179.6037682206241
+10210,yellowfin sole,EBS_SHELF,female,177.59203327017906
+10261,northern rock sole,EBS_SHELF,female,121.69813139084646
+10285,Alaska plaice,EBS_SHELF,female,117.14901325397562
+21720,Pacific cod,EBS_SHELF,female,265.366604625738
+21740,walleye pollock,EBS_SHELF,female,269.13990148391275
+10110,arrowtooth flounder,EBS_SHELF,male,86.67331005588845
+10112,Kamchatka flounder,EBS_SHELF,male,87.02476895068824
+10115,Greenland turbot,EBS_SHELF,male,19.168524154864624
+10130,flathead sole,EBS_SHELF,male,177.3692137531433
+10210,yellowfin sole,EBS_SHELF,male,138.5043787897327
+10261,northern rock sole,EBS_SHELF,male,103.68981984662155
+10285,Alaska plaice,EBS_SHELF,male,60.800766394877165
+21720,Pacific cod,EBS_SHELF,male,271.72708063468514
+21740,walleye pollock,EBS_SHELF,male,295.5293293817377
+10110,arrowtooth flounder,EBS_SHELF,total,293.6973077970151
+10112,Kamchatka flounder,EBS_SHELF,total,182.75544708827846
+10115,Greenland turbot,EBS_SHELF,total,55.12380369308498
+10130,flathead sole,EBS_SHELF,total,319.0314215959502
+10210,yellowfin sole,EBS_SHELF,total,290.24974743044095
+10261,northern rock sole,EBS_SHELF,total,212.57594772142664
+10285,Alaska plaice,EBS_SHELF,total,151.8284790847074
+21720,Pacific cod,EBS_SHELF,total,348.51224945576405
+21740,walleye pollock,EBS_SHELF,total,421.6270741957321
+10112,Kamchatka flounder,EBS_SLOPE,female,140.5383864221691
+10115,Greenland turbot,EBS_SLOPE,female,61.679402598342044
+30060,Pacific ocean perch,EBS_SLOPE,female,50.59996986934615
+10112,Kamchatka flounder,EBS_SLOPE,male,113.63209293018096
+10115,Greenland turbot,EBS_SLOPE,male,78.06828607343827
+30060,Pacific ocean perch,EBS_SLOPE,male,52.85782745328943
+10112,Kamchatka flounder,EBS_SLOPE,total,223.26565915577348
+10115,Greenland turbot,EBS_SLOPE,total,113.87493667582798
+30060,Pacific ocean perch,EBS_SLOPE,total,92.8870026297627
