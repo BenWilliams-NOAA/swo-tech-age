@@ -7,7 +7,6 @@ year,species_code,ess,species_name,iss
 1987,10110,ess_f,arrowtooth flounder,304.18999141094184
 1987,10130,ess_f,flathead sole,170.07090851988488
 1987,10180,ess_f,Dover sole,69.1162750519328
-1987,20510,ess_f,sablefish,0
 1987,21740,ess_f,walleye pollock,68.63681328880119
 1987,30060,ess_f,Pacific ocean perch,132.7524965715558
 1987,30420,ess_f,northern rockfish,75.64110953530884
@@ -119,7 +118,6 @@ year,species_code,ess,species_name,iss
 1987,10110,ess_m,arrowtooth flounder,267.0401075580649
 1987,10130,ess_m,flathead sole,111.30652521782942
 1987,10180,ess_m,Dover sole,56.374218423725566
-1987,20510,ess_m,sablefish,0
 1987,21740,ess_m,walleye pollock,65.00723214175648
 1987,30060,ess_m,Pacific ocean perch,125.21377347519208
 1987,30420,ess_m,northern rockfish,65.01348117246616
@@ -231,7 +229,6 @@ year,species_code,ess,species_name,iss
 1987,10110,ess_t,arrowtooth flounder,415.7917387901974
 1987,10130,ess_t,flathead sole,246.6103540078172
 1987,10180,ess_t,Dover sole,115.23965828501008
-1987,20510,ess_t,sablefish,0
 1987,21740,ess_t,walleye pollock,75.86465202923604
 1987,30060,ess_t,Pacific ocean perch,162.5979099613319
 1987,30420,ess_t,northern rockfish,129.08367259876883
@@ -335,9 +332,6 @@ year,species_code,ess,species_name,iss
 2019,30060,ess_t,Pacific ocean perch,351.7372502733454
 2019,30420,ess_t,northern rockfish,142.41660867522506
 2021,21740,ess_t,walleye pollock,73.38564123456844
-1987,21720,ess_f,Pacific cod,0
-1987,21720,ess_m,Pacific cod,0
-1987,21720,ess_t,Pacific cod,0
 1984,30050,ess_f,REBS rockfish complex,51.60743571116334
 1987,30050,ess_f,REBS rockfish complex,47.06209438388781
 1990,30050,ess_f,REBS rockfish complex,38.137159878023674
@@ -384,8 +378,6 @@ year,species_code,ess,species_name,iss
 2017,30050,ess_t,REBS rockfish complex,145.6674818202179
 2019,30050,ess_t,REBS rockfish complex,53.497552742796536
 1984,30150,ess_f,Dusky rockfish,25.852028709910662
-1987,30150,ess_f,Dusky rockfish,0
-1990,30150,ess_f,Dusky rockfish,0
 1993,30150,ess_f,Dusky rockfish,39.9814565062701
 1996,30150,ess_f,Dusky rockfish,63.94880485898713
 1999,30150,ess_f,Dusky rockfish,29.498149836445336
@@ -401,7 +393,6 @@ year,species_code,ess,species_name,iss
 2019,30150,ess_f,Dusky rockfish,90.76809430623493
 1984,30150,ess_m,Dusky rockfish,13.208788868331844
 1987,30150,ess_m,Dusky rockfish,23.789332822622946
-1990,30150,ess_m,Dusky rockfish,0
 1993,30150,ess_m,Dusky rockfish,34.04603701762947
 1996,30150,ess_m,Dusky rockfish,68.79638828140067
 1999,30150,ess_m,Dusky rockfish,14.21328814258026
@@ -417,7 +408,6 @@ year,species_code,ess,species_name,iss
 2019,30150,ess_m,Dusky rockfish,82.01540676842978
 1984,30150,ess_t,Dusky rockfish,32.690394229559544
 1987,30150,ess_t,Dusky rockfish,30.10739035630953
-1990,30150,ess_t,Dusky rockfish,0
 1993,30150,ess_t,Dusky rockfish,49.32639020989382
 1996,30150,ess_t,Dusky rockfish,110.72940215857699
 1999,30150,ess_t,Dusky rockfish,45.102089917592586

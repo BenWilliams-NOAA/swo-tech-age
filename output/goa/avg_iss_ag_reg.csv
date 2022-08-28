@@ -1,25 +1,23 @@
 species_code,ess,region,species_name,avg_iss
-10262,ess_f,E,southern rock sole,4.21434785391231
-10262,ess_m,E,southern rock sole,3.8567343337140776
-10262,ess_t,E,southern rock sole,8.215462265908023
-10261,ess_f,E,northern rock sole,0
+10262,ess_f,E,southern rock sole,12.64304356173693
+10262,ess_m,E,southern rock sole,23.140406002284465
+10262,ess_t,E,southern rock sole,16.430924531816046
 10261,ess_m,E,northern rock sole,18.680795484691387
-10261,ess_t,E,northern rock sole,0
-10261,ess_f,W,northern rock sole,29.36794334973835
-10262,ess_f,W,southern rock sole,20.20293104208598
-10261,ess_m,W,northern rock sole,20.840256669526685
-10262,ess_m,W,southern rock sole,12.319602760569744
-10261,ess_t,W,northern rock sole,41.52626981370487
-10262,ess_t,W,southern rock sole,31.068718245373454
-10261,ess_f,C,northern rock sole,29.36794334973835
-10262,ess_f,C,southern rock sole,20.20293104208598
-10261,ess_m,C,northern rock sole,20.840256669526685
-10262,ess_m,C,southern rock sole,12.319602760569744
-10261,ess_t,C,northern rock sole,41.52626981370487
-10262,ess_t,C,southern rock sole,31.068718245373454
-10200,ess_f,E,rex sole,16.03334882216121
-10200,ess_m,E,rex sole,14.619945794254559
-10200,ess_t,E,rex sole,30.252544722321733
-10200,ess_f,WC,rex sole,24.185621293901985
-10200,ess_m,WC,rex sole,20.246317530248845
-10200,ess_t,WC,rex sole,42.22814193531849
+10262,ess_f,W,southern rock sole,30.304396563128968
+10261,ess_f,W,northern rock sole,35.89415298301354
+10262,ess_m,W,southern rock sole,21.11931901811956
+10261,ess_m,W,northern rock sole,22.924282336479354
+10262,ess_t,W,southern rock sole,41.42495766049794
+10261,ess_t,W,northern rock sole,50.75432977230595
+10262,ess_f,C,southern rock sole,30.304396563128968
+10261,ess_f,C,northern rock sole,35.89415298301354
+10262,ess_m,C,southern rock sole,21.11931901811956
+10261,ess_m,C,northern rock sole,22.924282336479354
+10262,ess_t,C,southern rock sole,41.42495766049794
+10261,ess_t,C,northern rock sole,50.75432977230595
+10200,ess_f,E,rex sole,21.863657484765287
+10200,ess_m,E,rex sole,19.936289719438033
+10200,ess_t,E,rex sole,34.90678237190969
+10200,ess_f,WC,rex sole,32.24749505853598
+10200,ess_m,WC,rex sole,26.995090040331792
+10200,ess_t,WC,rex sole,48.26073364036399

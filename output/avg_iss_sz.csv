@@ -29,7 +29,7 @@ species_code,species_name,surv,type,avg_iss
 30060,Pacific ocean perch,GOA,total,420.22941174281283
 30150,Dusky rockfish,GOA,total,194.12800867785037
 30420,northern rockfish,GOA,total,211.65742741676004
-10110,arrowtooth flounder,AI,female,676.1287369502621
+10110,arrowtooth flounder,AI,female,724.4236467324238
 10112,Kamchatka flounder,AI,female,202.66846479328612
 21720,Pacific cod,AI,female,442.2759411396543
 21740,walleye pollock,AI,female,295.75862169693227
@@ -37,14 +37,14 @@ species_code,species_name,surv,type,avg_iss
 30050,REBS rockfish complex,AI,female,141.28772127672843
 30060,Pacific ocean perch,AI,female,382.54503873852826
 30420,northern rockfish,AI,female,183.20504493982446
-10110,arrowtooth flounder,AI,male,352.88639526345185
+10110,arrowtooth flounder,AI,male,378.09256635369843
 10112,Kamchatka flounder,AI,male,187.68055229006
 21720,Pacific cod,AI,male,455.83351211329256
 21740,walleye pollock,AI,male,220.34102822778993
 21921,Atka mackerel,AI,male,147.5982892472166
 30050,REBS rockfish complex,AI,male,146.62811583644532
 30060,Pacific ocean perch,AI,male,471.5492969184802
-30420,northern rockfish,AI,male,161.3153545591776
+30420,northern rockfish,AI,male,172.83787988483311
 10110,arrowtooth flounder,AI,total,793.461868681151
 10112,Kamchatka flounder,AI,total,292.3274262699991
 21720,Pacific cod,AI,total,699.1117736758446

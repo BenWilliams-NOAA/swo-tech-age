@@ -1,7 +1,5 @@
 year,species_code,ess,species_name,iss
-1980,21720,ess_f,Pacific cod,0
 1980,21740,ess_f,walleye pollock,14.547239701644298
-1980,21921,ess_f,Atka mackerel,0
 1980,30060,ess_f,Pacific ocean perch,17.19033371097297
 1980,30420,ess_f,northern rockfish,39.87723527633467
 1983,21740,ess_f,walleye pollock,140.198428901558
@@ -80,11 +78,8 @@ year,species_code,ess,species_name,iss
 2018,21921,ess_f,Atka mackerel,83.6716848992987
 2018,30060,ess_f,Pacific ocean perch,165.79281280189366
 2018,30420,ess_f,northern rockfish,155.57766070229937
-1980,21720,ess_m,Pacific cod,0
 1980,21740,ess_m,walleye pollock,10.655485337353777
 1980,21921,ess_m,Atka mackerel,5.966362186525773
-1980,30060,ess_m,Pacific ocean perch,0
-1980,30420,ess_m,northern rockfish,0
 1983,21740,ess_m,walleye pollock,122.25213425474814
 1983,21921,ess_m,Atka mackerel,15.68553045510015
 1983,30060,ess_m,Pacific ocean perch,78.36643421841755

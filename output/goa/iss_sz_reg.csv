@@ -16,9 +16,7 @@ year,species_code,ess,region,species_name,iss
 2003,10262,ess_m,E,southern rock sole,41.10197878267316
 2005,10262,ess_m,E,southern rock sole,44.72178958002453
 2007,10262,ess_m,E,southern rock sole,38.8363391685556
-2009,10262,ess_m,E,southern rock sole,0
 2011,10262,ess_m,E,southern rock sole,20.30619313762686
-2013,10262,ess_m,E,southern rock sole,0
 2015,10262,ess_m,E,southern rock sole,22.21865129852101
 2017,10262,ess_m,E,southern rock sole,25.289663602143058
 2019,10262,ess_m,E,southern rock sole,14.809657899019967
@@ -73,11 +71,9 @@ year,species_code,ess,region,species_name,iss
 2005,10261,ess_m,WC,northern rock sole,174.79941027435368
 2007,10262,ess_m,WC,southern rock sole,38.8363391685556
 2007,10261,ess_m,WC,northern rock sole,180.6958732022807
-2009,10262,ess_m,WC,southern rock sole,0
 2009,10261,ess_m,WC,northern rock sole,154.67662487493465
 2011,10262,ess_m,WC,southern rock sole,20.30619313762686
 2011,10261,ess_m,WC,northern rock sole,128.46659529596127
-2013,10262,ess_m,WC,southern rock sole,0
 2013,10261,ess_m,WC,northern rock sole,80.84838440575129
 2015,10262,ess_m,WC,southern rock sole,22.21865129852101
 2015,10261,ess_m,WC,northern rock sole,114.60092284714918

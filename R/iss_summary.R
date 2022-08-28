@@ -31,7 +31,9 @@ ai_size %>%
   mutate.(iss = length(unique(sim))/sum(value^(-1),na.rm=TRUE), 
           .by = c(year, species_code, ess)) %>% 
   group_by(year, species_code, ess, species_name) %>%
-  dplyr::distinct(iss) -> ai_iss_sz
+  dplyr::distinct(iss) %>% 
+  tidytable::drop_na.() %>% 
+  tidytable::filter.(iss > 0) -> ai_iss_sz
 
 ai_iss_sz %>% 
   mutate.(avg_iss = mean(iss), 
@@ -48,7 +50,9 @@ ai_age %>%
   mutate.(iss = length(unique(sim))/sum(value^(-1),na.rm=TRUE), 
           .by = c(year, species_code, ess)) %>% 
   group_by(year, species_code, ess, species_name) %>%
-  dplyr::distinct(iss) -> ai_iss_ag
+  dplyr::distinct(iss) %>% 
+  tidytable::drop_na.() %>% 
+  tidytable::filter.(iss > 0) -> ai_iss_ag
 
 ai_iss_ag %>% 
   mutate.(avg_iss = mean(iss), 
@@ -72,7 +76,9 @@ ebs_shelf_size %>%
   mutate.(iss = length(unique(sim))/sum(value^(-1),na.rm=TRUE), 
           .by = c(year, species_code, ess)) %>% 
   group_by(year, species_code, ess, species_name) %>%
-  dplyr::distinct(iss) -> ebs_shelf_iss_sz
+  dplyr::distinct(iss) %>% 
+  tidytable::drop_na.() %>% 
+  tidytable::filter.(iss > 0) -> ebs_shelf_iss_sz
 
 ebs_shelf_iss_sz %>% 
   mutate.(avg_iss = mean(iss), 
@@ -88,7 +94,9 @@ ebs_shelf_age %>%
   mutate.(iss = length(unique(sim))/sum(value^(-1),na.rm=TRUE), 
           .by = c(year, species_code, ess)) %>% 
   group_by(year, species_code, ess, species_name) %>%
-  dplyr::distinct(iss) -> ebs_shelf_iss_ag
+  dplyr::distinct(iss) %>% 
+  tidytable::drop_na.() %>% 
+  tidytable::filter.(iss > 0) -> ebs_shelf_iss_ag
 
 ebs_shelf_iss_ag %>% 
   mutate.(avg_iss = mean(iss), 
@@ -108,7 +116,9 @@ ebs_slope_size %>%
   mutate.(iss = length(unique(sim))/sum(value^(-1),na.rm=TRUE), 
           .by = c(year, species_code, ess)) %>% 
   group_by(year, species_code, ess, species_name) %>%
-  dplyr::distinct(iss) -> ebs_slope_iss_sz
+  dplyr::distinct(iss) %>% 
+  tidytable::drop_na.() %>% 
+  tidytable::filter.(iss > 0) -> ebs_slope_iss_sz
 
 ebs_slope_iss_sz %>% 
   mutate.(avg_iss = mean(iss), 
@@ -124,7 +134,9 @@ ebs_slope_age %>%
   mutate.(iss = length(unique(sim))/sum(value^(-1),na.rm=TRUE), 
           .by = c(year, species_code, ess)) %>% 
   group_by(year, species_code, ess, species_name) %>%
-  dplyr::distinct(iss) -> ebs_slope_iss_ag
+  dplyr::distinct(iss) %>% 
+  tidytable::drop_na.() %>% 
+  tidytable::filter.(iss > 0) -> ebs_slope_iss_ag
 
 ebs_slope_iss_ag %>% 
   mutate.(avg_iss = mean(iss), 
@@ -164,7 +176,9 @@ goa_size %>%
   mutate.(iss = length(unique(sim))/sum(value^(-1),na.rm=TRUE), 
           .by = c(year, species_code, ess)) %>% 
   group_by(year, species_code, ess, species_name) %>%
-  dplyr::distinct(iss) -> goa_iss_sz
+  dplyr::distinct(iss) %>% 
+  tidytable::drop_na.() %>% 
+  tidytable::filter.(iss > 0) -> goa_iss_sz
 
 goa_iss_sz %>% 
   mutate.(avg_iss = mean(iss), 
@@ -181,7 +195,9 @@ goa_age %>%
   mutate.(iss = length(unique(sim))/sum(value^(-1),na.rm=TRUE), 
           .by = c(year, species_code, ess)) %>% 
   group_by(year, species_code, ess, species_name) %>%
-  dplyr::distinct(iss) -> goa_iss_ag
+  dplyr::distinct(iss) %>% 
+  tidytable::drop_na.() %>% 
+  tidytable::filter.(iss > 0) -> goa_iss_ag
 
 goa_iss_ag %>% 
   mutate.(avg_iss = mean(iss), 
@@ -192,6 +208,7 @@ goa_iss_ag %>%
 vroom::vroom_write(goa_iss_ag, file = here::here("output", region, paste0("iss_ag.csv")), delim = ",")
 vroom::vroom_write(goa_avg_iss_ag, file = here::here("output", region, paste0("avg_iss_ag.csv")), delim = ",")
 
+# regional GOA species
 goa_size_rs <- vroom::vroom(here::here('output', region, 'input_ss_ess_sz_w_c_egoa_rocksole.csv'))
 goa_age_rs <- vroom::vroom(here::here('output', region, 'input_ss_ess_ag_w_c_egoa_rocksole.csv'))
 goa_size_rex <- vroom::vroom(here::here('output', region, 'input_ss_ess_sz_wc_egoa_rex.csv'))
@@ -203,7 +220,9 @@ goa_size_rs %>%
   mutate.(iss = length(unique(sim))/sum(value^(-1),na.rm=TRUE), 
           .by = c(year, species_code, ess)) %>% 
   group_by(year, species_code, ess, species_name, region) %>%
-  dplyr::distinct(iss) -> goa_reg_iss_sz
+  dplyr::distinct(iss) %>% 
+  tidytable::drop_na.() %>% 
+  tidytable::filter.(iss > 0) -> goa_reg_iss_sz
 
 goa_reg_iss_sz %>% 
   mutate.(avg_iss = mean(iss), 
@@ -220,7 +239,9 @@ goa_age_rs %>%
   mutate.(iss = length(unique(sim))/sum(value^(-1),na.rm=TRUE), 
           .by = c(year, species_code, ess)) %>% 
   group_by(year, species_code, ess, species_name, region) %>%
-  dplyr::distinct(iss) -> goa_reg_iss_ag
+  dplyr::distinct(iss) %>% 
+  tidytable::drop_na.() %>% 
+  tidytable::filter.(iss > 0) -> goa_reg_iss_ag
 
 goa_reg_iss_ag %>% 
   mutate.(avg_iss = mean(iss), 
@@ -321,7 +342,7 @@ ebs_shelf_iss_ag %>%
   pivot_longer.(cols = c(female, male, total),names_to = "type", values_to = "iss") -> .ebs_shelf_iss_ag
 
 ebs_slope_iss_ag %>% 
-  mutate.(surv = "EBS_SHELF") %>% 
+  mutate.(surv = "EBS_SLOPE") %>% 
   pivot_wider.(names_from = ess, values_from = iss) %>% 
   rename.(female = ess_f, male = ess_m, total = ess_t) %>% 
   pivot_longer.(cols = c(female, male, total),names_to = "type", values_to = "iss") -> .ebs_slope_iss_ag

@@ -1,0 +1,19 @@
+Stock,Type,Female,Male,Total
+Alaska plaice,nominal,"5,209","5,135","10,800"
+,iss,"1,122","1,079","1,685"
+arrowtooth flounder,nominal,"6,715","2,806","9,779"
+,iss,"1,989",999,"2,565"
+flathead sole,nominal,"8,145","7,994","17,193"
+,iss,"1,538","1,298","2,302"
+Greenland turbot,nominal,301,316,720
+,iss,78,35,115
+Kamchatka flounder,nominal,875,882,"1,776"
+,iss,383,355,679
+northern rock sole,nominal,"14,060","14,285","29,137"
+,iss,"1,272","1,153","1,933"
+Pacific cod,nominal,"6,032","6,210","13,320"
+,iss,"1,693","1,631","2,655"
+walleye pollock,nominal,"28,713","29,373","82,451"
+,iss,"2,138","2,015","2,448"
+yellowfin sole,nominal,"17,326","10,952","29,803"
+,iss,"1,653","1,012","1,166"

@@ -1,5 +1,4 @@
 year,species_code,ess,species_name,iss
-1980,10110,ess_f,arrowtooth flounder,0
 1983,10110,ess_f,arrowtooth flounder,325.45258730222685
 1986,10110,ess_f,arrowtooth flounder,188.09621447482183
 1991,10110,ess_f,arrowtooth flounder,505.99130963799416
@@ -102,7 +101,6 @@ year,species_code,ess,species_name,iss
 2014,30420,ess_f,northern rockfish,215.30864771080508
 2016,30420,ess_f,northern rockfish,260.867691572975
 2018,30420,ess_f,northern rockfish,278.1539451921656
-1980,10110,ess_m,arrowtooth flounder,0
 1983,10110,ess_m,arrowtooth flounder,201.83229046821373
 1986,10110,ess_m,arrowtooth flounder,105.17380261770279
 1991,10110,ess_m,arrowtooth flounder,405.79684380537424
@@ -190,7 +188,6 @@ year,species_code,ess,species_name,iss
 2014,30060,ess_m,Pacific ocean perch,273.7631917160741
 2016,30060,ess_m,Pacific ocean perch,838.5175755761376
 2018,30060,ess_m,Pacific ocean perch,955.9334206874939
-1980,30420,ess_m,northern rockfish,0
 1983,30420,ess_m,northern rockfish,96.07791386131204
 1986,30420,ess_m,northern rockfish,196.12648213987933
 1991,30420,ess_m,northern rockfish,82.89976159196476

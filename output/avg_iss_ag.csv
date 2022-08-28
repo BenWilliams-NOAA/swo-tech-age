@@ -2,49 +2,49 @@ species_code,species_name,surv,type,avg_iss
 10110,arrowtooth flounder,GOA,female,229.84960454212643
 10130,flathead sole,GOA,female,110.54942623244752
 10180,Dover sole,GOA,female,85.21224646702491
-20510,sablefish,GOA,female,51.564487293291464
-21720,Pacific cod,GOA,female,78.46307086826711
+20510,sablefish,GOA,female,68.75264972438862
+21720,Pacific cod,GOA,female,84.0675759302862
 21740,walleye pollock,GOA,female,109.6719046349053
 30050,REBS rockfish complex,GOA,female,86.2238273072282
 30060,Pacific ocean perch,GOA,female,131.59787480607517
-30150,Dusky rockfish,GOA,female,57.51662750180027
+30150,Dusky rockfish,GOA,female,65.73328857348602
 30420,northern rockfish,GOA,female,66.6431932532245
 10110,arrowtooth flounder,GOA,male,150.5480538885771
 10130,flathead sole,GOA,male,86.11667110641442
 10180,Dover sole,GOA,male,71.28196523841909
-20510,sablefish,GOA,male,54.95504028459939
-21720,Pacific cod,GOA,male,70.1829760876491
+20510,sablefish,GOA,male,73.27338704613253
+21720,Pacific cod,GOA,male,75.19604580819546
 21740,walleye pollock,GOA,male,88.15652457192465
 30050,REBS rockfish complex,GOA,male,84.5215460845376
 30060,Pacific ocean perch,GOA,male,132.70283664955215
-30150,Dusky rockfish,GOA,male,47.97219752278617
+30150,Dusky rockfish,GOA,male,51.170344024305244
 30420,northern rockfish,GOA,male,59.97971524615615
 10110,arrowtooth flounder,GOA,total,337.34689599389304
 10130,flathead sole,GOA,total,180.17074867515723
 10180,Dover sole,GOA,total,144.99705998876743
-20510,sablefish,GOA,total,77.24890650728395
-21720,Pacific cod,GOA,total,96.43621330617583
+20510,sablefish,GOA,total,102.99854200971194
+21720,Pacific cod,GOA,total,103.32451425661696
 21740,walleye pollock,GOA,total,99.43376455855878
 30050,REBS rockfish complex,GOA,total,152.06208756481044
 30060,Pacific ocean perch,GOA,total,204.73012939260218
-30150,Dusky rockfish,GOA,total,90.0770815807487
+30150,Dusky rockfish,GOA,total,96.0822203527986
 30420,northern rockfish,GOA,total,115.65869198799233
 10110,arrowtooth flounder,AI,female,109.12931745521257
 10112,Kamchatka flounder,AI,female,74.12208530058089
-21720,Pacific cod,AI,female,79.85575067671974
+21720,Pacific cod,AI,female,86.51039656644637
 21740,walleye pollock,AI,female,70.81750517362525
-21921,Atka mackerel,AI,female,49.67867091146215
+21921,Atka mackerel,AI,female,53.22714740513802
 30050,REBS rockfish complex,AI,female,62.69087268274022
 30060,Pacific ocean perch,AI,female,122.3450121536981
 30420,northern rockfish,AI,female,73.94286851235786
 10110,arrowtooth flounder,AI,male,55.81319457582547
 10112,Kamchatka flounder,AI,male,60.39264068589535
-21720,Pacific cod,AI,male,80.80382012201146
+21720,Pacific cod,AI,male,87.53747179884574
 21740,walleye pollock,AI,male,56.11803278653435
 21921,Atka mackerel,AI,male,45.8528294435292
 30050,REBS rockfish complex,AI,male,62.10198435093382
-30060,Pacific ocean perch,AI,male,117.03733566674633
-30420,northern rockfish,AI,male,57.15747623527832
+30060,Pacific ocean perch,AI,male,125.39714535722821
+30420,northern rockfish,AI,male,61.24015310922677
 10110,arrowtooth flounder,AI,total,132.07504416420392
 10112,Kamchatka flounder,AI,total,94.7892574298017
 21720,Pacific cod,AI,total,113.15310167547398

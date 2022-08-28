@@ -9,12 +9,10 @@ year,species_code,species_name,surv,type,iss
 1987,10110,arrowtooth flounder,GOA,female,304.18999141094184
 1987,10130,flathead sole,GOA,female,170.07090851988488
 1987,10180,Dover sole,GOA,female,69.1162750519328
-1987,20510,sablefish,GOA,female,0
-1987,21720,Pacific cod,GOA,female,0
 1987,21740,walleye pollock,GOA,female,68.63681328880119
 1987,30050,REBS rockfish complex,GOA,female,47.06209438388781
 1987,30060,Pacific ocean perch,GOA,female,132.7524965715558
-1987,30150,Dusky rockfish,GOA,female,0
+1987,30150,Dusky rockfish,GOA,female,NA
 1987,30420,northern rockfish,GOA,female,75.64110953530884
 1990,10110,arrowtooth flounder,GOA,female,89.51076891259333
 1990,10130,flathead sole,GOA,female,34.30456968971314
@@ -23,7 +21,6 @@ year,species_code,species_name,surv,type,iss
 1990,21740,walleye pollock,GOA,female,97.4395077153767
 1990,30050,REBS rockfish complex,GOA,female,38.137159878023674
 1990,30060,Pacific ocean perch,GOA,female,105.09574143758853
-1990,30150,Dusky rockfish,GOA,female,0
 1990,30420,northern rockfish,GOA,female,39.34844395198764
 1993,10110,arrowtooth flounder,GOA,female,241.89460176601236
 1993,10130,flathead sole,GOA,female,61.84476978515532
@@ -153,8 +150,6 @@ year,species_code,species_name,surv,type,iss
 1987,10110,arrowtooth flounder,GOA,male,267.0401075580649
 1987,10130,flathead sole,GOA,male,111.30652521782942
 1987,10180,Dover sole,GOA,male,56.374218423725566
-1987,20510,sablefish,GOA,male,0
-1987,21720,Pacific cod,GOA,male,0
 1987,21740,walleye pollock,GOA,male,65.00723214175648
 1987,30050,REBS rockfish complex,GOA,male,40.6291744222512
 1987,30060,Pacific ocean perch,GOA,male,125.21377347519208
@@ -167,7 +162,6 @@ year,species_code,species_name,surv,type,iss
 1990,21740,walleye pollock,GOA,male,75.73082759290402
 1990,30050,REBS rockfish complex,GOA,male,30.60898303446833
 1990,30060,Pacific ocean perch,GOA,male,157.2490258043056
-1990,30150,Dusky rockfish,GOA,male,0
 1990,30420,northern rockfish,GOA,male,30.222221000206194
 1993,10110,arrowtooth flounder,GOA,male,153.73722212735012
 1993,10130,flathead sole,GOA,male,41.04619722804798
@@ -297,8 +291,6 @@ year,species_code,species_name,surv,type,iss
 1987,10110,arrowtooth flounder,GOA,total,415.7917387901974
 1987,10130,flathead sole,GOA,total,246.6103540078172
 1987,10180,Dover sole,GOA,total,115.23965828501008
-1987,20510,sablefish,GOA,total,0
-1987,21720,Pacific cod,GOA,total,0
 1987,21740,walleye pollock,GOA,total,75.86465202923604
 1987,30050,REBS rockfish complex,GOA,total,70.19938286065077
 1987,30060,Pacific ocean perch,GOA,total,162.5979099613319
@@ -311,7 +303,6 @@ year,species_code,species_name,surv,type,iss
 1990,21740,walleye pollock,GOA,total,103.70426564956347
 1990,30050,REBS rockfish complex,GOA,total,61.12926817597129
 1990,30060,Pacific ocean perch,GOA,total,159.0333896624139
-1990,30150,Dusky rockfish,GOA,total,0
 1990,30420,northern rockfish,GOA,total,57.082754672946955
 1993,10110,arrowtooth flounder,GOA,total,363.91189914006367
 1993,10130,flathead sole,GOA,total,101.6188685476304
@@ -431,9 +422,9 @@ year,species_code,species_name,surv,type,iss
 2019,30150,Dusky rockfish,GOA,total,156.87029816033044
 2019,30420,northern rockfish,GOA,total,142.41660867522506
 2021,21740,walleye pollock,GOA,total,73.38564123456844
-1980,21720,Pacific cod,AI,female,0
+1980,21720,Pacific cod,AI,female,NA
 1980,21740,walleye pollock,AI,female,14.547239701644298
-1980,21921,Atka mackerel,AI,female,0
+1980,21921,Atka mackerel,AI,female,NA
 1980,30060,Pacific ocean perch,AI,female,17.19033371097297
 1980,30420,northern rockfish,AI,female,39.87723527633467
 1983,21740,walleye pollock,AI,female,140.198428901558
@@ -525,11 +516,11 @@ year,species_code,species_name,surv,type,iss
 2018,30050,REBS rockfish complex,AI,female,50.33868234378478
 2018,30060,Pacific ocean perch,AI,female,165.79281280189366
 2018,30420,northern rockfish,AI,female,155.57766070229937
-1980,21720,Pacific cod,AI,male,0
+1980,21720,Pacific cod,AI,male,NA
 1980,21740,walleye pollock,AI,male,10.655485337353777
 1980,21921,Atka mackerel,AI,male,5.966362186525773
-1980,30060,Pacific ocean perch,AI,male,0
-1980,30420,northern rockfish,AI,male,0
+1980,30060,Pacific ocean perch,AI,male,NA
+1980,30420,northern rockfish,AI,male,NA
 1983,21740,walleye pollock,AI,male,122.25213425474814
 1983,21921,Atka mackerel,AI,male,15.68553045510015
 1983,30060,Pacific ocean perch,AI,male,78.36643421841755
@@ -806,27 +797,27 @@ year,species_code,species_name,surv,type,iss
 2021,10210,yellowfin sole,EBS_SHELF,total,231.45640684819404
 2021,10261,northern rock sole,EBS_SHELF,total,260.1146655247461
 2021,21740,walleye pollock,EBS_SHELF,total,340.7114893688244
-2008,10115,Greenland turbot,EBS_SHELF,female,70.55558135535877
-2008,30060,Pacific ocean perch,EBS_SHELF,female,50.74528830478366
-2012,10112,Kamchatka flounder,EBS_SHELF,female,144.66766696237306
-2012,10115,Greenland turbot,EBS_SHELF,female,45.50509375957772
-2012,30060,Pacific ocean perch,EBS_SHELF,female,63.678404684643326
-2016,10112,Kamchatka flounder,EBS_SHELF,female,136.40910588196516
-2016,10115,Greenland turbot,EBS_SHELF,female,68.97753268008965
-2016,30060,Pacific ocean perch,EBS_SHELF,female,37.376216618611465
-2008,10115,Greenland turbot,EBS_SHELF,male,90.50562702198998
-2008,30060,Pacific ocean perch,EBS_SHELF,male,50.43225609144016
-2012,10112,Kamchatka flounder,EBS_SHELF,male,96.98266395542156
-2012,10115,Greenland turbot,EBS_SHELF,male,70.07390979327302
-2012,30060,Pacific ocean perch,EBS_SHELF,male,56.37943429524913
-2016,10112,Kamchatka flounder,EBS_SHELF,male,130.28152190494035
-2016,10115,Greenland turbot,EBS_SHELF,male,73.62532140505182
-2016,30060,Pacific ocean perch,EBS_SHELF,male,51.76179197317901
-2008,10115,Greenland turbot,EBS_SHELF,total,140.9396362170223
-2008,30060,Pacific ocean perch,EBS_SHELF,total,88.71606935817252
-2012,10112,Kamchatka flounder,EBS_SHELF,total,208.61402615010886
-2012,10115,Greenland turbot,EBS_SHELF,total,87.34694627362897
-2012,30060,Pacific ocean perch,EBS_SHELF,total,107.75309199308208
-2016,10112,Kamchatka flounder,EBS_SHELF,total,237.9172921614381
-2016,10115,Greenland turbot,EBS_SHELF,total,113.33822753683269
-2016,30060,Pacific ocean perch,EBS_SHELF,total,82.19184653803353
+2008,10115,Greenland turbot,EBS_SLOPE,female,70.55558135535877
+2008,30060,Pacific ocean perch,EBS_SLOPE,female,50.74528830478366
+2012,10112,Kamchatka flounder,EBS_SLOPE,female,144.66766696237306
+2012,10115,Greenland turbot,EBS_SLOPE,female,45.50509375957772
+2012,30060,Pacific ocean perch,EBS_SLOPE,female,63.678404684643326
+2016,10112,Kamchatka flounder,EBS_SLOPE,female,136.40910588196516
+2016,10115,Greenland turbot,EBS_SLOPE,female,68.97753268008965
+2016,30060,Pacific ocean perch,EBS_SLOPE,female,37.376216618611465
+2008,10115,Greenland turbot,EBS_SLOPE,male,90.50562702198998
+2008,30060,Pacific ocean perch,EBS_SLOPE,male,50.43225609144016
+2012,10112,Kamchatka flounder,EBS_SLOPE,male,96.98266395542156
+2012,10115,Greenland turbot,EBS_SLOPE,male,70.07390979327302
+2012,30060,Pacific ocean perch,EBS_SLOPE,male,56.37943429524913
+2016,10112,Kamchatka flounder,EBS_SLOPE,male,130.28152190494035
+2016,10115,Greenland turbot,EBS_SLOPE,male,73.62532140505182
+2016,30060,Pacific ocean perch,EBS_SLOPE,male,51.76179197317901
+2008,10115,Greenland turbot,EBS_SLOPE,total,140.9396362170223
+2008,30060,Pacific ocean perch,EBS_SLOPE,total,88.71606935817252
+2012,10112,Kamchatka flounder,EBS_SLOPE,total,208.61402615010886
+2012,10115,Greenland turbot,EBS_SLOPE,total,87.34694627362897
+2012,30060,Pacific ocean perch,EBS_SLOPE,total,107.75309199308208
+2016,10112,Kamchatka flounder,EBS_SLOPE,total,237.9172921614381
+2016,10115,Greenland turbot,EBS_SLOPE,total,113.33822753683269
+2016,30060,Pacific ocean perch,EBS_SLOPE,total,82.19184653803353

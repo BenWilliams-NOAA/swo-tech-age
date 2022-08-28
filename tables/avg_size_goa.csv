@@ -1,0 +1,21 @@
+Stock,Type,Female,Male,Total
+arrowtooth flounder,nominal,"35,553","17,117","54,108"
+,iss,"3,637","1,860","4,581"
+Dover sole,nominal,"2,523","3,209","6,084"
+,iss,601,623,"1,089"
+Dusky rockfish,nominal,"1,039",923,"1,997"
+,iss,146,118,194
+flathead sole,nominal,"10,753","9,799","21,318"
+,iss,"1,469","1,139","2,214"
+northern rockfish,nominal,"1,971","1,827","3,913"
+,iss,125,144,212
+Pacific cod,nominal,"5,314","5,208","10,918"
+,iss,576,555,767
+Pacific ocean perch,nominal,"9,003","10,181","20,456"
+,iss,322,326,420
+REBS rockfish complex,nominal,"1,630","1,656","3,378"
+,iss,341,338,520
+sablefish,nominal,"2,829","3,735","6,908"
+,iss,468,620,854
+walleye pollock,nominal,"13,701","11,402","28,242"
+,iss,467,365,434
