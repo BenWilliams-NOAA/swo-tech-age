@@ -2,19 +2,19 @@
 title: "Bootstrap age and length composition input sample sizes for stocks assessed with statistical catch-at-age models at the Alaska Fisheries Science Center"
 
 author:
-# alpha order for now
-  - name: Meaghan Bryan
-    institute: afscsearefm
-  - name: Jason Conner
-    institute: afscsearace
   - name: Pete Hulson
     institute: afscjnu
     email: pete.hulson@noaa.gov
     correspondence: true
+  - name: Benjamin Williams
+    institute: afscjnu
   - name: Matthew Siskey
     institute: uw
-  - name: Benjamin Williams
-    institute: afscjnu    
+  - name: Meaghan Bryan
+    institute: afscsearefm
+  - name: Jason Conner
+    institute: afscsearace
+   
 
 institute:
   - afscjnu: Auke Bay Laboratories, Alaska Fisheries Science Center, National Marine Fisheries Service, National Oceanic and Atmospheric Administration, 17109 Point Lena Loop Rd., Juneau, AK 99801
@@ -43,6 +43,10 @@ header-includes:
 
   - \renewcommand{\eqref}{\Cref}
   - \Crefformat{equation}{#2#1#3}
+  
+editor_options:
+  markdown:
+    wrap: sentence
 ---
 
 ```{r setup, include=FALSE}
@@ -56,7 +60,6 @@ source(here::here('R', "render_toc.R"))
 
 [Pete and Matt]
 
-
 \newpage
 
 ```{r toc}
@@ -67,25 +70,36 @@ render_toc("swo_age_tech_memo.Rmd")
 
 # Introduction
 
-Age-structured stock assessments (e.g., statistical catch-at-age models) conducted by the Alaska Fisheries Science Center (AFSC) offer valuable information for the management of marine fish stocks. 
-Compositional information on age and length comprise important data products used in these assessments, as they facilitate the tracking of year classes and size-structure over time, thus improving our understanding of the population dynamics [@QuinnDeriso1999]. 
-For stocks that depend on the periodic production of strong year-classes and subsequent recruitment into fisheries, sampling efforts for age and length data, scaling of these data to the population level (‘compositional expansion’), and the weight assigned to these data products in assessment models are highly important. 
+[General para on age-structured assessments at AFSC]
+Under the North Pacific Fishery Management Council (NPFMC) Fishery Management Plan (FMP) for the Eastern Bering Sea, Aleutian Islands, and Gulf of Alaska, Tier 1, 2, and 3 stocks use an age-structured assessment model to estimate population and management quantities (@ref).
+While these assessment models can vary in their specific implementation across stocks (i.e., parameterization or data availability), a critical and common data component of this structure of assessment model is age and length composition data.
+Age and length composition data are collected on both fishery-independent (e.g., bottom trawl or longline surveys) and fishery-dependent platforms, providing critical data to assessments in order to track population changes over time.
+The Alaska Fisheries Science Center (AFSC) operates fishery-independent surveys that then provide age and length composition data to ## stocks assessed with age-structured models.
+
+[General para on weighting age and length comp data as it relates to input sample size]
+
+
+[Purpose para: to generate age and length composition input sample sizes]
+
+Age-structured stock assessments (e.g., statistical catch-at-age models) conducted by the Alaska Fisheries Science Center (AFSC) offer valuable information for the management of marine fish stocks.
+Compositional information on age and length comprise important data products used in these assessments, as they facilitate the tracking of year classes and size-structure over time, thus improving our understanding of the population dynamics [@QuinnDeriso1999].
+For stocks that depend on the periodic production of strong year-classes and subsequent recruitment into fisheries, sampling efforts for age and length data, scaling of these data to the population level ('compositional expansion'), and the weight assigned to these data products in assessment models are highly important.
 Therefore, care must be taken in the design of sampling efforts as well as the development of quantitative methods used in the expansion process and estimation of weights.
-  
-The AFSC is responsible for the execution of several fisheries-independent bottom trawl surveys [@stauffer2004], spanning most of the continental shelf in Alaskan waters south of the Bering Strait, including the eastern Bering Sea (EBS), the Aleutian Islands (AI), and the Gulf of Alaska (GOA). 
-The quantitative time series of these surveys began in 1982 with the adoption of standardized trawling protocols [@lauth2019], but trawl observations were made as early as 1955 [@zimmerman2009]. 
-Within the quantitative time series, AFSC scientists have routinely collected observations of fish size and age composition, consisting of complete or random subsamples of fish within each trawl. 
-Large subsample observations (n > 200 per trawl sample) of sex-specific fish size are relatively inexpensive to obtain, however the indirect cost of workplace illness from repetitive length processing has been documented [@Hulson2022]. 
-There is a significant fiscal cost to processing age composition data, in that the extraction of otoliths from individual fish and the subsequent analysis of these otoliths for age determination is labor intensive. 
+
+The AFSC is responsible for the execution of several fisheries-independent bottom trawl surveys [@stauffer2004], spanning most of the continental shelf in Alaskan waters south of the Bering Strait, including the eastern Bering Sea (EBS), the Aleutian Islands (AI), and the Gulf of Alaska (GOA).
+The quantitative time series of these surveys began in 1982 with the adoption of standardized trawling protocols [@lauth2019], but trawl observations were made as early as 1955 [@zimmerman2009].
+Within the quantitative time series, AFSC scientists have routinely collected observations of fish size and age composition, consisting of complete or random subsamples of fish within each trawl.
+Large subsample observations (n \> 200 per trawl sample) of sex-specific fish size are relatively inexpensive to obtain, however the indirect cost of workplace illness from repetitive length processing has been documented [@Hulson2022].
+There is a significant fiscal cost to processing age composition data, in that the extraction of otoliths from individual fish and the subsequent analysis of these otoliths for age determination is labor intensive.
 To leverage the relative costs of size composition data to age composition data, estimated age-at-length is often applied to the estimated total population proportion for each length bin in a survey.
-  
-Since modern stock assessment models integrate multiple sources of data related to catch (e.g., fisheries catch-per-unit-effort, survey indices of abundance), life history (e.g., size-at-age, maturity-at-age, selectivity-at-age), and composition (e.g., length and age), it is imperative to consider the relative information content these data products provide to the model employed. 
-This is often handled through the use of data-weighting methods, checking the fit of compositional data in the model, and ensuring a good match between the variance of the data and the variance implied by the model [@Francis2017]. The weight assigned to annual compositions (the ‘input sample size’) can be calculated using myriad methods (e.g., fixed values, number of samples or tows sampled upon, bootstrapping compositions; @Stewart2014), as can the estimated sample size resulting from the fit of compositional data in the model (the ‘effective sample size’). 
-Often, input sample sizes are used in an initial fit of the model, and then a tuning (or ‘re-weighting’) process is used to ensure the compositional data are appropriately weighted. 
+
+Since modern stock assessment models integrate multiple sources of data related to catch (e.g., fisheries catch-per-unit-effort, survey indices of abundance), life history (e.g., size-at-age, maturity-at-age, selectivity-at-age), and composition (e.g., length and age), it is imperative to consider the relative information content these data products provide to the model employed.
+This is often handled through the use of data-weighting methods, checking the fit of compositional data in the model, and ensuring a good match between the variance of the data and the variance implied by the model [@Francis2017].
+The weight assigned to annual compositions (the 'input sample size') can be calculated using myriad methods (e.g., fixed values, number of samples or tows sampled upon, bootstrapping compositions; @Stewart2014), as can the estimated sample size resulting from the fit of compositional data in the model (the 'effective sample size').
+Often, input sample sizes are used in an initial fit of the model, and then a tuning (or 're-weighting') process is used to ensure the compositional data are appropriately weighted.
 This re-weighting process has various forms, but two common methods are to use the estimated effective sample size in a new fit of the model, or calculating a new weight based on expected vs. observed compositions applied to the original input sample size.
 
 The main objectives of this technical memorandum are to (1) document methods used by AFSC for expanding length and age collections to population abundance estimates (which are subsequently used as composition data in stock assessments), (2) present species-specific results of historical input samples size for Tier $\geq$ 3 stocks, and (3) record methods for estimating input sample sizes of survey-based age and length compositions using a two-stage bootstrapping approach.
-
 
 # Materials and Methods
 
@@ -94,49 +108,54 @@ The main objectives of this technical memorandum are to (1) document methods use
 Data collection for each AFSC groundfish survey is described in respective NOAA Technical Memorandum [EBS: @Lauth2019; AI: @vonSzalay2017; GOA: @vonSzalay2018].
 Length frequency protocols and recent analysis of historical data are further described in @Hulson2022.
 
-To facilitate age estimation, individual fish are processed at sea to record sex, length and weight and to remove sagittal otoliths that are returned the AFSC Age and Growth laboratory for age determination. 
-Survey age sampling protocols are specific by fish species and follow 1 of 2 paradigms: 1) a stratified collection that is distributed over both the spatial frame of the stratification scheme and the expected size range of a species; or 2) a small subsample (3-6 fish, depneding on species) collected randomly per trawl. 
-The protocol for some species has changed over the time series, which has followed a trend of transitioning from protocol 1) to protocol 2). 
-Age-length-keys (ALKs) generated from the age/length observations within a survey are then applied to estimated size compositions to provide an estimate of population age composition. 
-Currently, no species age composition are estimated using stratified ALKs, rather, all observations are pooled for the entirety of the survey area each survey year. 
+To facilitate age estimation, individual fish are processed at sea to record sex, length and weight and to remove sagittal otoliths that are returned the AFSC Age and Growth laboratory for age determination.
+Survey age sampling protocols are specific by fish species and follow 1 of 2 paradigms: 1) a stratified collection that is distributed over both the spatial frame of the stratification scheme and the expected size range of a species; or 2) a small subsample (3-6 fish, depneding on species) collected randomly per trawl.
+The protocol for some species has changed over the time series, which has followed a trend of transitioning from protocol 1) to protocol 2).
+Age-length-keys (ALKs) generated from the age/length observations within a survey are then applied to estimated size compositions to provide an estimate of population age composition.
+Currently, no species age composition are estimated using stratified ALKs, rather, all observations are pooled for the entirety of the survey area each survey year.
 When there is no corresponding age observation for an observed length bin in a single survey, age-at-length observations for all years are pooled to assign ages to that length bin.
 This is different in AI/GOA, where the age obs are just dropped.
-  
+
 Species within each survey that are assessed with statistical catch-at-age models (Tier $\geq$ 3 stock assessments, Table \@ref(tab:species)) were selected to be included in this analysis (shown by groupings in Table \@ref(tab:species-group)).
-The database (i.e., RACEBASE) was queried based on functions used in the sumfish package in Program R (https://github.com/afsc-gap-products/sumfish).
+The database (i.e., RACEBASE) was queried based on functions used in the sumfish package in Program R (<https://github.com/afsc-gap-products/sumfish>).
 
 ## Expanding length frequency to population abundance at length
 
 Length frequency samples collected by the AFSC bottom trawl surveys are expanded by catch and stratum area to obtain estimates of population abundance at length (this approach is also detailed in @Hulson2022, we include the description here as well in order to provide a source for both the length and age expansions for reference).
-This is often referred to as the ‘first stage expansion’ and is a common method to obtain population estimates at length from area-swept survey data [e.g., @Ailloud2019, @Miller2006].
+This is often referred to as the 'first stage expansion' and is a common method to obtain population estimates at length from area-swept survey data [e.g., @Ailloud2019, @Miller2006].
 Population abundance at length are computed for three sex categories: males, females, and unsexed at the stratum level, which are then summed across stratum to obtain the population abundance at length for the management-scale region (i.e., EBS, AI, or GOA), these can also be summed to any sub-region level.
 
 In the first step of this process we compute the overall population numbers in year-*y* within stratum-*st* ($\hat{N}_{st,y}$) with:
 
+```{=tex}
 \begin{equation}
  \hat{N}_{st,y}=\overline{CPUE}_{st,y}\cdot A_{st}
   (\#eq:eqn1)
 \end{equation}
-
+```
 where $A_{st}$ is the area of stratum-*st* (in km^2^), and $\overline{CPUE}_{st,y}$ is the average catch per unit effort of numbers captured across the hauls within a strata, given by:
 
+```{=tex}
 \begin{equation}
  \overline{CPUE}_{st,y}
   =\frac{1}{H_{st,y}}\sum_{h=1}^{H_{st,y}}CPUE_{h,st,y}
   =\frac{1}{H_{st,y}}\sum_{h=1}^{H_{st,y}}\frac{n_{h,st,y}}{E_{h,st,y}}
   (\#eq:eqn2)
 \end{equation}
-
+```
 where $H_{st,y}$ is the number of hauls, $CPUE_{h,st,y}$ is the catch per unit effort of numbers caught within a haul-*h*, $n_{h,st,y}$ is the catch (in numbers) in haul-*h*, and $E_{h,st,y}$ is the effort in haul-*h*, which is computed as the net width multiplied by the time on bottom, or, the area swept by the haul (in km^2^).
 Next, the ratio of catch per unit effort among hauls ($\hat{p}_{CPUE,h,st,y}$) is computed by:
 
+```{=tex}
 \begin{equation}
 \hat{p}_{CPUE,h,st,y}=\frac{CPUE_{h,st,y}}{\sum_{h=1}^{H_{sy,y}}CPUE_{h,st,y}}
   (\#eq:eqn3)
 \end{equation}
+```
+where $CPUE_{h,st,y}$ is the catch per unit effort of numbers caught within a haul-*h*.
+We then compute the sex-specific ratio of the total number of lengths sampled within a haul by length ($\hat{p}_{sx,l,h,st,y}$) with:
 
-where $CPUE_{h,st,y}$ is the catch per unit effort of numbers caught within a haul-*h*. We then compute the sex-specific ratio of the total number of lengths sampled within a haul by length ($\hat{p}_{sx,l,h,st,y}$) with:
-
+```{=tex}
 \begin{equation}
  \hat{p}_{sx,l,h,st,y} =
   \begin{cases}
@@ -145,16 +164,17 @@ where $CPUE_{h,st,y}$ is the catch per unit effort of numbers caught within a ha
   \end{cases}
   (\#eq:eqn4)
 \end{equation}
-
+```
 where $N_{sx,l,h,st,y}$ is the length frequency sampled, in numbers, by sex-*sx* and length-*l*.
 In some cases there are hauls that have catch for a species but did not collect length frequency data, in this case (2) is applied in order to account for the unknown length frequency in these hauls, otherwise, if length frequency samples are obtained case (1) is applied.
 Finally, we estimate the sex-specific population abundance at length within strata-st with:
 
+```{=tex}
 \begin{equation}
  \hat{N}_{sx,l,st,y}=\hat{N}_{st,y}\cdot\hat{p}_{CPUE,h,st,y}\cdot\hat{p}_{sx,l,h,st,y}
   (\#eq:eqn5)
 \end{equation}
-
+```
 and to obtain the sex-specific estimates of population abundance at length in a management area one would simply sum $\hat{N}_{sx,l,st,y}$ across strata.
 
 ## Expanding specimen collections to population abundance at age
@@ -163,18 +183,20 @@ In the second stage expansion the sex-specific estimates of population abundance
 The annual specimen data that is collected during the survey, which includes observations of age at length, are first populated into sex-specific numbers at age and length ($N_{sx,a,l,y}$).
 Next, the sex-specific numbers at age and length are converted to sex-specific proportions of age at length with:
 
+```{=tex}
 \begin{equation}
  \hat{p}_{sx,a,l,y}=\frac{N_{sx,a,l,y}}{\sum_{a=1}^{A}N_{sx,a,l,y}}
   (\#eq:eqn6)
 \end{equation}
-
+```
 The proportions of age at length are then expanded to population abundance at age with:
 
+```{=tex}
 \begin{equation}
  \hat{N}_{sx,a,y}=\sum_{l=1}^{L}\hat{p}_{sx,a,l,y}\cdot \hat{N}_{sx,l,y}
   (\#eq:eqn7)
 \end{equation}
-
+```
 where $\hat{N}_{sx,l,y}$ is the population abundance at length from \@ref(eq:eqn5) summed across strata.
 For specimen data with observations of sex (either female or male), the sex-specific specimen data is used, however, for specimen data without observations of sex the specimen data is pooled across all sexes and the unsexed population abundance at length is then applied to the pooled specimen data to estimate unsexed population abundance at age.
 
@@ -193,16 +215,18 @@ The bootstrap framework is composed of a suite of nested resampling (with replac
 Functions to run the sampling protocols were developed in a compartmentalized manner to provide for substantial flexibility in exploring desired resampling protocols.
 The order of operations (Figure \@ref(fig:length)) has the following schedule, with steps 1-3 being optional switches:
 
-1. Resample hauls from the set of hauls with associated catch per unit effort (in numbers)
-2. Within the resampled hauls from step 1, resample the observed length frequency data
-3. Within the resampled hauls from step 1, resample the observed specimen data
-4. From the resampled length frequency data in step 2, calculate sex-specific population abundance at length, using equations \@ref(eq:eqn1) - \@ref(eq:eqn5)
-5. From the resampled specimen data in step 3 and the sex-specific population abundance at length in step 4, calculate sex-specific population abundance at age, using equations \@ref(eq:eqn6) - \@ref(eq:eqn7)
+1.  Resample hauls from the set of hauls with associated catch per unit effort (in numbers)
+2.  Within the resampled hauls from step 1, resample the observed length frequency data
+3.  Within the resampled hauls from step 1, resample the observed specimen data
+4.  From the resampled length frequency data in step 2, calculate sex-specific population abundance at length, using equations \@ref(eq:eqn1) - \@ref(eq:eqn5)
+5.  From the resampled specimen data in step 3 and the sex-specific population abundance at length in step 4, calculate sex-specific population abundance at age, using equations \@ref(eq:eqn6) - \@ref(eq:eqn7)
 
 The bootstrap framework then repeated steps 1-5 iteratively, providing iterated sex-specific population abundance at length and age that was then compared to the historical sex-specific population abundance at length and age determined by the bottom trawl surveys.
 We applied the bootstrap-simulation to stocks that are assessed in the EBS, AI, and GOA with statistical catch-at-age models (or are Tier $\geq$ 3).
 We ran the bootstrap-simulation for 500 iterations, which was a level for which the variability in population abundance at length results had stabilized, and applied the bootstrap-simulation to all years of the respective bottom trawl surveys through the 2021 surveys (for species that had specimen data completed by the AFSC Age and Growth Program).
-The bootstrap-simulation was developed in R [@Rcore] and is available via GitHub as an R package (https://github.com/BenWilliams-NOAA/swo).
+The bootstrap-simulation was developed in R [@Rcore] and is available via GitHub as an R package (<https://github.com/BenWilliams-NOAA/swo>).
+
+[add paras of special cases]
 
 ## Computing effective and input sample size
 
@@ -210,19 +234,20 @@ Effective sample size, as introduced by @Mcallister1997, is a statistic that can
 It is also a statistic that can evaluate the amount of uncertainty in an estimated composition compared to an observed composition.
 Effective sample size is given by:
 
+```{=tex}
 \begin{equation}
  ESS=\frac{\sum_{c=1}^{C}E_c(1-E_c)}{\sum_{c=1}^{C}(E_c-O_c)^2}
  (\#eq:eqn8)
 \end{equation}
-
+```
 where $E_c$ is the estimated proportion for category-*c* (which can be either age or length or any other arbitrary category across which proportions are computed) and $O_c$ is the observed proportion.
 
 In this bootstrap framework the underlying age and length compositions derived from the historical bottom trawl surveys was treated as the observed proportions $O_c$ in equation \@ref(eq:eqn8).
 For each iteration of the bootstrap we computed a sex-specific estimated proportion ($E_c$) that was then compared to the underlying historical sex-specific age and length composition (the effective sample size for the total age and length composition, as the sum of population abundance at age and length, was also computed).
 To summarize effective sample size across iterations we used the harmonic mean, which has been shown to reduce bias in recovering the true sample size in simulations for a multinomial distribution.
-Due to this reduction in bias the harmonic mean has also been recommended to determine the ‘input sample size’ that is used in stock assessment models to fit compositional data [@Stewart2014].
-Herein, when we use the term ‘effective sample size’ we are referring to the effective sample sizes that were computed for each iteration of the bootstrap-simulation.
-When we use the term ‘input sample size’ we are referring to the harmonic mean of the iterated effective sample sizes, which has been recommended to be used to weight composition data in stock assessment models.
+Due to this reduction in bias the harmonic mean has also been recommended to determine the 'input sample size' that is used in stock assessment models to fit compositional data [@Stewart2014].
+Herein, when we use the term 'effective sample size' we are referring to the effective sample sizes that were computed for each iteration of the bootstrap-simulation.
+When we use the term 'input sample size' we are referring to the harmonic mean of the iterated effective sample sizes, which has been recommended to be used to weight composition data in stock assessment models.
 
 # Results
 
@@ -259,7 +284,6 @@ For each of the species groupings as the number of fish sampled for age per haul
 The average input sample size per age sampled was 0.39 for flatfish, 0.27 for rockfish, and 0.19 for roundfish.
 Similar to the length results, it was generally the case that as the number of sampled hauls for age increased the age composition input sample size increased (Figure \@ref(fig:age-iss-haul)), with the exception of roundfish in the Eastern Bering Sea shelf and Gulf of Alaska surveys.
 
-
 # Discussion
 
 [General para on main take-home results - Pete]
@@ -280,7 +304,8 @@ We thank *reviewer1* and *reviewer2* for their helpful reviews of this manuscrip
 
 # Citations
 
-<div id="refs"></div>
+::: {#refs}
+:::
 
 \newpage
 
@@ -289,51 +314,61 @@ We thank *reviewer1* and *reviewer2* for their helpful reviews of this manuscrip
 ```{r species}
 knitr::kable(vroom::vroom(here::here('tables', 'species.csv')), caption = "Species assessed at the Alaska Fisheries Science Center that were evaluated in the bootstrap analysis for bottom trawl survey length and age composition input sample size (AI - Aleutian Islands, EBS - Eastern Bering Sea, GOA - Gulf of Alaska)", align = c('llc'), format.args = list(big.mark = ",", scientific = FALSE))
 ```
+
 \newpage
 
 ```{r species-group}
 knitr::kable(vroom::vroom(here::here('tables', 'species_group.csv')), caption = "Species assessed at the Alaska Fisheries Science Center that were evaluated in the bootstrap analysis by 'flatfish', 'rockfish' and 'roundfish' groupings", align = c('ccc'), format.args = list(big.mark = ",", scientific = FALSE))
 ```
+
 \newpage
 
 ```{r ebs-shelf-length}
 knitr::kable(vroom::vroom(here::here('tables', 'avg_size_ebs_shelf.csv')), caption = "Average length frequency samples (nominal) and average length composition input sample size (iss) from the Eastern Bering Sea shelf bottom trawl survey.", align = c('llccc'), format.args = list(big.mark = ",", scientific = FALSE))
 ```
+
 \newpage
 
 ```{r ebs-slope-length}
 knitr::kable(vroom::vroom(here::here('tables', 'avg_size_ebs_slope.csv')), caption = "Average length frequency samples (nominal) and average length composition input sample size (iss) from the Eastern Bering Sea slope bottom trawl survey.", align = c('llccc'), format.args = list(big.mark = ",", scientific = FALSE))
 ```
+
 \newpage
 
 ```{r ai-length}
 knitr::kable(vroom::vroom(here::here('tables', 'avg_size_ai.csv')), caption = "Average length frequency samples (nominal) and average length composition input sample size (iss) from the Aleutian Islands bottom trawl surveys.", align = c('llccc'), format.args = list(big.mark = ",", scientific = FALSE))
 ```
+
 \newpage
 
 ```{r goa-length}
 knitr::kable(vroom::vroom(here::here('tables', 'avg_size_goa.csv')), caption = "Average length frequency samples (nominal) and average length composition input sample size (iss) from the Gulf of Alaska bottom trawl surveys.", align = c('llccc'), format.args = list(big.mark = ",", scientific = FALSE))
 ```
+
 \newpage
 
 ```{r ebs-shelf-age}
 knitr::kable(vroom::vroom(here::here('tables', 'avg_age_ebs_shelf.csv')), caption = "Average age frequency samples (nominal) and average age composition input sample size (iss) from the Eastern Bering Sea shelf bottom trawl survey.", align = c('llccc'), format.args = list(big.mark = ",", scientific = FALSE))
 ```
+
 \newpage
 
 ```{r ebs-slope-age}
 knitr::kable(vroom::vroom(here::here('tables', 'avg_age_ebs_slope.csv')), caption = "Average age frequency samples (nominal) and average age composition input sample size (iss) from the Eastern Bering Sea slope bottom trawl survey.", align = c('llccc'), format.args = list(big.mark = ",", scientific = FALSE))
 ```
+
 \newpage
 
 ```{r ai-age}
 knitr::kable(vroom::vroom(here::here('tables', 'avg_age_ai.csv')), caption = "Average age frequency samples (nominal) and average age composition input sample size (iss) from the Aleutian Islands bottom trawl surveys.", align = c('llccc'), format.args = list(big.mark = ",", scientific = FALSE))
 ```
+
 \newpage
 
 ```{r goa-age}
 knitr::kable(vroom::vroom(here::here('tables', 'avg_age_goa.csv')), caption = "Average age frequency samples (nominal) and average age composition input sample size (iss) from the Gulf of Alaska bottom trawl surveys.", align = c('llccc'), format.args = list(big.mark = ",", scientific = FALSE))
 ```
+
 \newpage
 
 # Figures
