@@ -70,54 +70,34 @@ render_toc("swo_age_tech_memo.Rmd")
 
 # Introduction
 
-[General para on age-structured assessments at AFSC]
-Under the North Pacific Fishery Management Council (NPFMC) Fishery Management Plan (FMP) for the Eastern Bering Sea, Aleutian Islands, and Gulf of Alaska, Tier 1, 2, and 3 stocks use an age-structured assessment model to estimate population and management quantities (@ref).
+Under the North Pacific Fishery Management Council (NPFMC) Fishery Management Plan (FMP) for the Eastern Bering Sea, Aleutian Islands, and Gulf of Alaska, Tier 1, 2, and 3 stocks use an age-structured assessment model to estimate population and management quantities [@NPFMC2020bsai; @NPFMC2020goa].
 While these assessment models can vary in their specific implementation across stocks (i.e., parameterization or data availability), a critical and common data component of this structure of assessment model is age and length composition data.
 Age and length composition data are collected on both fishery-independent (e.g., bottom trawl or longline surveys) and fishery-dependent platforms, providing critical data to assessments in order to track population changes over time.
-The Alaska Fisheries Science Center (AFSC) operates fishery-independent surveys that then provide age and length composition data to ## stocks assessed with age-structured models.
+The Alaska Fisheries Science Center (AFSC) operates fishery-independent surveys that then provide age and length composition data to 26 stocks (or stock complexes) assessed with age-structured models.
 
-
-
-At the AFSC, age and length frequency sampling from the bottom trawl surveys is used in stock assessment models in a variety of ways to inform estimates of population abundance that are subsequently used to set management quantities. 
-The most common use of length frequency sampling is to derive estimates of the population abundance at length that are then used in an age-length key to estimate population estimates at age and the model is fit to these age composition estimates [e.g., @Spencer2020, @Monnahan2021]. 
-Length frequency samples are also used in many assessments in a conditional-age-at-length framework [e.g., @Rudd2021] that both fits the length composition and enables estimation of growth internally to the assessment [e.g., @Turnock2017]. 
+At the AFSC, age and length frequency sampling from the bottom trawl surveys is used in stock assessment models in a variety of ways to inform estimates of population abundance that are subsequently used to set management quantities.
+The most common use of length frequency sampling is to derive estimates of the population abundance at length that are then used in an age-length key to estimate population estimates at age and the model is fit to these age composition estimates [e.g., @Spencer2022; @Monnahan2021]. 
+Length frequency samples are also used in many assessments in a conditional-age-at-length framework [e.g., @Rudd2021] that both fits the length composition and enables estimation of growth internally to the assessment [e.g., @Mcgilliard2017]. 
 In some cases, where age data is not available, length frequency samples which have been expanded to population abundance at length estimates are used directly as composition data within the assessment [e.g., @Mcgilliard2019]. 
 Finally, recent developments have included using length frequency samples in a model-based framework to estimate length and age composition estimates [@Thorson2019; @Ianelli2021; @Thompson2021].
 
+Predominantly, the multinomial likelihood is used to fit age and length composition data at the AFSC [e.g., @Bryan2021], while recently the Dirichlet-Multinomial has also been explored [@Barbeaux2022].
+A common requirement, regardless of the likelihood employed, is a pre-determination of the input sample size that is used to 'weight' the particular year's age or length composition that is subsequently fit by the assessment model.
+Over the years, a variety of approaches have been used at AFSC to set the input sample size in stock assessments.
+These include selecting a constant value [e.g., @Hulson2022b], relating the input sample size to the number of hauls from which age or length composition data was collected [e.g., @Spencer2022], relating the input sample size to the nominal sample size [e.g., @Hulson2021], or relating the input sample size to some combination of hauls and nominal sample size [e.g., @Williams2022].
+Overall, there is no general or consensus method that is agreed upon at the AFSC to determine input sample size.
 
-
-
-[General para on weighting age and length comp data as it relates to input sample size]
-
-
-[Purpose para: to generate age and length composition input sample sizes]
-
-Age-structured stock assessments (e.g., statistical catch-at-age models) conducted by the Alaska Fisheries Science Center (AFSC) offer valuable information for the management of marine fish stocks.
-Compositional information on age and length comprise important data products used in these assessments, as they facilitate the tracking of year classes and size-structure over time, thus improving our understanding of the population dynamics [@QuinnDeriso1999].
-For stocks that depend on the periodic production of strong year-classes and subsequent recruitment into fisheries, sampling efforts for age and length data, scaling of these data to the population level ('compositional expansion'), and the weight assigned to these data products in assessment models are highly important.
-Therefore, care must be taken in the design of sampling efforts as well as the development of quantitative methods used in the expansion process and estimation of weights.
-
-The AFSC is responsible for the execution of several fisheries-independent bottom trawl surveys [@stauffer2004], spanning most of the continental shelf in Alaskan waters south of the Bering Strait, including the eastern Bering Sea (EBS), the Aleutian Islands (AI), and the Gulf of Alaska (GOA).
-The quantitative time series of these surveys began in 1982 with the adoption of standardized trawling protocols [@lauth2019], but trawl observations were made as early as 1955 [@zimmerman2009].
-Within the quantitative time series, AFSC scientists have routinely collected observations of fish size and age composition, consisting of complete or random subsamples of fish within each trawl.
-Large subsample observations (n \> 200 per trawl sample) of sex-specific fish size are relatively inexpensive to obtain, however the indirect cost of workplace illness from repetitive length processing has been documented [@Hulson2022].
-There is a significant fiscal cost to processing age composition data, in that the extraction of otoliths from individual fish and the subsequent analysis of these otoliths for age determination is labor intensive.
-To leverage the relative costs of size composition data to age composition data, estimated age-at-length is often applied to the estimated total population proportion for each length bin in a survey.
-
-Since modern stock assessment models integrate multiple sources of data related to catch (e.g., fisheries catch-per-unit-effort, survey indices of abundance), life history (e.g., size-at-age, maturity-at-age, selectivity-at-age), and composition (e.g., length and age), it is imperative to consider the relative information content these data products provide to the model employed.
-This is often handled through the use of data-weighting methods, checking the fit of compositional data in the model, and ensuring a good match between the variance of the data and the variance implied by the model [@Francis2017].
-The weight assigned to annual compositions (the 'input sample size') can be calculated using myriad methods (e.g., fixed values, number of samples or tows sampled upon, bootstrapping compositions; @Stewart2014), as can the estimated sample size resulting from the fit of compositional data in the model (the 'effective sample size').
-Often, input sample sizes are used in an initial fit of the model, and then a tuning (or 're-weighting') process is used to ensure the compositional data are appropriately weighted.
-This re-weighting process has various forms, but two common methods are to use the estimated effective sample size in a new fit of the model, or calculating a new weight based on expected vs. observed compositions applied to the original input sample size.
-
-The main objectives of this technical memorandum are to (1) document methods used by AFSC for expanding length and age collections to population abundance estimates (which are subsequently used as composition data in stock assessments), (2) present species-specific results of historical input samples size for Tier $\geq$ 3 stocks, and (3) record methods for estimating input sample sizes of survey-based age and length compositions using a two-stage bootstrapping approach.
+@Stewart2014 introduced a method in which bootstrap techniques were used to resample age and length composition data that provides an estimate of the input sample size that can be used within assessment models.
+The primary advantage of this method is that it provides an objective framework from which estimates of input sample size are obtained that mimic the sampling design employed, either on a fishery-independent survey or on fishery-dependent platforms.
+Here, we apply the methods of @Stewart2014 to obtain historical estimates of input sample size for age and length composition data for all stocks assessed at AFSC with age-structured assessment models.
+The main objectives of this technical memorandum are to 1) document methods used by AFSC for expanding length and age collections to population abundance estimates (which are subsequently used as composition data in stock assessments), 2) present stock-specific results of historical input samples size for Tier $\geq$ 3 stocks, and 3) record methods for estimating input sample sizes of survey-based age and length compositions using a two-stage bootstrapping approach.
 
 # Materials and Methods
 
 ## Survey data
 
 Data collection for each AFSC groundfish survey is described in respective NOAA Technical Memorandum [EBS: @Lauth2019; AI: @vonSzalay2017; GOA: @vonSzalay2018].
-Length frequency protocols and recent analysis of historical data are further described in @Hulson2022.
+Length frequency protocols and recent analysis of historical data are further described in @Hulson2022a.
 
 To facilitate age estimation, individual fish are processed at sea to record sex, length and weight and to remove sagittal otoliths that are returned the AFSC Age and Growth laboratory for age determination.
 Survey age sampling protocols are specific by fish species and follow 1 of 2 paradigms: 1) a stratified collection that is distributed over both the spatial frame of the stratification scheme and the expected size range of a species; or 2) a small subsample (3-6 fish, depneding on species) collected randomly per trawl.
@@ -132,7 +112,7 @@ The database (i.e., RACEBASE) was queried based on functions used in the sumfish
 
 ## Expanding length frequency to population abundance at length
 
-Length frequency samples collected by the AFSC bottom trawl surveys are expanded by catch and stratum area to obtain estimates of population abundance at length (this approach is also detailed in @Hulson2022, we include the description here as well in order to provide a source for both the length and age expansions for reference).
+Length frequency samples collected by the AFSC bottom trawl surveys are expanded by catch and stratum area to obtain estimates of population abundance at length (this approach is also detailed in @Hulson2022a, we include the description here as well in order to provide a source for both the length and age expansions for reference).
 This is often referred to as the 'first stage expansion' and is a common method to obtain population estimates at length from area-swept survey data [e.g., @Ailloud2019, @Miller2006].
 Population abundance at length are computed for three sex categories: males, females, and unsexed at the stratum level, which are then summed across stratum to obtain the population abundance at length for the management-scale region (i.e., EBS, AI, or GOA), these can also be summed to any sub-region level.
 
