@@ -58,7 +58,15 @@ source(here::here('R', "render_toc.R"))
 
 # Abstract
 
-[Pete and Matt]
+*Why are you doing this? [context and aim]*
+
+*What did you do? [methods]*
+
+*What did you find? [core results – say something useful – no motherhood statements or deference to the main text!]*
+
+*What does this mean? [interpretation in context]*
+
+*What is it good for? [application]*
 
 \newpage
 
@@ -73,7 +81,7 @@ render_toc("swo_age_tech_memo.Rmd")
 Under the North Pacific Fishery Management Council (NPFMC) Fishery Management Plan (FMP) for the Eastern Bering Sea, Aleutian Islands, and Gulf of Alaska, Tier 1, 2, and 3 stocks use statistical catch-at-age assessment models to estimate population and management quantities [@NPFMC2020bsai; @NPFMC2020goa].
 While these models can vary in their specific implementation across stocks (i.e., due to differences in parameterization, error structures, or data availability), a critical and ubiquitous data component of this structure of assessment model is age and length composition data.
 Age and length composition data are collected on both fishery-independent (e.g., bottom trawl or longline surveys) and fishery-dependent platforms, providing critical data to assessments in order to track population changes over time.
-The Alaska Fisheries Science Center (AFSC) operates fishery-independent bottom trawl surveys [@stauffer2004], spanning most of the continental shelf in Alaskan waters south of the Bering Strait, including the eastern Bering Sea (EBS), the Aleutian Islands (AI), and the Gulf of Alaska (GOA) that provide age and length composition data to 26 stocks (or stock complexes) assessed with statistical catch-at-age models.
+The Alaska Fisheries Science Center (AFSC) operates fishery-independent bottom trawl surveys [@Stauffer2004], spanning most of the continental shelf in Alaskan waters south of the Bering Strait, including the eastern Bering Sea (EBS), the Aleutian Islands (AI), and the Gulf of Alaska (GOA) that provide age and length composition data to 26 stocks (or stock complexes) assessed with statistical catch-at-age models.
 
 At the AFSC, age and length frequency sampling from the bottom trawl surveys is used in stock assessment models in a variety of ways to inform estimates of population abundance that are subsequently used to set management quantities.
 The most common use of length frequency sampling is to derive estimates of the population abundance-at-length that are used in conjunction with an age-length key to estimate population estimates at age, which are then converted to age composition estimates and fit in the model [e.g., @Spencer2022; @Monnahan2021]. 
@@ -84,7 +92,7 @@ Finally, recent developments have included using length frequency samples in a m
 Predominantly, the multinomial likelihood is used to fit age and length composition data at the AFSC [e.g., @Bryan2021], while recently the Dirichlet-Multinomial has also been explored [e.g., @Barbeaux2022].
 A common requirement, regardless of the likelihood employed, is a pre-determination of the input sample size that is used to 'weight' the particular year's age or length composition data that subsequently influences the precision of the assessment models fit.
 Over the years, a variety of approaches have been used at AFSC to set the input sample size in stock assessments.
-These include selecting a constant value [e.g., @Hulson2022b], relating the input sample size to the number of hauls from which age or length composition data was collected [e.g., @Spencer2022], relating the input sample size to the nominal sample size [e.g., @Hulson2021], or relating the input sample size to some combination of hauls and nominal sample size [e.g., @Williams2022].
+These include selecting a constant value [e.g., @Hulson2022], relating the input sample size to the number of hauls from which age or length composition data was collected [e.g., @Spencer2022], relating the input sample size to the nominal sample size [e.g., @Hulson2021], or relating the input sample size to some combination of hauls and nominal sample size [e.g., @Williams2022].
 Overall, there is no general or consensus method that is agreed upon at the AFSC to determine input sample size.
 
 @Stewart2014 introduced a method in which bootstrap techniques were used to resample age and length composition data that provides an estimate of the input sample size that can be used within assessment models.
@@ -97,7 +105,7 @@ The main objectives of this technical memorandum are to 1) document methods used
 ## Survey data
 
 Data collection for each AFSC groundfish survey is described in respective NOAA Technical Memorandum [EBS: @Lauth2019; AI: @vonSzalay2017; GOA: @vonSzalay2018].
-Length frequency protocols and recent analysis of sex-specific length frequency data are further described in @Hulson2022a.
+Length frequency protocols and recent analysis of sex-specific length frequency data are further described in @Hulson2023a.
 To facilitate age estimation, individual fish are processed at sea to record sex, length and weight and to remove sagittal otoliths that are returned the AFSC Age and Growth laboratory for age determination.
 Survey age sampling protocols are specific by fish species and follow 1 of 2 paradigms: 1) a stratified collection that is distributed over both the spatial frame of the stratification scheme and the expected size range of a species; or 2) a small subsample (3-6 fish, depneding on species) collected randomly per trawl.
 The protocol for some species has changed over the time series, which has followed a trend of transitioning from protocol 1) to protocol 2). 
@@ -106,41 +114,34 @@ Data from AFSC bottom trawl surveys conducted in the EBS shelf (1982 to present)
 
 ## Expanding length frequency to population abundance-at-length
 
-Length frequency samples collected by the AFSC bottom trawl surveys are expanded by catch and stratum area to obtain estimates of population abundance-at-length (this approach is also detailed in @Hulson2022a, we include the description here as well in order to provide a source for both the length and age expansions for reference).
+Length frequency samples collected by the AFSC bottom trawl surveys are expanded by catch and stratum area to obtain estimates of population abundance-at-length [this approach is also detailed in @Hulson2023a, we include the description here as well in order to provide a source for both the length and age expansions for reference].
 This is often referred to as the 'first stage expansion' and is a common method to obtain population estimates at length from area-swept survey data [e.g., @Ailloud2019, @Miller2006].
 Population abundance-at-length are computed for three sex categories: males, females, and unsexed at the stratum level, which are then summed across stratum to obtain the population abundance-at-length for the management-scale region (i.e., EBS, AI, or GOA), these can also be summed to any sub-region level.
 
 In the first step of this process we compute the overall population numbers in year-*y* within stratum-*st* ($\hat{N}_{st,y}$) with:
 
-```{=tex}
 \begin{equation}
  \hat{N}_{st,y}=\overline{CPUE}_{st,y}\cdot A_{st}
   (\#eq:eqn1)
 \end{equation}
-```
 where $A_{st}$ is the area of stratum-*st* (in km^2^), and $\overline{CPUE}_{st,y}$ is the average catch per unit effort of numbers captured across the hauls within a strata, given by:
 
-```{=tex}
 \begin{equation}
  \overline{CPUE}_{st,y}
   =\frac{1}{H_{st,y}}\sum_{h=1}^{H_{st,y}}CPUE_{h,st,y}
   =\frac{1}{H_{st,y}}\sum_{h=1}^{H_{st,y}}\frac{n_{h,st,y}}{E_{h,st,y}}
   (\#eq:eqn2)
 \end{equation}
-```
 where $H_{st,y}$ is the number of hauls, $CPUE_{h,st,y}$ is the catch per unit effort of numbers caught within a haul-*h*, $n_{h,st,y}$ is the catch (in numbers) in haul-*h*, and $E_{h,st,y}$ is the effort in haul-*h*, which is computed as the net width multiplied by the time on bottom, or, the area swept by the haul (in km^2^).
 Next, the ratio of catch per unit effort among hauls ($\hat{p}_{CPUE,h,st,y}$) is computed by:
 
-```{=tex}
 \begin{equation}
 \hat{p}_{CPUE,h,st,y}=\frac{CPUE_{h,st,y}}{\sum_{h=1}^{H_{sy,y}}CPUE_{h,st,y}}
   (\#eq:eqn3)
 \end{equation}
-```
 where $CPUE_{h,st,y}$ is the catch per unit effort of numbers caught within a haul-*h*.
 We then compute the sex-specific ratio of the total number of lengths sampled within a haul by length ($\hat{p}_{sx,l,h,st,y}$) with:
 
-```{=tex}
 \begin{equation}
  \hat{p}_{sx,l,h,st,y} =
   \begin{cases}
@@ -149,17 +150,14 @@ We then compute the sex-specific ratio of the total number of lengths sampled wi
   \end{cases}
   (\#eq:eqn4)
 \end{equation}
-```
 where $N_{sx,l,h,st,y}$ is the length frequency sampled, in numbers, by sex-*sx* and length-*l*.
 In some cases there are hauls that have catch for a species but did not collect length frequency data, in this case (2) is applied in order to account for the unknown length frequency in these hauls, otherwise, if length frequency samples are obtained case (1) is applied.
 Finally, we estimate the sex-specific population abundance-at-length within strata-st with:
 
-```{=tex}
 \begin{equation}
  \hat{N}_{sx,l,st,y}=\sum_{h=1}^{H_{st,y}}[\hat{N}_{st,y}\cdot\hat{p}_{CPUE,h,st,y}\cdot\hat{p}_{sx,l,h,st,y}]
   (\#eq:eqn5)
 \end{equation}
-```
 and to obtain the sex-specific estimates of population abundance-at-length in a management area one would simply sum $\hat{N}_{sx,l,st,y}$ across strata.
 
 ## Expanding specimen collections to population abundance-at-age
@@ -168,20 +166,16 @@ In the second stage expansion the sex-specific estimates of population abundance
 The annual specimen data that is collected during the survey, which includes observations of age at length, are first populated into sex-specific numbers at age and length ($N_{sx,a,l,y}$).
 Next, the sex-specific numbers at age and length are converted to sex-specific proportions of age at length with:
 
-```{=tex}
 \begin{equation}
  \hat{p}_{sx,a,l,y}=\frac{N_{sx,a,l,y}}{\sum_{a=1}^{A}N_{sx,a,l,y}}
   (\#eq:eqn6)
 \end{equation}
-```
 The proportions of age at length are then expanded to population abundance-at-age with:
 
-```{=tex}
 \begin{equation}
  \hat{N}_{sx,a,y}=\sum_{l=1}^{L}\hat{p}_{sx,a,l,y}\cdot \hat{N}_{sx,l,y}
   (\#eq:eqn7)
 \end{equation}
-```
 where $\hat{N}_{sx,l,y}$ is the population abundance-at-length from \@ref(eq:eqn5) summed across strata.
 For specimen data with observations of sex (either female or male), the sex-specific specimen data is used, however, for specimen data without observations of sex the specimen data is pooled across all sexes and the unsexed population abundance-at-length is then applied to the pooled specimen data to estimate unsexed population abundance-at-age.
 
@@ -210,7 +204,7 @@ The order of operations (Figure \@ref(fig:length)) has the following schedule, w
 
 The bootstrap framework then repeated steps 1-5 iteratively, providing iterated sex-specific population abundance-at-length and age that was then compared to the historical sex-specific population abundance-at-length and age as observed by the bottom trawl surveys.
 We ran the bootstrap-simulation for 500 iterations, which was a level for which the variability in population abundance-at-length results had stabilized.
-The bootstrap-simulation was developed in R [@Rcore] and is available via GitHub as an R package (<https://github.com/BenWilliams-NOAA/swo>).
+The bootstrap-simulation was developed in R [@Rcore] and is available via GitHub as an R package (<https://github.com/BenWilliams-NOAA/swo> *will need to change this to the surveyISS package, potentially having been moved to AFSC github*).
 
 ## Computing effective and input sample size
 
@@ -218,12 +212,10 @@ Effective sample size (ESS), as introduced by @Mcallister1997, is a statistic th
 It is also a statistic that can evaluate the amount of uncertainty in an estimated composition compared to an observed composition.
 Effective sample size is given by:
 
-```{=tex}
 \begin{equation}
  ESS=\frac{\sum_{c=1}^{C}E_c(1-E_c)}{\sum_{c=1}^{C}(E_c-O_c)^2}
  (\#eq:eqn8)
 \end{equation}
-```
 where $E_c$ is the estimated proportion for category-*c* (which can be either age or length or any other arbitrary category across which proportions are computed) and $O_c$ is the observed proportion.
 It can be interpreted by a higher ESS indicates less uncertainty in the composition estimates, while lower ESS indicates more uncertainty. 
 
@@ -235,12 +227,10 @@ Input sample size (ISS) is defined as a metric of uncertainty used in data-weigh
 An input sample size is usually assigned to annual length compositions in the model fitting process, but there are a variety of methods for calculation -- many of which are closely related to the information content of the data product in question.
 To summarize uncertainty across bootstrap replicates of ESS, we calculated ISS as the harmonic mean of effective sample size across bootstrap iterations
 
-```{=tex}
 \begin{equation}
- ISS=\left(\frac{\sum_{i=1}^{I}ESS_i}{I}\right)^{-1}
+ ISS=\frac{I}{\sum_{i=1}^{I}(ESS_i)^{-1}}
  (\#eq:eqn9)
 \end{equation}
-```
 where $ISS$ is the input sample size, $ESS_i$ is the effective sample size for iteration-*i*, and *I* is the total number of iterations for which the bootstrap procedure is run.
 The harmonic mean has been shown to reduce bias in recovering the true sample size in simulations for a multinomial distribution.
 Due to this reduction in bias the harmonic mean has also been recommended to determine the 'input sample size' that is used in stock assessment models to fit compositional data [@Stewart2014].
