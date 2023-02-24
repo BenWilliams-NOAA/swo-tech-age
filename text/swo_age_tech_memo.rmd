@@ -27,7 +27,7 @@ output:
   bookdown::word_document2:
     toc: false
     number_sections: false
-    reference_docx: styles_reference.docx
+    reference_docx: styles_reference_ph.docx
     pandoc_args:  
       - '--lua-filter=scholarly-metadata.lua'
       - '--lua-filter=author-info-blocks.lua'
@@ -49,14 +49,16 @@ editor_options:
     wrap: sentence
 ---
 
+\newpage
+
+\newpage
+
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = FALSE, message = FALSE, warning = FALSE, error = FALSE)
 source(here::here('R', "render_toc.R"))
 ```
 
-\newpage
-
-# Abstract
+# ABSTRACT
 
 *Why are you doing this? [context and aim]*
 
@@ -70,13 +72,15 @@ source(here::here('R', "render_toc.R"))
 
 \newpage
 
+\newpage
+
 ```{r toc}
 render_toc("swo_age_tech_memo.Rmd")
 ```
 
 \newpage
 
-# Introduction
+# INTRODUCTION
 
 Under the North Pacific Fishery Management Council (NPFMC) Fishery Management Plan (FMP) for the Eastern Bering Sea, Aleutian Islands, and Gulf of Alaska, Tier 1, 2, and 3 stocks use statistical catch-at-age assessment models to estimate population and management quantities [@NPFMC2020bsai; @NPFMC2020goa].
 While these models can vary in their specific implementation across stocks (i.e., due to differences in parameterization, error structures, or data availability), a critical and ubiquitous data component of this structure of assessment model is age and length composition data.
@@ -100,7 +104,7 @@ The primary advantage of this method is that it provides an objective framework 
 Here, we apply the methods of @Stewart2014 to obtain historical estimates of input sample size for age and length composition data obtained by the AFSC bottom trawl surveys in the EBS, AI, and GOA for all stocks assessed at AFSC with statistical catch-at-age assessment models.
 The main objectives of this technical memorandum are to 1) document methods used by AFSC for expanding length and age collections to population abundance estimates (which are subsequently used as composition data in stock assessments), 2) present stock-specific results of historical input samples size from AFSC bottom trawl surveys for Tier $\geq$ 3 stocks, and 3) record methods for estimating input sample sizes of survey-based age and length compositions using a two-stage bootstrapping approach.
 
-# Materials and Methods
+# MATERIALS AND METHODS
 
 ## Survey data
 
@@ -111,6 +115,7 @@ Survey age sampling protocols are specific by fish species and follow 1 of 2 par
 The protocol for some species has changed over the time series, which has followed a trend of transitioning from protocol 1) to protocol 2). 
 Species within each survey that are assessed with statistical catch-at-age models were selected to be included in this analysis (Tier $\geq$ 3 stock assessments, Table \@ref(tab:species)). 
 Data from AFSC bottom trawl surveys conducted in the EBS shelf (1982 to present), EBS slope (2002, 2004, 2008, 2010, 2012, and 2016), AI (1991 to present), and GOA (1990 to present) were used to estimate input sample size for each of these stock assessments in this study. 
+
 
 ## Expanding length frequency to population abundance-at-length
 
@@ -160,6 +165,7 @@ Finally, we estimate the sex-specific population abundance-at-length within stra
 \end{equation}
 and to obtain the sex-specific estimates of population abundance-at-length in a management area one would simply sum $\hat{N}_{sx,l,st,y}$ across strata.
 
+
 ## Expanding specimen collections to population abundance-at-age
 
 In the second stage expansion the sex-specific estimates of population abundance-at-length are used to estimate sex-specific population abundance-at-age.
@@ -189,6 +195,7 @@ Between the two management regions there are subtle differences in how the popul
 In a similar case, while not assessed as a complex, over the historical bottom trawl sruvey in the GOA several species codes have been used for dusky rockfish. 
 We have also developed a custom function that estimates population abundance-at-length and age for this case. 
 
+
 ## Bootstrap framework for estimating age and length composition input sample size
 
 To estimate the historical input sample sizes for age and length compositions of stocks assessed at AFSC we developed a bootstrap framework based on the methodology outlined in @Stewart2014. 
@@ -205,6 +212,7 @@ The order of operations (Figure \@ref(fig:length)) has the following schedule, w
 The bootstrap framework then repeated steps 1-5 iteratively, providing iterated sex-specific population abundance-at-length and age that was then compared to the historical sex-specific population abundance-at-length and age as observed by the bottom trawl surveys.
 We ran the bootstrap-simulation for 500 iterations, which was a level for which the variability in population abundance-at-length results had stabilized.
 The bootstrap-simulation was developed in R [@Rcore] and is available via GitHub as an R package (<https://github.com/BenWilliams-NOAA/swo> *will need to change this to the surveyISS package, potentially having been moved to AFSC github*).
+
 
 ## Computing effective and input sample size
 
@@ -236,7 +244,8 @@ The harmonic mean has been shown to reduce bias in recovering the true sample si
 Due to this reduction in bias the harmonic mean has also been recommended to determine the 'input sample size' that is used in stock assessment models to fit compositional data [@Stewart2014].
 Herein, when we use the term 'effective sample size or ESS' we are referring to the effective sample sizes that were computed for each iteration of the bootstrap-simulation from equation \@ref(eq:eqn8), when we use the term 'input sample size or ISS' we are referring to the harmonic mean of the iterated effective sample sizes from equation \@ref(eq:eqn9).
 
-# Results
+
+# RESULTS
 
 Average length composition nominal sample sizes and estimated input sample sizes for the bottom trawl surveys evaluated are shown in Tables \@ref(tab:ebs-shelf-length) - \@ref(tab:goa-length).
 Across the surveys, average sex-specific length composition nominal sample size ranged from around 300 to upwards of 35,000 samples per year, where the total length composition nominal sample size (for all sexes combined) ranged from around 700 to upwards of 82,000 per year.
@@ -271,7 +280,8 @@ For each of the species groupings as the number of fish sampled for age per haul
 The average input sample size per age sampled was 0.39 for flatfish, 0.27 for rockfish, and 0.19 for roundfish.
 Similar to the length results, it was generally the case that as the number of sampled hauls for age increased the age composition input sample size increased (Figure \@ref(fig:age-iss-haul)), with the exception of roundfish in the Eastern Bering Sea shelf and Gulf of Alaska surveys.
 
-# Discussion
+
+# DISCUSSION
 
 [General para on main take-home results - Pete]
 
@@ -283,20 +293,24 @@ Similar to the length results, it was generally the case that as the number of s
 
 \newpage
 
-# Acknowledgments
+\newpage
+
+# ACKNOWLEDGEMENTS
 
 We thank *reviewer1* and *reviewer2* for their helpful reviews of this manuscript.
 
 \newpage
 
-# Citations
+\newpage
+
+# CITATIONS
 
 ::: {#refs}
 :::
 
 \newpage
 
-# Tables
+# TABLES
 
 ```{r species}
 knitr::kable(vroom::vroom(here::here('tables', 'species.csv')), caption = "Species assessed at the Alaska Fisheries Science Center that were evaluated in the bootstrap analysis for bottom trawl survey length and age composition input sample size (AI - Aleutian Islands, EBS - Eastern Bering Sea, GOA - Gulf of Alaska)", align = c('llc'), format.args = list(big.mark = ",", scientific = FALSE))
@@ -358,7 +372,7 @@ knitr::kable(vroom::vroom(here::here('tables', 'avg_age_goa.csv')), caption = "A
 
 \newpage
 
-# Figures
+# FIGURES
 
 ```{r length, fig.cap="Bootstrap flow chart, the steps refer to the order of operations as described in the *Bootstrap framework for estimating age and length composition input sample size* section."}
 knitr::include_graphics(here::here('figs', 'age_flowchart.png'))
