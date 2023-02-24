@@ -27,7 +27,7 @@ output:
   bookdown::word_document2:
     toc: false
     number_sections: false
-    reference_docx: styles_reference_ph.docx
+    reference_docx: styles_reference_ph_tm.docx
     pandoc_args:  
       - '--lua-filter=scholarly-metadata.lua'
       - '--lua-filter=author-info-blocks.lua'
@@ -106,7 +106,7 @@ The main objectives of this technical memorandum are to 1) document methods used
 
 # MATERIALS AND METHODS
 
-## Survey data
+## Survey Data
 
 Data collection for each AFSC groundfish survey is described in respective NOAA Technical Memorandum [EBS: @Lauth2019; AI: @vonSzalay2017; GOA: @vonSzalay2018].
 Length frequency protocols and recent analysis of sex-specific length frequency data are further described in @Hulson2023a.
@@ -117,7 +117,7 @@ Species within each survey that are assessed with statistical catch-at-age model
 Data from AFSC bottom trawl surveys conducted in the EBS shelf (1982 to present), EBS slope (2002, 2004, 2008, 2010, 2012, and 2016), AI (1991 to present), and GOA (1990 to present) were used to estimate input sample size for each of these stock assessments in this study. 
 
 
-## Expanding length frequency to population abundance-at-length
+## Expanding Length Frequency to Population Abundance-at-Length
 
 Length frequency samples collected by the AFSC bottom trawl surveys are expanded by catch and stratum area to obtain estimates of population abundance-at-length [this approach is also detailed in @Hulson2023a, we include the description here as well in order to provide a source for both the length and age expansions for reference].
 This is often referred to as the 'first stage expansion' and is a common method to obtain population estimates at length from area-swept survey data [e.g., @Ailloud2019, @Miller2006].
@@ -166,7 +166,7 @@ Finally, we estimate the sex-specific population abundance-at-length within stra
 and to obtain the sex-specific estimates of population abundance-at-length in a management area one would simply sum $\hat{N}_{sx,l,st,y}$ across strata.
 
 
-## Expanding specimen collections to population abundance-at-age
+## Expanding Specimen Collections to Population Abundance-at-Age
 
 In the second stage expansion the sex-specific estimates of population abundance-at-length are used to estimate sex-specific population abundance-at-age.
 The annual specimen data that is collected during the survey, which includes observations of age at length, are first populated into sex-specific numbers at age and length ($N_{sx,a,l,y}$).
@@ -196,7 +196,7 @@ In a similar case, while not assessed as a complex, over the historical bottom t
 We have also developed a custom function that estimates population abundance-at-length and age for this case. 
 
 
-## Bootstrap framework for estimating age and length composition input sample size
+## Bootstrap Framework for Estimating Age and Length Composition Input Sample Size
 
 To estimate the historical input sample sizes for age and length compositions of stocks assessed at AFSC we developed a bootstrap framework based on the methodology outlined in @Stewart2014. 
 The bootstrap framework is composed of a suite of nested resampling (with replacement) protocols.
@@ -214,7 +214,7 @@ We ran the bootstrap-simulation for 500 iterations, which was a level for which 
 The bootstrap-simulation was developed in R [@Rcore] and is available via GitHub as an R package (<https://github.com/BenWilliams-NOAA/swo> *will need to change this to the surveyISS package, potentially having been moved to AFSC github*).
 
 
-## Computing effective and input sample size
+## Computing Effective and Input Sample Size
 
 Effective sample size (ESS), as introduced by @Mcallister1997, is a statistic that can evaluate the level of intra-haul correlation in composition samples that are collected on a survey (whether from age or length frequency collections).
 It is also a statistic that can evaluate the amount of uncertainty in an estimated composition compared to an observed composition.
