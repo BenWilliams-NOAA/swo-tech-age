@@ -9,6 +9,8 @@ library(rsample)
 library(data.table)
 library(scico)
 library(extrafont)
+library(cowplot)
+library(egg)
 remotes::install_version("Rttf2pt1", version = "1.3.8")
 extrafont::font_import()
 loadfonts(device="win")
@@ -30,130 +32,179 @@ ggplot2::theme_set(
       text = element_text(family = "Times New Roman")
     )
 )
-spec<-vroom::vroom(here::here('data', 'species_code_name.csv')) #species_code and common names
 
-nss_len<-vroom::vroom(here::here('data', 'ann_len.csv'))
-nss_age<-vroom::vroom(here::here('data', 'ann_specimen.csv'))
-avg_nss_len<-vroom::vroom(here::here('data', 'avg_ann_len.csv'))
-avg_nss_age<-vroom::vroom(here::here('data', 'avg_ann_specimen.csv'))
-iss_len<-vroom::vroom(here::here('output', 'iss_sz.csv'))
-iss_age<-vroom::vroom(here::here('output', 'iss_ag.csv'))
-avg_iss_len<-vroom::vroom(here::here('output', 'avg_iss_sz.csv'))
-avg_iss_age<-vroom::vroom(here::here('output', 'avg_iss_ag.csv'))
+spec <- vroom::vroom(here::here('data', 'species_code_name.csv')) #species_code and common names
+
+iss <- vroom::vroom(here::here('output', 'afsc_iss.csv')) #species_code and common names
 
 
+## plot example of annual iss for walleye pollock across regions
 
-# length plot data
-
-nss_len %>% 
-  left_join.(iss_len) %>% 
-  filter(species_code %in% c(10110, 10112, 10115, 10130, 10180, 10210, 10261, 10285, 10262, 10200)) %>% 
-  mutate.(group = "flatfish") %>% 
-  tidytable::drop_na.() %>% 
-  tidytable::filter.(iss > 0, hls > 2, year >= 1990) -> flatfish
-
-nss_len %>% 
-  left_join.(iss_len) %>% 
-  filter(species_code %in% c(20510, 21720, 21740, 21921)) %>% 
-  mutate.(group = "roundfish") %>% 
-  tidytable::drop_na.() %>% 
-  tidytable::filter.(iss > 0, year >= 1990) -> roundfish
-  
-nss_len %>% 
-  left_join.(iss_len) %>% 
-  filter(species_code %in% c(30060, 30420, 30050, 30150)) %>% 
-  mutate.(group = "rockfish") %>% 
-  tidytable::drop_na.() %>% 
-  tidytable::filter.(iss > 0, year >= 1990) %>% 
-  rbind(flatfish, roundfish) %>% 
-  mutate.(avg_nss = nss/hls, avg_iss = iss/hls) -> plot_dat_len
-
-plot_dat_len %>% 
-  tidytable::mutate.(i_per_n = iss/nss) %>% 
-  tidytable::summarise.(mean(i_per_n), .by = c(group)) -> iss_rate_len
-
-# age plot data
-
-nss_age %>% 
-  left_join.(iss_age) %>% 
-  filter(species_code %in% c(10110, 10112, 10115, 10130, 10180, 10210, 10261, 10285, 10262, 10200)) %>% 
-  mutate.(group = "flatfish") %>% 
-  tidytable::drop_na.() %>% 
-  tidytable::filter.(iss > 0, year >= 1990) -> flatfish
-
-nss_age %>% 
-  left_join.(iss_age) %>% 
-  filter(species_code %in% c(20510, 21720, 21740, 21921)) %>% 
-  mutate.(group = "roundfish") %>% 
-  tidytable::drop_na.() %>% 
-  tidytable::filter.(iss > 0, year >= 1990) -> roundfish
-
-nss_age %>% 
-  left_join.(iss_age) %>% 
-  filter(species_code %in% c(30060, 30420, 30050, 30150)) %>% 
-  mutate.(group = "rockfish") %>% 
-  tidytable::drop_na.() %>% 
-  tidytable::filter.(iss > 0, year >= 1990)  %>% 
-  rbind(flatfish, roundfish) %>% 
-  mutate.(avg_nss = nss/hls, avg_iss = iss/hls) -> plot_dat_age
-
-plot_dat_age %>% 
-  tidytable::mutate.(i_per_n = iss/nss) %>% 
-  tidytable::summarise.(mean(i_per_n), .by = c(group)) -> iss_rate_age
-
-
-# plot the number of sampled lengths v length comp iss per haul by species and survey
-
-ggplot(plot_dat_len,aes(x = avg_nss, y = avg_iss, color = as.factor(type))) +
-  geom_point(pch = 21) +
-  facet_grid(surv ~ group, scales = "free") +
-  geom_abline(slope = 1, intercept = 0, colour = "black") +
-  xlim(0, 80) +
-  ylim(0, 10) +
-  xlab("Number of fish lengthed per sampled haul") +
-  ylab("Length composition input sample size per sampled haul") +
-  scale_color_discrete(name = "Sex") +
-  geom_smooth(method = 'lm', se = F)
-
-
-# plot the number of hauls v length comp iss by species and survey
-
-ggplot(plot_dat_len,aes(x = hls,y = iss,color = as.factor(type))) +
-  geom_point(pch = 21) +
-  facet_grid(surv ~ group,scales = "free") +
-  geom_abline(slope = 1, intercept = 0, colour = "black") +
-  xlim(0, 1000) +
-  ylim(0, 4000) +
-  xlab("Number of sampled hauls") +
-  ylab("Length composition input sample size") +
-  scale_color_discrete(name = "Sex") +
-  geom_smooth(method = 'lm', se = F)
-
-# plot the number of sampled age v age comp iss per haul by species and survey
-
-ggplot(plot_dat_age,aes(x = avg_nss,y = avg_iss,color = as.factor(type))) +
-  geom_point(pch = 21) +
-  facet_grid(surv ~ group,scales = "free") +
-  geom_abline(slope = 1, intercept = 0, colour = "black") +
-  xlim(0, 20) +
-  ylim(0, 7) +
-  xlab("Number of fish aged per sampled haul") +
-  ylab("Age composition input sample size per sampled haul") +
-  scale_color_discrete(name = "Sex") +
-  geom_smooth(method = 'lm', se = F, intercept = 0)
-
-# plot the number of hauls v age comp iss by species and survey
-
-ggplot(plot_dat_age,aes(x = hls,y = iss,color = as.factor(type))) +
-  geom_point(pch = 21) +
-  facet_grid(surv ~ group,scales = "free") +
-  geom_abline(slope = 1, intercept = 0, colour = "black") +
-  xlim(0, 800) +
-  ylim(0, 400) +
-  xlab("Number of sampled hauls") +
+iss %>% 
+  tidytable::left_join(spec) %>% 
+  tidytable::filter(species_code == 21740 & comp_type == 'total') %>% 
+  ggplot(., aes(x = year, y = iss_age)) +
+  geom_bar(stat = "identity", color = "black", fill = "grey") +
+  facet_grid(region ~ .) +
+  xlab("Year") +
   ylab("Age composition input sample size") +
-  scale_color_discrete(name = "Sex") +
-  geom_smooth(method = 'lm', se = F, intercept = 0)
+  theme(legend.position = "none",
+        strip.text.y = element_blank()) -> p1
 
+iss %>% 
+  tidytable::left_join(spec) %>% 
+  tidytable::filter(species_code == 21740 & comp_type == 'total') %>% 
+  ggplot(., aes(x = species_name, y = iss_age)) +
+  geom_boxplot(fill = "grey") +
+  facet_grid(region ~ .) +
+  xlab("") +
+  ylab("none") +
+  theme(legend.position = "none",
+        axis.title.y = element_blank()) -> p2
+
+ggarrange(p1 + 
+            theme(plot.margin = margin(r = 1)),
+          p2 + 
+            theme(plot.margin = margin(l = 1),
+                  axis.text.y = element_blank(),
+                  axis.ticks.y = element_blank()),
+          nrow = 1,
+          widths = c(4,1))
+
+
+## plot example of annual iss for yellowfin sole across sexes
+
+iss %>% 
+  tidytable::left_join(spec) %>% 
+  tidytable::filter(species_code == 10210) %>% 
+  ggplot(., aes(x = year, y = iss_age)) +
+  geom_bar(stat = "identity", color = "black", fill = "grey") +
+  facet_grid(comp_type ~ .) +
+  xlab("Year") +
+  ylab("Age composition input sample size") +
+  theme(legend.position = "none",
+        strip.text.y = element_blank()) -> p1
+
+iss %>% 
+  tidytable::left_join(spec) %>% 
+  tidytable::filter(species_code == 10210) %>% 
+  ggplot(., aes(x = species_name, y = iss_age)) +
+  geom_boxplot(fill = "grey") +
+  facet_grid(comp_type ~ .) +
+  xlab("") +
+  ylab("none") +
+  theme(legend.position = "none",
+        axis.title.y = element_blank()) -> p2
+
+ggarrange(p1 + 
+            theme(plot.margin = margin(r = 1)),
+          p2 + 
+            theme(plot.margin = margin(l = 1),
+                  axis.text.y = element_blank(),
+                  axis.ticks.y = element_blank()),
+          nrow = 1,
+          widths = c(4,1))
+
+## plot for all species
+iss %>% 
+  tidytable::left_join(spec) %>% 
+  tidytable::filter(region %in% c('bs_shelf', 'bs_slope', 'ai', 'goa') 
+                    & !is.na(species_name)) %>%
+  ggplot(., aes(x = species_name, y = iss_age, fill = comp_type)) +
+  geom_boxplot() +
+  facet_wrap(vars(region), scales = "free") +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1),
+        axis.title.y = element_text(vjust = 4)) +
+  xlab("Stock") +
+  ylab("Age composition input sample size")
+
+
+iss %>% 
+  tidytable::left_join(spec) %>% 
+  tidytable::filter(region %in% c('bs_shelf', 'bs_slope', 'ai', 'goa') 
+                    & !is.na(species_name)) %>%
+  ggplot(., aes(x = species_name, y = iss_length, fill = comp_type)) +
+  geom_boxplot() +
+  facet_wrap(vars(region), scales = "free") +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1)) +
+  xlab("Stock") +
+  ylab("Length composition input sample size")
+
+
+# plot relationships with hauls
+
+
+vroom::vroom(here::here('data', 'ann_specimen.csv')) %>% 
+  tidytable::mutate.(region = case_when.(surv == 'AI' ~ 'ai',
+                                         surv == 'EBS_SHELF' ~ 'bs_shelf',
+                                         surv == 'EBS_SLOPE' ~ 'bs_slope',
+                                         surv == 'GOA' ~ 'goa')) %>% 
+  tidytable::rename.(comp_type = 'type',
+                     hls_age = 'hls',
+                     nss_age = 'nss') %>% 
+  tidytable::select.(year, species_code, comp_type, region, hls_age, nss_age) -> ann_spec
+
+
+vroom::vroom(here::here('data', 'ann_len.csv')) %>% 
+  tidytable::mutate.(region = case_when.(surv == 'AI' ~ 'ai',
+                                         surv == 'EBS_SHELF' ~ 'bs_shelf',
+                                         surv == 'EBS_SLOPE' ~ 'bs_slope',
+                                         surv == 'GOA' ~ 'goa')) %>% 
+  tidytable::rename.(comp_type = 'type',
+                     hls_length = 'hls',
+                     nss_length = 'nss') %>% 
+  tidytable::select.(year, species_code, comp_type, region, hls_length, nss_length) -> ann_len
+
+
+# iss vs nss
+iss %>% 
+  tidytable::left_join(spec) %>% 
+  tidytable::left_join(ann_spec) %>% 
+  tidytable::left_join(ann_len) %>% 
+  tidytable::filter(region %in% c('bs_shelf', 'bs_slope', 'ai', 'goa') 
+                    & !is.na(species_name)
+                    & species_type != "other") %>% 
+ggplot(.,aes(x = nss_age, y = iss_age, color = as.factor(comp_type))) +
+  geom_point() +
+  facet_grid(region ~ species_type) +
+  geom_abline(slope = 1, intercept = 0, colour = "black") +
+  xlab("Number of age samples") +
+  ylab("Age composition input sample size") +
+  scale_color_discrete(name = "Composition type") +
+  geom_smooth(method = 'lm', se = T)
+
+# iss vs hauls
+iss %>% 
+  tidytable::left_join(spec) %>% 
+  tidytable::left_join(ann_spec) %>% 
+  tidytable::left_join(ann_len) %>% 
+  tidytable::filter(region %in% c('bs_shelf', 'bs_slope', 'ai', 'goa') 
+                    & !is.na(species_name)
+                    & species_type != "other") %>% 
+  ggplot(.,aes(x = hls_age, y = iss_age, color = as.factor(comp_type))) +
+  geom_point() +
+  facet_grid(region ~ species_type) +
+  geom_abline(slope = 1, intercept = 0, colour = "black") +
+  xlab("Number of hauls sampled for age") +
+  ylab("Age composition input sample size") +
+  scale_color_discrete(name = "Composition type") +
+  geom_smooth(method = 'lm', se = T)
+
+# iss/hls vs nss/hls
+iss %>% 
+  tidytable::left_join(spec) %>% 
+  tidytable::left_join(ann_spec) %>% 
+  tidytable::left_join(ann_len) %>% 
+  tidytable::filter(region %in% c('bs_shelf', 'bs_slope', 'ai', 'goa') 
+                    & !is.na(species_name)
+                    & species_type != "other") %>% 
+  ggplot(.,aes(x = nss_age / hls_age, y = iss_age / hls_age, color = as.factor(comp_type))) +
+  geom_point() +
+  facet_grid(region ~ species_type) +
+  geom_abline(slope = 1, intercept = 0, colour = "black") +
+  xlab("Number of age samples per sampled haul") +
+  ylab("Age composition input sample size per sampled haul") +
+  scale_color_discrete(name = "Composition type") +
+  geom_smooth(method = 'lm', se = T)
 
 
