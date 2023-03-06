@@ -39,8 +39,8 @@ iss <- vroom::vroom(here::here('output', 'afsc_iss.csv')) #species_code and comm
 
 # plot example of annual iss for walleye pollock across regions ----
 
-surv_labs <- c("Aleutian Isalnds", "Bering Sea Shelf", "Gulf of Alaska", "Bering Sea Slope")
-names(surv_labs) <- c("ai", "bs_shelf", "goa", "bs_slope")
+surv_labs <- c("Aleutian Isalnds", "Bering Sea Shelf", "Gulf of Alaska", "Bering Sea Slope", "Central GOA", "Eastern GOA", "Western-Central GOA", "Western GOA")
+names(surv_labs) <- c("ai", "bs_shelf", "goa", "bs_slope", "cgoa", "egoa", "wcgoa", "wgoa")
 
 iss %>% 
   tidytable::left_join(spec) %>% 
@@ -151,7 +151,8 @@ iss %>%
   ggplot(., aes(x = species_name, y = iss_length, fill = comp_type)) +
   geom_boxplot() +
   facet_wrap(vars(region), 
-             scales = "free") +
+             scales = "free",
+             labeller = labeller(region = surv_labs)) +
   theme(axis.text.x = element_text(angle = 45, hjust = 1)) +
   xlab("Stock") +
   ylab("Length composition input sample size") +
@@ -164,7 +165,8 @@ iss %>%
   ggplot(., aes(x = species_name, y = iss_age, fill = comp_type)) +
   geom_boxplot() +
   facet_wrap(vars(region), 
-             scales = "free") +
+             scales = "free",
+             labeller = labeller(region = surv_labs)) +
   theme(axis.text.x = element_text(angle = 45, hjust = 1)) +
   xlab("Stock") +
   ylab("Age composition input sample size") +
