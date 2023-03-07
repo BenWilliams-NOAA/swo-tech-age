@@ -1,18 +1,18 @@
-Stock,Survey,Female (a),Male (a),Total (a),Female (l),Male (l),Total (l)
-arrowtooth flounder,AI,560,360,920,"35,600","17,100","54,100"
-Dover sole,AI,210,190,390,"2,500","3,200","6,100"
-Dusky rockfish,AI,230,200,430,"1,000",900,"2,000"
-flathead sole,AI,290,240,540,"10,800","9,800","21,300"
-northern rockfish,AI,240,210,450,"2,000","1,800","3,900"
-Pacific cod,AI,320,300,620,"5,300","5,200","10,900"
-Pacific ocean perch,AI,550,550,"1,100","9,000","10,200","20,500"
-REBS rockfish complex,AI,280,280,560,"1,600","1,700","3,400"
-walleye pollock,AI,710,600,"1,330","13,700","11,400","28,200"
-arrowtooth flounder,GOA,290,240,520,"6,300","3,900","10,600"
-Atka mackerel,GOA,320,290,610,"4,600","4,300","9,100"
-Kamchatka flounder,GOA,260,250,510,"1,100","1,600","2,700"
-northern rockfish,GOA,300,240,540,"5,600","3,600","9,300"
-Pacific cod,GOA,390,390,790,"3,300","3,500","7,100"
-Pacific ocean perch,GOA,550,550,"1,100","9,800","13,200","23,500"
-REBS rockfish complex,GOA,230,230,460,900,900,"2,100"
-walleye pollock,GOA,850,700,"1,550","7,800","6,300","14,500"
+Stock,Survey,F (a),M (a),T (a),F (l),M (l),T (l)
+arrowtooth flounder,AI,560,360,920,35600,17100,54100
+Dover sole,AI,210,190,390,2500,3200,6100
+Dusky rockfish,AI,230,200,430,1000,900,2000
+flathead sole,AI,290,240,540,10800,9800,21300
+northern rockfish,AI,240,210,450,2000,1800,3900
+Pacific cod,AI,320,300,620,5300,5200,10900
+Pacific ocean perch,AI,550,550,1100,9000,10200,20500
+REBS rockfish complex,AI,280,280,560,1600,1700,3400
+walleye pollock,AI,710,600,1330,13700,11400,28200
+arrowtooth flounder,GOA,290,240,520,6300,3900,10600
+Atka mackerel,GOA,320,290,610,4600,4300,9100
+Kamchatka flounder,GOA,260,250,510,1100,1600,2700
+northern rockfish,GOA,300,240,540,5600,3600,9300
+Pacific cod,GOA,390,390,790,3300,3500,7100
+Pacific ocean perch,GOA,550,550,1100,9800,13200,23500
+REBS rockfish complex,GOA,230,230,460,900,900,2100
+walleye pollock,GOA,850,700,1550,7800,6300,14500

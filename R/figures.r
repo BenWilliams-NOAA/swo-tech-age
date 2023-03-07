@@ -11,8 +11,8 @@ library(scico)
 library(extrafont)
 library(cowplot)
 library(egg)
-remotes::install_version("Rttf2pt1", version = "1.3.8")
-extrafont::font_import()
+# remotes::install_version("Rttf2pt1", version = "1.3.8")
+# extrafont::font_import()
 loadfonts(device = "win")
 
 # add fonts to all text (last line)
@@ -52,7 +52,8 @@ iss %>%
   xlab("Year") +
   ylab("Age composition input sample size") +
   theme(legend.position = "none",
-        strip.text.y = element_blank()) -> p1
+        strip.text.y = element_blank(),
+        text = element_text(size = 14)) -> p1
 
 iss %>% 
   tidytable::left_join(spec) %>% 
@@ -64,16 +65,23 @@ iss %>%
   xlab("") +
   ylab("none") +
   theme(legend.position = "none",
-        axis.title.y = element_blank()) -> p2
+        axis.title.y = element_blank(),
+        text = element_text(size = 14)) -> p2
 
-ggarrange(p1 + 
-            theme(plot.margin = margin(r = 1)),
-          p2 + 
-            theme(plot.margin = margin(l = 1),
-                  axis.text.y = element_blank(),
-                  axis.ticks.y = element_blank()),
-          nrow = 1,
-          widths = c(4,1))
+poll <- ggarrange(p1 + 
+                    theme(plot.margin = margin(r = 1)),
+                  p2 + 
+                    theme(plot.margin = margin(l = 1),
+                          axis.text.y = element_blank(),
+                          axis.ticks.y = element_blank()),
+                  nrow = 1,
+                  widths = c(4,1))
+
+ggsave(here::here("figs", "pollock_examp.png"),
+       poll,
+       device = "png",
+       width = 6,
+       height = 5)
 
 # plot example of annual iss for yellowfin sole across sexes ----
 
@@ -86,7 +94,8 @@ iss %>%
   xlab("Year") +
   ylab("Age composition input sample size") +
   theme(legend.position = "none",
-        strip.text.y = element_blank()) +
+        strip.text.y = element_blank(),
+        text = element_text(size = 14)) +
   scale_fill_scico_d(palette = 'roma') -> p1
 
 iss %>% 
@@ -98,10 +107,11 @@ iss %>%
   xlab("") +
   ylab("none") +
   theme(legend.position = "none",
-        axis.title.y = element_blank()) +
+        axis.title.y = element_blank(),
+        text = element_text(size = 14)) +
   scale_fill_scico_d(palette = 'roma') -> p2
 
-ggarrange(p1 + 
+yell <- ggarrange(p1 + 
             theme(plot.margin = margin(r = 1)),
           p2 + 
             theme(plot.margin = margin(l = 1),
@@ -109,6 +119,12 @@ ggarrange(p1 +
                   axis.ticks.y = element_blank()),
           nrow = 1,
           widths = c(4,1))
+
+ggsave(here::here("figs", "yellowfin_examp.png"),
+       yell,
+       device = "png",
+       width = 6,
+       height = 5)
 
 # plot for all species ----
 
@@ -121,12 +137,21 @@ iss %>%
   facet_wrap(vars(region), 
              scales = "free",
              labeller = labeller(region = surv_labs)) +
-  theme(axis.text.x = element_text(angle = 45, hjust = 1),
-        axis.title.y = element_text(vjust = 4)) +
+  theme(axis.text.x = element_text(angle = -45, hjust = 0),
+        axis.title.y = element_text(vjust = 4),
+        text = element_text(size = 14),
+        legend.position = "bottom",
+        plot.margin = margin(t = 0, r = 50, b = 0, l = 15, unit = "pt")) +
   xlab("Stock") +
   ylab("Age composition input sample size") +
-  scale_fill_scico_d(palette = 'roma')
+  scale_fill_scico_d(palette = 'roma',
+                     name = "Composition type") -> all_age
 
+ggsave(here::here("figs", "age_iss.png"),
+       all_age,
+       device = "png",
+       width = 7,
+       height = 6)
 
 iss %>% 
   tidytable::left_join(spec) %>% 
@@ -137,10 +162,20 @@ iss %>%
   facet_wrap(vars(region), 
              scales = "free",
              labeller = labeller(region = surv_labs)) +
-  theme(axis.text.x = element_text(angle = 45, hjust = 1)) +
+  theme(axis.text.x = element_text(angle = -45, hjust = 0),
+        text = element_text(size = 14),
+        legend.position = "bottom",
+        plot.margin = margin(t = 0, r = 50, b = 0, l = 15, unit = "pt")) +
   xlab("Stock") +
   ylab("Length composition input sample size") +
-  scale_fill_scico_d(palette = 'roma')
+  scale_fill_scico_d(palette = 'roma',
+                     name = "Composition type") -> all_length
+
+ggsave(here::here("figs", "length_iss.png"),
+       all_length,
+       device = "png",
+       width = 7,
+       height = 6)
 
 # plot for sub-region special cases in goa ----
 
@@ -153,10 +188,20 @@ iss %>%
   facet_wrap(vars(region), 
              scales = "free",
              labeller = labeller(region = surv_labs)) +
-  theme(axis.text.x = element_text(angle = 45, hjust = 1)) +
+  theme(axis.text.x = element_text(angle = -45, hjust = 0),
+        text = element_text(size = 14),
+        legend.position = "bottom",
+        plot.margin = margin(t = 0, r = 50, b = 0, l = 15, unit = "pt")) +
   xlab("Stock") +
   ylab("Length composition input sample size") +
-  scale_fill_scico_d(palette = 'roma')
+  scale_fill_scico_d(palette = 'roma',
+                     name = "Composition type") -> sub_length
+
+ggsave(here::here("figs", "length_iss_subreg.png"),
+       sub_length,
+       device = "png",
+       width = 7,
+       height = 6)
 
 iss %>% 
   tidytable::left_join(spec) %>% 
@@ -167,10 +212,20 @@ iss %>%
   facet_wrap(vars(region), 
              scales = "free",
              labeller = labeller(region = surv_labs)) +
-  theme(axis.text.x = element_text(angle = 45, hjust = 1)) +
+  theme(axis.text.x = element_text(angle = -45, hjust = 0),
+        text = element_text(size = 14),
+        legend.position = "bottom",
+        plot.margin = margin(t = 0, r = 50, b = 0, l = 15, unit = "pt")) +
   xlab("Stock") +
   ylab("Age composition input sample size") +
-  scale_fill_scico_d(palette = 'roma')
+  scale_fill_scico_d(palette = 'roma',
+                     name = "Composition type") -> sub_age
+
+ggsave(here::here("figs", "age_iss_subreg.png"),
+       sub_age,
+       device = "png",
+       width = 7,
+       height = 6)
 
 # plot relationships with hauls ----
 
@@ -202,7 +257,15 @@ ggplot(.,aes(x = nss_age, y = iss_age, pch = as.factor(species_name), color = as
   labs(pch = "Stock") +
   # geom_smooth(method = "lm", se = F) +
   scale_color_scico_d(palette = 'roma',
-                      name = "Composition type")
+                      name = "Composition type") + 
+  theme(text = element_text(size = 14),
+        axis.text.x = element_text(angle = -45, hjust = 0)) -> iss_nss
+
+ggsave(here::here("figs", "age_iss_nss.png"),
+       iss_nss,
+       device = "png",
+       width = 7,
+       height = 6)
 
 # iss vs hauls
 iss %>% 
@@ -222,7 +285,15 @@ iss %>%
   labs(pch = "Stock") +
   # geom_smooth(method = 'lm', se = T) +
   scale_color_scico_d(palette = 'roma',
-                      name = "Composition type")
+                      name = "Composition type") + 
+  theme(text = element_text(size = 14),
+        axis.text.x = element_text(angle = -45, hjust = 0)) -> iss_hls
+
+ggsave(here::here("figs", "age_iss_hls.png"),
+       iss_hls,
+       device = "png",
+       width = 7,
+       height = 6)
 
 # iss/hls vs nss/hls
 iss %>% 
@@ -243,7 +314,14 @@ iss %>%
   labs(pch = "Stock") +
   # geom_smooth(method = 'lm', se = T) +
   scale_color_scico_d(palette = 'roma',
-                      name = "Composition type")
+                      name = "Composition type") + 
+  theme(text = element_text(size = 14)) -> iss_nss_hls
+
+ggsave(here::here("figs", "age_iss_nss_hl.png"),
+       iss_nss_hls,
+       device = "png",
+       width = 7,
+       height = 6)
 
 # compute iss stats ----
 

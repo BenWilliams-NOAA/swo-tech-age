@@ -60,9 +60,10 @@ source(here::here('R', "render_toc.R"))
 
 # ABSTRACT
 
-At the Alaska Fisheries Science center the most 'data-rich' stocks are assessed with statistical catch-at-age models that integrate various sources of information.
-One of these sources of information is age and length composition data that require setting the 'input sample size' to weight the relative influence of composition data to other data sources fit by the assessment model.
-We developed an R-package that uses bootstrap methods to estimate input sample size for the bottom trawl surveys conducted by the Alaska Fisheries Science Center in the Eastern Bering Sea, Aleutian Islands, and Gulf of Alaska.
+At the Alaska Fisheries Science center a number of stocks are assessed with statistical catch-at-age models which integrate various sources of information to inform estimation of population dynamics that aid in the management of the fisheries that target these stocks.
+One of these sources of information is age and length composition data, both from fishery-independent (survey) and fishery-dependent sources.
+When used in statistical catch-at-age models, age and length composition data require determining *a priori* the 'input sample size' to weight the relative influence of the composition data to other data sources fit by the assessment model.
+We developed an R-package that uses bootstrap methods to estimate input sample size for age and length composition data from the bottom trawl surveys conducted by the Alaska Fisheries Science Center in the Eastern Bering Sea, Aleutian Islands, and Gulf of Alaska.
 Here we present annual input sample size estimates for length and age composition (including sex-specific and sex combined composition, and sub-regional composition within the Gulf of Alaska) historically collected in Alaskan bottom trawl surveys.
 These newly available input sample size estimates provide an objective method that follows the sampling design of the bottom trawl surveys to set input sample size in assessments.
 We recommend that these input sample size estimates become a standard bottom trawl survey data product that are available to assessment authors for inclusion into Alaska Fisheries Science Center stock assessments.
@@ -91,7 +92,7 @@ In some cases, where age data is not available, length frequency samples which h
 Finally, recent developments have included using length frequency samples in a model-based framework to estimate length and age composition estimates [@Thorson2019; @Ianelli2021; @Thompson2021].
 
 Predominantly, the multinomial likelihood is used to fit age and length composition data at the AFSC [e.g., @Bryan2021], while recently the Dirichlet-Multinomial has also been explored [e.g., @Barbeaux2022].
-A common requirement, regardless of the likelihood employed, is a pre-determination of the input sample size that is used to 'weight' the particular year's age or length composition data that subsequently influences the precision of the assessment models fit.
+A common requirement, regardless of the likelihood employed, is a pre-determination of the input sample size that is used to 'weight' the particular year's age or length composition data that subsequently influences the precision of the assessment model's fit.
 Over the years, a variety of approaches have been used at AFSC to set the input sample size in stock assessments.
 These include selecting a constant value [e.g., @Hulson2022], relating the input sample size to the number of hauls from which age or length composition data was collected [e.g., @Spencer2022], relating the input sample size to the nominal sample size [e.g., @Hulson2021], or relating the input sample size to some combination of hauls and nominal sample size [e.g., @Williams2022].
 Overall, there is no general or consensus method that is agreed upon at the AFSC to determine input sample size.
@@ -120,13 +121,13 @@ Length frequency samples collected by the AFSC bottom trawl surveys are expanded
 This is often referred to as the 'first stage expansion' and is a common method to obtain population estimates at length from area-swept survey data [e.g., @Ailloud2019, @Miller2006].
 Population abundance-at-length are computed for three sex categories: males, females, and unsexed at the stratum level, which are then summed across stratum to obtain the population abundance-at-length for the management-scale region (i.e., EBS, AI, or GOA), these can also be summed to any sub-region level.
 
-In the first step of this process we compute the overall population numbers in year-*y* within stratum-*st* ($\hat{N}_{st,y}$) with:
+In the first step of this process we compute the overall population numbers in year-*y* within stratum-*st* ($\hat{N}_{st,y}$) with
 
 \begin{equation}
  \hat{N}_{st,y}=\overline{CPUE}_{st,y}\cdot A_{st}
   (\#eq:eqn1)
 \end{equation}
-where $A_{st}$ is the area of stratum-*st* (in km^2^), and $\overline{CPUE}_{st,y}$ is the average catch per unit effort of numbers captured across the hauls within a strata, given by:
+where $A_{st}$ is the area of stratum-*st* (in km^2^), and $\overline{CPUE}_{st,y}$ is the average catch per unit effort of numbers captured across the hauls within a strata, given by
 
 \begin{equation}
  \overline{CPUE}_{st,y}
@@ -135,14 +136,14 @@ where $A_{st}$ is the area of stratum-*st* (in km^2^), and $\overline{CPUE}_{st,
   (\#eq:eqn2)
 \end{equation}
 where $H_{st,y}$ is the number of hauls, $CPUE_{h,st,y}$ is the catch per unit effort of numbers caught within a haul-*h*, $n_{h,st,y}$ is the catch (in numbers) in haul-*h*, and $E_{h,st,y}$ is the effort in haul-*h*, which is computed as the net width multiplied by the time on bottom, or, the area swept by the haul (in km^2^).
-Next, the ratio of catch per unit effort among hauls ($\hat{p}_{CPUE,h,st,y}$) is computed by:
+Next, the ratio of catch per unit effort among hauls ($\hat{p}_{CPUE,h,st,y}$) is computed by
 
 \begin{equation}
 \hat{p}_{CPUE,h,st,y}=\frac{CPUE_{h,st,y}}{\sum_{h=1}^{H_{sy,y}}CPUE_{h,st,y}}
   (\#eq:eqn3)
 \end{equation}
 where $CPUE_{h,st,y}$ is the catch per unit effort of numbers caught within a haul-*h*.
-We then compute the sex-specific ratio of the total number of lengths sampled within a haul by length ($\hat{p}_{sx,l,h,st,y}$) with:
+We then compute the sex-specific ratio of the total number of lengths sampled within a haul by length ($\hat{p}_{sx,l,h,st,y}$) with
 
 \begin{equation}
  \hat{p}_{sx,l,h,st,y} =
@@ -154,7 +155,7 @@ We then compute the sex-specific ratio of the total number of lengths sampled wi
 \end{equation}
 where $N_{sx,l,h,st,y}$ is the length frequency sampled, in numbers, by sex-*sx* and length-*l*.
 In some cases there are hauls that have catch for a species but did not collect length frequency data, in this case (2) is applied in order to account for the unknown length frequency in these hauls, otherwise, if length frequency samples are obtained case (1) is applied.
-Finally, we estimate the sex-specific population abundance-at-length within strata-st with:
+Finally, we estimate the sex-specific population abundance-at-length within strata-st with
 
 \begin{equation}
  \hat{N}_{sx,l,st,y}=\sum_{h=1}^{H_{st,y}}[\hat{N}_{st,y}\cdot\hat{p}_{CPUE,h,st,y}\cdot\hat{p}_{sx,l,h,st,y}]
@@ -167,13 +168,13 @@ and to obtain the sex-specific estimates of population abundance-at-length in a 
 
 In the second stage expansion the sex-specific estimates of population abundance-at-length are used to estimate sex-specific population abundance-at-age.
 The annual specimen data that is collected during the survey, which includes observations of age at length, are first populated into sex-specific numbers at age and length ($N_{sx,a,l,y}$).
-Next, the sex-specific numbers at age and length are converted to sex-specific proportions of age at length with:
+Next, the sex-specific numbers at age and length are converted to sex-specific proportions of age at length with
 
 \begin{equation}
  \hat{p}_{sx,a,l,y}=\frac{N_{sx,a,l,y}}{\sum_{a=1}^{A}N_{sx,a,l,y}}
   (\#eq:eqn6)
 \end{equation}
-The proportions of age at length are then expanded to population abundance-at-age with:
+The proportions of age at length are then expanded to population abundance-at-age with
 
 \begin{equation}
  \hat{N}_{sx,a,y}=\sum_{l=1}^{L}\hat{p}_{sx,a,l,y}\cdot \hat{N}_{sx,l,y}
@@ -215,7 +216,7 @@ The bootstrap-simulation was developed in R [@Rcore] and is available via GitHub
 
 Effective sample size (ESS), as introduced by @Mcallister1997, is a statistic that can evaluate the level of intra-haul correlation in composition samples that are collected on a survey (whether from age or length frequency collections).
 It is also a statistic that can evaluate the amount of uncertainty in an estimated composition compared to an observed composition.
-Effective sample size is given by:
+Effective sample size is given by
 
 \begin{equation}
  ESS=\frac{\sum_{c=1}^{C}E_c(1-E_c)}{\sum_{c=1}^{C}(E_c-O_c)^2}
@@ -258,6 +259,7 @@ For all species sampled in each survey, the range and median of total and sex-sp
 Sub-regional ISS for age and length composition can also be estimated within the GOA survey, and is shown in Figures \@ref(fig:sublength-iss) - \@ref(fig:sublength-iss).
 These results show that the length composition ISS ranged from the hundreds to thousands, and were larger than the age composition ISS.
 It also resulted that the sex-specific ISS for either length or age composition were smaller than the ISS for the total age composition.
+For both the age and length composition ISS the magnitude was species-specific, and was closely related to the overall sampling intensity for age and length observations from the surveys.
 
 Whether for age or length composition (including sex-specific composition data) the ISS was smaller than the nominal sample sizes (Figure \@ref(fig:iss-nss), shown for age composition) and there was a generally increasing trend between nominal sample size and input sample size.
 Comparing the age composition ISS to the number of hauls from which age samples were obtained did not result in a strong relationship for the flatfish and gadids sampled in the AFSC surveys, but there was an increasing trend for the rockfish species (Figure \@ref(fig:iss-hls)).
@@ -293,7 +295,7 @@ We recommend that the surveyISS package be adopted and further developed by asse
 
 \newpage
 
-# ACKNOWLEDGEMENTS
+# ACKNOWLEDGMENTS
 
 We thank *reviewer1* and *reviewer2* for their helpful reviews of this manuscript.
 
@@ -317,13 +319,13 @@ knitr::kable(vroom::vroom(here::here('tables', 'species.csv')), caption = "Speci
 \newpage
 
 ```{r ebs-nss}
-knitr::kable(vroom::vroom(here::here('tables', 'avg_nss_ebs.csv')), caption = "Average age (a) and length (l) frequency samples from the Eastern Bering Sea shelf and slope bottom trawl surveys.", align = c('llcccccc'), format.args = list(big.mark = ",", scientific = FALSE))
+knitr::kable(vroom::vroom(here::here('tables', 'avg_nss_ebs.csv')), caption = "Average age (a) and length (l) frequency samples for Female (F), Male (M), and Total (T, all sexes combined) collections from the Eastern Bering Sea shelf and slope bottom trawl surveys.", align = c('llcccccc'), format.args = list(big.mark = ",", scientific = FALSE))
 ```
 
 \newpage
 
 ```{r goai-nss}
-knitr::kable(vroom::vroom(here::here('tables', 'avg_nss_goai.csv')), caption = "Average age (a) and length (l) frequency samples from the Aleutian Islands (AI) and Gulf of Alaska (GOA) bottom trawl surveys.", align = c('llcccccc'), format.args = list(big.mark = ",", scientific = FALSE))
+knitr::kable(vroom::vroom(here::here('tables', 'avg_nss_goai.csv')), caption = "Average age (a) and length (l) frequency samples for Female (F), Male (M), and Total (T, all sexes combined) collections from the Aleutian Islands (AI) and Gulf of Alaska (GOA) bottom trawl surveys.", align = c('llcccccc'), format.args = list(big.mark = ",", scientific = FALSE))
 ```
 
 \newpage
@@ -336,7 +338,7 @@ knitr::kable(vroom::vroom(here::here('tables', 'surveyISS_examp.csv')), caption 
 
 # FIGURES
 
-```{r length, fig.cap="Bootstrap flow chart, the steps refer to the order of operations as described in the *Bootstrap framework for estimating age and length composition input sample size* section."}
+```{r length, fig.cap="Bootstrap flow chart, the steps refer to the order of operations."}
 knitr::include_graphics(here::here('figs', 'age_flowchart.png'))
 ```
 
@@ -348,19 +350,19 @@ knitr::include_graphics(here::here('figs', 'pollock_examp.png'))
 knitr::include_graphics(here::here('figs', 'yellowfin_examp.png'))
 ```
 
-```{r length-iss, fig.cap="Length compostion input sample size by species and survey."}
+```{r length-iss, fig.cap="Length composition input sample size by species and survey."}
 knitr::include_graphics(here::here('figs', 'length_iss.png'))
 ```
 
-```{r age-iss, fig.cap="Age compostion input sample size by species and survey."}
+```{r age-iss, fig.cap="Age composition input sample size by species and survey."}
 knitr::include_graphics(here::here('figs', 'age_iss.png'))
 ```
 
-```{r sublength-iss, fig.cap="Sub-region length compostion input sample size by species within the Gulf of Alaska survey."}
+```{r sublength-iss, fig.cap="Sub-region length composition input sample size by species within the Gulf of Alaska survey."}
 knitr::include_graphics(here::here('figs', 'length_iss_subreg.png'))
 ```
 
-```{r subage-iss, fig.cap="Sub-region age compostion input sample size by species within the Gulf of Alaska survey."}
+```{r subage-iss, fig.cap="Sub-region age composition input sample size by species within the Gulf of Alaska survey."}
 knitr::include_graphics(here::here('figs', 'age_iss_subreg.png'))
 ```
 
@@ -368,10 +370,10 @@ knitr::include_graphics(here::here('figs', 'age_iss_subreg.png'))
 knitr::include_graphics(here::here('figs', 'age_iss_nss.png'))
 ```
 
-```{r iss-hls, fig.cap="Number of sampled hauls compared to age compostion input sample size by species group and survey (1-1 line shown in black for reference)."}
+```{r iss-hls, fig.cap="Number of sampled hauls compared to age composition input sample size by species group and survey (1-1 line shown in black for reference)."}
 knitr::include_graphics(here::here('figs', 'age_iss_hls.png'))
 ```
 
-```{r iss-nss-hls, fig.cap="Number of age samples compared to age compostion input sample size per sampled haul by species group and survey (1-1 line and the slope = 1 line (when all samples are independent) shown in black for reference)."}
+```{r iss-nss-hls, fig.cap="Number of age samples compared to age composition input sample size per sampled haul by species group and survey (1-1 line and the slope = 1 line (when all samples are identical in each haul) shown in black for reference)."}
 knitr::include_graphics(here::here('figs', 'age_iss_nss_hl.png'))
 ```
