@@ -245,4 +245,18 @@ iss %>%
   scale_color_scico_d(palette = 'roma',
                       name = "Composition type")
 
+# compute iss stats ----
 
+iss %>% 
+  tidytable::left_join(spec) %>% 
+  tidytable::left_join(ann_spec) %>% 
+  tidytable::select(-iss_length) %>% 
+  tidytable::mutate(iss_per = iss_age / nss_age, .by = c(year, species_code, comp_type, region)) %>% 
+  tidytable::summarise(iss_per = mean(iss_per, na.rm = TRUE), .by = c(species_type))
+
+iss %>% 
+  tidytable::left_join(spec) %>% 
+  tidytable::left_join(ann_spec) %>% 
+  tidytable::select(-iss_length) %>% 
+  tidytable::mutate(iss_per = iss_age / hls_age, .by = c(year, species_code, comp_type, region)) %>% 
+  tidytable::summarise(iss_per = mean(iss_per, na.rm = TRUE), .by = c(species_type))

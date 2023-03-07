@@ -2,15 +2,15 @@
 title: "Bottom trawl survey age and length composition input sample sizes for stocks assessed with statistical catch-at-age assessment models at the Alaska Fisheries Science Center"
 
 author:
-  - name: Pete Hulson
+  - name: Peter-John F. Hulson
     institute: afscjnu
     email: pete.hulson@noaa.gov
     correspondence: true
-  - name: Benjamin Williams
+  - name: Benjamin C. Williams
     institute: afscjnu
-  - name: Matthew Siskey
+  - name: Matthew R. Siskey
     institute: uw
-  - name: Meaghan Bryan
+  - name: Meaghan D. Bryan
     institute: afscsearefm
   - name: Jason Conner
     institute: afscsearace
@@ -60,15 +60,12 @@ source(here::here('R', "render_toc.R"))
 
 # ABSTRACT
 
-*Why are you doing this? [context and aim]*
-
-*What did you do? [methods]*
-
-*What did you find? [core results – say something useful – no motherhood statements or deference to the main text!]*
-
-*What does this mean? [interpretation in context]*
-
-*What is it good for? [application]*
+At the Alaska Fisheries Science center the most 'data-rich' stocks are assessed with statistical catch-at-age models that integrate various sources of information.
+One of these sources of information is age and length composition data that require setting the 'input sample size' to weight the relative influence of composition data to other data sources fit by the assessment model.
+We developed an R-package that uses bootstrap methods to estimate input sample size for the bottom trawl surveys conducted by the Alaska Fisheries Science Center in the Eastern Bering Sea, Aleutian Islands, and Gulf of Alaska.
+Here we present annual input sample size estimates for length and age composition (including sex-specific and sex combined composition, and sub-regional composition within the Gulf of Alaska) historically collected in Alaskan bottom trawl surveys.
+These newly available input sample size estimates provide an objective method that follows the sampling design of the bottom trawl surveys to set input sample size in assessments.
+We recommend that these input sample size estimates become a standard bottom trawl survey data product that are available to assessment authors for inclusion into Alaska Fisheries Science Center stock assessments.
 
 \newpage
 
@@ -88,7 +85,7 @@ Age and length composition data are collected on both fishery-independent (e.g.,
 The Alaska Fisheries Science Center (AFSC) operates fishery-independent bottom trawl surveys [@Stauffer2004], spanning most of the continental shelf in Alaskan waters south of the Bering Strait, including the eastern Bering Sea (EBS), the Aleutian Islands (AI), and the Gulf of Alaska (GOA) that provide age and length composition data to 26 stocks (or stock complexes) assessed with statistical catch-at-age models.
 
 At the AFSC, age and length frequency sampling from the bottom trawl surveys is used in stock assessment models in a variety of ways to inform estimates of population abundance that are subsequently used to set management quantities.
-The most common use of length frequency sampling is to derive estimates of the population abundance-at-length that are used in conjunction with an age-length key to estimate population estimates at age, which are then converted to age composition estimates and fit in the model [e.g., @Spencer2022; @Monnahan2021]. 
+The most common use of length frequency sampling is to derive estimates of the population abundance-at-length that are used in conjunction with an age-length key to estimate population estimates at age, which are then converted to age composition estimates and fit in the model [e.g., @Monnahan2021; @Spencer2022]. 
 Length frequency samples are also used in many assessments in a conditional-age-at-length framework [@Rudd2021] that both fits the length composition and enables estimation of growth internally to the assessment [e.g., @Mcgilliard2017]. 
 In some cases, where age data is not available, length frequency samples which have been expanded to population abundance-at-length estimates are used directly as composition data within the assessment [e.g., @Mcgilliard2019]. 
 Finally, recent developments have included using length frequency samples in a model-based framework to estimate length and age composition estimates [@Thorson2019; @Ianelli2021; @Thompson2021].
@@ -254,9 +251,9 @@ The most frequently sampled species for length frequency within the Aleutian Isl
 Across the surveys, average sex-specific age composition nominal sample sizes ranged from around 130 to nearly 850 per year, where the total age composition nominal sample size (for all sexes combined) ranged from nearly 300 to over 1,500 per year.
 It was commonly the case that the most frequently sampled species in each survey for age composition were the most frequently sampled species for length composition.
 
-The age and length ISS output of the surveyISS package is structured by year, species (using the AFSC survey species code), sex, and region (an example is shown in Table \@ref(tab:surveyISS-examp)).
-Using walleye pollock total age composition ISS as an example, the surveyISS package produces ISS by year for each survey the stock is sampled from (\@ref(fig:wallpoll-iss)).
-Using yellowfin sole age composition from the EBS shelf survey as an example, the surveyISS package also produces sex-specific ISS (\@ref(fig:yellsol-iss)).
+The age and length composition ISS output of the surveyISS package is structured by year, species (using the AFSC survey species code), sex, and region (an example of the output is shown in Table \@ref(tab:surveyISS-examp)).
+Using walleye pollock total (combined sex) age composition as an example, ISS is produced by year for each survey the stock is sampled from (\@ref(fig:wallpoll-iss)).
+Using yellowfin sole age composition from the EBS shelf survey as an example, sex-specific composition ISS is also produced (\@ref(fig:yellsol-iss)).
 For all species sampled in each survey, the range and median of total and sex-specific length composition ISS across survey years is shown in Figure \@ref(fig:length-iss), and age composition ISS is shown in Figure \@ref(fig:age-iss).
 Sub-regional ISS for age and length composition can also be estimated within the GOA survey, and is shown in Figures \@ref(fig:sublength-iss) - \@ref(fig:sublength-iss).
 These results show that the length composition ISS ranged from the hundreds to thousands, and were larger than the age composition ISS.
@@ -270,13 +267,27 @@ This translated to 0.36 ISS per age sample for flatfish, 0.22 ISS per age sample
 
 # DISCUSSION
 
-[General para on main take-home results - Pete]
+Here we have presented an application of the method outlined in @Stewart2014 to produce annual age and length composition ISS for stocks assessed by AFSC with statistical catch-at-age models for the bottom trawl surveys conducted in the EBS shelf, slope, AI and GOA by AFSC.
+This application produces total (combined sex) and sex-specific ISS, as well as sub-region ISS within the GOA bottom trawl survey.
+We find that the magnitude of age and length composition can vary across stocks and years, where, generally, age composition ISS ranges from the tens to hundreds (with an average ISS of around 100 across all years and species) and length composition ISS ranges from the hundreds to thousands (with an average ISS of around 1,000 across all years and species).
+This is not surprising, given that the magnitude of sampling for length frequency is much larger than sampling for ages.
+We also find that sex-specific ISS is smaller than the total (combined sex) ISS, which again, is not surprising given the relatively smaller sampling intensity for sex-specific samples.
+We will note from this result that care and intentionality should be taken when developing and implementing sex-specific assessments given this increase in uncertainty in composition data.
 
-[Para on use of input sample sizes used in assessment, with examples from other regions (e.g., west coast, iphc) - Matt]
+At the AFSC, as noted previously, there are a myriad of approaches take to set input sample size for age and length composition data used in assessments.
+There is no generally agreed upon approach, however, a common approach that has been implemented is to make input sample size some function of the number of hauls, this follows from a result of @Pennington2000 that found the age composition ISS to be one per sampled haul.
+Herein we find that the average age composition ISS per haul by species group (gadid, flatish, and rockfish) to be larger than one per sampled haul.
+We also find that there is no clear relationship between the number of sampled hauls and the magnitude of ISS, particularly for gadids and flatfish.
+There was, however, a stronger trend for rockfish.
+It is unclear as to the consequence of ISS mispecification in AFSC assessments that use the number of sampled hauls as a proxy for ISS; we note that the results of the analysis conducted here does not strongly support this approach.
+The results of this analysis showed an increasing trend between the age composition ISS per haul and the number of ages sampled per haul, however, we support the approach of increasing the number of hauls sampled from rather than reducing the number of hauls in order to increase sampling on any given haul [e.g., @Siskey2022].
 
-[Para on different approaches used to weight comp data at AFSC]
-
-[Conclusion para on where input sample size will be available to authors - Pete with input from all]
+A strength of the methodology presented by @Stewart2014 is that it provides an objective method that produces estimates of ISS that follow from the sampling design employed.
+As such, this approach has been adopted in a number of assessments, both internationally and domestically.
+For example, this bootstrap approach has been applied to weight compositional data within the Pacific halibut stock assessment performed by the International Pacific Halibut Commission [@Stewart2022].
+If adopted within assessments conducted at AFSC, this approach would provide an objective and unifying method to set ISS when weighting compositional data.
+Further analysis to be developed and conducted includes constructing methods that apply the bootstrap approach to fishery-dependent age and length composition used in AFSC assessments.
+We recommend that the surveyISS package be adopted and further developed by assessment and survey programs at AFSC so that bootstrap derived ISS is a standard data product available to scientists conducting assessments with statistical catch-at-age models at AFSC.
 
 \newpage
 
@@ -346,11 +357,11 @@ knitr::include_graphics(here::here('figs', 'age_iss.png'))
 ```
 
 ```{r sublength-iss, fig.cap="Sub-region length compostion input sample size by species within the Gulf of Alaska survey."}
-knitr::include_graphics(here::here('figs', 'length_iss_subregion.png'))
+knitr::include_graphics(here::here('figs', 'length_iss_subreg.png'))
 ```
 
 ```{r subage-iss, fig.cap="Sub-region age compostion input sample size by species within the Gulf of Alaska survey."}
-knitr::include_graphics(here::here('figs', 'age_iss_subregion.png'))
+knitr::include_graphics(here::here('figs', 'age_iss_subreg.png'))
 ```
 
 ```{r iss-nss, fig.cap="Number of fish aged and age composition input sample size by species group and survey (1-1 line shown in black for reference)."}
@@ -361,6 +372,6 @@ knitr::include_graphics(here::here('figs', 'age_iss_nss.png'))
 knitr::include_graphics(here::here('figs', 'age_iss_hls.png'))
 ```
 
-```{r iss-nss-hls, fig.cap="Number of age samples compared to age compostion input sample size per sampled haul by species group and survey (1-1 line and the spope = 1 line (when all samples are independent) shown in black for reference)."}
+```{r iss-nss-hls, fig.cap="Number of age samples compared to age compostion input sample size per sampled haul by species group and survey (1-1 line and the slope = 1 line (when all samples are independent) shown in black for reference)."}
 knitr::include_graphics(here::here('figs', 'age_iss_nss_hl.png'))
 ```
