@@ -247,24 +247,24 @@ Herein, when we use the term 'effective sample size or ESS' we are referring to 
 
 Average age and length composition nominal sample sizes (rounded to the nearest 10s for age and 100s for length) for the bottom trawl surveys evaluated are shown in Tables \@ref(tab:ebs-nss) - \@ref(tab:goai-nss).
 Across the surveys, average sex-specific length composition nominal sample size ranged from around 300 to upwards of 35,000 samples per year, where the total length composition nominal sample size (for all sexes combined) ranged from around 700 to upwards of 82,000 per year.
-The most frequently sampled species for length frequency within in Eastern Bering Sea shelf survey were walleye pollock, yellowfin sole, northern rock sole, and arrowtooth flounder, and in the Eastern Bering Sea slope survey were arrowtooth flounder, kamchatka flounder, and Pacific ocean perch (Table \@ref(tab:ebs-nss)).
+The most frequently sampled species for length frequency within in eastern Bering Sea shelf survey were walleye pollock, yellowfin sole, northern rock sole, and arrowtooth flounder, and in the eastern Bering Sea slope survey were arrowtooth flounder, kamchatka flounder, and Pacific ocean perch (Table \@ref(tab:ebs-nss)).
 The most frequently sampled species for length frequency within the Aleutian Islands bottom trawl survey were Pacific ocean perch, walleye pollock, and arrowtooth flounder and in the Gulf of Alaska bottom trawl survey were arrowtooth flounder, walleye pollock, flathead flounder, and Pacific ocean perch (Table \@ref(tab:goai-nss)).
 Across the surveys, average sex-specific age composition nominal sample sizes ranged from around 130 to nearly 850 per year, where the total age composition nominal sample size (for all sexes combined) ranged from nearly 300 to over 1,500 per year.
 It was commonly the case that the most frequently sampled species in each survey for age composition were the most frequently sampled species for length composition.
 
 The age and length composition ISS output of the surveyISS package is structured by year, species (using the AFSC survey species code), sex, and region (an example of the output is shown in Table \@ref(tab:surveyISS-examp)).
-Using walleye pollock total (combined sex) age composition as an example, ISS is produced by year for each survey the stock is sampled from (\@ref(fig:wallpoll-iss)).
-Using yellowfin sole age composition from the EBS shelf survey as an example, sex-specific composition ISS is also produced (\@ref(fig:yellsol-iss)).
+Using walleye pollock total (combined sex) age composition as an example, ISS is produced by year for each survey the stock is sampled from Figure (\@ref(fig:wallpoll-iss)).
+Sex specific, yellowfin sole age composition from the EBS shelf survey composition ISS is shown in Figure (\@ref(fig:yellsol-iss)).
 For all species sampled in each survey, the range and median of total and sex-specific length composition ISS across survey years is shown in Figure \@ref(fig:length-iss), and age composition ISS is shown in Figure \@ref(fig:age-iss).
-Sub-regional ISS for age and length composition can also be estimated within the GOA survey, and is shown in Figures \@ref(fig:sublength-iss) - \@ref(fig:sublength-iss).
+Sub-regional ISS for age and length composition can also be estimated within the GOA survey, and is shown in Figures \@ref(fig:sublength-iss) - \@ref(fig:sublage-iss).
 These results show that the length composition ISS ranged from the hundreds to thousands, and were larger than the age composition ISS.
-It also resulted that the sex-specific ISS for either length or age composition were smaller than the ISS for the total age composition.
-For both the age and length composition ISS the magnitude was species-specific, and was closely related to the overall sampling intensity for age and length observations from the surveys.
+Additionally, the sex-specific ISS for either length or age composition were smaller than the ISS for the total age compositions.
+For both the age and length compositions ISS the magnitude was species-specific, and was closely related to the overall sampling intensity for age and length observations from the surveys.
 
-Whether for age or length composition (including sex-specific composition data) the ISS was smaller than the nominal sample sizes (Figure \@ref(fig:iss-nss), shown for age composition) and there was a generally increasing trend between nominal sample size and input sample size.
+Whether for age or length compositions (including sex-specific composition data) the ISS was smaller than the nominal sample sizes (Figure \@ref(fig:iss-nss), shown for age compositions) and there was a generally increasing trend between nominal sample size and input sample size.
 Comparing the age composition ISS to the number of hauls from which age samples were obtained did not result in a strong relationship for the flatfish and gadids sampled in the AFSC surveys, but there was an increasing trend for the rockfish species (Figure \@ref(fig:iss-hls)).
-There was also an increasing trend that resulted between age composition ISS per sampled haul and the number of samples per sampled haul for most of the species sampled, and was the most striking for the flatfish species (Figure \@ref(fig:iss-nss-hls)).
-The ISS for age composition was 2.6 per sampled haul for flatfish, 1.7 per sampled haul for gadids, and 1.5 per sampled haul for rockfish sampled by the AFSC surveys.
+There was an increasing trend between age composition ISS per sampled haul and the number of samples per sampled haul for most of the species sampled, this trend was most striking for the flatfish species (Figure \@ref(fig:iss-nss-hls)).
+The ISS for age compositions sampled during AFSC surveys was 2.6 per sampled haul for flatfish, 1.7 per sampled haul for gadids, and 1.5 per sampled haul for rockfish.
 This translated to 0.36 ISS per age sample for flatfish, 0.22 ISS per age sample for gadids, and 0.26 ISS per age sample for rockfish.
 
 # DISCUSSION
@@ -298,6 +298,7 @@ We recommend that the surveyISS package be adopted and further developed by asse
 # ACKNOWLEDGMENTS
 
 We thank *reviewer1* and *reviewer2* for their helpful reviews of this manuscript.
+All the staff who have spent time at sea and staring through microscopes to produce the data these analyses are based upon.
 
 \newpage
 
@@ -313,25 +314,35 @@ We thank *reviewer1* and *reviewer2* for their helpful reviews of this manuscrip
 # TABLES
 
 ```{r species}
-knitr::kable(vroom::vroom(here::here('tables', 'species.csv')), caption = "Species assessed at the Alaska Fisheries Science Center that were evaluated in the bootstrap analysis for bottom trawl survey length and age composition input sample size (AI - Aleutian Islands, EBS - Eastern Bering Sea, GOA - Gulf of Alaska)", align = c('llc'), format.args = list(big.mark = ",", scientific = FALSE))
+knitr::kable(vroom::vroom(here::here('tables', 'species.csv')), 
+  caption = "Species assessed at the Alaska Fisheries Science Center that were evaluated in the bootstrap analysis for bottom trawl survey length and age composition input sample size (AI - Aleutian Islands, EBS - Eastern Bering Sea, GOA - Gulf of Alaska)", 
+  align = c('llc'), format.args = list(big.mark = ",", scientific = FALSE))
 ```
 
 \newpage
 
 ```{r ebs-nss}
-knitr::kable(vroom::vroom(here::here('tables', 'avg_nss_ebs.csv')), caption = "Average age (a) and length (l) frequency samples for Female (F), Male (M), and Total (T, all sexes combined) collections from the Eastern Bering Sea shelf and slope bottom trawl surveys.", align = c('llcccccc'), format.args = list(big.mark = ",", scientific = FALSE))
+knitr::kable(vroom::vroom(here::here('tables', 'avg_nss_ebs.csv')), 
+  caption = "Average age (a) and length (l) frequency samples for Female (F), Male (M), and Total (T, all sexes combined) collections from the Eastern Bering Sea shelf and slope bottom trawl surveys.", 
+  align = c('llcccccc'), 
+  format.args = list(big.mark = ",", scientific = FALSE))
 ```
 
 \newpage
 
 ```{r goai-nss}
-knitr::kable(vroom::vroom(here::here('tables', 'avg_nss_goai.csv')), caption = "Average age (a) and length (l) frequency samples for Female (F), Male (M), and Total (T, all sexes combined) collections from the Aleutian Islands (AI) and Gulf of Alaska (GOA) bottom trawl surveys.", align = c('llcccccc'), format.args = list(big.mark = ",", scientific = FALSE))
+knitr::kable(vroom::vroom(here::here('tables', 'avg_nss_goai.csv')), 
+  caption = "Average age (a) and length (l) frequency samples for Female (F), Male (M), and Total (T, all sexes combined) collections from the Aleutian Islands (AI) and Gulf of Alaska (GOA) bottom trawl surveys.", 
+  align = c('llcccccc'), 
+  format.args = list(big.mark = ",", scientific = FALSE))
 ```
 
 \newpage
 
 ```{r surveyISS-examp}
-knitr::kable(vroom::vroom(here::here('tables', 'surveyISS_examp.csv')), caption = "Example output for age (iss_age) and length (iss_length) input sample size from the surveyISS package.", format.args = list(big.mark = ",", scientific = FALSE))
+knitr::kable(vroom::vroom(here::here('tables', 'surveyISS_examp.csv')), 
+  caption = "Example output for age (iss_age) and length (iss_length) input sample size from the surveyISS package.", 
+  format.args = list(big.mark = ",", scientific = FALSE))
 ```
 
 \newpage
