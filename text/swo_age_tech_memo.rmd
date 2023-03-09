@@ -269,19 +269,19 @@ This translated to 0.36 ISS per age sample for flatfish, 0.22 ISS per age sample
 
 # DISCUSSION
 
-Here we have presented an application of the method outlined in @Stewart2014 to produce annual age and length composition ISS for stocks assessed by AFSC with statistical catch-at-age models for the bottom trawl surveys conducted in the EBS shelf, slope, AI and GOA by AFSC.
+Here we have presented an application of the method outlined in @Stewart2014 to produce annual age and length composition ISS for fishery stocks assessed by AFSC with statistical catch-at-age models for the bottom trawl surveys conducted in the EBS shelf, slope, AI and GOA by AFSC.
 This application produces total (combined sex) and sex-specific ISS, as well as sub-region ISS within the GOA bottom trawl survey.
-We find that the magnitude of age and length composition can vary across stocks and years, where, generally, age composition ISS ranges from the tens to hundreds (with an average ISS of around 100 across all years and species) and length composition ISS ranges from the hundreds to thousands (with an average ISS of around 1,000 across all years and species).
+We find that the magnitude of age and length compositions can vary across stocks and years, where generally, age composition ISSs ranges from the tens to hundreds (with an average age ISS of around 100 across all years and species) and length composition ISSs ranges from the hundreds to thousands (with an average length ISS of around 1,000 across all years and species).
 This is not surprising, given that the magnitude of sampling for length frequency is much larger than sampling for ages.
-We also find that sex-specific ISS is smaller than the total (combined sex) ISS, which again, is not surprising given the relatively smaller sampling intensity for sex-specific samples.
+We also find that the sex-specific ISS is smaller than the total (combined sex) ISS, which again, is not surprising given the relatively smaller sampling intensity for sex-specific samples.
 We will note from this result that care and intentionality should be taken when developing and implementing sex-specific assessments given this increase in uncertainty in composition data.
 
-At the AFSC, as noted previously, there are a myriad of approaches take to set input sample size for age and length composition data used in assessments.
-There is no generally agreed upon approach, however, a common approach that has been implemented is to make input sample size some function of the number of hauls, this follows from a result of @Pennington2000 that found the age composition ISS to be one per sampled haul.
+At the AFSC, as noted previously, there are a myriad of approaches take to set ISS for age and length composition data used in assessments.
+There is no generally agreed upon approach, however, a common approach that has been implemented is to make ISS some function of the number of hauls, this follows from a result of @Pennington2000 that found the age composition ISS to be one per sampled haul.
 Herein we find that the average age composition ISS per haul by species group (gadid, flatish, and rockfish) to be larger than one per sampled haul.
 We also find that there is no clear relationship between the number of sampled hauls and the magnitude of ISS, particularly for gadids and flatfish.
 There was, however, a stronger trend for rockfish.
-It is unclear as to the consequence of ISS mispecification in AFSC assessments that use the number of sampled hauls as a proxy for ISS; we note that the results of the analysis conducted here does not strongly support this approach.
+It is unclear as to the consequence of ISS misspecification in AFSC assessments that use the number of sampled hauls as a proxy for ISS; we note that the results of the analysis conducted here does not strongly support this approach. **gonna need a bit more explanation on this**
 The results of this analysis showed an increasing trend between the age composition ISS per haul and the number of ages sampled per haul, however, we support the approach of increasing the number of hauls sampled from rather than reducing the number of hauls in order to increase sampling on any given haul [e.g., @Siskey2022].
 
 A strength of the methodology presented by @Stewart2014 is that it provides an objective method that produces estimates of ISS that follow from the sampling design employed.
