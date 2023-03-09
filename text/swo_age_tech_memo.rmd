@@ -256,7 +256,7 @@ The age and length composition ISS output of the surveyISS package is structured
 Using walleye pollock total (combined sex) age composition as an example, ISS is produced by year for each survey the stock is sampled from Figure (\@ref(fig:wallpoll-iss)).
 Sex specific, yellowfin sole age composition from the EBS shelf survey composition ISS is shown in Figure (\@ref(fig:yellsol-iss)).
 For all species sampled in each survey, the range and median of total and sex-specific length composition ISS across survey years is shown in Figure \@ref(fig:length-iss), and age composition ISS is shown in Figure \@ref(fig:age-iss).
-Sub-regional ISS for age and length composition can also be estimated within the GOA survey, and is shown in Figures \@ref(fig:sublength-iss) - \@ref(fig:sublage-iss).
+Sub-regional ISS for age and length composition can also be estimated within the GOA survey, and is shown in Figures \@ref(fig:sublength-iss) - \@ref(fig:subage-iss).
 These results show that the length composition ISS ranged from the hundreds to thousands, and were larger than the age composition ISS.
 Additionally, the sex-specific ISS for either length or age composition were smaller than the ISS for the total age compositions.
 For both the age and length compositions ISS the magnitude was species-specific, and was closely related to the overall sampling intensity for age and length observations from the surveys.
@@ -281,7 +281,8 @@ There is no generally agreed upon approach, however, a common approach that has 
 Herein we find that the average age composition ISS per haul by species group (gadid, flatish, and rockfish) to be larger than one per sampled haul.
 We also find that there is no clear relationship between the number of sampled hauls and the magnitude of ISS, particularly for gadids and flatfish.
 There was, however, a stronger trend for rockfish.
-It is unclear as to the consequence of ISS misspecification in AFSC assessments that use the number of sampled hauls as a proxy for ISS; we note that the results of the analysis conducted here does not strongly support this approach. **gonna need a bit more explanation on this**
+It is unclear as to the consequence of ISS misspecification in AFSC assessments that use the number of sampled hauls as a proxy for ISS, as ISS misspecification can lead to bias model results [@Stewart2017; @Xu2020].
+We note that the results of the analysis conducted here does not strongly support the approach of using hauls as a proxy due to the large uncertainty and lack of correspondence when comparing ISS to the number of sampled hauls.
 The results of this analysis showed an increasing trend between the age composition ISS per haul and the number of ages sampled per haul, however, we support the approach of increasing the number of hauls sampled from rather than reducing the number of hauls in order to increase sampling on any given haul [e.g., @Siskey2022].
 
 A strength of the methodology presented by @Stewart2014 is that it provides an objective method that produces estimates of ISS that follow from the sampling design employed.
@@ -297,7 +298,7 @@ We recommend that the surveyISS package be adopted and further developed by asse
 
 # ACKNOWLEDGMENTS
 
-We thank *reviewer1* and *reviewer2* for their helpful reviews of this manuscript.
+We thank *reviewers* for their helpful reviews of this manuscript.
 All the staff who have spent time at sea and staring through microscopes to produce the data these analyses are based upon.
 
 \newpage
