@@ -237,9 +237,9 @@ To summarize uncertainty across bootstrap replicates of ESS, we calculated ISS a
  ISS=\frac{I}{\sum_{i=1}^{I}(ESS_i)^{-1}}
  (\#eq:eqn9)
 \end{equation}
-where $ISS$ is the input sample size, $ESS_i$ is the effective sample size for iteration-*i*, and *I* is the total number of iterations for which the bootstrap procedure is run.
+where $ISS$ is the annual input sample size, $ESS_i$ is the effective sample size for iteration-*i*, and *I* is the total number of iterations for which the bootstrap procedure is run.
 The harmonic mean has been shown to reduce bias in recovering the true sample size in simulations for a multinomial distribution.
-Due to this reduction in bias the harmonic mean has also been recommended to determine the 'input sample size' that is used in stock assessment models to fit compositional data [@Stewart2014].
+Due to this reduction in bias the harmonic mean has also been recommended to determine the ISS that is used in stock assessment models to fit compositional data [@Stewart2014].
 Herein, when we use the term 'effective sample size or ESS' we are referring to the effective sample sizes that were computed for each iteration of the bootstrap-simulation from equation \@ref(eq:eqn8), when we use the term 'input sample size or ISS' we are referring to the harmonic mean of the iterated effective sample sizes from equation \@ref(eq:eqn9).
 
 
