@@ -60,13 +60,13 @@ source(here::here('R', "render_toc.R"))
 
 # ABSTRACT
 
-At the Alaska Fisheries Science center a number of stocks are assessed with statistical catch-at-age models which integrate various sources of information to inform estimation of population dynamics that aid in the management of the fisheries that target these stocks.
-One of these sources of information is age and length composition data, both from fishery-independent (survey) and fishery-dependent sources.
-When used in statistical catch-at-age models, age and length composition data require determining *a priori* the 'input sample size' to weight the relative influence of the composition data to other data sources fit by the assessment model.
-We developed an R-package that uses bootstrap methods to estimate input sample size for age and length composition data from the bottom trawl surveys conducted by the Alaska Fisheries Science Center in the Eastern Bering Sea, Aleutian Islands, and Gulf of Alaska.
-Here we present annual input sample size estimates for length and age composition (including sex-specific and sex combined composition, and sub-regional composition within the Gulf of Alaska) historically collected in Alaskan bottom trawl surveys.
-These newly available input sample size estimates provide an objective method that follows the sampling design of the bottom trawl surveys to set input sample size in assessments.
-We recommend that these input sample size estimates become a standard bottom trawl survey data product that are available to assessment authors for inclusion into Alaska Fisheries Science Center stock assessments.
+At the Alaska Fisheries Science Center (AFSC) a number of fish stocks are assessed using statistical catch-at-age models which integrate various sources of information to inform estimation of population dynamics that aid in the management of the fisheries that target these stocks.
+Two important sources of information are age and length composition data, from both fishery-independent (survey) and fishery-dependent sources.
+When used in statistical catch-at-age models, age and length composition data require determining *a priori* the 'input sample size' to weight the relative influence of the composition data to other data sources fit within the assessment model.
+We developed an R-package that uses bootstrap methods to estimate input sample size for age and length composition data from bottom trawl surveys conducted by the AFSC in the eastern Bering Sea, Aleutian Islands, and Gulf of Alaska.
+Here we present annual input sample size estimates for length and age compositions (including sex-specific and sex combined compositions, and sub-regional compositions within the Gulf of Alaska) historically collected during Alaska bottom trawl surveys.
+These newly available input sample size estimates provide an objective method that follows the sampling design of the bottom trawl surveys to provide inputs for fishery stock assessments.
+We recommend that these input sample size estimates become a standard bottom trawl survey data product that are available to assessment authors for inclusion into AFSC fishery stock assessments.
 
 \newpage
 
@@ -80,16 +80,17 @@ render_toc("swo_age_tech_memo.Rmd")
 
 # INTRODUCTION
 
-Under the North Pacific Fishery Management Council (NPFMC) Fishery Management Plan (FMP) for the Eastern Bering Sea, Aleutian Islands, and Gulf of Alaska, Tier 1, 2, and 3 stocks use statistical catch-at-age assessment models to estimate population and management quantities [@NPFMC2020bsai; @NPFMC2020goa].
-While these models can vary in their specific implementation across stocks (i.e., due to differences in parameterization, error structures, or data availability), a critical and ubiquitous data component of this structure of assessment model is age and length composition data.
+Under the North Pacific Fishery Management Council (NPFMC) Fishery Management Plan (FMP) for the Eastern Bering Sea, Aleutian Islands, and Gulf of Alaska, Tier 1--3 stocks use statistical catch-at-age assessment models to estimate population and management quantities [@NPFMC2020bsai; @NPFMC2020goa].
+While these models can vary in their specific implementation across stocks (i.e., due to differences in parameterization, error structures, or data availability), a critical and ubiquitous data component of this structure of assessment model is the age and length composition data.
 Age and length composition data are collected on both fishery-independent (e.g., bottom trawl or longline surveys) and fishery-dependent platforms, providing critical data to assessments in order to track population changes over time.
-The Alaska Fisheries Science Center (AFSC) operates fishery-independent bottom trawl surveys [@Stauffer2004], spanning most of the continental shelf in Alaskan waters south of the Bering Strait, including the eastern Bering Sea (EBS), the Aleutian Islands (AI), and the Gulf of Alaska (GOA) that provide age and length composition data to 26 stocks (or stock complexes) assessed with statistical catch-at-age models.
+The Alaska Fisheries Science Center (AFSC) operates fishery-independent bottom trawl surveys [@Stauffer2004], spanning most of the continental shelf for federal waters off of Alaska. 
+These waters include the Bering Strait, including the eastern Bering Sea (EBS), the Aleutian Islands (AI), and the Gulf of Alaska (GOA) and provide age and length composition data for 26 stocks (or stock complexes) assessed with statistical catch-at-age models.
 
-At the AFSC, age and length frequency sampling from the bottom trawl surveys is used in stock assessment models in a variety of ways to inform estimates of population abundance that are subsequently used to set management quantities.
+At the AFSC, age and length frequency sampling from bottom trawl surveys is used in stock assessment models in a multitude of ways to inform estimates of population abundance that are subsequently used to set management quantities.
 The most common use of length frequency sampling is to derive estimates of the population abundance-at-length that are used in conjunction with an age-length key to estimate population estimates at age, which are then converted to age composition estimates and fit in the model [e.g., @Monnahan2021; @Spencer2022]. 
-Length frequency samples are also used in many assessments in a conditional-age-at-length framework [@Rudd2021] that both fits the length composition and enables estimation of growth internally to the assessment [e.g., @Mcgilliard2017]. 
+Length frequency samples are also used in many assessments in a conditional-age-at-length framework [@Rudd2021] that both fit the length compositions and enables estimation of growth internally to the assessment [e.g., @Mcgilliard2017]. 
 In some cases, where age data is not available, length frequency samples which have been expanded to population abundance-at-length estimates are used directly as composition data within the assessment [e.g., @Mcgilliard2019]. 
-Finally, recent developments have included using length frequency samples in a model-based framework to estimate length and age composition estimates [@Thorson2019; @Ianelli2021; @Thompson2021].
+Finally, recent developments have incorporated using length frequency samples in a model-based framework to estimate length and age composition estimates [@Thorson2019; @Ianelli2021; @Thompson2021].
 
 Predominantly, the multinomial likelihood is used to fit age and length composition data at the AFSC [e.g., @Bryan2021], while recently the Dirichlet-Multinomial has also been explored [e.g., @Barbeaux2022].
 A common requirement, regardless of the likelihood employed, is a pre-determination of the input sample size that is used to 'weight' the particular year's age or length composition data that subsequently influences the precision of the assessment model's fit.
