@@ -110,11 +110,10 @@ The main objectives of this technical memorandum are to 1) document methods used
 Data collection for each AFSC groundfish survey is described in respective NOAA Technical Memorandum [EBS: @Lauth2019; AI: @vonSzalay2017; GOA: @vonSzalay2018].
 Length frequency protocols and recent analysis of sex-specific length frequency data are further described in @Hulson2023a.
 To facilitate age estimation, individual fish are processed at sea to record sex, length and weight and to remove sagittal otoliths that are returned the AFSC Age and Growth laboratory for age determination.
-Survey age sampling protocols are specific by fish species and follow 1 of 2 paradigms: 1) a stratified collection that is distributed over both the spatial frame of the stratification scheme and the expected size range of a species; or 2) a small subsample (3-6 fish, depneding on species) collected randomly per trawl.
+Survey age sampling protocols are specific by fish species and follow 1 of 2 paradigms: 1) a stratified collection distributed over both the spatial frame of the stratification scheme and the expected size range of a species; or 2) a small subsample (3-6 fish, depending on species) collected randomly per trawl.
 The protocol for some species has changed over the time series, which has followed a trend of transitioning from protocol 1) to protocol 2). 
 Species within each survey that are assessed with statistical catch-at-age models were selected to be included in this analysis (Tier $\geq$ 3 stock assessments, Table \@ref(tab:species)). 
-Data from AFSC bottom trawl surveys conducted in the EBS shelf (1982 to present), EBS slope (2002, 2004, 2008, 2010, 2012, and 2016), AI (1991 to present), and GOA (1990 to present) were used to estimate input sample size for each of these stock assessments in this study. 
-
+Data from AFSC bottom trawl surveys conducted in the EBS shelf (1982 to present), EBS slope (2002, 2004, 2008, 2010, 2012, and 2016), AI (1991 to present), and GOA (1990 to present) were used to estimate input sample size for each of the stock assessments in this study. 
 
 ## Expanding Length Frequency to Population Abundance-at-Length
 
@@ -182,7 +181,7 @@ The proportions of age at length are then expanded to population abundance-at-ag
   (\#eq:eqn7)
 \end{equation}
 where $\hat{N}_{sx,l,y}$ is the population abundance-at-length from \@ref(eq:eqn5) summed across strata.
-For specimen data with observations of sex (either female or male), the sex-specific specimen data is used, however, for specimen data without observations of sex the specimen data is pooled across all sexes and the unsexed population abundance-at-length is then applied to the pooled specimen data to estimate unsexed population abundance-at-age.
+For specimen data with observations of sex (either female or male), the sex-specific specimen data is used, however, for specimen data without observations of sex the specimen data are pooled across all sexes and the unsexed population abundance-at-length is then applied to the pooled specimen data to estimate unsexed population abundance-at-age.
 
 Two general categories of special cases for several stock assessments were also included in our analysis: 1) spatially-explicit assessments, and 2) assessments for species complexes. 
 For the majority of stocks assessed at AFSC age population estimates are computed at the management area scale (e.g., the entire GOA, AI, or EBS), however, we note that there are two flatfish stock assessments that are spatially-explicit in the GOA [@Mcgilliard2017; @Bryan2021].
@@ -191,7 +190,7 @@ We have developed functions to estimate population abundance-at-age by sub-regio
 There are a handful of assessments conducted at AFSC that evaluate stocks at a complex level, where several species are included together in an assessment.
 There are two stock complexes at AFSC in which the species are combined and assessed within the same statistical catch-at-age model: blackspotted and rougheye rockfish in the GOA and AI [@Spencer2020b; @Sullivan2021].
 Between the two management regions there are subtle differences in how the population abundance-at-age is estimated from the survey specimen data; we have developed functions that allow for these differences and estimate population abundance-at-age for these two stock complexes. 
-In a similar case, while not assessed as a complex, over the historical bottom trawl sruvey in the GOA several species codes have been used for dusky rockfish. 
+In a similar case, while not assessed as a complex, over the historical bottom trawl survey in the GOA several species codes have been used for dusky rockfish. 
 We have also developed a custom function that estimates population abundance-at-length and age for this case. 
 
 
