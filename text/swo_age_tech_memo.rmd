@@ -9,7 +9,7 @@ author:
   - name: Benjamin C. Williams
     institute: afscjnu
   - name: Matthew R. Siskey
-    institute: uw
+    institute: wdfw
   - name: Meaghan D. Bryan
     institute: afscsearefm
   - name: Jason Conner
@@ -20,7 +20,7 @@ institute:
   - afscjnu: Auke Bay Laboratories, Alaska Fisheries Science Center, National Marine Fisheries Service, National Oceanic and Atmospheric Administration, 17109 Point Lena Loop Rd., Juneau, AK 99801
   - afscsearefm: Resource Ecology and Fisheries Management Division, Alaska Fisheries Science Center, National Marine Fisheries Service, National Oceanic and Atmospheric Administration, 7600 Sand Point Way NE, Seattle, WA 98115
   - afscsearace: Resource Assessment and Conservation Engineering Division, Alaska Fisheries Science Center, National Marine Fisheries Service, National Oceanic and Atmospheric Administration, 7600 Sand Point Way NE, Seattle, WA 98115
-  - uw: School of Aquatic and Fishery Sciences, University of Washington, Seattle, WA, USA
+  - wdfw: Washington Department of Fish and Wildlife, 1111 Washington St. SE, Olympia, WA 98501 
 
 
 output:
@@ -60,13 +60,15 @@ source(here::here('R', "render_toc.R"))
 
 # ABSTRACT
 
-At the Alaska Fisheries Science Center (AFSC) a number of fish stocks are assessed using statistical catch-at-age models which integrate various sources of information to inform estimation of population dynamics that aid in the management of the fisheries that target these stocks.
-Two important sources of information are age and length composition data, from both fishery-independent (survey) and fishery-dependent sources.
-When used in statistical catch-at-age models, age and length composition data require determining *a priori* the 'input sample size' to weight the relative influence of the composition data to other data sources fit within the assessment model.
-We developed an R-package that uses bootstrap methods to estimate input sample size for age and length composition data from bottom trawl surveys conducted by the AFSC in the eastern Bering Sea, Aleutian Islands, and Gulf of Alaska.
-Here we present annual input sample size estimates for length and age compositions (including sex-specific and sex combined compositions, and sub-regional compositions within the Gulf of Alaska) historically collected during Alaska bottom trawl surveys.
-These newly available input sample size estimates provide an objective method that follows the sampling design of the bottom trawl surveys to provide inputs for fishery stock assessments.
-We recommend that these input sample size estimates become a standard bottom trawl survey data product that are available to assessment authors for inclusion into AFSC fishery stock assessments.
+At the Alaska Fisheries Science Center (AFSC) a number of fish stocks are assessed using statistical catch-at-age (SCA) models.
+SCA models integrate various sources of data to inform estimation of population dynamics and management quantities for fisheries that target these stocks.
+Two important information sources are age and length composition data, from fishery-independent (survey) and fishery-dependent sources.
+When used in SCA models, age and length composition data require determining *a priori* the 'input sample size' to weight their relative information content against other data sources fit within the assessment model.
+We developed an R-package that uses bootstrap methods originally presented in @Stewart2014 to estimate input sample size for age and length composition data from bottom trawl surveys conducted by the AFSC in the eastern Bering Sea, Aleutian Islands, and Gulf of Alaska.
+Here we present annual input sample size estimates for length and age compositions (including sex-specific and sex combined compositions, and sub-regional compositions within the Gulf of Alaska) collected during Alaska bottom trawl surveys.
+These new input sample size estimates provide an objective method that follows the sampling design of the bottom trawl surveys for fishery stock assessments.
+We recommend that these input sample size estimates become a standard bottom trawl survey data product that are updated annually and available to assessment authors for inclusion into AFSC fishery stock assessments.
+Software provided can also be used on a less-frequent basis for research to explore the consequences of changes in sampling design or intensity.
 
 \newpage
 
