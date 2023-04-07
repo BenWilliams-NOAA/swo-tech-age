@@ -112,19 +112,26 @@ The main objectives of this technical memorandum are to 1) document methods used
 
 ## Survey Data
 
-Data collection for each AFSC groundfish survey is described in respective NOAA Technical Memorandum [EBS: @Lauth2019; AI: @vonSzalay2017; GOA: @vonSzalay2018].
-Length frequency protocols and recent analysis of sex-specific length frequency data are further described in @Hulson2023a.
-To facilitate age estimation, individual fish are processed at sea to record sex, length and weight and to remove sagittal otoliths that are returned the AFSC Age and Growth laboratory for age determination.
-Survey age sampling protocols are specific by fish species and follow 1 of 2 paradigms: 1) a stratified collection distributed over both the spatial frame of the stratification scheme and the expected size range of a species; or 2) a small subsample (3-6 fish, depending on species) collected randomly per trawl.
-The protocol for some species has changed over the time series, which has followed a trend of transitioning from protocol 1) to protocol 2). 
-Species within each survey that are assessed with statistical catch-at-age models were selected to be included in this analysis (Tier $\geq$ 3 stock assessments, Table \@ref(tab:species)). 
-Data from AFSC bottom trawl surveys conducted in the EBS shelf (1982 to present), EBS slope (2002, 2004, 2008, 2010, 2012, and 2016), AI (1991 to present), and GOA (1990 to present) were used to estimate input sample size for each of the stock assessments in this study. 
+Data collection for each AFSC groundfish survey is described in NOAA Technical Memoranda [EBS: @Lauth2019; AI: @vonSzalay2017; GOA: @vonSzalay2018].
+Length frequency protocols and a recent analysis of sex-specific length frequency data are further described in @Hulson2023a.
+To facilitate age estimation, individual fish are processed at sea; sex, length and weight are recorded and sagittal otoliths are extracted and returned to the AFSC Age and Growth laboratory for age determination.
+Survey age sampling protocols are species-specific and follow 1 of 2 paradigms: 1) a stratified collection distributed over both the survey's spatial extent and the expected size range of the species; or 2) a small subsample (3-6 fish, species-dependent) collected randomly (i.e., no size-stratification) per haul.
+The protocol for some species has changed over the time series, which has followed a trend of transitioning from protocol 1) (stratified sampling) to protocol 2) (random sample). 
+
+Species collected on each survey that are assessed with statistical catch-at-age models were selected to be included in this analysis (Tier 1--3 stock assessments, Table \@ref(tab:species)). 
+Data from AFSC bottom trawl surveys conducted in the EBS shelf (1982 to present), EBS slope (2002, 2004, 2008, 2010, 2012, and 2016), AI (triennially from 1991 to 2000, biennially from 2000 to present with the exception of 2008 and 2020 in which no surveys took place), and GOA (triennially from 1990 to 1999, bienially from 1999 to present) that are employed in the stock assessment models for each respective area were used in this study to estimate input sample size with a bootstrap estimator.
+The bootstrap estimator is designed to be a standardized tool for generating input sample sizes and the input sample sizes generated with it are intended to be used to weight length and age composition data in future sotck assessments. 
 
 ## Expanding Length Frequency to Population Abundance-at-Length
 
-Length frequency samples collected by the AFSC bottom trawl surveys are expanded by catch and stratum area to obtain estimates of population abundance-at-length [this approach is also detailed in @Hulson2023a, we include the description here as well in order to provide a source for both the length and age expansions for reference].
-This is often referred to as the 'first stage expansion' and is a common method to obtain population estimates at length from area-swept survey data [e.g., @Ailloud2019, @Miller2006].
-Population abundance-at-length are computed for three sex categories: males, females, and unsexed at the stratum level, which are then summed across stratum to obtain the population abundance-at-length for the management-scale region (i.e., EBS, AI, or GOA), these can also be summed to any sub-region level.
+Length frequency samples collected by the AFSC bottom trawl surveys are expanded by catch and stratum area to obtain estimates of population abundance-at-length [this approach is also detailed in @Hulson2023a, we include the description here to provide a source for both the length and age expansions].
+This is often referred to as the 'first stage expansion' and is a common method to obtain population abundance estimates at length from area-swept survey data [e.g., @Ailloud2019; @Miller2006].
+Population abundance-at-length is computed for three sex categories at the stratum level: males, females, and unsexed; these estimates are then summed across strata to obtain the population abundance-at-length for the management-scale region (i.e., EBS, AI, or GOA).
+However, these estimates can also be summed to any sub-region level.
+To expand the species-specific length frequency samples to population-at-length we first compute the overall numbers within a stratum by multiplying the average catch per unit effort within the strata (i.e., the number of fish per square kilometer averaged across the hauls performed within the strata) by the area of the strata (in square kilometers).
+We then compute the relative catch per unit effort for each haul performed within the strata and the sex-specific relative length frequency for each haul.
+The expanded population-at-length is obtained by multiplying the numbers within the strata, the relative catch per unit effort of each haul, and the sex-specific relative length frequency.
+This process is shown in mathematical form in the following.
 
 In the first step of this process we compute the overall population numbers in year-*y* within stratum-*st* ($\hat{N}_{st,y}$) with
 
