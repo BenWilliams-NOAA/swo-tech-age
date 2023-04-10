@@ -264,24 +264,24 @@ Herein, we use the term 'realized sample size or $R$' to refer to the realized s
 
 # RESULTS
 
-Average age and length composition nominal sample sizes (rounded to the nearest 10s for age and 100s for length) for the bottom trawl surveys evaluated are shown in Tables \@ref(tab:ebs-nss) - \@ref(tab:goai-nss).
-Across the surveys, average sex-specific length composition nominal sample size ranged from around 300 to upwards of 35,000 samples per year, where the total length composition nominal sample size (for all sexes combined) ranged from around 700 to upwards of 82,000 per year.
-The most frequently sampled species for length frequency within in eastern Bering Sea shelf survey were walleye pollock, yellowfin sole, northern rock sole, and arrowtooth flounder, and in the eastern Bering Sea slope survey were arrowtooth flounder, kamchatka flounder, and Pacific ocean perch (Table \@ref(tab:ebs-nss)).
-The most frequently sampled species for length frequency within the Aleutian Islands bottom trawl survey were Pacific ocean perch, walleye pollock, and arrowtooth flounder and in the Gulf of Alaska bottom trawl survey were arrowtooth flounder, walleye pollock, flathead flounder, and Pacific ocean perch (Table \@ref(tab:goai-nss)).
-Across the surveys, average sex-specific age composition nominal sample sizes ranged from around 130 to nearly 850 per year, where the total age composition nominal sample size (for all sexes combined) ranged from nearly 300 to over 1,500 per year.
-It was commonly the case that the most frequently sampled species in each survey for age composition were the most frequently sampled species for length composition.
+Average age and length composition nominal sample sizes (i.e., number of length samples collected on deck or number of otoliths aged in the laboratory, rounded to the nearest 10s for age and 100s for length) for each species and year bottom trawl surveys evaluated are shown in Tables \@ref(tab:ebs-nss) - \@ref(tab:goai-nss).
+Across the surveys, average sex-specific length frequency nominal sample size ranged from 300--35,600 samples per year, where the total length frequency nominal sample size (for all sexes combined) ranged from around 700--82,500 per year.
+The most frequently sampled species for length frequency within the EBS shelf survey were walleye pollock, yellowfin sole, northern rock sole, and arrowtooth flounder, while arrowtooth flounder, kamchatka flounder, and Pacific ocean perch were the most frequently sampled in the EBS slope survey (Table \@ref(tab:ebs-nss)).
+The most frequently sampled species for length frequency within the Aleutian Islands bottom trawl survey were Pacific ocean perch, walleye pollock, and arrowtooth flounder and in the Gulf of Alaska bottom trawl survey were arrowtooth flounder, walleye pollock, flathead sole, and Pacific ocean perch (Table \@ref(tab:goai-nss)).
+Across the surveys, average sex-specific otolith nominal sample sizes ranged from 130--850 per year, while the total otolith nominal sample size (for all sexes combined) ranged from 290--1,550 per year.
+It was commonly the case that the most frequently sampled species in each survey for otoliths were the most frequently sampled species for length frequency.
 
 The age and length composition $ISS$ output of the surveyISS package is structured by year, species (using the AFSC survey species code), sex, and region (an example of the output is shown in Table \@ref(tab:surveyISS-examp)).
-Using walleye pollock total (combined sex) age composition as an example, $ISS$ is produced by year for each survey the stock is sampled from Figure (\@ref(fig:wallpoll-iss)).
-Sex specific, yellowfin sole age composition from the EBS shelf survey composition $ISS$ is shown in Figure (\@ref(fig:yellsol-iss)).
+Using walleye pollock total (combined sex) age composition as an example, $ISS$ is produced by year for each survey the stock is sampled from (Figure \@ref(fig:wallpoll-iss)).
+Sex-specific yellowfin sole age composition from the EBS shelf survey composition $ISS$ is shown in Figure \@ref(fig:yellsol-iss).
 For all species sampled in each survey, the range and median of total and sex-specific length composition $ISS$ across survey years is shown in Figure \@ref(fig:length-iss), and age composition $ISS$ is shown in Figure \@ref(fig:age-iss).
-Sub-regional $ISS$ for age and length composition can also be estimated within the GOA survey, and is shown in Figures \@ref(fig:sublength-iss) - \@ref(fig:subage-iss).
-These results show that the length composition $ISS$ ranged from the hundreds to thousands, and were larger than the age composition $ISS$.
+Sub-regional $ISS$ for age and length composition can also be estimated within the GOA survey (Figures \@ref(fig:sublength-iss) and \@ref(fig:subage-iss)).
+These results show that the length composition $ISS$ ranged from the hundreds to thousands and were larger than the age composition $ISS$.
 Additionally, the sex-specific $ISS$ for either length or age composition were smaller than the $ISS$ for the total age compositions.
-For both the age and length compositions $ISS$ the magnitude was species-specific, and was closely related to the overall sampling intensity for age and length observations from the surveys.
+For both the age and length compositions $ISS$ the magnitude was species-specific, and was closely related to the overall sampling intensity for age and length observations on the surveys.
 
-Whether for age or length compositions (including sex-specific composition data) the $ISS$ was smaller than the nominal sample sizes (Figure \@ref(fig:iss-nss), shown for age compositions) and there was a generally increasing trend between nominal sample size and input sample size.
-Comparing the age composition $ISS$ to the number of hauls from which age samples were obtained did not result in a strong relationship for the flatfish and gadids sampled in the AFSC surveys, but there was an increasing trend for the rockfish species (Figure \@ref(fig:iss-hls)).
+For both age and length compositions (including sex-specific composition data), the $ISS$ was smaller than the nominal sample sizes (Figure \@ref(fig:iss-nss), shown for age compositions) and there was a generally increasing trend between nominal sample size and input sample size with gadids being the exception.
+Comparing the age composition $ISS$ to the number of hauls from which age samples were obtained did not result in a strong relationship for the flatfish and gadids sampled in the AFSC surveys, but $ISS$ tended to increase with increased number of hauls for the rockfish species (Figure \@ref(fig:iss-hls)).
 There was an increasing trend between age composition $ISS$ per sampled haul and the number of samples per sampled haul for most of the species sampled, this trend was most striking for the flatfish species (Figure \@ref(fig:iss-nss-hls)).
 The $ISS$ for age compositions sampled during AFSC surveys was 2.6 per sampled haul for flatfish, 1.7 per sampled haul for gadids, and 1.5 per sampled haul for rockfish.
 This translated to 0.36 $ISS$ per age sample for flatfish, 0.22 $ISS$ per age sample for gadids, and 0.26 $ISS$ per age sample for rockfish.
@@ -295,12 +295,12 @@ This is not surprising, given that the magnitude of sampling for length frequenc
 We also find that the sex-specific $ISS$ is smaller than the total (combined sex) $ISS$, which again, is not surprising given the relatively smaller sampling intensity for sex-specific samples.
 We will note from this result that care and intentionality should be taken when developing and implementing sex-specific assessments given this increase in uncertainty in composition data.
 
-At the AFSC, as noted previously, there are a myriad of approaches take to set $ISS$ for age and length composition data used in assessments.
+At the AFSC, as noted previously, there are a myriad of approaches taken to set $ISS$ for age and length composition data used in assessments.
 There is no generally agreed upon approach, however, a common approach that has been implemented is to make $ISS$ some function of the number of hauls, this follows from a result of @Pennington2000 that found the age composition $ISS$ to be one per sampled haul.
 Herein we find that the average age composition $ISS$ per haul by species group (gadid, flatish, and rockfish) to be larger than one per sampled haul.
 We also find that there is no clear relationship between the number of sampled hauls and the magnitude of $ISS$, particularly for gadids and flatfish.
 There was, however, a stronger trend for rockfish.
-It is unclear as to the consequence of $ISS$ misspecification in AFSC assessments that use the number of sampled hauls as a proxy for $ISS$, as $ISS$ misspecification can lead to bias model results [@Stewart2017; @Xu2020].
+It is unclear as to the consequence of $ISS$ misspecification in AFSC assessments that use the number of sampled hauls as a proxy for $ISS$, as $ISS$ misspecification can lead to biased model results [@Stewart2017; @Xu2020].
 We note that the results of the analysis conducted here does not strongly support the approach of using hauls as a proxy due to the large uncertainty and lack of correspondence when comparing $ISS$ to the number of sampled hauls.
 The results of this analysis showed an increasing trend between the age composition $ISS$ per haul and the number of ages sampled per haul, however, we support the approach of increasing the number of hauls sampled from rather than reducing the number of hauls in order to increase sampling on any given haul [e.g., @Siskey2022].
 
