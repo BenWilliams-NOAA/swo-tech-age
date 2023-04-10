@@ -133,126 +133,133 @@ We then compute the relative catch per unit effort for each haul performed withi
 The expanded population-at-length is obtained by multiplying the numbers within the strata, the relative catch per unit effort of each haul, and the sex-specific relative length frequency.
 This process is shown in mathematical form in the following.
 
-In the first step of this process we compute the overall population numbers in year-*y* within stratum-*st* ($\hat{N}_{st,y}$) with
+In the first step of this process we compute the overall population numbers in year-*y* within stratum-*st* ($\hat{N}_{s,y}$) with
 
 \begin{equation}
- \hat{N}_{st,y}=\overline{CPUE}_{st,y}\cdot A_{st}
+ \hat{N}_{s,y}=\overline{CPUE}_{s,y}\cdot A_{s}
   (\#eq:eqn1)
 \end{equation}
-where $A_{st}$ is the area of stratum-*st* (in km^2^), and $\overline{CPUE}_{st,y}$ is the average catch per unit effort of numbers captured across the hauls within a strata, given by
+where $A_{s}$ is the area of stratum-*s* (in km^2^), and $\overline{CPUE}_{s,y}$ is the species-specific average catch per unit effort of numbers captured across the hauls within a strata in year-*y*, given by
 
 \begin{equation}
- \overline{CPUE}_{st,y}
-  =\frac{1}{H_{st,y}}\sum_{h=1}^{H_{st,y}}CPUE_{h,st,y}
-  =\frac{1}{H_{st,y}}\sum_{h=1}^{H_{st,y}}\frac{n_{h,st,y}}{E_{h,st,y}}
+ \overline{CPUE}_{s,y}
+  =\frac{1}{H_{s,y}}\sum_{h=1}^{H_{s,y}}CPUE_{h,s,y}
+  =\frac{1}{H_{s,y}}\sum_{h=1}^{H_{s,y}}\frac{N_{h,s,y}}{E_{h,s,y}}
   (\#eq:eqn2)
 \end{equation}
-where $H_{st,y}$ is the number of hauls, $CPUE_{h,st,y}$ is the catch per unit effort of numbers caught within a haul-*h*, $n_{h,st,y}$ is the catch (in numbers) in haul-*h*, and $E_{h,st,y}$ is the effort in haul-*h*, which is computed as the net width multiplied by the time on bottom, or, the area swept by the haul (in km^2^).
-Next, the ratio of catch per unit effort among hauls ($\hat{p}_{CPUE,h,st,y}$) is computed by
+where $H_{s,y}$ is the number of hauls conduscted in stratum-*s* in year-*y*, $CPUE_{h,s,y}$ is the catch per unit effort (i.e, numbers caught divided by effort) within a haul-*h*, $N_{h,s,y}$ is the catch (in numbers) in haul-*h* for stratum-*s* in year-*y*, and $E_{h,s,y}$ is the effort in haul-*h* for stratum-*s* in year-*y*.
+Effort is computed as the net width multiplied by the distance the trawl was in contact with the seafloor, or, the area swept by the haul (in km^2^).
+Next, the proportion of catch per unit effort among hauls ($\hat{p}_{C,h,s,y}$) is computed by
 
 \begin{equation}
-\hat{p}_{CPUE,h,st,y}=\frac{CPUE_{h,st,y}}{\sum_{h=1}^{H_{sy,y}}CPUE_{h,st,y}}
+\hat{p}_{C,h,s,y}=\frac{CPUE_{h,s,y}}{\sum_{h=1}^{H_{s,y}}CPUE_{h,s,y}}
   (\#eq:eqn3)
 \end{equation}
-where $CPUE_{h,st,y}$ is the catch per unit effort of numbers caught within a haul-*h*.
-We then compute the sex-specific ratio of the total number of lengths sampled within a haul by length ($\hat{p}_{sx,l,h,st,y}$) with
+where $CPUE_{h,s,y}$ is the catch per unit effort of numbers caught within a haul-*h* for stratum-*s* in year-*y*.
+We then compute the sex-specific proportion of the total number of lengths sampled within a haul by length ($\hat{p}_{x,l,h,s,y}$) with
 
 \begin{equation}
- \hat{p}_{sx,l,h,st,y} =
+ \hat{p}_{x,l,h,s,y} =
   \begin{cases}
-    (1) \frac{N_{sx,l,h,st,y}}{N_{h,st,y}}  \\
-    (2) \frac{\sum_{h=1}^{H_{st,y}}[N_{sx,l,h,st,y}/N_{h,st,y}]}{\sum_{sx=1}^{3}\sum_{l=1}^{L}\sum_{h=1}^{H_{st,y}}[N_{sx,l,h,st,y}/N_{h,st,y}]}
+    (1) \frac{N_{x,l,h,s,y}}{N_{h,s,y}} &N_{x,h,s,y}>0  \\
+    (2) \frac{\sum_{h=1}^{H_{s,y}}[N_{x,l,h,s,y}/N_{h,s,y}]}{\sum_{x=1}^{3}\sum_{l=1}^{L}\sum_{h=1}^{H_{s,y}}[N_{x,l,h,s,y}/N_{h,s,y}]} &N_{x,h,s,y}=0
   \end{cases}
   (\#eq:eqn4)
 \end{equation}
-where $N_{sx,l,h,st,y}$ is the length frequency sampled, in numbers, by sex-*sx* and length-*l*.
-In some cases there are hauls that have catch for a species but did not collect length frequency data, in this case (2) is applied in order to account for the unknown length frequency in these hauls, otherwise, if length frequency samples are obtained case (1) is applied.
-Finally, we estimate the sex-specific population abundance-at-length within strata-st with
+where $N_{x,l,h,s,y}$ is the length frequency sampled, in numbers, by sex-*x* and length-*l* (in cm) within a haul-*h* for stratum-*s* in year-*y*.
+In some hauls that have catch for a species there is no length frequency data that was collected (i.e, $N_{x,h,s,y}=0$); this occurs infrequently, but does occur in the historical data.
+When this occurs case (2) is applied in \@ref(eq:eqn4), where the data are pooled for each sex across all the hauls conducted and used in place of the missing length frequency data for that haul to account for the unknown length frequency in these hauls.
+Otherwise, if length frequency samples are obtained case (1) is applied.
+Finally, we estimate the sex-specific population abundance-at-length within strata-*s* with
 
 \begin{equation}
- \hat{N}_{sx,l,st,y}=\sum_{h=1}^{H_{st,y}}[\hat{N}_{st,y}\cdot\hat{p}_{CPUE,h,st,y}\cdot\hat{p}_{sx,l,h,st,y}]
+ \hat{N}_{x,l,s,y}=\sum_{h=1}^{H_{s,y}}[\hat{N}_{s,y}\cdot\hat{p}_{C,h,s,y}\cdot\hat{p}_{x,l,h,s,y}]
   (\#eq:eqn5)
 \end{equation}
-and to obtain the sex-specific estimates of population abundance-at-length in a management area one would simply sum $\hat{N}_{sx,l,st,y}$ across strata.
+and to obtain the sex-specific estimates of population abundance-at-length in a management area one would simply sum $\hat{N}_{x,l,s,y}$ across strata.
 
 
 ## Expanding Specimen Collections to Population Abundance-at-Age
 
 In the second stage expansion the sex-specific estimates of population abundance-at-length are used to estimate sex-specific population abundance-at-age.
-The annual specimen data that is collected during the survey, which includes observations of age at length, are first populated into sex-specific numbers at age and length ($N_{sx,a,l,y}$).
-Next, the sex-specific numbers at age and length are converted to sex-specific proportions of age at length with
+The annual specimen data that are collected during the survey, which include observations of age-at-length, are first populated into sex-specific numbers at age and length ($N_{x,a,l,y}$).
+Next, the sex-specific numbers-at-age and length are converted to sex-specific proportions of age-at-length (i.e., age-length key) with
 
 \begin{equation}
- \hat{p}_{sx,a,l,y}=\frac{N_{sx,a,l,y}}{\sum_{a=1}^{A}N_{sx,a,l,y}}
+ \hat{p}_{x,a,l,y}=\frac{N_{x,a,l,y}}{\sum_{a=1}^{A}N_{x,a,l,y}}
   (\#eq:eqn6)
 \end{equation}
-The proportions of age at length are then expanded to population abundance-at-age with
+The proportions of age-at-length are then expanded to population abundance-at-age with
 
 \begin{equation}
- \hat{N}_{sx,a,y}=\sum_{l=1}^{L}\hat{p}_{sx,a,l,y}\cdot \hat{N}_{sx,l,y}
+ \hat{N}_{sx,a,y}=\sum_{l=1}^{L}\hat{p}_{x,a,l,y}\cdot \hat{N}_{x,l,y}
   (\#eq:eqn7)
 \end{equation}
-where $\hat{N}_{sx,l,y}$ is the population abundance-at-length from \@ref(eq:eqn5) summed across strata.
-For specimen data with observations of sex (either female or male), the sex-specific specimen data is used, however, for specimen data without observations of sex the specimen data are pooled across all sexes and the unsexed population abundance-at-length is then applied to the pooled specimen data to estimate unsexed population abundance-at-age.
+where $\hat{N}_{x,l,y}$ is the population abundance-at-length from \@ref(eq:eqn5) summed across strata.
+For specimen age data with observations of sex (either female or male), the sex-specific specimen age data is used.
+However, for specimen age data without observations of sex, the specimen age data are pooled across all sexes and the unsexed population abundance-at-length is then applied to the pooled specimen data to estimate unsexed population abundance-at-age.
 
-Two general categories of special cases for several stock assessments were also included in our analysis: 1) spatially-explicit assessments, and 2) assessments for species complexes. 
-For the majority of stocks assessed at AFSC age population estimates are computed at the management area scale (e.g., the entire GOA, AI, or EBS), however, we note that there are two flatfish stock assessments that are spatially-explicit in the GOA [@Mcgilliard2017; @Bryan2021].
-While in the preceding equations we do not include a subscript for sub-region, population abundance-at-age can be estimated by sub-region through summing the population abundance-at-length in equation \@ref(eq:eqn5) across strata within the sub-region and applying equations \@ref(eq:eqn6) and \@ref(eq:eqn7) to specimen data that is subsetted to the sub-region.
+Two general categories of special cases for several stock assessments were also included in our analysis: 1) spatially-explicit assessments, and 2) assessments of species complexes. 
+Population abundance-at-age estimates are computed at the management area scale (e.g., the entire GOA, AI, or EBS) for the majority of stocks assessed at AFSC; however, we note that there are two flatfish stock assessments that are spatially-explicit in the GOA [@Mcgilliard2017; @Bryan2021].
+While in the preceding equations we do not include a subscript for sub-region, population abundance-at-age can be estimated by sub-region by summing the population abundance-at-length in equation \@ref(eq:eqn5) across selected strata within the region that correspond to the sub-region and applying equations \@ref(eq:eqn6) and \@ref(eq:eqn7) to specimen age data that are subsetted to the sub-region.
 We have developed functions to estimate population abundance-at-age by sub-region, and by a combination of sub-regions within the GOA to allow for this flexibility in estimating population abundance-at-age.
-There are a handful of assessments conducted at AFSC that evaluate stocks at a complex level, where several species are included together in an assessment.
-There are two stock complexes at AFSC in which the species are combined and assessed within the same statistical catch-at-age model: blackspotted and rougheye rockfish in the GOA and AI [@Spencer2020b; @Sullivan2021].
-Between the two management regions there are subtle differences in how the population abundance-at-age is estimated from the survey specimen data; we have developed functions that allow for these differences and estimate population abundance-at-age for these two stock complexes. 
+There are also assessments evaluating stocks at a complex level, where several species are included together in an assessment.
+In addition, there are two stock complexes managed by AFSC in which the species are combined and assessed within the same statistical catch-at-age model: blackspotted and rougheye rockfish in the GOA and AI [@Spencer2020b; @Sullivan2021].
+Between the two management regions there are subtle differences in how the population abundance-at-age is estimated from the survey specimen age data.
+The difference between each region is that complex specimen age data are pooled prior to age expansion [@Spencer2020b], or the specimen age data are not pooled and population-at-age for each species are summed after expansion [@Sullivan2021].
+We have developed functions that allow for these differences and estimate population abundance-at-age for these two stock complexes. 
 In a similar case, while not assessed as a complex, over the historical bottom trawl survey in the GOA several species codes have been used for dusky rockfish. 
 We have also developed a custom function that estimates population abundance-at-length and age for this case. 
 
 
 ## Bootstrap Framework for Estimating Age and Length Composition Input Sample Size
 
-To estimate the historical input sample sizes for age and length compositions of stocks assessed at AFSC we developed a bootstrap framework based on the methodology outlined in @Stewart2014. 
+To estimate the historical input sample sizes for age and length compositions of stocks assessed at AFSC we developed a nonparameteric bootstrap framework based on the methodology outlined in @Stewart2014 and expanding on recent work [@Siskey2023]. 
 The bootstrap framework is composed of a suite of nested resampling (with replacement) protocols.
-Functions to run the sampling protocols were developed in a compartmentalized manner to provide for substantial flexibility in exploring desired resampling protocols. 
-The order of operations (Figure \@ref(fig:length)) has the following schedule, with steps 1-3 being optional switches:
+Functions to run the sampling protocols were developed in a compartmentalized manner to provide for flexibility in exploring desired resampling protocols. 
+The order of operations (Figure \@ref(fig:length)) has the following schedule, with steps 1-3 being optional switches (so that the uncertainty that results from resampling at each step can be tested):
 
 1.  Resample hauls from the set of hauls with associated catch per unit effort (in numbers)
 2.  Within the resampled hauls from step 1, resample the observed length frequency data
 3.  Within the resampled hauls from step 1, resample the observed specimen data
 4.  From the resampled length frequency data in step 2, calculate sex-specific population abundance-at-length, using equations \@ref(eq:eqn1) - \@ref(eq:eqn5)
-5.  From the resampled specimen data in step 3 and the sex-specific population abundance-at-length in step 4, calculate sex-specific population abundance-at-age, using equations \@ref(eq:eqn6) - \@ref(eq:eqn7)
+5.  From the resampled specimen age data in step 3 and the sex-specific population abundance-at-length in step 4, calculate sex-specific population abundance-at-age, using equations \@ref(eq:eqn6) - \@ref(eq:eqn7)
 
-The bootstrap framework then repeated steps 1-5 iteratively, providing iterated sex-specific population abundance-at-length and age that was then compared to the historical sex-specific population abundance-at-length and age as observed by the bottom trawl surveys.
-We ran the bootstrap-simulation for 500 iterations, which was a level for which the variability in population abundance-at-length results had stabilized.
-The bootstrap-simulation was developed in R [@Rcore] and is available via GitHub as an R package (<https://github.com/BenWilliams-NOAA/surveyISS> *still need to make this a package*).
+Steps 1-5 were repeated iteratively, providing sex-specific population abundance-at-length and age that was then compared to the observed sex-specific population abundance-at-length and age as from the bottom trawl surveys.
+We completed 500 iterations of the bootstrap-simulation, variability in the population abundance-at-length had stabilized at that point.
+The bootstrap-simulation was developed in R [@Rcore] and is available via GitHub as an R package (<https://github.com/BenWilliams-NOAA/surveyISS>).
 
 
-## Computing Effective and Input Sample Size
+## Computing Input Sample Size
 
-Effective sample size (ESS), as introduced by @Mcallister1997, is a statistic that can evaluate the level of intra-haul correlation in composition samples that are collected on a survey (whether from age or length frequency collections).
+Realized sample size ($R$), as introduced by @Mcallister1997, is a statistic that can evaluate the level of intra-haul correlation in age or length composition samples that are collected on a survey.
 It is also a statistic that can evaluate the amount of uncertainty in an estimated composition compared to an observed composition.
-Effective sample size is given by
+Realized sample size is given by
 
 \begin{equation}
- ESS=\frac{\sum_{c=1}^{C}E_c(1-E_c)}{\sum_{c=1}^{C}(E_c-O_c)^2}
+ R=\frac{\sum_{c=1}^{C}E_c(1-E_c)}{\sum_{c=1}^{C}(E_c-O_c)^2}
  (\#eq:eqn8)
 \end{equation}
 where $E_c$ is the estimated proportion for category-*c* (which can be either age or length or any other arbitrary category across which proportions are computed) and $O_c$ is the observed proportion.
-It can be interpreted by a higher ESS indicates less uncertainty in the composition estimates, while lower ESS indicates more uncertainty. 
+A higher $R$ indicates less uncertainty in the composition estimates, while a lower $R$ indicates more uncertainty. 
 
-In this bootstrap-simulation, we used effective sample size to calculate uncertainty in length compositions for each simulation replicate where the underlying age and length compositions derived from the historical bottom trawl surveys was treated as the observed proportions $O_c$ in equation \@ref(eq:eqn8).
-For each iteration of the bootstrap we computed a sex-specific estimated proportion ($E_c$) that was then compared to the underlying historical sex-specific age and length composition (the effective sample size for the total age and length composition, as the sum of population abundance-at-age and length, was also computed).
-Thus, for each iteration of the simulation, we computed an effective sample size that quantifies the amount of uncertainty that resulted from each iteration of sub-sampling sexed length frequency data.
+In this bootstrap-simulation, we used realized sample size to calculate uncertainty in length compositions for each simulation iteration, where the underlying age and length compositions derived from the historical bottom trawl surveys were treated as the observed proportions $O_c$ in equation \@ref(eq:eqn8).
+For each iteration of the bootstrapped survey data we computed a sex-specific estimated proportion ($E_c$) that was then compared to the underlying historical sex-specific age and length composition (the realized sample size for the total age and length composition was also comupted as the sum of population abundance-at-age and length).
+Thus, for each iteration of the simulation, we computed an realized sample size that quantifies the amount of uncertainty that resulted from that iteration of sub-sampling sexed length frequency data.
+This resulted in distributions of realized sample size for each stock, each sex, and each sub-region of interest
 
-Input sample size (ISS) is defined as a metric of uncertainty used in data-weighting procedures for stock assessment models.
-An input sample size is usually assigned to annual length compositions in the model fitting process, but there are a variety of methods for calculation -- many of which are closely related to the information content of the data product in question.
-To summarize uncertainty across bootstrap replicates of ESS, we calculated ISS as the harmonic mean of effective sample size across bootstrap iterations
+Input sample size ($ISS$) is defined as a metric of uncertainty used in data-weighting procedures for stock assessment models.
+An input sample size is usually assigned to annual length compositions in the model fitting process, but there are a variety of methods for calculation and are closely related to the information content of the data product in question.
+To summarize uncertainty across bootstrap iterations of $R$, we calculated $ISS$ as the harmonic mean of realized sample size across bootstrap iterations
 
 \begin{equation}
- ISS=\frac{I}{\sum_{i=1}^{I}(ESS_i)^{-1}}
+ ISS=\frac{I}{\sum_{i=1}^{I}(R_i)^{-1}}
  (\#eq:eqn9)
 \end{equation}
-where $ISS$ is the annual input sample size, $ESS_i$ is the effective sample size for iteration-*i*, and *I* is the total number of iterations for which the bootstrap procedure is run.
+where $ISS$ is the annual input sample size, $ESS_i$ is the realized sample size for iteration-*i*, and *I* is the total number of iterations for which the bootstrap procedure is run.
 The harmonic mean has been shown to reduce bias in recovering the true sample size in simulations for a multinomial distribution.
-Due to this reduction in bias the harmonic mean has also been recommended to determine the ISS that is used in stock assessment models to fit compositional data [@Stewart2014].
-Herein, when we use the term 'effective sample size or ESS' we are referring to the effective sample sizes that were computed for each iteration of the bootstrap-simulation from equation \@ref(eq:eqn8), when we use the term 'input sample size or ISS' we are referring to the harmonic mean of the iterated effective sample sizes from equation \@ref(eq:eqn9).
+Due to this reduction in bias the harmonic mean has also been recommended to determine the $ISS$ that is used in stock assessment models to fit compositional data [@Stewart2014].
+Herein, we use the term 'realized sample size or $R$' to refer to the realized sample sizes that were computed for each iteration of the bootstrap-simulation from equation \@ref(eq:eqn8), and the term 'input sample size or $ISS$' to refer to the harmonic mean of the iterated realized sample sizes from equation \@ref(eq:eqn9).
 
 
 # RESULTS
@@ -264,45 +271,45 @@ The most frequently sampled species for length frequency within the Aleutian Isl
 Across the surveys, average sex-specific age composition nominal sample sizes ranged from around 130 to nearly 850 per year, where the total age composition nominal sample size (for all sexes combined) ranged from nearly 300 to over 1,500 per year.
 It was commonly the case that the most frequently sampled species in each survey for age composition were the most frequently sampled species for length composition.
 
-The age and length composition ISS output of the surveyISS package is structured by year, species (using the AFSC survey species code), sex, and region (an example of the output is shown in Table \@ref(tab:surveyISS-examp)).
-Using walleye pollock total (combined sex) age composition as an example, ISS is produced by year for each survey the stock is sampled from Figure (\@ref(fig:wallpoll-iss)).
-Sex specific, yellowfin sole age composition from the EBS shelf survey composition ISS is shown in Figure (\@ref(fig:yellsol-iss)).
-For all species sampled in each survey, the range and median of total and sex-specific length composition ISS across survey years is shown in Figure \@ref(fig:length-iss), and age composition ISS is shown in Figure \@ref(fig:age-iss).
-Sub-regional ISS for age and length composition can also be estimated within the GOA survey, and is shown in Figures \@ref(fig:sublength-iss) - \@ref(fig:subage-iss).
-These results show that the length composition ISS ranged from the hundreds to thousands, and were larger than the age composition ISS.
-Additionally, the sex-specific ISS for either length or age composition were smaller than the ISS for the total age compositions.
-For both the age and length compositions ISS the magnitude was species-specific, and was closely related to the overall sampling intensity for age and length observations from the surveys.
+The age and length composition $ISS$ output of the surveyISS package is structured by year, species (using the AFSC survey species code), sex, and region (an example of the output is shown in Table \@ref(tab:surveyISS-examp)).
+Using walleye pollock total (combined sex) age composition as an example, $ISS$ is produced by year for each survey the stock is sampled from Figure (\@ref(fig:wallpoll-iss)).
+Sex specific, yellowfin sole age composition from the EBS shelf survey composition $ISS$ is shown in Figure (\@ref(fig:yellsol-iss)).
+For all species sampled in each survey, the range and median of total and sex-specific length composition $ISS$ across survey years is shown in Figure \@ref(fig:length-iss), and age composition $ISS$ is shown in Figure \@ref(fig:age-iss).
+Sub-regional $ISS$ for age and length composition can also be estimated within the GOA survey, and is shown in Figures \@ref(fig:sublength-iss) - \@ref(fig:subage-iss).
+These results show that the length composition $ISS$ ranged from the hundreds to thousands, and were larger than the age composition $ISS$.
+Additionally, the sex-specific $ISS$ for either length or age composition were smaller than the $ISS$ for the total age compositions.
+For both the age and length compositions $ISS$ the magnitude was species-specific, and was closely related to the overall sampling intensity for age and length observations from the surveys.
 
-Whether for age or length compositions (including sex-specific composition data) the ISS was smaller than the nominal sample sizes (Figure \@ref(fig:iss-nss), shown for age compositions) and there was a generally increasing trend between nominal sample size and input sample size.
-Comparing the age composition ISS to the number of hauls from which age samples were obtained did not result in a strong relationship for the flatfish and gadids sampled in the AFSC surveys, but there was an increasing trend for the rockfish species (Figure \@ref(fig:iss-hls)).
-There was an increasing trend between age composition ISS per sampled haul and the number of samples per sampled haul for most of the species sampled, this trend was most striking for the flatfish species (Figure \@ref(fig:iss-nss-hls)).
-The ISS for age compositions sampled during AFSC surveys was 2.6 per sampled haul for flatfish, 1.7 per sampled haul for gadids, and 1.5 per sampled haul for rockfish.
-This translated to 0.36 ISS per age sample for flatfish, 0.22 ISS per age sample for gadids, and 0.26 ISS per age sample for rockfish.
+Whether for age or length compositions (including sex-specific composition data) the $ISS$ was smaller than the nominal sample sizes (Figure \@ref(fig:iss-nss), shown for age compositions) and there was a generally increasing trend between nominal sample size and input sample size.
+Comparing the age composition $ISS$ to the number of hauls from which age samples were obtained did not result in a strong relationship for the flatfish and gadids sampled in the AFSC surveys, but there was an increasing trend for the rockfish species (Figure \@ref(fig:iss-hls)).
+There was an increasing trend between age composition $ISS$ per sampled haul and the number of samples per sampled haul for most of the species sampled, this trend was most striking for the flatfish species (Figure \@ref(fig:iss-nss-hls)).
+The $ISS$ for age compositions sampled during AFSC surveys was 2.6 per sampled haul for flatfish, 1.7 per sampled haul for gadids, and 1.5 per sampled haul for rockfish.
+This translated to 0.36 $ISS$ per age sample for flatfish, 0.22 $ISS$ per age sample for gadids, and 0.26 $ISS$ per age sample for rockfish.
 
 # DISCUSSION
 
-Here we have presented an application of the method outlined in @Stewart2014 to produce annual age and length composition ISS for fishery stocks assessed by AFSC with statistical catch-at-age models for the bottom trawl surveys conducted in the EBS shelf, slope, AI and GOA by AFSC.
-This application produces total (combined sex) and sex-specific ISS, as well as sub-region ISS within the GOA bottom trawl survey.
-We find that the magnitude of age and length compositions can vary across stocks and years, where generally, age composition ISSs ranges from the tens to hundreds (with an average age ISS of around 100 across all years and species) and length composition ISSs ranges from the hundreds to thousands (with an average length ISS of around 1,000 across all years and species).
+Here we have presented an application of the method outlined in @Stewart2014 to produce annual age and length composition $ISS$ for fishery stocks assessed by AFSC with statistical catch-at-age models for the bottom trawl surveys conducted in the EBS shelf, slope, AI and GOA by AFSC.
+This application produces total (combined sex) and sex-specific $ISS$, as well as sub-region $ISS$ within the GOA bottom trawl survey.
+We find that the magnitude of age and length compositions can vary across stocks and years, where generally, age composition ISSs ranges from the tens to hundreds (with an average age $ISS$ of around 100 across all years and species) and length composition ISSs ranges from the hundreds to thousands (with an average length $ISS$ of around 1,000 across all years and species).
 This is not surprising, given that the magnitude of sampling for length frequency is much larger than sampling for ages.
-We also find that the sex-specific ISS is smaller than the total (combined sex) ISS, which again, is not surprising given the relatively smaller sampling intensity for sex-specific samples.
+We also find that the sex-specific $ISS$ is smaller than the total (combined sex) $ISS$, which again, is not surprising given the relatively smaller sampling intensity for sex-specific samples.
 We will note from this result that care and intentionality should be taken when developing and implementing sex-specific assessments given this increase in uncertainty in composition data.
 
-At the AFSC, as noted previously, there are a myriad of approaches take to set ISS for age and length composition data used in assessments.
-There is no generally agreed upon approach, however, a common approach that has been implemented is to make ISS some function of the number of hauls, this follows from a result of @Pennington2000 that found the age composition ISS to be one per sampled haul.
-Herein we find that the average age composition ISS per haul by species group (gadid, flatish, and rockfish) to be larger than one per sampled haul.
-We also find that there is no clear relationship between the number of sampled hauls and the magnitude of ISS, particularly for gadids and flatfish.
+At the AFSC, as noted previously, there are a myriad of approaches take to set $ISS$ for age and length composition data used in assessments.
+There is no generally agreed upon approach, however, a common approach that has been implemented is to make $ISS$ some function of the number of hauls, this follows from a result of @Pennington2000 that found the age composition $ISS$ to be one per sampled haul.
+Herein we find that the average age composition $ISS$ per haul by species group (gadid, flatish, and rockfish) to be larger than one per sampled haul.
+We also find that there is no clear relationship between the number of sampled hauls and the magnitude of $ISS$, particularly for gadids and flatfish.
 There was, however, a stronger trend for rockfish.
-It is unclear as to the consequence of ISS misspecification in AFSC assessments that use the number of sampled hauls as a proxy for ISS, as ISS misspecification can lead to bias model results [@Stewart2017; @Xu2020].
-We note that the results of the analysis conducted here does not strongly support the approach of using hauls as a proxy due to the large uncertainty and lack of correspondence when comparing ISS to the number of sampled hauls.
-The results of this analysis showed an increasing trend between the age composition ISS per haul and the number of ages sampled per haul, however, we support the approach of increasing the number of hauls sampled from rather than reducing the number of hauls in order to increase sampling on any given haul [e.g., @Siskey2022].
+It is unclear as to the consequence of $ISS$ misspecification in AFSC assessments that use the number of sampled hauls as a proxy for $ISS$, as $ISS$ misspecification can lead to bias model results [@Stewart2017; @Xu2020].
+We note that the results of the analysis conducted here does not strongly support the approach of using hauls as a proxy due to the large uncertainty and lack of correspondence when comparing $ISS$ to the number of sampled hauls.
+The results of this analysis showed an increasing trend between the age composition $ISS$ per haul and the number of ages sampled per haul, however, we support the approach of increasing the number of hauls sampled from rather than reducing the number of hauls in order to increase sampling on any given haul [e.g., @Siskey2022].
 
-A strength of the methodology presented by @Stewart2014 is that it provides an objective method that produces estimates of ISS that follow from the sampling design employed.
+A strength of the methodology presented by @Stewart2014 is that it provides an objective method that produces estimates of $ISS$ that follow from the sampling design employed.
 As such, this approach has been adopted in a number of assessments, both internationally and domestically.
 For example, this bootstrap approach has been applied to weight compositional data within the Pacific halibut stock assessment performed by the International Pacific Halibut Commission [@Stewart2022].
-If adopted within assessments conducted at AFSC, this approach would provide an objective and unifying method to set ISS when weighting compositional data.
+If adopted within assessments conducted at AFSC, this approach would provide an objective and unifying method to set $ISS$ when weighting compositional data.
 Further analysis to be developed and conducted includes constructing methods that apply the bootstrap approach to fishery-dependent age and length composition used in AFSC assessments.
-We recommend that the surveyISS package be adopted and further developed by assessment and survey programs at AFSC so that bootstrap derived ISS is a standard data product available to scientists conducting assessments with statistical catch-at-age models at AFSC.
+We recommend that the surveyISS package be adopted and further developed by assessment and survey programs at AFSC so that bootstrap derived $ISS$ is a standard data product available to scientists conducting assessments with statistical catch-at-age models at AFSC.
 
 \newpage
 
