@@ -288,26 +288,30 @@ This translated to 0.36 $ISS$ per age sample for flatfish, 0.22 $ISS$ per age sa
 
 # DISCUSSION
 
-Here we have presented an application of the method outlined in @Stewart2014 to produce annual age and length composition $ISS$ for fishery stocks assessed by AFSC with statistical catch-at-age models for the bottom trawl surveys conducted in the EBS shelf, slope, AI and GOA by AFSC.
+Here we have presented an application of the method outlined in @Stewart2014 to produce annual age and length composition $ISS$ for fishery stocks assessed by AFSC with statistical catch-at-age models.
+We present results for the bottom trawl surveys conducted in the EBS shelf, slope, AI and GOA by AFSC with the hope that this will motivate the adoption of a standardized approach akin to ours for setting initial composition weights in future assessments.
 This application produces total (combined sex) and sex-specific $ISS$, as well as sub-region $ISS$ within the GOA bottom trawl survey.
-We find that the magnitude of age and length compositions can vary across stocks and years, where generally, age composition ISSs ranges from the tens to hundreds (with an average age $ISS$ of around 100 across all years and species) and length composition ISSs ranges from the hundreds to thousands (with an average length $ISS$ of around 1,000 across all years and species).
+We found that the magnitude of age and length compositions $ISS$ can vary across stocks and years, but in general, age composition $ISS$ ranged from the tens to hundreds (with an average age $ISS$ of around 100 across all years and species) and length composition $ISS$ ranged from the hundreds to thousands (with an average length $ISS$ of around 1,000 across all years and species).
 This is not surprising, given that the magnitude of sampling for length frequency is much larger than sampling for ages.
-We also find that the sex-specific $ISS$ is smaller than the total (combined sex) $ISS$, which again, is not surprising given the relatively smaller sampling intensity for sex-specific samples.
+We also found that the sex-specific $ISS$ is smaller than the total (combined sex) $ISS$, which is also not surprising given the relatively smaller sampling intensity for sex-specific samples.
 We will note from this result that care and intentionality should be taken when developing and implementing sex-specific assessments given this increase in uncertainty in composition data.
 
-At the AFSC, as noted previously, there are a myriad of approaches taken to set $ISS$ for age and length composition data used in assessments.
-There is no generally agreed upon approach, however, a common approach that has been implemented is to make $ISS$ some function of the number of hauls, this follows from a result of @Pennington2000 that found the age composition $ISS$ to be one per sampled haul.
-Herein we find that the average age composition $ISS$ per haul by species group (gadid, flatish, and rockfish) to be larger than one per sampled haul.
-We also find that there is no clear relationship between the number of sampled hauls and the magnitude of $ISS$, particularly for gadids and flatfish.
-There was, however, a stronger trend for rockfish.
+At the AFSC, as noted previously, there are a myriad of approaches employed to set $ISS$ for age and length composition data used in assessments.
+There is no generally agreed upon approach, however, a common approach that has been implemented is set $ISS$ as some function of the number of hauls.
+This follows from a result of @Pennington2000 who found the age composition $ISS$ to be one per sampled haul.
+Herein we find the average age composition $ISS$ per haul by species group (gadid, flatish, and rockfish) to be larger than one per sampled haul.
+We also find that, while there is a generally increasing relationship between the number of sampled hauls and the age composition $ISS$, and that the number of hauls and age composition $ISS$ are the same order of magnitude, the relationship between hauls and age composition $ISS$ is highly variable.
 It is unclear as to the consequence of $ISS$ misspecification in AFSC assessments that use the number of sampled hauls as a proxy for $ISS$, as $ISS$ misspecification can lead to biased model results [@Stewart2017; @Xu2020].
-We note that the results of the analysis conducted here does not strongly support the approach of using hauls as a proxy due to the large uncertainty and lack of correspondence when comparing $ISS$ to the number of sampled hauls.
-The results of this analysis showed an increasing trend between the age composition $ISS$ per haul and the number of ages sampled per haul, however, we support the approach of increasing the number of hauls sampled from rather than reducing the number of hauls in order to increase sampling on any given haul [e.g., @Siskey2022].
 
-A strength of the methodology presented by @Stewart2014 is that it provides an objective method that produces estimates of $ISS$ that follow from the sampling design employed.
+We note that the results of the analysis conducted here does not strongly support the approach of using hauls as a proxy due to the large uncertainty and lack of correspondence when comparing $ISS$ to the number of sampled hauls.
+In particular, we see no reason to use the relationship with number of hauls or number of samples.
+The regression of $ISS$ and number of hauls results in substantial residual variance, both among years for a given species and across species, so using the predicted $ISS$ from that regression likely results in an estimate of $ISS$ that is less precise and more biased than the original calculations reported here.
+Instead, we recommend that assessments directly use the $ISS$ calculated here (and as updated given future years of data).  
+
+A strength of the methodology presented by @Stewart2014 is that it provides an objective method that produces estimates of $ISS$ that follow from the sampling design employed to collect data (i.e., design-based estimator).
 As such, this approach has been adopted in a number of assessments, both internationally and domestically.
 For example, this bootstrap approach has been applied to weight compositional data within the Pacific halibut stock assessment performed by the International Pacific Halibut Commission [@Stewart2022].
-If adopted within assessments conducted at AFSC, this approach would provide an objective and unifying method to set $ISS$ when weighting compositional data.
+If adopted for assessments conducted at AFSC, this approach would provide an objective and unifying method to set $ISS$ when weighting compositional data.
 Further analysis to be developed and conducted includes constructing methods that apply the bootstrap approach to fishery-dependent age and length composition used in AFSC assessments.
 We recommend that the surveyISS package be adopted and further developed by assessment and survey programs at AFSC so that bootstrap derived $ISS$ is a standard data product available to scientists conducting assessments with statistical catch-at-age models at AFSC.
 
@@ -317,8 +321,8 @@ We recommend that the surveyISS package be adopted and further developed by asse
 
 # ACKNOWLEDGMENTS
 
-We thank *reviewers* for their helpful reviews of this manuscript.
-All the staff who have spent time at sea and staring through microscopes to produce the data these analyses are based upon.
+We thank Jim Thorson and Maia Kapur for their helpful reviews of this manuscript.
+We also express our profound gratitude to all the staff who have spent countless hours at sea and staring through microscopes to produce the data these analyses are based upon.
 
 \newpage
 
