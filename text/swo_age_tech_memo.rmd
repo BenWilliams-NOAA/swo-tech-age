@@ -256,10 +256,17 @@ To summarize uncertainty across bootstrap iterations of $R$, we calculated $ISS$
  ISS=\frac{I}{\sum_{i=1}^{I}(R_i)^{-1}}
  (\#eq:eqn9)
 \end{equation}
-where $ISS$ is the annual input sample size, $ESS_i$ is the realized sample size for iteration-*i*, and *I* is the total number of iterations for which the bootstrap procedure is run.
+where $ISS$ is the annual input sample size, $R_i$ is the realized sample size for iteration-*i*, and *I* is the total number of iterations for which the bootstrap procedure is run.
 The harmonic mean has been shown to reduce bias in recovering the true sample size in simulations for a multinomial distribution.
 Due to this reduction in bias the harmonic mean has also been recommended to determine the $ISS$ that is used in stock assessment models to fit compositional data [@Stewart2014].
 Herein, we use the term 'realized sample size or $R$' to refer to the realized sample sizes that were computed for each iteration of the bootstrap-simulation from equation \@ref(eq:eqn8), and the term 'input sample size or $ISS$' to refer to the harmonic mean of the iterated realized sample sizes from equation \@ref(eq:eqn9).
+
+
+## Analysis and Presentation of Input Sample Size
+To present the age and length composition $ISS$ as determined by the nonparameteric bootstrap procedure we use bar-plots to show the annual $ISS$ results and box-plots to show the combined $ISS$ results across years (where the median, interquartile, and inter 95th percentile ranges are shown).
+We show these results across the surveys evaluated and for each sex-specific age and length composition so that the reader can refer to the general $ISS$ results as it pertains to their stock of interest; this also allows for general comparisons to be made across stocks.
+Because of the use of nominal sample size and sampled hauls as proxies for input sample size in a number of AFSC stock assessment models we provide scatter-plots that compare age composition $ISS$ to the number of otoliths aged and the number of hauls sampled for otoliths.
+We further explored the relationship between age composition $ISS$ and the number of sampled hauls by fitting a linear model, we present the $R^2$ values from these fits to indicate the strength of the relationships.
 
 
 # RESULTS
@@ -280,11 +287,12 @@ These results show that the length composition $ISS$ ranged from the hundreds to
 Additionally, the sex-specific $ISS$ for either length or age composition were smaller than the $ISS$ for the total age compositions.
 For both the age and length compositions $ISS$ the magnitude was species-specific, and was closely related to the overall sampling intensity for age and length observations on the surveys.
 
-For both age and length compositions (including sex-specific composition data), the $ISS$ was smaller than the nominal sample sizes (Figure \@ref(fig:iss-nss), shown for age compositions) and there was a generally increasing trend between nominal sample size and input sample size with gadids being the exception.
-Comparing the age composition $ISS$ to the number of hauls from which age samples were obtained did not result in a strong relationship for the flatfish and gadids sampled in the AFSC surveys, but $ISS$ tended to increase with increased number of hauls for the rockfish species (Figure \@ref(fig:iss-hls)).
-There was an increasing trend between age composition $ISS$ per sampled haul and the number of samples per sampled haul for most of the species sampled, this trend was most striking for the flatfish species (Figure \@ref(fig:iss-nss-hls)).
-The $ISS$ for age compositions sampled during AFSC surveys was 2.6 per sampled haul for flatfish, 1.7 per sampled haul for gadids, and 1.5 per sampled haul for rockfish.
-This translated to 0.36 $ISS$ per age sample for flatfish, 0.22 $ISS$ per age sample for gadids, and 0.26 $ISS$ per age sample for rockfish.
+For age composition (including sex-specific composition data), the $ISS$ was smaller than the sample sizes collected that were aged and there was a generally increasing trend between the number aged and $ISS$ (Figure \@ref(fig:iss-nss)).
+The result of $ISS$ less than sample size was also true for length composition (results not shown).
+Comparing the age composition $ISS$ to the number of hauls from which age samples were obtained also resulted in a generally increasing trend, and the magnitude of $ISS$ and the number of sampled hauls was comparable (Figure \@ref(fig:iss-hls). 
+The strength of the relationship between $ISS$ and the number of sampled hauls, in terms of the $R^2$ value from a linear model fit, was stock and region-specific (Tables \@ref(tab:iss_hls_rsq_bs) and \@ref(tab:iss_hls_rsq_goai)).
+In general, the strongest relationship between age composition $ISS$ and the number of sampled hauls resulted for the flatfish stocks evaluated as compared to the gadid and rockfish stocks.
+Although, nearly 80% of the stock-composition type (female, male, and total) combinations resulted in $R^2$ values less than 0.75, and over 56% resulted in $R^2$ values less than 0.5, indicating that the relationship between age composition $ISS$ and the number of sampled hauls was generally weak.
 
 # DISCUSSION
 
@@ -299,8 +307,7 @@ We will note from this result that care and intentionality should be taken when 
 At the AFSC, as noted previously, there are a myriad of approaches employed to set $ISS$ for age and length composition data used in assessments.
 There is no generally agreed upon approach, however, a common approach that has been implemented is set $ISS$ as some function of the number of hauls.
 This follows from a result of @Pennington2000 who found the age composition $ISS$ to be one per sampled haul.
-Herein we find the average age composition $ISS$ per haul by species group (gadid, flatish, and rockfish) to be larger than one per sampled haul.
-We also find that, while there is a generally increasing relationship between the number of sampled hauls and the age composition $ISS$, and that the number of hauls and age composition $ISS$ are the same order of magnitude, the relationship between hauls and age composition $ISS$ is highly variable.
+Herein we find that, while there is a generally increasing relationship between the number of sampled hauls and the age composition $ISS$, and that the number of hauls and age composition $ISS$ are the same order of magnitude, the relationship between hauls and age composition $ISS$ is highly variable and not very strong.
 It is unclear as to the consequence of $ISS$ misspecification in AFSC assessments that use the number of sampled hauls as a proxy for $ISS$, as $ISS$ misspecification can lead to biased model results [@Stewart2017; @Xu2020].
 
 We note that the results of the analysis conducted here does not strongly support the approach of using hauls as a proxy due to the large uncertainty and lack of correspondence when comparing $ISS$ to the number of sampled hauls.
@@ -371,6 +378,22 @@ knitr::kable(vroom::vroom(here::here('tables', 'surveyISS_examp.csv')),
 
 \newpage
 
+```{r iss_hls_rsq_bs}
+knitr::kable(vroom::vroom(here::here('tables', 'iss_hls_rsq_bs.csv')), 
+  caption = "R-squared values from linear fit between age composition input sample size and number of sampled hauls from the Eastern Bering Sea shelf and slope bottom trawl surveys.", 
+  format.args = list(big.mark = ",", scientific = FALSE))
+```
+
+\newpage
+
+```{r iss_hls_rsq_goai}
+knitr::kable(vroom::vroom(here::here('tables', 'iss_hls_rsq_goai.csv')), 
+  caption = "R-squared values from linear fit between age composition input sample size and number of sampled hauls from the Aleutian Islands (AI) and Gulf of Alaska (GOA) bottom trawl surveys.", 
+  format.args = list(big.mark = ",", scientific = FALSE))
+```
+
+\newpage
+
 # FIGURES
 
 ```{r length, fig.cap="Bootstrap flow chart, the steps refer to the order of operations."}
@@ -407,8 +430,4 @@ knitr::include_graphics(here::here('figs', 'age_iss_nss.png'))
 
 ```{r iss-hls, fig.cap="Number of sampled hauls compared to age composition input sample size by species group and survey (1-1 line shown in black for reference, gadids are not captured in the Bering Sea slope survey)."}
 knitr::include_graphics(here::here('figs', 'age_iss_hls.png'))
-```
-
-```{r iss-nss-hls, fig.cap="Number of age samples compared to age composition input sample size per sampled haul by species group and survey (1-1 line and the slope = 1 line (when all samples are identical in each haul) shown in black for reference)."}
-knitr::include_graphics(here::here('figs', 'age_iss_nss_hl.png'))
 ```

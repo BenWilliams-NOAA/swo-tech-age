@@ -37,10 +37,11 @@ spec <- vroom::vroom(here::here('data', 'species_code_name.csv')) #species_code 
 
 iss <- vroom::vroom(here::here('output', 'afsc_iss.csv')) #species_code and common names
 
-# plot example of annual iss for walleye pollock across regions ----
-
 surv_labs <- c("Aleutian Isalnds", "Bering Sea Shelf", "Gulf of Alaska", "Bering Sea Slope", "Central GOA", "Eastern GOA", "Western-Central GOA", "Western GOA")
 names(surv_labs) <- c("ai", "bs_shelf", "goa", "bs_slope", "cgoa", "egoa", "wcgoa", "wgoa")
+
+# plot example of annual iss for walleye pollock across regions ----
+
 
 iss %>% 
   tidytable::left_join(spec) %>% 
@@ -126,7 +127,7 @@ ggsave(here::here("figs", "yellowfin_examp.png"),
        width = 6,
        height = 5)
 
-# plot for all species ----
+# plot iss for all species ----
 
 iss %>% 
   tidytable::left_join(spec) %>% 
@@ -177,7 +178,7 @@ ggsave(here::here("figs", "length_iss.png"),
        width = 7,
        height = 6)
 
-# plot for sub-region special cases in goa ----
+# plot iss for sub-region special cases in goa ----
 
 iss %>% 
   tidytable::left_join(spec) %>% 
@@ -227,7 +228,7 @@ ggsave(here::here("figs", "age_iss_subreg.png"),
        width = 7,
        height = 6)
 
-# plot relationships with hauls ----
+# plot age iss relationships with sample size ----
 
 vroom::vroom(here::here('data', 'ann_specimen.csv')) %>% 
   tidytable::mutate.(region = case_when.(surv == 'AI' ~ 'ai',
@@ -255,7 +256,6 @@ ggplot(.,aes(x = nss_age, y = iss_age, pch = as.factor(species_name), color = as
   xlab("Number of age samples") +
   ylab("Age composition input sample size") +
   labs(pch = "Stock") +
-  # geom_smooth(method = "lm", se = F) +
   scale_color_scico_d(palette = 'roma',
                       name = "Composition type") + 
   theme(text = element_text(size = 14),
@@ -266,6 +266,9 @@ ggsave(here::here("figs", "age_iss_nss.png"),
        device = "png",
        width = 7,
        height = 6)
+
+# plot age iss relationships with hauls ----
+
 
 # iss vs hauls
 iss %>% 
@@ -283,7 +286,6 @@ iss %>%
   xlab("Number of hauls sampled for age") +
   ylab("Age composition input sample size") +
   labs(pch = "Stock") +
-  # geom_smooth(method = 'lm', se = T) +
   scale_color_scico_d(palette = 'roma',
                       name = "Composition type") + 
   theme(text = element_text(size = 14),
@@ -295,7 +297,7 @@ ggsave(here::here("figs", "age_iss_hls.png"),
        width = 7,
        height = 6)
 
-# iss/hls vs nss/hls
+# iss/hls vs nss/hls (not used in ms) ----
 iss %>% 
   tidytable::left_join(spec) %>% 
   tidytable::left_join(ann_spec) %>% 
@@ -323,7 +325,7 @@ ggsave(here::here("figs", "age_iss_nss_hl.png"),
        width = 7,
        height = 6)
 
-# compute iss stats ----
+# compute iss stats (not used in ms) ----
 
 iss %>% 
   tidytable::left_join(spec) %>% 
@@ -338,3 +340,55 @@ iss %>%
   tidytable::select(-iss_length) %>% 
   tidytable::mutate(iss_per = iss_age / hls_age, .by = c(year, species_code, comp_type, region)) %>% 
   tidytable::summarise(iss_per = mean(iss_per, na.rm = TRUE), .by = c(species_type))
+
+# produce r-squared tables together ----
+
+iss %>% 
+  tidytable::left_join(spec) %>% 
+  tidytable::left_join(ann_spec) %>% 
+  tidytable::filter(region %in% c('bs_shelf', 'bs_slope', 'ai', 'goa') & !is.na(species_name)) %>% 
+  tidytable::drop_na() %>% 
+  tidytable::summarise(rsq = summary(lm(iss_age ~ nss_age))$r.squared, .by = c(species_type, comp_type, region)) %>% 
+  tidytable::pivot_wider(names_from = comp_type, values_from = rsq) %>% 
+  tidytable::rename(species = species_type) %>% 
+  tidytable::bind_rows(data_fit %>% 
+                         tidytable::drop_na() %>% 
+                         tidytable::summarise(rsq = summary(lm(iss_age ~ nss_age))$r.squared, .by = c(species_name, comp_type, region)) %>% 
+                         tidytable::pivot_wider(names_from = comp_type, values_from = rsq) %>% 
+                         tidytable::rename(species = species_name)) -> iss_nss_rsq
+
+iss_nss_rsq %>% 
+  tidytable::filter(region %in% c('goa', 'ai')) %>% 
+  vroom::vroom_write(here::here("tables", "iss_nss_rsq_goai.csv"), delim = ",")
+
+iss_nss_rsq %>% 
+  tidytable::filter(!(region %in% c('goa', 'ai'))) %>% 
+  vroom::vroom_write(here::here("tables", "iss_nss_rsq_bs.csv"), delim = ",")
+
+iss %>% 
+  tidytable::left_join(spec) %>% 
+  tidytable::left_join(ann_spec) %>% 
+  tidytable::filter(region %in% c('bs_shelf', 'bs_slope', 'ai', 'goa') & !is.na(species_name)) %>% 
+  tidytable::drop_na() %>% 
+  tidytable::summarise(rsq = summary(lm(iss_age ~ hls_age))$r.squared, .by = c(species_type, comp_type, region)) %>% 
+  tidytable::pivot_wider(names_from = comp_type, values_from = rsq) %>% 
+  tidytable::rename(species = species_type) %>% 
+  tidytable::bind_rows(data_fit %>% 
+                         tidytable::drop_na() %>% 
+                         tidytable::summarise(rsq = summary(lm(iss_age ~ hls_age))$r.squared, .by = c(species_name, comp_type, region)) %>% 
+                         tidytable::pivot_wider(names_from = comp_type, values_from = rsq) %>% 
+                         tidytable::rename(species = species_name)) -> iss_hls_rsq
+
+iss_hls_rsq %>% 
+  tidytable::filter(region %in% c('goa', 'ai')) %>% 
+  vroom::vroom_write(here::here("tables", "iss_hls_rsq_goai.csv"), delim = ",")
+
+iss_hls_rsq %>% 
+  tidytable::filter(!(region %in% c('goa', 'ai'))) %>% 
+  vroom::vroom_write(here::here("tables", "iss_hls_rsq_bs.csv"), delim = ",")
+
+
+
+
+
+
