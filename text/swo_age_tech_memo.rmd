@@ -104,7 +104,7 @@ Overall, there is no consensus method that is agreed upon at the AFSC to determi
 
 @Stewart2014 introduced a method in which bootstrap techniques were used to resample age and length composition data that provides an estimate of the input sample size that can be used within assessment models.
 The primary advantage of this method is that it provides an objective framework from which estimates of input sample size are obtained that mimics the sampling design employed (i.e., design-based estimation), either from a fishery-independent survey or on fishery-dependent platforms.
-Other methods have also been developed, including model-based [@Thorson2014; @Thorson2018] or methods that combine design and model-based elements [@Miller2006].
+Other methods have also been developed, including model-based [@Thorson2014; @Thorson2017] or methods that combine design and model-based elements [@Miller2006].
 Here, we apply the methods of @Stewart2014 to obtain annual estimates of input sample size for age and length composition data obtained by the AFSC bottom trawl surveys in the EBS, AI, and GOA for all stocks assessed at AFSC with statistical catch-at-age assessment models.
 The main objectives of this technical memorandum are to 1) document methods used by AFSC for expanding length and age collections to population abundance estimates (which are subsequently used as composition data in stock assessments), 2) present stock-specific results of input samples size from AFSC bottom trawl surveys for Tier 1--3 stocks, and 3) record methods for estimating input sample sizes of survey-based age and length compositions using a two-stage bootstrapping approach.
 
@@ -120,7 +120,7 @@ The protocol for some species has changed over the time series, which has follow
 
 Species collected on each survey that are assessed with statistical catch-at-age models were selected to be included in this analysis (Tier 1--3 stock assessments, Table \@ref(tab:species)). 
 Data from AFSC bottom trawl surveys conducted in the EBS shelf (1982 to present), EBS slope (2002, 2004, 2008, 2010, 2012, and 2016), AI (triennially from 1991 to 2000, biennially from 2000 to present with the exception of 2008 and 2020 in which no surveys took place), and GOA (triennially from 1990 to 1999, bienially from 1999 to present) that are employed in the stock assessment models for each respective area were used in this study to estimate input sample size with a bootstrap estimator.
-The bootstrap estimator is designed to be a standardized tool for generating input sample sizes and the input sample sizes generated with it are intended to be used to weight length and age composition data in future sotck assessments. 
+The bootstrap estimator is designed to be a standardized tool for generating input sample sizes and the input sample sizes generated with it are intended to be used to weight length and age composition data in future stock assessments. 
 
 ## Expanding Length Frequency to Population Abundance-at-Length
 
@@ -133,7 +133,7 @@ We then compute the relative catch per unit effort for each haul performed withi
 The expanded population-at-length is obtained by multiplying the numbers within the strata, the relative catch per unit effort of each haul, and the sex-specific relative length frequency.
 This process is shown in mathematical form in the following.
 
-In the first step of this process we compute the overall population numbers in year-*y* within stratum-*st* ($\hat{N}_{s,y}$) with
+In the first step of this process we compute the overall population numbers in year-*y* within stratum-*s* ($\hat{N}_{s,y}$) with
 
 \begin{equation}
  \hat{N}_{s,y}=\overline{CPUE}_{s,y}\cdot A_{s}
@@ -203,9 +203,9 @@ Two general categories of special cases for several stock assessments were also 
 Population abundance-at-age estimates are computed at the management area scale (e.g., the entire GOA, AI, or EBS) for the majority of stocks assessed at AFSC; however, we note that there are two flatfish stock assessments that are spatially-explicit in the GOA [@Mcgilliard2017; @Bryan2021].
 While in the preceding equations we do not include a subscript for sub-region, population abundance-at-age can be estimated by sub-region by summing the population abundance-at-length in equation \@ref(eq:eqn5) across selected strata within the region that correspond to the sub-region and applying equations \@ref(eq:eqn6) and \@ref(eq:eqn7) to specimen age data that are subsetted to the sub-region.
 We have developed functions to estimate population abundance-at-age by sub-region, and by a combination of sub-regions within the GOA to allow for this flexibility in estimating population abundance-at-age.
-There are also assessments evaluating stocks at a complex level, where several species are included together in an assessment.
-In addition, there are two stock complexes managed by AFSC in which the species are combined and assessed within the same statistical catch-at-age model: blackspotted and rougheye rockfish in the GOA and AI [@Spencer2020b; @Sullivan2021].
-Between the two management regions there are subtle differences in how the population abundance-at-age is estimated from the survey specimen age data.
+
+There are two stock complexes managed by AFSC in which the species are combined and assessed within the same statistical catch-at-age model: blackspotted and rougheye rockfish in the GOA and AI [@Spencer2020b; @Sullivan2021].
+Between the two management regions there is a subtle differences in how the population abundance-at-age is estimated from the survey specimen age data.
 The difference between each region is that complex specimen age data are pooled prior to age expansion [@Spencer2020b], or the specimen age data are not pooled and population-at-age for each species are summed after expansion [@Sullivan2021].
 We have developed functions that allow for these differences and estimate population abundance-at-age for these two stock complexes. 
 In a similar case, while not assessed as a complex, over the historical bottom trawl survey in the GOA several species codes have been used for dusky rockfish. 
@@ -262,7 +262,7 @@ Due to this reduction in bias the harmonic mean has also been recommended to det
 Herein, we use the term 'realized sample size or $R$' to refer to the realized sample sizes that were computed for each iteration of the bootstrap-simulation from equation \@ref(eq:eqn8), and the term 'input sample size or $ISS$' to refer to the harmonic mean of the iterated realized sample sizes from equation \@ref(eq:eqn9).
 
 
-## Analysis and Presentation of Input Sample Size
+## Evaluation and Presentation of Input Sample Size
 To present the age and length composition $ISS$ as determined by the nonparameteric bootstrap procedure we use bar-plots to show the annual $ISS$ results and box-plots to show the combined $ISS$ results across years (where the median, interquartile, and inter 95th percentile ranges are shown).
 We show these results across the surveys evaluated and for each sex-specific age and length composition so that the reader can refer to the general $ISS$ results as it pertains to their stock of interest; this also allows for general comparisons to be made across stocks.
 Because of the use of nominal sample size and sampled hauls as proxies for input sample size in a number of AFSC stock assessment models we provide scatter-plots that compare age composition $ISS$ to the number of otoliths aged and the number of hauls sampled for otoliths.
@@ -290,7 +290,7 @@ For both the age and length compositions $ISS$ the magnitude was species-specifi
 For age composition (including sex-specific composition data), the $ISS$ was smaller than the sample sizes collected that were aged and there was a generally increasing trend between the number aged and $ISS$ (Figure \@ref(fig:iss-nss)).
 The result of $ISS$ less than sample size was also true for length composition (results not shown).
 Comparing the age composition $ISS$ to the number of hauls from which age samples were obtained also resulted in a generally increasing trend, and the magnitude of $ISS$ and the number of sampled hauls was comparable (Figure \@ref(fig:iss-hls). 
-The strength of the relationship between $ISS$ and the number of sampled hauls, in terms of the $R^2$ value from a linear model fit, was stock and region-specific (Tables \@ref(tab:iss_hls_rsq_bs) and \@ref(tab:iss_hls_rsq_goai)).
+The strength of the relationship between $ISS$ and the number of sampled hauls, in terms of the $R^2$ value from a linear model fit, was stock and region-specific (Tables \@ref(tab:iss-hls-rsq-bs) and \@ref(tab:iss-hls-rsq-goai)).
 In general, the strongest relationship between age composition $ISS$ and the number of sampled hauls resulted for the flatfish stocks evaluated as compared to the gadid and rockfish stocks.
 Although, nearly 80% of the stock-composition type (female, male, and total) combinations resulted in $R^2$ values less than 0.75, and over 56% resulted in $R^2$ values less than 0.5, indicating that the relationship between age composition $ISS$ and the number of sampled hauls was generally weak.
 
@@ -378,7 +378,7 @@ knitr::kable(vroom::vroom(here::here('tables', 'surveyISS_examp.csv')),
 
 \newpage
 
-```{r iss_hls_rsq_bs}
+```{r iss-hls-rsq-bs}
 knitr::kable(vroom::vroom(here::here('tables', 'iss_hls_rsq_bs.csv')), 
   caption = "R-squared values from linear fit between age composition input sample size and number of sampled hauls from the Eastern Bering Sea shelf and slope bottom trawl surveys.", 
   format.args = list(big.mark = ",", scientific = FALSE))
@@ -386,7 +386,7 @@ knitr::kable(vroom::vroom(here::here('tables', 'iss_hls_rsq_bs.csv')),
 
 \newpage
 
-```{r iss_hls_rsq_goai}
+```{r iss-hls-rsq-goai}
 knitr::kable(vroom::vroom(here::here('tables', 'iss_hls_rsq_goai.csv')), 
   caption = "R-squared values from linear fit between age composition input sample size and number of sampled hauls from the Aleutian Islands (AI) and Gulf of Alaska (GOA) bottom trawl surveys.", 
   format.args = list(big.mark = ",", scientific = FALSE))
