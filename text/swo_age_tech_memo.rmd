@@ -347,7 +347,7 @@ knitr::kable(vroom::vroom(here::here('tables', 'species.csv')),
 
 ```{r ebs-nss}
 knitr::kable(vroom::vroom(here::here('tables', 'avg_nss_ebs.csv')), 
-  caption = "Average age (a) and length (l) frequency samples for Female (F), Male (M), and Total (T, all sexes combined) collections from the Eastern Bering Sea shelf and slope bottom trawl surveys.", 
+  caption = "Average age (a) and length (l) frequency samples for Female (F), Male (M), and Total (T, all sexes combined, including unsexed) collections from the Eastern Bering Sea shelf and slope bottom trawl surveys.", 
   align = c('llcccccc'), 
   format.args = list(big.mark = ",", scientific = FALSE))
 ```
@@ -377,35 +377,35 @@ knitr::kable(vroom::vroom(here::here('tables', 'surveyISS_examp.csv')),
 knitr::include_graphics(here::here('figs', 'age_flowchart.png'))
 ```
 
-```{r wallpoll-iss, fig.cap="Walleye pollock total age composition input sample size by year and survey."}
+```{r wallpoll-iss, fig.cap="Walleye pollock total age composition input sample size by year and survey. Left panel shows age composition input sample size by year, right panel shows boxplot of combined annual input sample size with median (solid line), inter-quartile range (box), and 95th percentile range (whiskers)."}
 knitr::include_graphics(here::here('figs', 'pollock_examp.png'))
 ```
 
-```{r yellsol-iss, fig.cap="Eastern Bering Sea Yellowfin sole sex-specific age composition annual input sample size."}
+```{r yellsol-iss, fig.cap="Eastern Bering Sea Yellowfin sole sex-specific age composition annual input sample size. Left panel shows age composition input sample size by year, right panel shows boxplot of combined annual input sample size with median (solid line), inter-quartile range (box), and 95th percentile range (whiskers)."}
 knitr::include_graphics(here::here('figs', 'yellowfin_examp.png'))
 ```
 
-```{r length-iss, fig.cap="Length composition input sample size by species and survey."}
+```{r length-iss, fig.cap="Length composition input sample size by stock and survey."}
 knitr::include_graphics(here::here('figs', 'length_iss.png'))
 ```
 
-```{r age-iss, fig.cap="Age composition input sample size by species and survey."}
+```{r age-iss, fig.cap="Age composition input sample size by stock and survey."}
 knitr::include_graphics(here::here('figs', 'age_iss.png'))
 ```
 
-```{r sublength-iss, fig.cap="Sub-region length composition input sample size by species within the Gulf of Alaska survey."}
+```{r sublength-iss, fig.cap="Sub-region length composition input sample size by stock within the Gulf of Alaska survey."}
 knitr::include_graphics(here::here('figs', 'length_iss_subreg.png'))
 ```
 
-```{r subage-iss, fig.cap="Sub-region age composition input sample size by species within the Gulf of Alaska survey."}
+```{r subage-iss, fig.cap="Sub-region age composition input sample size by stock within the Gulf of Alaska survey."}
 knitr::include_graphics(here::here('figs', 'age_iss_subreg.png'))
 ```
 
-```{r iss-nss, fig.cap="Number of fish aged and age composition input sample size by species group and survey (1-1 line shown in black for reference)."}
+```{r iss-nss, fig.cap="Number of fish aged and age composition input sample size by species group and survey (1-1 line shown in black for reference, gadids are not captured in the Bering Sea slope survey)."}
 knitr::include_graphics(here::here('figs', 'age_iss_nss.png'))
 ```
 
-```{r iss-hls, fig.cap="Number of sampled hauls compared to age composition input sample size by species group and survey (1-1 line shown in black for reference)."}
+```{r iss-hls, fig.cap="Number of sampled hauls compared to age composition input sample size by species group and survey (1-1 line shown in black for reference, gadids are not captured in the Bering Sea slope survey)."}
 knitr::include_graphics(here::here('figs', 'age_iss_hls.png'))
 ```
 
